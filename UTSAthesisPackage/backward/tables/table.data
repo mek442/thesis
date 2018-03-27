@@ -1,0 +1,296 @@
+log4j 2.0.0-2.0.2	Always	ValueChange	MoreReasonableBehavior
+log4j 2.0.2-2.1 (1)	SpecialType	ValueChange	EnforceRules
+log4j 2.0.2-2.1 (3)	Always	FileSystem	APIPatternChange
+log4j 2.0.2-2.1 (3)	SpecificValue	FileSystem	APIPatternChange
+maven 3.0-3.0.5(1)	StringFormat	ValueChange	ReportError
+maven 3.0-3.0.5(1)	StringFormat	ValueChange	ErrorMessage
+maven 3.0-3.0.5(1)	StringFormat	ValueChange	MoreReasonableBehavior
+maven 3.0-3.0.5(1)	StringFormat	StructureChange	InternalStructureOpt
+maven 3.0.5-3.1	Always	UnhandledException	UpgradeLibrary
+maven 3.0.5-3.1	Always	UnhandledException	UpgradeLibrary
+maven 3.0.5-3.1	Always	UnhandledException	UpgradeLibrary
+maven 3.1-3.2.1	StringFormat	ValueChange	EnableBadOrNewInput
+maven 3.1-3.2.1	Always	UnhandledException	SignatureChangeReflection
+maven 3.1-3.2.1	Always	UnhandledException	UpgradeLibrary
+maven 3.1-3.2.1	Always	UnhandledException	UpgradeLibrary
+maven 3.1-3.2.1	Always	UnhandledException	UpgradeLibrary
+maven 3.1-3.2.1	Always	UnhandledException	UpgradeLibrary
+maven 3.1-3.2.1	Always	UnhandledException	UpgradeLibrary
+maven 3.2.1-3.2.5	Always	UnhandledException	UpgradeLibrary
+maven 3.2.1-3.2.5	StringFormat	ValueChange	MoreReasonableBehavior
+maven 3.2.1-3.2.5	Always	UnhandledException	UpgradeLibrary
+maven 3.2.1-3.2.5	Always	UnhandledException	UpgradeLibrary
+maven 3.2.1-3.2.5	Always	UnhandledException	UpgradeLibrary
+Bukkit 1.2.3-1.2.5	Always	ValueChange	OutputFormatChange
+Bukkit 1.2.3-1.2.5	Always	UnhandledException	SignatureChangeReflection
+Bukkit 1.2.3-1.2.5	Always	UnhandledException	SignatureChangeReflection
+Bukkit 1.2.3-1.2.5	Always	UnhandledException	SignatureChangeReflection
+Bukkit 1.2.5-1.3.1	Always	UnhandledException	SignatureChangeReflection
+Bukkit 1.3.1-1.4.7	Trivial	UnhandledException	EnforceRules
+Bukkit 1.6.4-1.7.2	SpecificValue	ValueChange	OutputFormatChange
+Codec 1.6-1.7	Always	ValueChange	MoreReasonableBehavior
+Codec 1.6-1.7	Always	ValueChange	MoreReasonableBehavior
+Codec 1.6-1.7	SpecificValue	UnhandledException	EnforceRules
+Codec 1.6-1.7	SpecificValue	UnhandledException	EnforceRules
+Codec 1.6-1.7	SpecificValue	UnhandledException	EnforceRules
+Codec 1.6-1.7	SpecificValue	UnhandledException	EnforceRules
+fileup 1.2-1.2.2(2)	Always	UnhandledException	UpgradeLibrary
+fileup 1.3-1.3.1	Always	UnhandledException	InputFormatChange
+jsoup 1.1-1.2	StringFormat	ValueChange	OutputFormatChange
+jsoup 1.2.1 - 1.2.3(2)	StringFormat	ValueChange	OutputFormatChange
+jsoup 1.2.1 - 1.2.3	StringFormat	ValueChange	OutputFormatChange
+jsoup 1.2.3-1.3.1	StringFormat	ValueChange	InputFormatChange
+jsoup 1.3.3-1.4.1	StringFormat	ValueChange	OutputFormatChange
+jsoup 1.3.3-1.4.1	StringFormat	ValueChange	OutputFormatChange
+jsoup 1.3.3-1.4.1	SpecificValue	ValueChange	MoreReasonableBehavior
+jsoup 1.4.1-1.5.1	StringFormat	ValueChange	MoreReasonableBehavior
+jsoup 1.4.1-1.5.1	StringFormat	ValueChange	MoreReasonableBehavior
+jsoup 1.5.1-1.6	StringFormat	ValueChange	MoreReasonableBehavior
+jsoup 1.5.1-1.6	StringFormat	ValueChange	InputFormatChange
+jsoup 1.5.1-1.6	StringFormat	ValueChange	OutputFormatChange
+jsoup 1.5.1-1.6	StringFormat	ValueChange	EnforceRules
+jsoup 1.5.1-1.6	StringFormat	ValueChange	MoreReasonableBehavior
+jsoup 1.5.1-1.6(3)	StringFormat	ValueChange	OutputFormatChange
+jsoup 1.5.1-1.6(2)	StringFormat	ValueChange	MoreReasonableBehavior
+jsoup 1.5.1-1.6	MultipleAPI	ValueChange	MoreReasonableBehavior
+jsoup 1.5.1-1.6	ErrorException	ValueChange	MoreReasonableBehavior
+jsoup 1.5.1-1.6	StringFormat	ValueChange	MoreReasonableBehavior
+jsoup 1.5.1-1.6(3)	StringFormat	ValueChange	MoreReasonableBehavior
+jsoup 1.5.1-1.6	StringFormat	ValueChange	EnableBadOrNewInput
+jsoup 1.5.1-1.6(5)	StringFormat	ValueChange	EnableBadOrNewInput
+jsoup 1.5.1-1.6	StringFormat	ValueChange	EnableBadOrNewInput
+jsoup 1.5.1-1.6	StringFormat	ValueChange	InputFormatChange
+jsoup 1.5.1-1.6	Trivial	UnhandledException	EnableBadOrNewInput
+jsoup 1.5.1-1.6	StringFormat	UnhandledException	EnableBadOrNewInput
+jsoup 1.5.1-1.6	StringFormat	ValueChange	EnableBadOrNewInput
+jsoup 1.5.1-1.6	StringFormat	ValueChange	OutputFormatChange
+jsoup 1.5.1-1.6	StringFormat	ValueChange	EnforceRules
+jsoup 1.5.1-1.6	StringFormat	ValueChange	OutputFormatChange
+jsoup 1.6 - 1.6.3	StringFormat	ValueChange	MoreReasonableBehavior
+jsoup 1.6.3-1.7.1(4)	StringFormat	ValueChange	EnableBadOrNewInput
+jsoup 1.6.3-1.7.1	StringFormat	ValueChange	OutputFormatChange
+jsoup 1.6.3-1.7.1	SpecificValue	ValueChange	MoreReasonableBehavior
+jsoup 1.7.1-1.7.3(4)	MultipleAPI	ValueChange	MoreReasonableBehavior
+jsoup 1.7.1-1.7.3	StringFormat	ValueChange	EnableBadOrNewInput
+neo4j 1.8.3-1.9(2)	SpecificField	ValueChange	MoreReasonableBehavior
+neo4j 1.9.9 - 2.0.0	SpecificField	UnhandledException	EnableBadOrNewInput
+neo4j 1.9.9 - 2.0.0	Always	ValueChange	ChangeDefaultSetting
+neo4j 1.9.9 - 2.0.0(4)	Trivial	UnhandledException	EnforceRules
+neo4j 1.9.9 - 2.0.0	Always	UnhandledException	EnforceRules
+neo4j 1.9.9 - 2.0.0	Always	UnhandledException	EnforceRules
+snakeyaml 1.3-1.4(14)	Always	ValueChange	OutputFormatChange
+snakeyaml 1.3-1.4	Trivial	NoException	EnableBadOrNewInput
+snakeyaml 1.3-1.4(7)	Always	ValueChange	ErrorMessage
+snakeyaml 1.3-1.4(3)	Trivial	UnhandledException	EnforceRules
+snakeyaml 1.3-1.4	Always	UnhandledException	SignatureChangeReflection
+snakeyaml 1.4-1.5(8)	Always	ValueChange	OutputFormatChange
+snakeyaml 1.4-1.5	Always	TypeChange	InternalStructureOpt
+snakeyaml 1.4-1.5	Always	ValueChange	OutputFormatChange
+snakeyaml 1.4-1.5(2)	Always	ValueChange	ErrorMessage
+snakeyaml 1.4-1.5	Always	ValueChange	ChangeDefaultSetting
+snakeyaml 1.4-1.5	Always	ValueChange	ChangeDefaultSetting
+snakeyaml 1.5-1.6 (11)	Always	ValueChange	OutputFormatChange
+snakeyaml 1.5-1.6	Always	ValueChange	OutputFormatChange
+snakeyaml 1.5-1.6	Always	StructureChange	InternalStructureOpt
+snakeyaml 1.5-1.6	Always	ValueChange	ErrorMessage
+snakeyaml 1.5-1.6 (3)	SpecificField	UnhandledException	APIPatternChange
+snakeyaml 1.5-1.6	Always	TypeChange	InternalStructureOpt
+snakeyaml 1.6-1.7	Always	ValueChange	OutputFormatChange
+snakeyaml 1.6-1.7	Always	ValueChange	ErrorMessage
+snakeyaml 1.6-1.7(2)	Always	ValueChange	ErrorMessage
+snakeyaml 1.6-1.7	Always	ValueChange	ErrorMessage
+snakeyaml 1.6-1.7	MultipleAPI	ValueChange	OutputFormatChange
+snakeyaml 1.6-1.7	MultipleAPI	UnhandledException	EnforceRules
+snakeyaml 1.6-1.7	Always	ValueChange	ErrorMessage
+snakeyaml 1.7-1.8	SpecificField	NoException	EnableBadOrNewInput
+snakeyaml 1.7-1.8	SpecificField	UnhandledException	ReportError
+snakeyaml 1.7-1.8(2)	Always	ValueChange	ErrorMessage
+snakeyaml 1.7-1.8	Always	ValueChange	ErrorMessage
+snakeyaml 1.7-1.8	SpecialType	UnhandledException	ReportError
+snakeyaml 1.8-1.9(2)	SpecialType	ValueChange	ErrorMessage
+snakeyaml 1.8-1.9(4)	SpecialType	ValueChange	OutputFormatChange
+snakeyaml 1.8-1.9	SpecialType	ValueChange	ErrorMessage
+snakeyaml 1.8-1.9(2)	SpecialType	NoException	EnableBadOrNewInput
+snakeyaml 1.9-1.A	StringFormat	ValueChange	OutputFormatChange
+snakeyaml 1.9-1.A	SpecificField	ValueChange	OutputFormatChange
+snakeyaml 1.9-1.A	SpecificField	ValueChange	OutputFormatChange
+snakeyaml 1.9-1.A	SpecificValue	ValueChange	OutputFormatChange
+snakeyaml 1.A-1.B	SpecificField	ValueChange	ErrorMessage
+snakeyaml 1.A-1.B	SpecialType	ValueChange	ErrorMessage
+snakeyaml 1.A-1.B	SpecificValue	ValueChange	ErrorMessage
+snakeyaml 1.A-1.B	ErrorException	ValueChange	ErrorMessage
+snakeyaml 1.A-1.B	Always	ValueChange	OutputFormatChange
+snakeyaml 1.A-1.B(2)	Always	ValueChange	OutputFormatChange
+snakeyaml 1.A-1.B	SpecificValue	NoException	APIPatternChange
+snakeyaml 1.A-1.B(14)	SpecificValue	ValueChange	ErrorMessage
+snakeyaml 1.A-1.B(3)	Always	UnhandledException	SignatureChangeReflection
+snakeyaml 1.A-1.B	ErrorException	UnhandledException	DifferentException
+snakeyaml 1.A-1.B(2)	Always	ValueChange	OutputFormatChange
+snakeyaml 1.A-1.B	SpecificValue	ValueChange	MoreReasonableBehavior
+Jodatime 2.0-2.1	Always	ValueChange	OutputFormatChange
+Jodatime 2.0-2.1	Always	ValueChange	OutputFormatChange
+Jodatime 2.1-2.2(2)	ErrorException	UnhandledException	DifferentException
+Jodatime 2.1-2.2(3)	Always	ValueChange	OutputFormatChange
+Jodatime 2.1-2.2(2)	Always	UnhandledException	InputFormatChange
+Jodatime 2.2-2.3	SpecificValue	ValueChange	EnableBadOrNewInput
+Jodatime 2.3-2.4	Trivial	ValueChange	ReportError
+Jodatime 2.3-2.4	Trivial	ValueChange	ReportError
+Jodatime 2.3-2.4	Trivial	ValueChange	ReportError
+Jodatime 2.3-2.4	Trivial	ValueChange	ReportError
+Jodatime 2.3-2.4	Trivial	ValueChange	ReportError
+Jodatime 2.3-2.4	Trivial	ValueChange	ReportError
+Jodatime 2.3-2.4	Trivial	UnhandledException	EnforceRules
+Jodatime 2.3-2.4	Trivial	UnhandledException	EnforceRules
+Jodatime 2.3-2.4	SpecificValue	UnhandledException	EnforceRules
+Jodatime 2.5-2.6	SpecificValue	ValueChange	ChangeDefaultSetting
+Jodatime 2.5-2.6	Always	ValueChange	InternalStructureOpt
+commons-io 2.0-2.1	Always	ValueChange	MoreReasonableBehavior
+commons-io 2.2-2.3	ErrorException	Different Exception	DifferentException
+commons-io 2.2-2.3	ErrorException	Different Exception	DifferentException
+http-core 4.0.1-4.1(2)	Trivial	NoException	EnableBadOrNewInput
+http-core 4.0.1-4.1	Always	ValueChange	MoreReasonableBehavior
+http-core 4.0.1-4.1	Always	memory	ChangeDefaultSetting
+http-core 4.0.1-4.1(4)	Always	memory	ChangeDefaultSetting
+http-core 4.0.1-4.1	Trivial	ValueChange	OutputFormatChange
+http-core 4.0.1-4.1	Trivial	ValueChange	OutputFormatChange
+http-core 4.1-4.1.4	SpecificValue	UnhandledException	ReportError
+http-core 4.1-4.1.4(8)	SpecificValue	ValueChange	EnforceRules
+http-core 4.2-4.2.5	Always	memory	EnforceRules
+http-core 4.2-4.2.5	Always	memory	APIPatternChange
+http-core 4.2-4.2.5(4)	Always	memory	APIPatternChange
+http-core 4.2-4.2.5	MultipleAPI	memory	MoreReasonableBehavior
+http-core 4.2-4.2.5	MultipleAPI	ValueChange	EnforceRules
+http-core 4.2-4.2.5	SpecificField	memory	MoreReasonableBehavior
+http-core 4.3-4.3.3	SpecificField	ValueChange	EnableBadOrNewInput
+http-core 4.3-4.3.3	Always	memory	MoreReasonableBehavior
+http-core 4.3-4.3.3	ErrorException	ValueChange	EnableBadOrNewInput
+http-core 4.3-4.3.3(2)	SpecificField	memory	MoreReasonableBehavior
+http-core 4.3-4.3.3	SpecificField	memory	MoreReasonableBehavior
+http-core 4.3-4.3.3	SpecificField	memory	MoreReasonableBehavior
+http-core 4.3-4.3.3	ErrorException	UnhandledException	ReportError
+http-core 4.3-4.3.3	SpecificField	UnhandledException	EnforceRules
+http-core 4.3-4.3.3(2)	ErrorException	Different Exception	DifferentException
+http-core 4.3.3-4.4	ErrorException	NoException	EnableBadOrNewInput
+http-core 4.3.3-4.4(6)	SpecificValue	ValueChange	OutputFormatChange
+http-core 4.3.3-4.4	SpecificValue	UnhandledException	ReportError
+http-core 4.3.3-4.4	SpecificValue	UnhandledException	InputFormatChange
+http-core 4.3.3-4.4	MultipleAPI	memory	MoreReasonableBehavior
+http-core 4.3.3-4.4(3)	SpecificValue	ValueChange	MoreReasonableBehavior
+http-core 4.3.3-4.4(5)	Always	ValueChange	OutputFormatChange
+http-core 4.3.3-4.4	SpecificField	ValueChange	EnableBadOrNewInput
+http-core 4.3.3-4.4	SpecificValue	ValueChange	MoreReasonableBehavior
+elastic 1.1-1.1.2(4)	SpecialType	ValueChange	MoreReasonableBehavior
+elastic 1.1-1.1.2(4)	SpecificField	ValueChange	OutputFormatChange
+elastic 1.1-1.1.2(2)	SpecificField	UnhandledException	ErrorMessage
+elastic 1.2-1.2.4(2)	Always	ValueChange	InternalStructureOpt
+elastic 1.2-1.2.4(4)	SpecialType	UnhandledException	EnforceRules
+elastic 1.2-1.2.4(2)	Trivial	UnhandledException	EnforceRules
+elastic 1.2-1.2.4(2)	Always	ValueChange	ChangeDefaultSetting
+elastic 1.2-1.2.4(2)	MultipleAPI	UnhandledException	ReportError
+elastic 1.2-1.2.4(2)	Always	UnhandledException	ReportError
+elastic 1.2-1.2.4(2)	MultipleAPI	UnhandledException	ReportError
+elastic 1.2-1.2.4(2)	Always	UnhandledException	ReportError
+elastic 1.2-1.2.4(2)	MultipleAPI	UnhandledException	ReportError
+elastic 1.3-1.3.9	SpecificField	Unhandle Exception	SignatureChangeReflection
+elastic 1.3-1.3.9	Always	TypeChange	SignatureChangeReflection
+elastic 1.3-1.3.9	SpecificField	ValueChange	ErrorMessage
+elastic 1.3-1.3.9	SpecificField	ValueChange	MoreReasonableBehavior
+elastic 1.3-1.3.9	SpecificField	ValueChange	ErrorMessage
+elastic 1.3-1.3.9	SpecificField	UnhandledException	APIPatternChange
+elastic 1.3-1.3.9	ErrorException	NoException	EnableBadOrNewInput
+elastic 1.3-1.3.9	Trivial	ValueChange	OutputFormatChange
+elastic 1.3-1.3.9	Always	ValueChange	ErrorMessage
+elastic 1.3-1.3.9	StringFormat	ValueChange	MoreReasonableBehavior
+elastic 1.3-1.3.9	MultipleAPI	NoException	EnableBadOrNewInput
+elastic 1.3-1.3.9	ErrorException	ValueChange	EnableBadOrNewInput
+Android 4.3-4.4	Always	StructureChange	SignatureChangeReflection
+Android 4.3-4.4	Always	GUI	MoreReasonableBehavior
+Android 4.3-4.4	Always	GUI	MoreReasonableBehavior
+Android 4.3-4.4	ErrorException	Different Exception	DifferentException
+Android 4.3-4.4	Environment	memory	EnableBadOrNewInput
+Android 4.3-4.4	Always	ValueChange	EnableBadOrNewInput
+Android 4.3-4.4	SpecificField	ValueChange	MoreReasonableBehavior
+Android 4.3-4.4	Always	ValueChange	OutputFormatChange
+Android 4.3-4.4	Always	Different Exception	DifferentException
+Android 4.3-4.4	Always	ValueChange	OutputFormatChange
+Android 4.3-4.4	Trivial	TypeChange	EnforceRules
+Android 4.3-4.4	SpecificValue	UnhandledException	EnforceRules
+Android 4.3-4.4	Always	ValueChange	MoreReasonableBehavior
+Android 4.3-4.4	Trivial	UnhandledException	EnforceRules
+Android 4.3-4.4	Trivial	ValueChange	InternalStructureOpt
+Android 4.3-4.4	SpecificValue	ValueChange	MoreReasonableBehavior
+Android 4.3-4.4	ErrorException	FileSystem	OutputFormatChange
+Android 4.3-4.4	Trivial	ValueChange	MoreReasonableBehavior
+Android 4.3-4.4	SpecialType	UnhandledException	ReportError
+Android 4.3-4.4	Always	ValueChange	MoreReasonableBehavior
+Android 4.4-5.0	Always	StructureChange	SignatureChangeReflection
+Android 4.4-5.0	MultipleAPI	InfiniteLoop	APIPatternChange
+Android 4.4-5.0	Trivial	GUI	MoreReasonableBehavior
+Android 4.4-5.0	MultipleAPI	GUI	OutputFormatChange
+Android 4.4-5.0	Always	NoException	EnableBadOrNewInput
+Android 4.4-5.0	Always	UnhandledException	DifferentException
+Android 4.4-5.0	Always	UnhandledException	SignatureChangeReflection
+Android 4.4-5.0	Always	UnhandledException	ChangeDefaultSetting
+Android 4.4-5.0	SpecificValue	ValueChange	EnableBadOrNewInput
+Android 4.4-5.0	Trivial	NoException	MoreReasonableBehavior
+Android 4.4-5.0	SpecificValue	ValueChange	ChangeDefaultSetting
+Android 4.4-5.0	SpecificValue	ValueChange	ChangeDefaultSetting
+Android 4.4-5.0	SpecificField	memory	MoreReasonableBehavior
+Android 4.4-5.0	Always	NoException	EnableBadOrNewInput
+Android 4.4-5.0	SpecificValue	memory	InternalStructureOpt
+Android 4.4-5.0	Trivial	ValueChange	ChangeDefaultSetting
+Android 4.4-5.0	Trivial	UnhandledException	EnforceRules
+Android 4.4-5.0	MultipleAPI	ValueChange	MoreReasonableBehavior
+Android 4.4-5.0	Trivial	UnhandledException	EnforceRules
+Android 4.4-5.0	SpecificValue	NoException	EnableBadOrNewInput
+Android 4.4-5.0	Trivial	ValueChange	ChangeDefaultSetting
+Android 4.4-5.0	StringFormat	ValueChange	OutputFormatChange
+Android 4.4-5.0	Always	FileSystem	ChangeDefaultSetting
+Android 4.4-5.0	Trivial	UnhandledException	EnforceRules
+Android 4.4-5.0	ErrorException	NoException	EnableBadOrNewInput
+Android 4.4-5.0	ErrorException	NoException	EnableBadOrNewInput
+Android 4.4-5.0	Always	FileSystem	OutputFormatChange
+Android 4.4-5.0	Always	FileSystem	ChangeDefaultSetting
+Android 4.4-5.0	SpecificField	ValueChange	APIPatternChange
+Android 4.4-5.0	MultipleAPI	GUI	MoreReasonableBehavior
+Android 4.4-5.0	Environment	InfiniteLoop	APIPatternChange
+Android 4.4-5.0	StringFormat	StructureChange	OutputFormatChange
+Android 4.4-5.0	StringFormat	GUI	MoreReasonableBehavior
+Android 4.4-5.0	SpecificField	InfiniteLoop	APIPatternChange
+Android 4.4-5.0	SpecificValue	ValueChange	MoreReasonableBehavior
+Android 4.4-5.0	SpecificValue	ValueChange	ChangeDefaultSetting
+JDK 7 - 7u80	StringFormat	UnhandledException	APIPatternChange
+JDK 7 - 7u80	MultipleAPI	UnhandledException	APIPatternChange
+JDK 7 - 7u80	SpecificField	UnhandledException	ReportError
+JDK 7 - 7u80	ErrorException	UnhandledException	DifferentException
+JDK 7 - 7u80	SpecificField	TypeChange	InternalStructureOpt
+JDK 7 - 7u80	SpecificField	UnhandledException	EnforceRules
+JDK 7 - 7u80	SpecificField	UnhandledException	EnforceRules
+JDK 7 - 7u80	SpecificValue	UnhandledException	ChangeDefaultSetting
+JDK 7 - 7u80	Always	UnhandledException	EnforceRules
+JDK 7 - 7u80	SpecificValue	UnhandledException	EnforceRules
+JDK 7 - 7u80	ErrorException	NoException	APIPatternChange
+JDK 7 - 7u80	SpecificValue	ValueChange	EnableBadOrNewInput
+JDK 7u80 - 8	Always	TypeChange	MoreReasonableBehavior
+JDK 7u80 - 8	Trivial	UnhandledException	EnforceRules
+JDK 7u80 - 8	SpecificValue	ValueChange	MoreReasonableBehavior
+JDK 7u80 - 8	StringFormat	ValueChange	OutputFormatChange
+JDK 7u80 - 8	SpecificValue	UnhandledException	EnforceRules
+JDK 7u80 - 8	SpecificValue	ValueChange	EnforceRules
+JDK 7u80 - 8	MultipleAPI	UnhandledException	EnforceRules
+JDK 7u80 - 8	SpecificValue	ValueChange	ChangeDefaultSetting
+JDK 7u80 - 8	SpecificField	ValueChange	MoreReasonableBehavior
+JDK 7u80 - 8	SpecificValue	ValueChange	MoreReasonableBehavior
+JDK 7u80 - 8	Trivial	UnhandledException	EnforceRules
+JDK 7u80 - 8	SpecificField	UnhandledException	EnforceRules
+JDK 7u80 - 8	Environment	TypeChange	EnforceRules
+JDK 7u80 - 8	SpecificValue	TypeChange	EnableBadOrNewInput
+JDK 7u80 - 8	SpecificValue	UnhandledException	EnforceRules
+JDK 7u80 - 8	MultipleAPI	StructureChange	MoreReasonableBehavior
+JDK 7u80 - 8	SpecificValue	ValueChange	MoreReasonableBehavior
+JDK 7u80 - 8	MultipleAPI	GUI	APIPatternChange
+JDK 7u80 - 8	MultipleAPI	ValueChange	MoreReasonableBehavior
+JDK 7u80 - 8	MultipleAPI	GUI	APIPatternChange
+JDK 7u80 - 8	Environment	ValueChange	EnforceRules
+JDK 7u80 - 8	SpecificValue	ValueChange	APIPatternChange
+JDK 7u80 - 8	SpecificValue	NoException	EnableBadOrNewInput

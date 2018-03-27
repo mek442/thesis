@@ -1,0 +1,57 @@
+\section{Approach}
+\label{sec:approach}
+In this section, we introduce our approach in details. As we mentioned in Section~\ref{sec:intro}, in this paper, we deem the identification of security bug reports as an automatic content-tagging problem, and proposed an approach based on the combination of term ranking and classification. We leverage the existing scheme of combining the two techniques in automatic content-tagging, and further involve bootstrapping to improve the effectiveness with a small training set, which makes our approach applicable to more software projects. 
+
+\subsection{Approach Overview}
+Based on the analysis of the security-bug-report-identification problem, we design an approach that combines term ranking and classification as shown in Figure~\ref{figure:overview}. Specifically, the approach consists of the following steps. We will introduce the term-ranking, classification, and boostrapping steps in detail in the following subsections.
+%
+\begin{figure}
+\center
+\includegraphics[bb=0 0 840 540, width=4in]{images/overview.pdf}
+\caption{Overview of our approach}
+\label{figure:overview}
+\end{figure}
+
+\begin{itemize}
+\item First, based on the training set, using term ranking with discriminative term weighting, we automatically mine a number of terms that are most representative in security bug reports. We refer to this list of terms as \textit{top term list}.
+\item Second, we query with the terms in the top term list, and retrieve a number of bug reports from the data set, as candidates of security bug reports.
+\item Third, based on machine learning techniques, we train a classification model based on the training data, and perform classification on the candidates of security bug reports. All the candidates that are classified as security bug reports are identified as security bug reports.
+\item Build a new training set with the security bug reports identified in step 3 and the rest bug reports (deemed as non security bug reports), and iterative step 1 through 3 for several times.
+\end{itemize}
+
+\subsection{Term Ranking}
+
+In the first step of our approach, we try to perform term weighting and ranking to extract a number of terms that are most representative for security bug reports. To measure how representative a term is for a category of documents, we leverage the adaption of standard $tf$-$idf$ weights~\cite{Liu09im}. $Tf$-$idf$ is a standard term weighting approach in information retrieval to measure how representative a word is for a document. Specifically, $tf(t, doc)$ is defined as the frequency of the term $t$ in the document $doc$, and $idf(t)$ is defined with the formula below. The $idf$ value measures whether $t$ is unique enough to represent the document. The product of $tf(t, doc)$ and $idf(t)$ is viewed as the representativeness measure of term $t$ for document $doc$.
+
+\begin{equation}
+idf(t) = \log (\frac{\text{\#all documents}}{\text{\#documents containing t}})
+\end{equation}
+
+Therefore, an adaptive version of $tf$-$idf$ for a category of documents, is defined as below. The basic idea is to view all documents in category $cat$ as one large document. Thus, in the formula below, for $tf(t, cat)$, the total frequency of term $t$ in all documents in category $cat$ is used. For $idf(t)$, the total number of documents is replaced with the number of documents not in category $cat$ plus one (representing the one large document corresponding to the category $cat$), and the total number of documents containing term $t$ is replaced with the number of documents that contain term $t$ and are not in category $cat$. Similarly, 1 is added for the one large document corresponding to the category $cat$. With the adapted $tf$ and $idf$ value, we use the product of the two values to measure the representativeness of a word for a category (denoted as $w(t, cat)$). In our approach, we want the selected top words to be able to differentiate security bug reports and non-security bug reports. So we can further define the discriminative weight of term $t$ as the quotient of $w(t, security)$ and $w(t, nonsecurity)$.
+
+\begin{equation}
+tf(t, cat) = \text{total frequency of t in all documents in cat}
+\end{equation}
+
+\begin{equation}
+idf(t) = \log (\frac{1 + \text{\#documents not in cat}}{1 + \text{\#documents not in cat containing t}})
+\end{equation}
+
+Based on the weights calculated from above formulae, we are able to rank all terms that appears in security bug reports (in the training set), and have the top ranked terms in the $top term list$ for later retrieval of candidates of security bug reports.
+
+Diksha Behl et al.~\cite{behl2014bug} evaluated their TF-IDF method to identify security bug reports in open bug repositories. They ranked the token based on the 
+formulae:
+\begin{equation}
+w(t,d) = ( 1 + \log  \text{tf(t,d)} ) * \log (\frac{ \text{\#total documents}}{ \text{idf(t,d)}})
+\end{equation}
+
+In evaluation section we provides in details comparisons of their result on our dataset with our approach. Our evaluation shows that our tools performs far better than their approach.
+
+
+\subsection{Classification}
+
+The classification step is straightforward. Based on a training set in which bug reports are labelled as security and non-security, we are able to train a classification model with off-the-shelf machine learning tools. We use the term weights generated in the term ranking process as features for classification. Our approach is not specific to certain classification models, so any classification models and corresponding tools can be used in this step. In our experiments, we considered two classification models: Naive Bayes~\cite{Jiang13naive} and Support Vector Machines (SVM)~\cite{Hearst98SVM}. We choose these two classification models because they are popular and based on different theocratical models.
+
+\subsection{Bootstrapping}
+
+After the classification, we are able to identify a number of security bug reports. We assume that we have a small training set and it may have two potential negative impact on the results. First of all, when perform term weighting and ranking, it is possible that we miss some important terms (due to the small number of security bugs) and thus miss a number of security bug reports when selecting candidates of security bug reports. Second, the classification may be not of high quality due to the small training set. Therefore, we consider to perform bootstrapping by iterating the above steps of our approach. In each iteration, we use the identified security bug reports from the previous iteration and the rest bug reports (labelled as non-security) to build a new training set, and start the next iteration with the new training set.

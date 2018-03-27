@@ -1,0 +1,101 @@
+\select@language {english}
+\contentsline {chapter}{Acknowledgements}{iv}{Doc-Start}
+\contentsline {chapter}{Abstract}{vi}{Doc-Start}
+\contentsline {chapter}{List of Tables}{xii}{chapter*.1}
+\contentsline {chapter}{List of Figures}{xiii}{chapter*.2}
+\contentsline {chapter}{Chapter {1}: {Introduction}}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Thesis Statement}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Contributions}{3}{section.1.3}
+\contentsline {section}{\numberline {1.4}Organization}{4}{section.1.4}
+\contentsline {chapter}{Chapter {2}: {Background and Related Work}}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Mocking}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2} Regression}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Performance Reression}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Backward incompatibility }{7}{section.2.4}
+\contentsline {chapter}{Chapter {3}: {An Empirical Study on the Usage of Mocking Frameworks in Software Testing}}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Background}{11}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Mocking Objects}{11}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Mocking Frameworks}{12}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Design}{13}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Research Questions}{13}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Subjects}{14}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Process}{15}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Empirical Study Results}{16}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Popularity of Mocking Frameworks}{16}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Usage of Mocking Frameworks}{19}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Mocked Dependencies}{20}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Summary}{21}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Threats to Validity}{22}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}Related}{22}{section.3.5}
+\contentsline {section}{\numberline {3.6}Conclusion}{24}{section.3.6}
+\contentsline {chapter}{Chapter {4}: {PerfRanker: Prioritization of Performance Regression Tests for Collection-Intensive Software}}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Motivation}{29}{section.4.2}
+\contentsline {section}{\numberline {4.3}Approach}{30}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Overview}{31}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Performance Model}{32}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Performance Impact Analysis}{33}{subsection.4.3.3}
+\contentsline {subsubsection}{Model Extension}{34}{section*.4}
+\contentsline {subsubsection}{Execution-Time Change of Method Bodies}{35}{section*.5}
+\contentsline {subsubsection}{Invocation Frequencies of Method Bodies}{36}{section*.6}
+\contentsline {subsection}{\numberline {4.3.4}Loop-Count Estimation with Collection-Loop Correlation}{37}{subsection.4.3.4}
+\contentsline {subsubsection}{Correlating Loops and Collections}{37}{section*.7}
+\contentsline {subsubsection}{Iteration-Count Inference}{38}{section*.8}
+\contentsline {subsection}{\numberline {4.3.5}Test Case Prioritization}{39}{subsection.4.3.5}
+\contentsline {section}{\numberline {4.4}Evaluation}{40}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Evaluation Subjects}{40}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Evaluation Setup}{41}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Evaluation Metrics}{41}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Baseline Approaches Under Comparison}{43}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}Quantitative Evaluation}{44}{subsection.4.4.5}
+\contentsline {subsubsection}{\textit {APFD-P} Metric}{44}{section*.9}
+\contentsline {subsubsection}{\textit {nDCG} Metrics}{45}{section*.10}
+\contentsline {subsubsection}{Top-N Percentile}{46}{section*.11}
+\contentsline {subsubsection}{Overhead and Performance}{48}{section*.12}
+\contentsline {subsection}{\numberline {4.4.6}Successful and Challenging Examples}{48}{subsection.4.4.6}
+\contentsline {subsection}{\numberline {4.4.7}Threats to Validity}{50}{subsection.4.4.7}
+\contentsline {section}{\numberline {4.5}Discussion}{51}{section.4.5}
+\contentsline {section}{\numberline {4.6}Related Work}{52}{section.4.6}
+\contentsline {section}{\numberline {4.7}Conclusion}{54}{section.4.7}
+\contentsline {chapter}{Chapter {5}: {Beyond API Signatures: Behavioral Backward Incompatibilities of Java Software Libraries}}{55}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{55}{section.5.1}
+\contentsline {section}{\numberline {5.2}Research Scope}{56}{section.5.2}
+\contentsline {section}{\numberline {5.3}Cross-Version Testing Study}{57}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Study Setup}{57}{subsection.5.3.1}
+\contentsline {subsubsection}{Subject Libraries}{57}{section*.13}
+\contentsline {subsubsection}{Selection of Version Pairs}{58}{section*.14}
+\contentsline {subsubsection}{Detection of BBIs}{59}{section*.15}
+\contentsline {subsection}{\numberline {5.3.2}BBIs in Popular Libraries}{60}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Categorization of BBIs}{62}{subsection.5.3.3}
+\contentsline {subsubsection}{Incompatible Behaviors}{63}{section*.16}
+\contentsline {subsubsection}{Invocation Constraints}{65}{section*.17}
+\contentsline {subsubsection}{Reasons for Bringing in BBIs}{65}{section*.18}
+\contentsline {section}{\numberline {5.4}Real-world Bug Study}{68}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Collection of Bug Reports}{68}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Study on Bug-Inducing BBIs}{69}{subsection.5.4.2}
+\contentsline {subsubsection}{Incompatible Behaviors}{70}{section*.19}
+\contentsline {subsubsection}{Invocation Constraints}{72}{section*.20}
+\contentsline {subsection}{\numberline {5.4.3}Documentation Study}{73}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Bug Resolution Study}{74}{subsection.5.4.4}
+\contentsline {subsubsection}{Resolution of Library Bugs}{74}{section*.21}
+\contentsline {subsubsection}{Resolution of Client Bugs}{75}{section*.22}
+\contentsline {subsubsection}{Reporting to Library Developers. }{77}{section*.23}
+\contentsline {section}{\numberline {5.5}Discussion}{77}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Lessons Learned}{77}{subsection.5.5.1}
+\contentsline {subsubsection}{Avoidance of BBI Bugs}{77}{section*.24}
+\contentsline {subsubsection}{Detection and Resolution of BBI-Related Bugs}{79}{section*.25}
+\contentsline {subsection}{\numberline {5.5.2}Limitations and Threats}{80}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}Detailed Classification of BBIs}{81}{subsection.5.5.3}
+\contentsline {section}{\numberline {5.6}Related Work}{81}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Studies on Software Libraries Evolution}{81}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Summarizing Software Library Changes}{82}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}Support for Library Migration}{83}{subsection.5.6.3}
+\contentsline {section}{\numberline {5.7}Conclusion}{83}{section.5.7}
+\contentsline {chapter}{Chapter {6}: {Lesson Learned}}{84}{chapter.6}
+\contentsline {chapter}{Chapter {7}: {Future Directions}}{86}{chapter.7}
+\contentsline {section}{\numberline {7.1}Prioritization Regression Tests}{86}{section.7.1}
+\contentsline {section}{\numberline {7.2}Augmenting Regression Tests}{87}{section.7.2}
+\contentsline {section}{\numberline {7.3}Logging}{88}{section.7.3}
+\contentsline {chapter}{Bibliography}{89}{appendix*.26}

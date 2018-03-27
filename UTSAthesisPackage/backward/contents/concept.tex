@@ -1,0 +1,47 @@
+
+\section{Research Scope}
+
+%As the basis of our study, we clarify our definition of \textit{behavioral backward incompatibilities} in this section. In our paper, \textit{Behavioral backward incompatibilities} refers behavioral changes of a public or protected method / field (i.e., changing the default value of a field) between two consecutive versions of a software library, while the signature of the method / field remains unchanged in the two versions. The behavioral changes include any public accessible value difference of the argument / return value, or different effects on the user interface or the underlying system, after invoking the method or accessing the field. Unlike signature incompatibilities, behavioral incompatibilities are difficult to detect, and the reasons and characteristics of behavior incompatibilities have not been well studied. This is the reason why we try to acquire more understanding of behavioral incompatibilities through studies in this paper.  
+
+%From the aspect of library-developer's intention, BBIs can be divided to intentional behavioral changes and regression faults. Actually, the barrier between the two is often vague, and both types of incompatibilities are causing similar failures at the client side, so we do not differentiate these two types of incompatibilities in our study. We discuss how this may affect our study results in Section~\ref{sec:discuss}. 
+
+In our study, we try to answer the five research questions as follows. 
+
+
+%\subsection{Research Questions}
+%\label{subsec:libRQ}
+
+
+\begin{itemize}
+
+	\item \textbf{RQ1:} Are BBIs prevalent between consecutive version pairs of Java software libraries?
+
+	\item \textbf{RQ2:} Are most BBIs distribute in the major version upgrades, so that minor version updates are safer?
+
+	\item \textbf{RQ3:} What are the characteristics of BBIs and why library developers bring them in?
+
+	\item \textbf{RQ4:} How are BBIs detected in regression testing compare with BBIs causing real-world bugs?
+
+	\item \textbf{RQ5:} How are the BBI-related bugs fixed in software practice?
+\end{itemize}
+
+With the answers of these questions, we expect to understand: (1) whether BBIs are prevalent in the Java software libraries, and a problem that software developers need to face frequently, (2) whether BBIs are distributed most in major version upgrades, which are supposed to have some software interface changes, (3) whether it is possible to classify BBIs into several categories by their characteristics and reasons brought in, so that they can be avoided or detection and resolution techniques can be developed accordingly, (4) whether there are mismatches on the categories of BBIs being most detected and the categories of BBIs mostly likely to cause bugs, and (5) whether BBIs are fixed by library or client developers, and whether there exists certain fixing patterns on BBI related bugs. 
+
+%To answer the four research questions, we designed a study that applies cross-version testing to 68 versions in 15 top Java software libraries, and another study that involves manual inspection of bugs related to behavioral backward incompatibilities in real world.
+
+%\subsection{Types of Backward Incompatibilities}
+%\label{subsec:incompType}
+%As mentioned in Section~\ref{sec:intro}, in our study, we consider the following two categories of backward incompatibilities\footnote{In the description of the rest of this paper, we consider only public or protected classes, interfaces, methods, fields, unless indicated otherwise.}.
+
+%\textbf{Signature Incompatibilities} are backward incompatibilities caused by the interface signature changes of a software library. They can typically be detected with a recompilation of the client code and the new version of software library, although there are some exceptions such as when the client software is using reflections to invoke library methods. In our study, we considered the following three types of signature incompatibilities in Java software libraries. 
+
+%\begin{itemize}
+%	\item Class Incompatibilities: Removal of an existing class / interface, or revision of modifiers (e.g., \CodeIn{static}, \CodeIn{final}) of a class / interface. 
+
+%	\item Hierarchy Incompatibilities: Changing the ancestors of an existing class / interface. Note that such changes will result in compilation or runtime errors in type casts and \CodeIn{instanceof} expressions. 
+
+%	\item Member Incompatibilities: Removal or changing the signature (e.g., parameter / return types, modifiers) of an existing method / field. We also consider as method incompatibilities the addition of an abstract method or a method to an interface, because such additions may result in new implementation requirements in client software. 
+%\end{itemize}
+
+%It should be noted that, for some special client software, adding any method to any library class may result in runtime errors (e.g., the client code uses reflection to iterate all methods, and put them into an array wit hard-coded size). However, we believe that such cases are very rare, so we do not deem general addition of classes / methods / fields as backward incompatibilities. 
+

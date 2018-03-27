@@ -1,0 +1,191 @@
+\section{Evaluation}
+\label{sec:evaluation}
+To evaluation our approach, we carried out an experiments based on a data set from the RedHat bug repository~\cite{Redhat} hosted at Bugzilla~\cite{Bugzilla}. In this section, we first introduce how we build our data set and the metrics we used in our evaluation. Then, we present the overall empirical results of our approach and comparison between our approach and baseline approaches. After that, we introduce the variants of our approach (when different parameters are used), and compare the effectiveness between them. Moreover, we evaluate the effectiveness of further applying bootstrapping techniques. Finally, we discuss about some threats to validity.
+\subsection{Evaluation Setup}
+In our evaluation, we construct a data set\footnote{The data set is available at \url{http://xywang.100871.net/secbug.html}} from the RedHat bug repository hosted at Bugzilla. Specifically, we found that many Redhat bugs are linked to entries in the Common Vulnerability Exposure (CVE) Database~\cite{CVE}. Therefore, we trace such links to identify candidates of potential bug reports in the RedHat repository. We did some further inspection and select 800 bug reports that we confirm to be security bug reports. After building the data set security bug reports, we need to further decide how many non-security bug reports to be put into the data set. Specifically, our statistics show that the security bugs accounts for 8\% of all bugs in the time range where our security bug reports are created. Therefore, we use the ratio 1:11 to select non security bug reports and collected 8800 bug reports. It should be noted we are not able to inspect all 8800 bug reports to confirm that they are true non-security bug reports. Therefore, we just randomly select bug reports from the bug repository, while avoiding known security bugs (any bugs linked with CVE) as well as any bugs related to the ``Security Response Team'', which is a team handling security issues in RedHat. We believe that since security bug reports accounts for only a small proportion of all bug reports, and we have avoided many known or suspected security bug reports, there should be very small number of security bugs as noises hidden in non-security bugs.
+
+In our experiments, we try to evaluate our approach with a small training set, which is often the only available training set in practice. Therefore, we split the data set to 8 groups, each group including 100 security bug reports and 1100 security bug reports. Then, we use one group as the training set and the rest 7 groups as the testing set. According to the so-called cross-validation~\cite{Kohavi95study}, we use all different 8 groups as training data to perform experiments for 8 times, and report the average results.
+
+To measure the effectiveness of our approach, we leverage the standard precision, recall and F-score metrics. Specifically, precision is defined as the number of real security bug reports identified as security bug reports divided by the number of all bug reports identified as security bug reports. Recall is defined as the number of real security bug reports identified as security bug reports divided by all real security bug reports. F-score is the harmonic mean of precision and recall.
+\vspace{+0.5cm}
+
+
+\subsection{Evaluation Results}
+\label{subsec:eval}
+
+\begin{table}
+\center
+\caption{Considered Parameters}
+\label{table:para}
+\begin{tabular}{ | r | l |}
+\hline Parameter & Possible Values\\
+\hline Top-Term-List Size & 50, 100, 200\\
+\hline Term-Weighting & Discriminative, Non-Discriminative\\
+\hline Classification & Naive Bayes, SVM\\
+\hline Information Source & title only, title + description\\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+Our approach involves in a number of parameters and thus has a large number variants when combining the parameters. In this evaluation, we consider the parameters shown in Table~\ref{table:para}. The parameters include: whether use title only or title plus description of the bug reports, using what size for top term list, using discriminative term weighting or non-discriminative term weighting, and what machine learning model to use in classification(i.e., we specific consider the Naive Bayes model and SVM model which are widely used and based on different theocratical foundations). In the evaluation, we are not able to present the results of all combination of these parameters, so we choose a default parameter setting which uses title plus description of bug reports, 100 top term list size, discriminative term weighting, and Naive Bayes model. We will present the comparison between different variants of our approach in Section~\ref{subsec:variant}.
+
+We use the standard classification-based approach and the term-ranking-based approach as the baseline to compare with. For classification-based approaches, we consider two classification models: Naive Bayes and SVM\footnote{We use liblinear~\cite{fan08lib} as the implementation of SVM. }. For term-ranking-based approaches, we consider two parameters: the size of top term list, and whether using discriminative or non-discriminative term weighting. In particular, we use 50, 100, and 200 as variables of top-term-list size, and consider all six combinations of top-term-list sizes and term weighting techniques.
+
+The comparison of our approach (default setting) with classification-based approach is shown in Table~\ref{table:classonly}. The three lines in the table are the results of our approach (with default setting), the results of Naive Bayes model, and the results of SVM, respectively. From the table, we can observe that, our approach outperforms both classification models on F-score. Specifically, our approach outperforms SVM by 6 percentage points on F-score, and more than 11 percentage points on recall. It should be noted that for the scenario of security bugs, recall is often more important when the precision is not very low. Compared with Naive Bayes, our approach is 13.7 percentage points higher on F-score, while 2.6 percentage points lower on recall. Actually, the recall of our approach can be further enhanced by adding bootstrapping (See Section~\ref{subsec:boot}).
+
+\begin{table}
+\center
+\caption{Comparison with Classification-Only}
+\label{table:classonly}
+\begin{tabular}{ | l | r | r | r |}
+\hline Approach & Precision (\%) & Recall (\%) & F-Score (\%)\\
+\hline Our Approach & 92.8& 78.4 & 84.7\\
+\hline Naive Bayes & 69.5& 81.0 & 71.0\\
+\hline SVM & 96.0 & 67.1 & 78.7\\
+\hline
+\end{tabular}
+\end{table}
+
+The comparison of our approach (default setting) with term-ranking-based approach is shown in Table~\ref{table:rankonly}. In the table, the first line presents the results of our approach as a reference. Lines 2-4 presents the results of term ranking based on discriminative term weighting, with different top-term-list sizes (i.e., 50, 100, and 200). Lines 5-7 presents the results of term ranking based on non-discriminative term weighting, also combined with different top-term-list sizes.
+Lines 8-10 presents the result of the implementation of Diksha Behl et al.~\cite{behl2014bug} described their TF-IDF method to identify security bug reports in open bug repositories.From the table, we can observe that, our approach outperforms all term-ranking based approaches on F-score by at least 9.9 percentage points. Specifically, term-ranking with non-discriminative term weighting results in very high recall and very low precision. By contrast, term-ranking with discriminative term weighting results in higher precisions, but the precision drops sharply when a larger top-term-list size (i.e., 200) to maintain high recall.
+
+%Actually, from the results of classification-based approach and term-ranking-based approach, we can see that, term-ranking-based approach is usually able to achieve high recalls, but relatively low precision. Even when discriminative term weighting is used, the small amount of words cannot provide enough power to differentiate security bug reports and non-security bug reports sharing important terms. By contrast, classification models are able to provide enough differentiating power, but they have troubles in
+
+\begin{table}
+\center
+\caption{Comparison with Term-Ranking-Only}
+\label{table:rankonly}
+\begin{tabular}{| l | r | r | r |}
+\hline Approach & Precision (\%) & Recall (\%) & F-Score (\%)\\
+\hline Our Approach & 92.8& 78.4& 84.7\\
+\hline Disc. + 50 & 75.4& 74.8& 74.8\\
+\hline Disc. + 100 & 65.1& 83.3 & 72.8\\
+\hline Disc. + 200 & 53.0& 89.0& 66.1\\
+\hline Non-D. + 50 & 12.1 & 98.2& 21.5\\
+\hline Non-D. + 100 & 9.5& 99.4 & 17.4\\
+\hline Non-D. + 200 & 8.9 &99.8 & 16.4\\
+\hline ICROIT + 50 & 41.2 & 16.3 & 23.3\\
+\hline ICROIT + 100 & 42.5& 31.7 & 36.4\\
+\hline ICROIT + 200 & 36.2 &46.6 & 40.7\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Variant Evaluation}
+\label{subsec:variant}
+
+In this subsection, we compare the results of different variants of our approach (when different parameter values are used). As mentioned in Section~\ref{subsec:eval}, we consider four parameters of our approach. Since it is very hard to present the results of all different combination of parameter values. We use the typical approach~\cite{RAN07} to compare approaches with different parameters. Specifically, with a default setting of our approach, we change one parameter at one time, while have all other parameters stay on the default values.
+
+Table~\ref{table:termsize} shows how the results of our approach change with different top-term-list sizes (i.e., 50, 100, and 200). From the table, our observation is that as the top-term-list size grows from 50 to 200, the precision does not drop very much, but our approach gains more on recall, and thus results in higher F-score. Since we have classification to provide differentiating power, it may be wiser to retrieve more candidates of security bugs in the retrieving step.
+\begin{table}
+\center
+\caption{Different Top-Term-List Sizes}
+\label{table:termsize}
+\begin{tabular}{| l | r | r | r |}
+\hline Size & Precision (\%) & Recall (\%) & F-Score (\%)\\
+\hline 50 &90.4&83.5&86.5\\
+\hline 100&88.8&86.2&87.0\\
+\hline 200&84.5&87.3&85.1\\
+\hline
+\end{tabular}
+\end{table}
+
+Table~\ref{table:formula} shows how the results of our approach change with different term-weighting approaches (discriminative and non-discriminative). From the table, we can see that discriminative term-weighting generally performs better than non-discriminative weighting with higher F-scores. Actually, non-discriminative term-weighting performs terrible without combining with classification. However, when combined with classification, we can see that it achieves acceptable precision with high recalls. 
+
+\begin{table}
+\center
+\caption{Different Term Weighting Formulae}
+\label{table:formula}
+\begin{tabular}{| l | r | r | r |}
+\hline Formula & Precision (\%) & Recall (\%) & F-Score (\%)\\
+\hline Disc. & 88.8& 86.2& 87.0\\
+\hline Non-D. & 65.7 & 88.7 & 74.5\\
+\hline
+\end{tabular}
+\end{table}
+
+Table~\ref{table:class} shows how the results of our approach change when combining with different classification models (Naive Bayes and SVM). From the table, we can see that, while SVM performs better than Naive Bayes when used solely, it does not acquire much improvement when term-weighting and ranking is involved, while Naive Bayes performs better when combined with term-weighting and ranking.
+
+\begin{table}
+\center
+\caption{Different Classification Models}
+\label{table:class}
+\begin{tabular}{| l | r | r | r |}
+\hline Model & Precision (\%) & Recall (\%) & F-Score (\%)\\
+\hline Naive Bayes & 88.8& 86.2& 87.0\\
+\hline SVM & 97.4 & 67.3 & 79.5\\
+\hline
+\end{tabular}
+\end{table}
+
+Table~\ref{table:title} shows how the results of our approach change when using different information sources from the bug reports. From the table, we can see that, using both title and description performs better than using only title. The major reason may be that, title usually contains small amount of information and small number of terms, but the terms and information in title is are usually more representative. Thus, using only title is achieving higher precision due to less noises, but low recall due to the lack of information.
+
+\begin{table}
+\center
+\caption{Title Only vs. Title Plus Description}
+\label{table:title}
+\begin{tabular}{| l | r | r | r |}
+\hline Info. Source & Precision (\%) & Recall (\%) & F-Score (\%)\\
+\hline Title + Desc. & 88.8& 86.2& 87.0\\
+\hline Title Only  & 93.8& 53.6 & 68.1\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Evaluation of BootStrapping}
+\label{subsec:boot}
+In this subsection, we evaluate our approach on bootstrapping. Specifically, we perform our approach for 1-4 more rounds, using the results of the previous round as the training set of the next round. We perform up to 4 iterations because we found that the results tend to be stable after that. Since the variants of our approach with different top-term-list sizes all achieve good results (F score higher than 80\%), we perform experiments with all different sizes of top-term-list sizes. The results are presented in Table~\ref{table:boot1}, Table~\ref{table:boot2}, and Table~\ref{table:boot3}. The results show that bootstrapping is able to provide moderate improvement on the F-score, and significant improvement on the recall. Specifically, 4 rounds of bootstrapping is able to improve the F-score of our approach by 5.7 percentage points and 2.3 percentage points when 50 and 100 are used as the top-term-list sizes. When 200 is used as the top-term-list size, the F-score drops. A potential reason is that, bootstrapping mainly helps to enhance the recall of our approach. Since our approach already reaches a high recall when 200 is used as the top-term-list size, we are not able to gain much with bootstrapping on recall. Further more, bootstrapping relies on the precision of the results because the results are used as the training data for the next round. If the precision of results is low, a low quality training data will be used in the next round and much noise will be involved.
+
+To sum up, bootstrapping is able to improve our approach especially on recall which is important in the identification of security bug reports.
+
+%\begin{table}
+%\center
+%\caption{Results of BootStrapping (Top-term-list size = 50)}
+%\label{table:boot1}
+%\begin{tabular}{| l | r | r | r |}
+%\hline Iteration & Precision (\%) & Recall (\%) & F-Score (\%)\\
+%\hline Round 0&94.6&71.0&80.8\\
+%\hline Round 1&92.1&80.4&85.5\\
+%\hline Round 2&90.9&82.6&86.2\\
+%\hline Round 3&90.6&83.4&86.5\\
+%\hline Round 4&90.4&83.5&86.5\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+\begin{table}
+\center
+\caption{Results of BootStrapping (Top-term-list size = 100)}
+\label{table:boot2}
+\begin{tabular}{| l | r | r | r |}
+\hline Iteration& Precision (\%) & Recall (\%) & F-Score (\%)\\
+\hline Round 0&92.8&78.4&84.7\\
+\hline Round 1&89.5&85.3&87.0\\
+\hline Round 2&88.9&86.1&87.0\\
+\hline Round 3&88.8&86.2&87.0\\
+\hline Round 3&88.8&86.2&87.0\\
+\hline
+\end{tabular}
+\end{table}
+
+%\begin{table}
+%\center
+%\caption{Results of BootStrapping (Top-term-list size = 200)}
+%\label{table:boot3}
+%\begin{tabular}{| l | r | r | r |}
+%\hline Iteration& Precision (\%) & Recall (\%) & F-Score (\%)\\
+%\hline Round 0&90.1&82.6&85.7\\
+%\hline Round 1&85.3&87.2&85.4\\
+%\hline Round 2&84.9&87.2&85.2\\
+%\hline Round 3&84.6&87.3&85.1\\
+%\hline Round 4&84.5&87.3&85.1\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+\subsection{Cross-Project Evaluation}
+
+\subsection{Threats to Validity}
+When building our data set, we use randomly selected bug reports from the bug repository (excluding the known security bug reports) as non-security bug reports. Since the set of known security bug reports may miss some real security bug reports, we are not able to confirm the non-security bug reports used in our study are all non-security bug reports. This is a threat to the internal validity of our experiment, because it is possible that there are some security bug reports labelled as non-security in our data set, and affect the accuracy of our experimental results. To reduce this threat, when we select non-security bug reports, we avoid all bug reports that are related to the ``Security Response Team'' (i.e., assigned to, reported by, commented by the team or members). The major threat to the external validity of our experiment is that we use only selected bug reports in RedHat as our data set, thus our conclusion may apply to only the data set being experimented on. It should be noted that data set of security bug reports are rarely available in public, and it is very hard to build such data sets. We plan to reduce this threat by evaluating our approach on some industry data set of security bug reports in future.

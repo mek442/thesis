@@ -1,0 +1,21 @@
+\section{Motivation}
+\label{sec:motivation}
+We run real test cases and captured average execution time of two popular open source project apache common math and xalan.
+
+\begin{multline}
+Var(1) = Std(1,2,3,...,5000)\\
+Var(2) = Std( Avg(1,2), Avg(2,3),...,Avg(5000,1))\\
+Var(i) = Std( Avg(1,2,...,i),...,Avg(5000,1,...,i-1))\\
+Iter(i) = \frac{ \sum \limits_{k=1}^{alltest} Var(i)}{alltest}
+\end{multline}
+
+
+\textbf{Common math}:  We chose 2703 test cases randomly from a collection 3900 test cases and each of test cases  exercise 5000 time and recorder their execution time. In the figure \ref{fig:common-math-motiv} we can see that at first Iteration average of execution time standard deviation and average percentage ratio nearly 21\% and after approximately 1500 iteration it reduced to 5\%. Finally the overall trend decreased to  1\% with iteration 4200. This motivate us that running performance test needs more time and resources. It is hard for a developer to understand performance impact with few runs.\\
+\textbf{Xalan:} 
+\begin{figure}
+  \includegraphics[width=4in,height=3in]{images/math-motivation.png}
+    \label{fig:common-math-motiv}
+  \caption{Average of Execution time's STD/AVG Percentage vs Iteration of Apache Common-math}	
+\end{figure}
+
+

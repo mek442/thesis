@@ -1,0 +1,28 @@
+\section{Introduction}
+\label{sec:intro}
+Performance is an important non-function requirement of software systems which directly affects user experience and scalability of data processing. 
+
+During software evolution, code changes frequently and problematic changes may degrade software performance. For example, according to previous literature, GCC upgrading from MySQL 4.1 to 5.0 caused the loading time of the same web page to increase from 1 second to 20 seconds in a production e-commerce website and GCC from 4.3 to 4.5, Mozilla developers experienced an up to 19\% performance regression, which forced them to consider a complete switchover~\cite{huang2014performance}.Such problematic changes are referred to as performance regressions in the paper. 
+
+A performance degradation, even if just to a small extent, may result in severe consequence.For example, a report suggests that  Google could lose 20\% traffic due to an increase of 500ms latency and Amazon has been reported to have a 1\% decrease in sales due to a 100ms delay in page rendering ~\cite{GOOGLE}~\cite{Stevefamov}. 
+
+An effective way to  performance regression is to employ systematic, continuous performance regression testing to reveal such issues in early stages. This is widely advocated in academia, open source community and industry ~\cite{foxref,poliniref,Ejref,MITCHELL,KALIBERA,PerfGoogle}. Yet because of its high overhead, this activity is usually performed infrequently. For example, the typical running cost of popular benchmarks for web servers is 3 minute to 1 hr, for databases is 10 minutes to 3 hrs, for compilers is 1 hr to 20 hrs and for operating systems is 2 hrs to 24 hrs ~\cite{huang2014performance}. With the high revision frequency and high testing cost, it is almost impractical to run comprehensive performance testing each time a change is pushed to the Firefox source repository.
+
+%Mozilla’s Talos performance regression detection system~\cite{firefoxTalos} runs performance tests every time a change is pushed to the Firefox source repository~\cite{firefoxperf}. 
+
+There is a useful work on the performance risk implication of code change~\cite{huang2014performance}. But their approach may not accurately assess the risk of
+performance regression issues because of generic nature of static modeling and lacking profiling information. Futhermore, prioritizing commits is not enough to address performance regression because 
+a code changes touches several test cases is very common during the evolution of software. In our study, we found that some commits touches more than 100 test cases. So the key difference is that we focus 
+on the prioritizing test cases in regressional performance testing via performance impact analysis of code changes that includes one time profiling and static modeling.
+
+Due to the resource and time constraints for re-executing large test suites, it is important to develop techniques to reduce the effort of regression testing. Our approach composed of a series of automated step. At first, one time profile of base version and generate 1-depth context sensitive method exceution summaries with loop counter summaries.Then, static analysis of whole program of base version to capture loop controling array or collection pointer and alias analysis. At the final stage, Our algorithm automatically takes the information in each code commit by statically analyzing the added code and removed code from automatically generated diff of each commit. Incorporating the profile and static information into each test case's callgraph we determine the run-time cost and the execution frequency of the code affected by code changes. Finally, calculated impact score is used with adaptive APFD and DCG metric formula to rank the test case which shows that they can significantly reduce the cost of performance regression. 
+
+The major contributions of this paper are:
+\begin{itemize}
+  \item We conduct a study on real-world code changes from two widely used open source software for testing prioritization of performance test cases with commit performance impact analysis.
+  \item To the best of our knowledge, we are the first to propose prioritizing real performance test cases with code change performance analysis to make performance regression testing more efficient.
+  \item We implement a tool and going to release it in open source. Evaluation on the randomly selected commits shows that our approach achieves 21.5\% on APFD and 29.29\% on DCG improvements of Apache common math and 
+achieves 16.61\% on APFD and 27.21\% on DCG improvements of Xalan compared to change aware random tetsing. Futhermore, our approach rank top 1 impacted test case  within top 8\% on the average in Apache common math and
+within top 16\% on the average in Xalan.  
+\end{itemize}
+  

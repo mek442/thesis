@@ -1,0 +1,467 @@
+\begin{thebibliography}{10}
+\bibitem{IEEEhowto:kopka}
+Freeman, Steve and Mackinnon, Tim and Pryce, Nat and Walnes, Joe,
+Mock Roles, Objects, 
+Companion to the 19th Annual ACM SIGPLAN Conference on Object-oriented Programming Systems, Languages, and Applications,  236--246, 2004.
+
+\bibitem{Freeman}
+Freeman, Steve and Mackinnon, Tim and Pryce, Nat and Walnes, Joe,
+jMock: Supporting Responsibility-based Design with Mock Objects, 
+Companion to the 19th Annual ACM SIGPLAN Conference on Object-oriented Programming Systems, Languages, and Applications,4--5, 2004.
+
+\bibitem{Galler}
+Galler, Stefan J. and Maller, Andreas and Wotawa, Franz,
+Automatically Extracting Mock Object Behavior from Design by Contract \& Trade Specification for Test Data Generation
+Proceedings of the 5th Workshop on Automation of Software Test, 43--50, 2010.
+
+\bibitem{greiler2012test}
+M.~Greiler, A.~van Deursen, and M.~Storey.
+Test confessions: a study of testing practices for plug-in systems.
+In Software Engineering (ICSE), 2012 34th International Conference on, pages 244--254, 2012.
+
+\bibitem{pham2013creating}
+R.~Pham, L.~Singer, O.~Liskin, K.~Schneider, et~al.
+Creating a shared understanding of testing culture on a social coding site.
+In Software Engineering (ICSE), 2013 35th International
+  Conference on, pages 112--121, 2013.
+
+\bibitem{fraser2012sound}
+G.~Fraser and A.~Arcuri.
+Sound empirical evidence in software testing.
+In Proceedings of the 2012 International Conference on Software Engineering, pages 178--188, 2012.
+
+\bibitem{Taneja}
+Taneja, Kunal and Zhang, Yi and Xie, Tao, 
+MODA: Automated Test Generation for Database Applications via Mock Objects,
+Proceedings of the IEEE/ACM International Conference on Automated Software Engineering, 289-292, 2010.
+
+\bibitem{Coelho}
+Coelho, Roberta and Kulesza, Uir\'{a} and von Staa, Arndt and Lucena, Carlos,
+Unit Testing in Multi-agent Systems Using Mock Agents and Aspects,
+Proceedings of the International Workshop on Software Engineering for Large-scale Multi-agent Systems, 83-90, 2006
+
+\bibitem{woda}
+Islam, Mainul and Csallner, Christoph,
+Dsc+Mock: A Test Case + Mock Class Generator in Support of Coding Against Interfaces,
+Proceedings of the Eighth International Workshop on Dynamic Analysis, 26--31, 2010.
+
+\bibitem{Pasternak}
+Pasternak, Benny and Tyszberowicz, Shmuel and Yehudai, Amiram,
+GenUTest: A Unit Test and Mock Aspect Generation Tool, 
+Proceedings of the 3rd International Haifa Verification Conference on Hardware and Software: Verification and Testing, 252--266, 2008.
+
+\bibitem{Saff}
+Saff, David and Ernst, Michael D.
+Mock Object Creation for Test Factoring,
+Proceedings of the 5th ACM SIGPLAN-SIGSOFT Workshop on Program Analysis for Software Tools and Engineering, 49--51, 2004.
+
+\bibitem{Marri}
+Marri, M.R.; Tao Xie; Tillmann, N.; De Halleux, J.; Schulte, W., 
+An empirical study of testing file-system-dependent software with mock objects,
+ICSE Workshop on Automation of Software Test, 149--153, 2009.
+
+\bibitem{singh2013empirical}
+K.~P. Singh, T.~F. Bissyand{\'e}, D.~Lo, L.~Jiang, et~al., 
+An empirical study of adoption of software testing in open source projects.
+In Proceedings of the 13th International Conference on Quality Software (QSIC 2013), pages 1--10, 2013.
+
+
+\bibitem{firefoxperf}
+Matt Brubeck. Better automated detection of firefox performance regressions.
+http://limpet.net/mbrubeck/2013/11/10/improving-regression-detection.html,November 2013
+
+\bibitem{firefoxTalos}
+Talos. https://wiki.mozilla.org/Buildbot/Talos, 2014.
+
+\bibitem{GCC}
+GLEK, T. Massive performance regression from switching to gcc 4.5.
+http://gcc.gnu.org/ml/gcc/2010-06/msg00715.html
+
+\bibitem{GOOGLE}
+MAYER, M. In search of a better, faster, stronger web. http://
+goo.gl/m4fXx, 2009
+
+\bibitem{huang2014performance}
+ Huang, Peng, et al. "Performance regression testing target prioritization via performance risk analysis."
+ Proceedings of the 36th International Conference on Software Engineering. ACM, 2014.
+
+\bibitem{PerfGoogle}
+Google performance testing. http://googletesting.blogspot.com/
+2007/10/performance-testing.html.
+
+\bibitem{foxref}
+FOX, G. Performance engineering as a part of the development life
+cycle for large-scale software systems. ICSE 89, ACM, pp. 85-94.
+
+\bibitem{poliniref}
+DENARO, G., POLINI, A., AND EMMERICH, W. Early performance
+testing of distributed software applications. WOSP 04, ACM,
+pp. 94-103.
+
+\bibitem{Ejref}
+WEYUKER, E. J., AND VOKOLOS, F. I. Experience with
+performance testing of software systems: Issues, an approach, and
+case study. IEEE Trans. Softw. Eng. 26, 12 (Dec. 2000), 1147-1156
+
+\bibitem{KALIBERA}
+KALIBERA, T., BULEJ, L., AND TUMA, P. Automated detection of
+performance regressions: The mono experience. In MASCOTS
+(2005), pp. 183-190.
+
+\bibitem{MITCHELL}
+MITCHELL, M. GCC performance regression testing discussion.
+http://gcc.gnu.org/ml/gcc/2005-11/msg01306.
+
+\bibitem{Stevefamov}
+S. Stefanov. Yslow 2.0. Presented at the CSDN Software Development 2.0 Conference, 2008.
+
+
+\bibitem{ELBAUM00}
+ELBAUM, S., MALISHEVSKY, A. G., AND ROTHERMEL, G.
+Prioritizing test cases for regression testing. ISSTA 00, ACM,
+pp. 102-112.
+
+\bibitem{KIM02}
+KIM, J.-M., AND PORTER, A. A history-based test prioritization
+technique for regression testing in resource constrained
+environments. ICSE 02, ACM, pp. 119-129.
+
+\bibitem{LI07}
+LI, Z., HARMAN, M., AND HIERONS, R. M. Search algorithms for
+regression test case prioritization. IEEE Trans. Softw. Eng. 33, 4
+(Apr. 2007), 225-237.
+
+\bibitem{ROTHERMEL99}
+ROTHERMEL, G., UNTCH, R. H., CHU, C., AND HARROLD, M. J.
+Test case prioritization: An empirical study. ICSM 99, IEEE
+Computer Society, pp. 179-188.
+
+\bibitem{ROTHERMEL01}
+ROTHERMEL, G., UNTCH, R. J., AND CHU, C. Prioritizing test
+cases for regression testing. IEEE Trans. Softw. Eng. 27 (October
+2001), 929-948.
+
+\bibitem{HARROLD93}
+HARROLD, M. J., GUPTA, R., AND SOFFA, M. L. A methodology
+for controlling the size of a test suite. ACM Trans. Softw. Eng.
+Methodol. 2, 3 (July 1993), 270-285.
+
+\bibitem{BLACK04}
+BLACK, J., MELACHRINOUDIS, E., AND KAELI, D. Bi-criteria
+models for all-uses test suite reduction. ICSE 04, IEEE Computer
+Society, pp. 106-115.
+
+\bibitem{ZHONG06}
+ZHONG, H., ZHANG, L., AND MEI, H. An experimental
+comparison of four test suite reduction techniques. ICSE 06, ACM,
+pp. 636-640.
+
+\bibitem{ROTHERMEL97}
+ROTHERMEL, G., AND HARROLD, M. J. A safe, efficient regression
+test selection technique. ACM Trans. Softw. Eng. Methodol. 6, 2 (Apr.
+1997), 173-210.
+
+\bibitem{CHEN94}
+CHEN, Y.-F., ROSENBLUM, D. S., AND VO, K.-P. Testtube: a
+system for selective regression testing. ICSE 94, IEEE Computer
+Society Press, pp. 211-220.
+
+\bibitem{SHEN05}
+SHEN, K., ZHONG, M., AND LI, C. I/O system performance
+debugging using model-driven anomaly characterization. FAST 05,
+USENIX Association, pp. 23-23.
+
+\bibitem{HAN12}
+HAN, S., DANG, Y., GE, S., ZHANG, D., AND XIE, T.
+Performance debugging in the large via mining millions of stack
+traces. ICSE 2012, IEEE Press, pp. 145-155.
+
+\bibitem{LEUNG07}
+LEUNG, A. W., LALONDE, E., TELLEEN, J., DAVIS, J., AND
+MALTZAHN, C. Using comprehensive analysis for performance
+debugging in distributed storage systems. In MSST (2007),
+pp. 281-286.
+
+\bibitem{AGUILERA03}
+AGUILERA, M. K., MOGUL, J. C., WIENER, J. L., REYNOLDS, P.,
+AND MUTHITACHAROEN, A. Performance debugging for distributed
+systems of black boxes. SOSP 03, ACM, pp. 74-89.
+
+\bibitem{YAN12}
+YAN, D., XU, G., AND ROUNTEV, A. Uncovering performance
+problems in java applications with reference propagation profiling.
+ICSE 2012, IEEE Press, pp. 134-144.
+
+\bibitem{JIN12}
+JIN, G., SONG, L., SHI, X., SCHERPELZ, J., AND LU, S.
+Understanding and detecting real-world performance bugs. PLDI
+12, ACM, pp. 77-88.
+
+\bibitem{JOVIC11}
+JOVIC, M., ADAMOLI, A., AND HAUSWIRTH,M. Catch me if you
+can: performance bug detection in the wild. OOPSLA 11, ACM,
+pp. 155-170.
+
+\bibitem{KILLIAN10}
+KILLIAN, C., NAGARAJ, K., PERVEZ, S., BRAUD, R.,
+ANDERSON, J. W., AND JHALA, R. Finding latent performance
+bugs in systems implementations. FSE 10, ACM, pp. 17-26.
+
+\bibitem{FOO10}
+FOO, K. C., JIANG, Z. M., ADAMS, B., HASSAN, A. E., ZOU, Y.,
+AND FLORA, P. Mining performance regression testing repositories
+for automated performance analysis. QSIC 10, IEEE Computer
+Society, pp. 32-41.
+
+\bibitem{FOO11}
+FOO, K. C. D. Automated discovery of performance regressions in
+enterprise applications. Master's thesis, Queen's University, Canada,
+2011.
+
+\bibitem{ZHANG11}
+ZHANG, P., ELBAUM, S., AND DWYER, M. B. Automatic
+generation of load tests. In Proceedings of the 2011 26th IEEE/ACM
+International Conference on Automated Software Engineering
+(Washington, DC, USA, 2011), ASE 11, IEEE Computer Society,
+pp. 43-52.
+
+\bibitem{GRECHANIK12}
+GRECHANIK, M., FU, C., AND XIE, Q. Automatically finding
+performance problems with feedback-directed learning software
+testing. ICSE 2012, IEEE Press, pp. 156-166.
+
+\bibitem{KALIBERA05}
+KALIBERA, T., BULEJ, L., AND TUMA, P. Automated detection of
+performance regressions: The mono experience. In MASCOTS
+(2005), pp. 183-190.
+
+\bibitem{BARNA11}
+BARNA, C., LITOIU, M., AND GHANBARI, H. Model-based
+performance testing (nier track). ICSE 11, ACM, pp. 872-875.
+
+\bibitem{LAW03}
+LAW, J., AND ROTHERMEL, G. Whole program path-based dynamic
+impact analysis. ICSE 03, IEEE Computer Society, pp. 308-318.
+
+\bibitem{ORSO04}
+ORSO, A., APIWATTANAPONG, T., LAW, J. B., ROTHERMEL, G.,
+AND HARROLD, M. J. An empirical comparison of dynamic impact
+analysis algorithms. ICSE 04, pp. 491-500.
+
+\bibitem{ORSO11}
+ORSO, A., APIWATTANAPONG, T., AND HARROLD, M. J.
+Leveraging field data for impact analysis and regression testing.
+ESEC/FSE-11, ACM, pp. 128-137.
+
+\bibitem{APIWATTANAPON05}
+APIWATTANAPONG, T., ORSO, A., AND HARROLD, M. J. Efficient
+and precise dynamic impact analysis using execute-after sequences.
+ICSE 05, ACM, pp. 432-441.
+
+\bibitem{TURVERref}
+TURVER, R. J., AND MUNRO, M. An early impact analysis
+technique for software maintenance. Journal of Software
+Maintenance: Research and Practice 6, 1 (1994), 35-52.
+
+\bibitem{Arnoldref96}
+ARNOLD, R. S. Software Change Impact Analysis. IEEE Computer
+Society Press, Los Alamitos, CA, USA, 1996.
+
+\bibitem{Arnoldref93}
+ARNOLD, R. S., AND BOHNER, S. A. Impact analysis - towards a
+framework for comparison. In ICSM (1993), pp. 292-301.
+
+\bibitem{ZIMMERMANN04}
+ZIMMERMANN, T., WEISGERBER, P., DIEHL, S., AND ZELLER,
+A. Mining version histories to guide software changes. ICSE 04,
+IEEE Computer Society, pp. 563-572.
+
+\bibitem{SHERRIFF08}
+SHERRIFF, M., AND WILLIAMS, L. Empirical software change
+impact analysis using singular value decomposition. In ICST (2008),
+pp. 268-277.
+
+\bibitem{Chen2016}
+Chen, Bihuan, Yang Liu, and Wei Le. "Generating performance distributions via 
+probabilistic symbolic execution." Proceedings of the 38th International 
+Conference on Software Engineering. ACM, 2016.
+
+\bibitem{Nistor15}
+Nistor, Adrian, et al. "C aramel: detecting and fixing performance 
+problems that have non-intrusive fixes." Proceedings of the 37th International
+Conference on Software Engineering-Volume 1. IEEE Press, 2015.
+
+\bibitem{LUO16}
+Luo, Qi, Denys Poshyvanyk, and Mark Grechanik. "Mining performance regression 
+inducing code changes in evolving software." Proceedings of the 13th International 
+Workshop on Mining Software Repositories. ACM, 2016.
+
+
+
+\bibitem{vista}
+Criticism of windows vista.
+\newblock
+  \url{https://play.google.com/store/apps/details?id=com.sohu.inputmethod.sogou&hl=en}.
+\newblock Accessed: 2014-08-30.
+
+\bibitem{SemVer}
+Semantic versioning.
+\newblock http://semver.org/.
+
+\bibitem{sougou}
+Sougou.
+\newblock
+  \url{https://play.google.com/store/apps/details?id=com.sohu.inputmethod.sogou&hl=en}.
+\newblock Accessed: 2014-08-30.
+
+\bibitem{Bavota:upgrade}
+G.~Bavota, G.~Canfora, M.~Di~Penta, R.~Oliveto, and S.~Panichella.
+\newblock The evolution of project inter-dependencies in a software ecosystem:
+  The case of apache.
+\newblock In {\em Software Maintenance (ICSM), 2013 29th IEEE International
+  Conference on}, pages 280--289, 2013.
+
+\bibitem{Bavota:upgradeJ}
+G.~Bavota, G.~Canfora, M.~Di~Penta, R.~Oliveto, and S.~Panichella.
+\newblock How the apache community upgrades dependencies: an evolutionary
+  study.
+\newblock {\em Empirical Software Engineering}, pages 1--43, 2014.
+
+\bibitem{Bavota:AndroidRating}
+G.~Bavota, M.~Linares-Vasquez, C.~Bernal-Cardenas, M.~Di~Penta, R.~Oliveto, and
+  D.~Poshyvanyk.
+\newblock The impact of api change- and fault-proneness on the user ratings of
+  android apps.
+\newblock {\em Software Engineering, IEEE Transactions on}, (99):1--1, 2014.
+
+\bibitem{Dagenais:ICSE08}
+B.~Dagenais and M.~P. Robillard.
+\newblock Recommending adaptive changes for framework evolution.
+\newblock In {\em Proc. ICSE}, pages 481--490, 2008.
+
+\bibitem{Espinha:WebAPI}
+T.~Espinha, A.~Zaidman, and H.-G. Gross.
+\newblock Web api growing pains: Stories from client developers and their code.
+\newblock In {\em Software Maintenance, Reengineering and Reverse Engineering
+  (CSMR-WCRE), 2014 Software Evolution Week - IEEE Conference on}, pages
+  84--93, 2014.
+
+\bibitem{Godfrey:TSE05}
+M.~W. Godfrey and L.~Zou.
+\newblock Using origin analysis to detect merging and splitting of source code
+  entities.
+\newblock {\em IEEE TSE}, 31(2):166--181, February 2005.
+
+\bibitem{Kim:ICSE07}
+M.~Kim, D.~Notkin, and D.~Grossman.
+\newblock Automatic inference of structural changes for matching across program
+  versions.
+\newblock In {\em Proc. ICSE}, pages 333--343, 2007.
+
+\bibitem{Kim:WCRE05}
+S.~Kim, K.~Pan, and E.~J. Whitehead, Jr.
+\newblock When functions change their names: Automatic detection of origin
+  relationships.
+\newblock In {\em Proc. WCRE}, pages 143--152, 2005.
+
+\bibitem{Lahiri:CAVSymDiff}
+S.~Lahiri, C.~Hawblitzel, M.~Kawaguchi, and H.~Rebêlo.
+\newblock Symdiff: A language-agnostic semantic diff tool for imperative
+  programs.
+\newblock In {\em Computer Aided Verification}, pages 712--717, 2012.
+
+\bibitem{Vasquez:AndroidAPI}
+M.~Linares-V\'{a}squez, G.~Bavota, C.~Bernal-C\'{a}rdenas, M.~Di~Penta,
+  R.~Oliveto, and D.~Poshyvanyk.
+\newblock Api change and fault proneness: A threat to the success of android
+  apps.
+\newblock In {\em Proceedings of the 2013 9th Joint Meeting on Foundations of
+  Software Engineering}, ESEC/FSE 2013, pages 477--487, 2013.
+
+\bibitem{McCamant:ECoopUpgrade}
+S.~McCamant and M.~Ernst.
+\newblock Early identification of incompatibilities in multi-component
+  upgrades.
+\newblock In {\em European Conference on Object-Oriented Programming}, pages
+  440--464, 2004.
+
+\bibitem{McCamant:FSEUpgrade}
+S.~McCamant and M.~D. Ernst.
+\newblock Predicting problems caused by component upgrades.
+\newblock In {\em Proceedings of the 9th European Software Engineering
+  Conference Held Jointly with 11th ACM SIGSOFT International Symposium on
+  Foundations of Software Engineering}, pages 287--296, 2003.
+
+\bibitem{McDonnell:APIStability}
+T.~McDonnell, B.~Ray, and M.~Kim.
+\newblock An empirical study of api stability and adoption in the android
+  ecosystem.
+\newblock In {\em Proceedings of the 2013 IEEE International Conference on
+  Software Maintenance}, ICSM '13, pages 70--79, 2013.
+
+\bibitem{Meng1}
+S.~Meng, X.~Wang, L.~Zhang, and H.~Mei.
+\newblock A history-based matching approach to identification of framework
+  evolution.
+\newblock In {\em Proceedings of the 34th International Conference on Software
+  Engineering}, ICSE '12, pages 353--363, Piscataway, NJ, USA, 2012. IEEE
+  Press.
+
+\bibitem{Moreno:ARENA}
+L.~Moreno, G.~Bavota, M.~Di~Penta, R.~Oliveto, A.~Marcus, and G.~Canfora.
+\newblock Automatic generation of release notes.
+\newblock In {\em Proceedings of the 22Nd ACM SIGSOFT International Symposium
+  on Foundations of Software Engineering}, FSE 2014, pages 484--495, 2014.
+
+\bibitem{Person:FSEDiffSE}
+S.~Person, M.~B. Dwyer, S.~Elbaum, and C.~S. P\v{a}s\v{a}reanu.
+\newblock Differential symbolic execution.
+\newblock In {\em Proceedings of the 16th ACM SIGSOFT International Symposium
+  on Foundations of Software Engineering}, pages 226--237, 2008.
+
+\bibitem{Person:PLDIIncreSE}
+S.~Person, G.~Yang, N.~Rungta, and S.~Khurshid.
+\newblock Directed incremental symbolic execution.
+\newblock In {\em Proceedings of the 32Nd ACM SIGPLAN Conference on Programming
+  Language Design and Implementation}, pages 504--515, 2011.
+
+\bibitem{Raemaekers:APIStability}
+S.~Raemaekers, A.~van Deursen, and J.~Visser.
+\newblock Measuring software library stability through historical version
+  analysis.
+\newblock In {\em Software Maintenance (ICSM), 2012 28th IEEE International
+  Conference on}, pages 378--387, 2012.
+
+\bibitem{SCAM2014}
+S.~Raemaekers, A.~van Deursen, and J.~Visser.
+\newblock Semantic versioning versus breaking changes: A study of the maven
+  repository.
+\newblock In {\em Source Code Analysis and Manipulation (SCAM), 2014 IEEE 14th
+  International Working Conference on}, pages 215--224, 2014.
+
+\bibitem{Robbes}
+R.~Robbes, M.~Lungu, and D.~R\"{o}thlisberger.
+\newblock How do developers react to api deprecation?: The case of a smalltalk
+  ecosystem.
+\newblock In {\em Proceedings of the ACM SIGSOFT 20th International Symposium
+  on the Foundations of Software Engineering}, pages 56:1--56:11, 2012.
+
+\bibitem{Wu:AUCA}
+W.~Wu, B.~Adams, Y.-G. Gueheneuc, and G.~Antoniol.
+\newblock Acua: Api change and usage auditor.
+\newblock In {\em Source Code Analysis and Manipulation (SCAM), 2014 IEEE 14th
+  International Working Conference on}, pages 89--94, 2014.
+
+\bibitem{Wu:ICSE10}
+W.~Wu, Y.~Gu\'{e}h\'{e}neuc, G.~Antoniol, and M.~Kim.
+\newblock {AURA}: A hybrid approach to identify framework evolution.
+\newblock In {\em Proc. ICSE}, pages 325--334, 2010.
+
+\bibitem{OOPSLA06}
+T.~Xie.
+\newblock Augmenting automatically generated unit-test suites with regression
+  oracle checking.
+\newblock In {\em Proc. 20th European Conference on Object-Oriented Programming
+  (ECOOP 2006)}, pages 380--403, July 2006.
+
+\end{thebibliography}

@@ -1,0 +1,21 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {Figure 3.1}{\ignorespaces Size comparison of software projects using mocking frameworks and all software projects with test code}}{17}{subsection.3.4.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {Figure 4.1}{\ignorespaces Relative Standard Deviation vs. Sample Size}}{29}{section.4.2}
+\contentsline {figure}{\numberline {Figure 4.2}{\ignorespaces Workflow of Our Approach}}{30}{subsection.4.3.1}
+\contentsline {figure}{\numberline {Figure 4.3}{\ignorespaces An Example Performance Model}}{33}{subsection.4.3.2}
+\contentsline {figure}{\numberline {Figure 4.4}{\ignorespaces An Example Control Flow Graph}}{36}{equation.4.3.3}
+\contentsline {figure}{\numberline {Figure 4.5}{\ignorespaces Code Sample of Operation Dependency}}{38}{section*.7}
+\contentsline {figure}{\numberline {Figure 4.6}{\ignorespaces \textit {APFD-P} Comparison on Apache Commons Math}}{44}{section*.9}
+\contentsline {figure}{\numberline {Figure 4.7}{\ignorespaces \textit {APFD-P} Comparison on Xalan}}{45}{section*.9}
+\contentsline {figure}{\numberline {Figure 4.8}{\ignorespaces \textit {nDCG} Comparison on Apache Commons Math}}{45}{section*.10}
+\contentsline {figure}{\numberline {Figure 4.9}{\ignorespaces \textit {nDCG} Comparison on Xalan}}{46}{section*.10}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {Figure 5.1}{\ignorespaces BBI Distribution on Incompatible Behaviors}}{64}{section*.16}
+\contentsline {figure}{\numberline {Figure 5.2}{\ignorespaces BBI Distribution on Invoking Conditions}}{66}{section*.17}
+\contentsline {figure}{\numberline {Figure 5.3}{\ignorespaces BBI Distribution on Reasons}}{67}{section*.18}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

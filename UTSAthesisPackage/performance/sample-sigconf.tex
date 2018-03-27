@@ -1,0 +1,73 @@
+\documentclass[sigconf]{acmart}
+
+\usepackage{booktabs} % For formal tables
+\input{macros}
+%\usepackage{times}
+
+
+%%% The following is specific to ISSTA'17 and the paper
+%%% 'PerfRanker: Prioritization of Performance Regression Tests for Collection-Intensive Software'
+%%% by Shaikh Mostafa, Xiaoyin Wang, and Tao Xie.
+\setcopyright{acmcopyright} % Adjust this to match your publishing-rights agreement with ACM.
+\acmDOI{10.1145/3092703.3092725}
+\acmISBN{978-1-4503-5076-1/17/07}
+\acmConference[ISSTA'17]{26th International Symposium  on  Software Testing and Analysis}{July 2017}{Santa Barbara, CA, USA} 
+\acmYear{2017}
+\copyrightyear{2017}
+\acmPrice{15.00}
+
+
+\begin{document}
+\title{PerfRanker: Prioritization of Performance Regression Tests for\\ Collection-Intensive Software}
+
+\author{Shaikh Mostafa, Xiaoyin Wang}
+\affiliation{University of Texas at San Antonio, TX 78249, USA\\
+	\{shiakh.mostafa, xiaoyin.wang\}@utsa.edu}
+
+
+\author{Tao Xie}
+\affiliation{
+University of Illinois Urbana-Champaign, IL 61801, USA\\
+taoxie@illinois.edu
+}
+
+
+\begin{abstract}
+Regression performance testing is an important but time/resource-consuming phase during software development. Developers need to detect performance regressions as early as possible to reduce their negative impact and fixing cost. However, conducting regression performance testing frequently (e.g., after each commit) is prohibitively expensive. To address this issue, in this paper, we propose PerfRanker, the first approach to prioritizing test cases in performance regression testing for collection-intensive software, a common type of modern software heavily using collections. Our test prioritization is based on performance impact analysis that estimates the performance impact of a given code revision on a given test execution. The evaluation shows that our approach can cover top 3 test cases whose performance is most affected within top 30\% to 37\% prioritized test cases, in contrast to top 65\% to 79\% by three baseline approaches. 
+
+%on the version history of two popular open source collection-intensive projects (Apache Commons Math and Xalan) shows that our technique outperforms all baseline techniques on both \textit{APFD-P} and \textit{nDCG} measurements. Also, 
+\end{abstract}
+
+\begin{CCSXML}
+	<ccs2012>
+    <concept>
+	<concept_id>10011007.10011074.10011099.10011102.10011103</concept_id>
+	<concept_desc>Software and its engineering~Software testing and debugging</concept_desc>
+	<concept_significance>500</concept_significance>
+	</concept>
+	</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Software and its engineering~Software testing and debugging}
+
+\keywords{Performance, Regression Testing, Test Prioritization}
+
+\maketitle
+
+\input{contents/intro}
+\input{contents/motivation}
+\input{contents/approach}
+\input{contents/evaluation}
+\input{contents/discuss}
+\input{contents/related}
+\input{contents/future}
+\input{contents/conclusion}
+\vspace{+0.2cm}
+\noindent\textbf{ACKNOWLEDGMENT.}
+UTSA's work is supported in part by NSF grant CCF-1464425 and DHS grant DHS-14-ST-062-001. Tao Xie's work is supported in part by NSF under grants No. CCF-1409423, CNS-1434582, CNS-1513939, CNS-1564274.
+\balance
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{sigproc} 
+%\input{Perf-2016.bbl}
+
+\end{document}

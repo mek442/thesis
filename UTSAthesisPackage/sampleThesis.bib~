@@ -1,0 +1,1495 @@
+@inproceedings{IEEEhowto:kopka,
+  title={Mock roles, not objects},
+  author={Freeman, Steve and Mackinnon, Tim and Pryce, Nat and Walnes, Joe},
+  booktitle={Companion to the 19th annual ACM SIGPLAN conference on Object-oriented programming systems, languages, and applications},
+  pages={236--246},
+  year={2004},
+  organization={ACM}
+}
+
+@book{binder2000testing,
+  title={Testing object-oriented systems: models, patterns, and tools},
+  author={Binder, Robert V},
+  year={2000},
+  publisher={Addison-Wesley Professional}
+}
+
+@inproceedings{Freeman,
+  title={jMock: supporting responsibility-based design with mock objects},
+  author={Freeman, Steve and Mackinnon, Tim and Pryce, Nat and Walnes, Joe},
+  booktitle={Companion to the 19th annual ACM SIGPLAN conference on Object-oriented programming systems, languages, and applications},
+  pages={4--5},
+  year={2004},
+  organization={ACM}
+}
+
+
+@inproceedings{Galler,
+  title={Automatically extracting mock object behavior from Design by Contract specification for test data generation},
+  author={Galler, Stefan J and Maller, Andreas and Wotawa, Franz},
+  booktitle={Proceedings of the 5th Workshop on Automation of Software Test},
+  pages={43--50},
+  year={2010},
+  organization={ACM}
+}
+
+@inproceedings{greiler2012test,
+  title={Test confessions: A study of testing practices for plug-in systems},
+  author={Greiler, Michaela and Deursen, Arie van and Storey, Margaret-Anne},
+  booktitle={Proceedings of the 34th International Conference on Software Engineering},
+  pages={244--254},
+  year={2012},
+  organization={IEEE Press}
+}
+
+@inproceedings{pham2013creating,
+  title={Creating a shared understanding of testing culture on a social coding site},
+  author={Pham, Raphael and Singer, Leif and Liskin, Olga and Figueira Filho, Fernando and Schneider, Kurt},
+  booktitle={Software Engineering (ICSE), 2013 35th International Conference on},
+  pages={112--121},
+  year={2013},
+  organization={IEEE}
+}
+
+@inproceedings{fraser2012sound,
+  title={Sound empirical evidence in software testing},
+  author={Fraser, Gordon and Arcuri, Andrea},
+  booktitle={Software Engineering (ICSE), 2012 34th International Conference on},
+  pages={178--188},
+  year={2012},
+  organization={IEEE}
+}
+
+@inproceedings{Taneja,
+  title={MODA: Automated test generation for database applications via mock objects},
+  author={Taneja, Kunal and Zhang, Yi and Xie, Tao},
+  booktitle={Proceedings of the IEEE/ACM international conference on Automated software engineering},
+  pages={289--292},
+  year={2010},
+  organization={ACM}
+}
+
+@inproceedings{Coelho,
+  title={Unit testing in multi-agent systems using mock agents and aspects},
+  author={Coelho, Roberta and Kulesza, Uir{\'a} and von Staa, Arndt and Lucena, Carlos},
+  booktitle={Proceedings of the 2006 international workshop on Software engineering for large-scale multi-agent systems},
+  pages={83--90},
+  year={2006},
+  organization={ACM}
+}
+
+@inproceedings{woda,
+  title={Dsc+ mock: A test case+ mock class generator in support of coding against interfaces},
+  author={Islam, Mainul and Csallner, Christoph},
+  booktitle={Proceedings of the Eighth International Workshop on Dynamic Analysis},
+  pages={26--31},
+  year={2010},
+  organization={ACM}
+}
+
+@article{Pasternak,
+  title={GenUTest: a unit test and mock aspect generation tool},
+  author={Pasternak, Benny and Tyszberowicz, Shmuel and Yehudai, Amiram},
+  journal={International journal on software tools for technology transfer},
+  volume={11},
+  number={4},
+  pages={273},
+  year={2009},
+  publisher={Springer}
+}
+
+@inproceedings{Saff,
+  title={Mock object creation for test factoring},
+  author={Saff, David and Ernst, Michael D},
+  booktitle={Proceedings of the 5th ACM SIGPLAN-SIGSOFT workshop on Program analysis for software tools and engineering},
+  pages={49--51},
+  year={2004},
+  organization={ACM}
+}
+
+@inproceedings{Marri,
+  title={An empirical study of testing file-system-dependent software with mock objects},
+  author={Marri, Madhuri R and Xie, Tao and Tillmann, Nikolai and De Halleux, Jonathan and Schulte, Wolfram},
+  booktitle={Automation of Software Test, 2009. AST'09. ICSE Workshop on},
+  pages={149--153},
+  year={2009},
+  organization={IEEE}
+}
+
+@inproceedings{singh2013empirical,
+  title={An empirical study of adoption of software testing in open source projects},
+  author={Pavneet Singh, Kochaar and Bissyande, Tegawend{\'e} Fran{\c{c}}ois D Assise and Lo, David and Jiang, Lingxiao},
+  booktitle={Proceedings of the 13th International Conference on Quality Software (QSIC 2013)},
+  year={2013},
+  organization={Nanjing, China}
+}
+
+
+@inproceedings{SPEED,
+	author = {Gulwani, Sumit and Mehra, Krishna K. and Chilimbi, Trishul},
+	title = {SPEED: Precise and Efficient Static Estimation of Program Computational Complexity},
+	booktitle = {Proceedings of the 36th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+	year = {2009},
+	pages = {127--139},
+} 
+
+@Article{Hao2009,
+	author="Hao, Dan 
+	and Xie, Tao
+	and Zhang, Lu
+	and Wang, Xiaoyin
+	and Sun, Jiasu
+	and Mei, Hong",
+	title="Test input reduction for result inspection to facilitate fault localization",
+	journal="Automated Software Engineering",
+	year="2009",
+	volume="17",
+	number="1",
+	pages="5",
+}
+@inproceedings{Wang2010ASE,
+	author = {Wang, Xiaoyin and Lo, David and Cheng, Jiefeng and Zhang, Lu and Mei, Hong and Yu, Jeffrey Xu},
+	title = {Matching Dependence-related Queries in the System Dependence Graph},
+	booktitle = {Proceedings of the IEEE/ACM International Conference on Automated Software Engineering},
+	year = {2010},
+	pages = {457--466},
+} 
+
+@INPROCEEDINGS{MengHima, 
+	author={S. Meng and X. Wang and L. Zhang and H. Mei}, 
+	booktitle={2012 34th International Conference on Software Engineering (ICSE)}, 
+	title={A history-based matching approach to identification of framework evolution}, 
+	year={2012}, 
+	pages={353-363}, 
+}
+
+@INPROCEEDINGS{MockStudy, 
+	author={S. Mostafa and X. Wang}, 
+	booktitle={14th International Conference on Quality Software}, 
+	title={An Empirical Study on the Usage of Mocking Frameworks in Software Testing}, 
+	year={2014}, 
+	pages={127-132}, 
+}
+
+@inproceedings{Pradel:2014:PRT:2610384.2610393,
+	author = {Pradel, Michael and Huggler, Markus and Gross, Thomas R.},
+	title = {Performance Regression Testing of Concurrent Classes},
+	booktitle = {Proceedings of the 2014 International Symposium on Software Testing and Analysis},
+	year = {2014},
+	pages = {13--25},
+} 
+
+@inproceedings{PradelISSTA2014,
+	author = {Pradel, Michael and Huggler, Markus and Gross, Thomas R.},
+	title = {Performance Regression Testing of Concurrent Classes},
+	booktitle = {Proceedings of the International Symposium on Software Testing and Analysis},
+	year = {2014},
+	pages = {13--25},
+} 
+
+
+@inproceedings{PadhyeICSE2017,
+	author = {Rohan Padhye and Koushik Sen},
+	title = {TRAVIOLI: A Dynamic Analysis for Detecting Data-Structure Traversals},
+	booktitle = {Proceedings of the International Conference on Software Engineering},
+	year = {2017},
+	pages = {To Appear},
+} 
+
+@inproceedings{ATC2013,
+	author = {Kwon, Yongin and Lee, Sangmin and Yi, Hayoon and Kwon, Donghyun and Yang, Seungjun and Chun, Byung-Gon and Huang, Ling and Maniatis, Petros and Naik, Mayur and Paek, Yunheung},
+	title = {Mantis: Automatic Performance Prediction for Smartphone Applications},
+	booktitle = {Proceedings of the 2013 USENIX Conference on Annual Technical Conference},
+	year = {2013},
+	pages = {297--308},
+} 
+
+
+
+@misc{perfranker,
+	title =    {{PerfRanker} Project Web},
+	howpublished = {\url{https://sites.google.com/site/perfranker2017/}},
+	year = {2017},
+}
+
+@inproceedings{huang2014performance,
+ author = {Huang, Peng and Ma, Xiao and Shen, Dongcai and Zhou, Yuanyuan},
+ title = {Performance Regression Testing Target Prioritization via Performance Risk Analysis},
+ booktitle = {Proceedings of the 36th International Conference on Software Engineering},
+ series = {ICSE 2014},
+ year = {2014},
+ pages = {60--71},
+ numpages = {12},
+}
+
+
+@inproceedings{PerfBugStudy,
+	author = {Zaman, Shahed and Adams, Bram and Hassan, Ahmed E.},
+	title = {A Qualitative Study on Performance Bugs},
+	booktitle = {Proceedings of the 9th IEEE Working Conference on Mining Software Repositories},
+	year = {2012},
+	pages = {199--208},
+} 
+@inproceedings{luoinput2016,
+	author = {Luo, Qi},
+	title = {Automatic Performance Testing Using Input-sensitive Profiling},
+	booktitle = {Proceedings of the 2016 24th ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+	year = {2016},
+	pages = {1139--1141},
+}
+
+@INPROCEEDINGS{covtestprior, 
+	author={G. Rothermel and R. H. Untch and Chengyun Chu and M. J. Harrold}, 
+	booktitle={Software Maintenance, 1999. (ICSM '99) Proceedings. IEEE International Conference on}, 
+	title={Test case prioritization: an empirical study}, 
+	year={1999}, 
+	pages={179-188}, 
+}
+
+@inproceedings{additionalTestPrior,
+	author = {Zhang, Lingming and Hao, Dan and Zhang, Lu and Rothermel, Gregg and Mei, Hong},
+	title = {Bridging the Gap Between the Total and Additional Test-case Prioritization Strategies},
+	booktitle = {Proceedings of the 2013 International Conference on Software Engineering},
+	series = {ICSE '13},
+	year = {2013},
+	pages = {192--201},
+} 
+
+@Inbook{Spark,
+	author="Lhot{\'a}k, Ond{\v{r}}ej
+	and Hendren, Laurie",
+	editor="Hedin, G{\"o}rel",
+	title="Scaling Java Points-to Analysis Using Spark            ",
+	bookTitle="Compiler Construction: 12th International Conference, CC 2003 Held as Part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2003 Warsaw, Poland, April 7--11, 2003 Proceedings",
+	year="2003",
+	pages="153--169",
+}
+
+@inproceedings{DoubleTake,
+	author = {Liu, Tongping and Curtsinger, Charlie and Berger, Emery D.},
+	title = {DoubleTake: Fast and Precise Error Detection via Evidence-based Dynamic Analysis},
+	booktitle = {Proceedings of the 38th International Conference on Software Engineering},
+	year = {2016},
+	pages = {911--922},
+} 
+
+
+@ARTICLE{TSEPerform, 
+	author={E. J. Weyuker and F. I. Vokolos}, 
+	journal={IEEE Transactions on Software Engineering}, 
+	title={Experience with performance testing of software systems: issues, an approach, and case study}, 
+	year={2000}, 
+	volume={26}, 
+	number={12}, 
+	pages={1147-1156}, 
+}
+
+@inproceedings{foxref,
+	author = {Fox, Gregory},
+	title = {Performance Engineering As a Part of the Development Life Cycle for Large-scale Software Systems},
+	booktitle = {Proceedings of the 11th International Conference on Software Engineering},
+	series = {ICSE '89},
+	year = {1989},
+	pages = {85--94},
+} 
+
+@inproceedings{Google,
+	author = {Mayer, M.},
+	title = {In search of a better, faster, stronger web.},
+	howpublished = {\url{http://goo.gl/m4fXx}}
+}
+
+@inproceedings{Stevefamov,
+	author = {S. Stefanov},
+	title = {Yslow 2.0},
+	booktitle = {CSDN Software Development 2.0 Conference},
+	year = {2008},
+} 
+
+@inproceedings{poliniref,
+	author = {Denaro, Giovanni and Polini, Andrea and Emmerich, Wolfgang},
+	title = {Early Performance Testing of Distributed Software Applications},
+	booktitle = {Proceedings of the 4th International Workshop on Software and Performance},
+	year = {2004},
+	pages = {94--103},
+} 
+
+@article{Ejref,
+	author = {Weyuker, Elaine J. and Vokolos, Filippos I.},
+	title = {Experience with Performance Testing of Software Systems: Issues, an Approach, and Case Study},
+	journal = {IEEE Trans. Softw. Eng.},
+	volume = {26},
+	number = {12},
+	month = dec,
+	year = {2000},
+	pages = {1147--1156},
+} 
+
+@inproceedings{MITCHELL,
+	author = {M. MITCHELL},
+	title = {GCC performance regression testing discussion},
+	howpublished = {\url{http://gcc.gnu.org/ml/gcc/2005-11/msg01306}}
+} 
+
+@online{xalan,
+	title = {Xalan for Java},
+	howpublished = {https://xml.apache.org/xalan-j/}
+} 
+
+@online{commonMath,
+	title = {Apache Commons Maths},
+	howpublished = {http://commons.apache.org/proper/commons-math/}
+} 
+
+@inproceedings{dacapo,
+	author = {Blackburn, Stephen M. and Garner, Robin and Hoffmann, Chris and Khang, Asjad M. and McKinley, Kathryn S. and Bentzur, Rotem and Diwan, Amer and Feinberg, Daniel and Frampton, Daniel and Guyer, Samuel Z. and Hirzel, Martin and Hosking, Antony and Jump, Maria and Lee, Han and Moss, J. Eliot B. and Phansalkar, Aashish and Stefanovi\'{c}, Darko and VanDrunen, Thomas and von Dincklage, Daniel and Wiedermann, Ben},
+	title = {The DaCapo Benchmarks: Java Benchmarking Development and Analysis},
+	booktitle = {Proceedings of the 21st Annual ACM SIGPLAN Conference on Object-oriented Programming Systems, Languages, and Applications},
+	year = {2006},
+	pages = {169--190},
+} 
+
+@INPROCEEDINGS{KALIBERA, 
+	author={T. Kalibera and L. Bulej and P. Tuma}, 
+	booktitle={13th IEEE International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems}, 
+	title={Automated detection of performance regressions: the mono experience}, 
+	year={2005}, 
+	pages={183-190}, 
+}
+
+@inproceedings{ELBAUM00,
+	author = {Elbaum, Sebastian and Malishevsky, Alexey G. and Rothermel, Gregg},
+	title = {Prioritizing Test Cases for Regression Testing},
+	booktitle = {Proceedings of the 2000 ACM SIGSOFT International Symposium on Software Testing and Analysis},
+	year = {2000},
+	pages = {102--112},
+}
+
+@inproceedings{KIM02,
+	author = {Kim, Jung-Min and Porter, Adam},
+	title = {A History-based Test Prioritization Technique for Regression Testing in Resource Constrained Environments},
+	booktitle = {Proceedings of the 24th International Conference on Software Engineering},
+	year = {2002},
+	pages = {119--129},
+} 
+
+@article{LI07,
+	author = {Li, Zheng and Harman, Mark and Hierons, Robert M.},
+	title = {Search Algorithms for Regression Test Case Prioritization},
+	journal = {IEEE Trans. Softw. Eng.},
+	issue_date = {April 2007},
+	volume = {33},
+	number = {4},
+	month = apr,
+	year = {2007},
+	pages = {225--237},
+} 
+
+@inproceedings{ROTHERMEL99,
+	author = {Rothermel, Gregg and Untch, Roland H. and Chu, Chengyun and Harrold, Mary Jean},
+	title = {Test Case Prioritization: An Empirical Study},
+	booktitle = {Proceedings of the IEEE International Conference on Software Maintenance},
+	series = {ICSM '99},
+	year = {1999},
+	pages = {179--},
+} 
+
+@article{HARROLD93,
+	author = {Harrold, M. Jean and Gupta, Rajiv and Soffa, Mary Lou},
+	title = {A Methodology for Controlling the Size of a Test Suite},
+	journal = {ACM Trans. Softw. Eng. Methodol.},
+	issue_date = {July 1993},
+	volume = {2},
+	number = {3},
+	month = jul,
+	year = {1993},
+	pages = {270--285},
+	numpages = {16},
+} 
+
+@inproceedings{BLACK04,
+	author = {Black, Jennifer and Melachrinoudis, Emanuel and Kaeli, David},
+	title = {Bi-Criteria Models for All-Uses Test Suite Reduction},
+	booktitle = {Proceedings of the 26th International Conference on Software Engineering},
+	year = {2004},
+	pages = {106--115},
+} 
+
+@inproceedings{ZHONG06,
+	author = {Zhong, Hao and Zhang, Lu and Mei, Hong},
+	title = {An Experimental Comparison of Four Test Suite Reduction Techniques},
+	booktitle = {Proceedings of the 28th International Conference on Software Engineering},
+	year = {2006},
+	pages = {636--640},
+} 
+
+@article{ROTHERMEL97,
+	author = {Rothermel, Gregg and Harrold, Mary Jean},
+	title = {A Safe, Efficient Regression Test Selection Technique},
+	journal = {ACM Trans. Softw. Eng. Methodol.},
+	issue_date = {April 1997},
+	volume = {6},
+	number = {2},
+	month = apr,
+	year = {1997},
+	pages = {173--210},
+} 
+
+@INPROCEEDINGS{CHEN94, 
+	author={Yih-Farn Chen and D. S. Rosenblum and Kiem-Phong Vo}, 
+	booktitle={Proceedings of 16th International Conference on Software Engineering}, 
+	title={TESTTUBE: A System for Selective Regression Testing}, 
+	year={1994}, 
+	pages={211-220}, 
+}
+
+@inproceedings{SHEN05,
+	author = {Shen, Kai and Zhong, Ming and Li, Chuanpeng},
+	title = {I/O System Performance Debugging Using Model-driven Anomaly Characterization},
+	booktitle = {Proceedings of the 4th Conference on USENIX Conference on File and Storage Technologies - Volume 4},
+	year = {2005},
+	pages = {23--23},
+} 
+
+@inproceedings{HAN12,
+	author = {Han, Shi and Dang, Yingnong and Ge, Song and Zhang, Dongmei and Xie, Tao},
+	title = {Performance Debugging in the Large via Mining Millions of Stack Traces},
+	booktitle = {Proceedings of the 34th International Conference on Software Engineering},
+	series = {ICSE '12},
+	year = {2012},
+	pages = {145--155},
+} 
+
+@INPROCEEDINGS{LEUNG07, 
+	author={A. W. Leung and E. Lalonde and J. Telleen and J. Davis and C. Maltzahn}, 
+	booktitle={24th IEEE Conference on Mass Storage Systems and Technologies (MSST 2007)}, 
+	title={Using Comprehensive Analysis for Performance Debugging in Distributed Storage Systems}, 
+	year={2007}, 
+	pages={281-286}, 
+}
+
+@inproceedings{Soot,
+	author = {Vall{\'e}e-Rai, Raja and Co, Phong and Gagnon, Etienne and Hendren, Laurie and Lam, Patrick and Sundaresan, Vijay},
+	title = {Soot - a Java Bytecode Optimization Framework},
+	booktitle = {Proceedings of the 1999 Conference of the Centre for Advanced Studies on Collaborative Research},
+	series = {CASCON '99},
+	year = {1999},
+	pages = {13--},
+} 
+
+@inproceedings{SootIFDS,
+	author = {Bodden, Eric},
+	title = {Inter-procedural Data-flow Analysis with IFDS/IDE and Soot},
+	booktitle = {Proceedings of the ACM SIGPLAN International Workshop on State of the Art in Java Program Analysis},
+	year = {2012},
+	pages = {3--8},
+} 
+
+@inproceedings{IFDS,
+	author = {Reps, Thomas and Horwitz, Susan and Sagiv, Mooly},
+	title = {Precise Interprocedural Dataflow Analysis via Graph Reachability},
+	booktitle = {Proceedings of the 22Nd ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+	year = {1995},
+	pages = {49--61},
+}
+
+
+@inproceedings{AGUILERA03,
+	author = {Aguilera, Marcos K. and Mogul, Jeffrey C. and Wiener, Janet L. and Reynolds, Patrick and Muthitacharoen, Athicha},
+	title = {Performance Debugging for Distributed Systems of Black Boxes},
+	booktitle = {Proceedings of the 19th ACM Symposium on Operating Systems Principles},
+	year = {2003},
+	pages = {74--89},
+} 
+
+@inproceedings{YAN12,
+	author = {Yan, Dacong and Xu, Guoqing and Rountev, Atanas},
+	title = {Uncovering Performance Problems in Java Applications with Reference Propagation Profiling},
+	booktitle = {Proceedings of the 34th International Conference on Software Engineering},
+	year = {2012},
+	pages = {134--144},
+}
+
+@inproceedings{NDCG,
+	author = {Al-Maskari, Azzah and Sanderson, Mark and Clough, Paul},
+	title = {The Relationship Between IR Effectiveness Measures and User Satisfaction},
+	booktitle = {Proceedings of the 30th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval},
+	year = {2007},
+	pages = {773--774},
+}
+
+@inproceedings{MultiCoreRandom,
+	author = {Park, Heekwon and Baek, Seungjae and Choi, Jongmoo and Lee, Donghee and Noh, Sam H.},
+	title = {Regularities Considered Harmful: Forcing Randomness to Memory Accesses to Reduce Row Buffer Conflicts for Multi-core, Multi-bank Systems},
+	booktitle = {Proceedings of the Eighteenth International Conference on Architectural Support for Programming Languages and Operating Systems},
+	year = {2013},
+	pages = {181--192},
+} 
+
+
+@ARTICLE{CacheRandom, 
+	author={C. Pyo and S. Pae and G. Lee}, 
+	journal={Electronics Letters}, 
+	title={DRAM as source of randomness}, 
+	year={2009}, 
+	volume={45}, 
+	number={1}, 
+	pages={26-27}, 
+}
+
+@Inbook{GBRandom,
+	author="Wilson, Paul R.",
+	editor="Bekkers, Yves
+	and Cohen, Jacques",
+	title="Uniprocessor garbage collection techniques",
+	bookTitle="Memory Management: International Workshop IWMM 92 St. Malo, France, September 17--19, 1992 Proceedings",
+	year="1992",
+	pages="1--42",
+}
+
+@inproceedings{LiuCGO,
+	author = {Liu, Tongping and Liu, Xu},
+	title = {Cheetah: Detecting False Sharing Efficiently and Effectively},
+	booktitle = {Proceedings of the 2016 International Symposium on Code Generation and Optimization},
+	year = {2016},
+	pages = {1--11},
+} 
+
+@TECHREPORT{AlexeyAPFD,
+	author = {Alexey G. Malishevsky and Joseph R. Ruthruff and Gregg Rothermel and Sebastian Elbaum},
+	title = {Cost-cognizant test case prioritization},
+	institution = {},
+	year = {2006}
+}
+
+@inproceedings{JIN12,
+	author = {Jin, Guoliang and Song, Linhai and Shi, Xiaoming and Scherpelz, Joel and Lu, Shan},
+	title = {Understanding and Detecting Real-world Performance Bugs},
+	booktitle = {Proceedings of the 33rd ACM SIGPLAN Conference on Programming Language Design and Implementation},
+	year = {2012},
+	pages = {77--88},
+} 
+
+@inproceedings{JOVIC11,
+	author = {Jovic, Milan and Adamoli, Andrea and Hauswirth, Matthias},
+	title = {Catch Me if You Can: Performance Bug Detection in the Wild},
+	booktitle = {Proceedings of the 2011 ACM International Conference on Object Oriented Programming Systems Languages and Applications},
+	year = {2011},
+	pages = {155--170},
+} 
+
+@inproceedings{KILLIAN10,
+	author = {Killian, Charles and Nagaraj, Karthik and Pervez, Salman and Braud, Ryan and Anderson, James W. and Jhala, Ranjit},
+	title = {Finding Latent Performance Bugs in Systems Implementations},
+	booktitle = {Proceedings of the Eighteenth ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+	year = {2010},
+	pages = {17--26},
+} 
+
+@INPROCEEDINGS{FOO10, 
+	author={Foo, King Chun and Jiang, Zhen Ming and Adams, Bram and Hassan, Ahmed E. and Zou, Ying and Flora, Parminder}, 
+	booktitle={2010 10th International Conference on Quality Software}, 
+	title={Mining Performance Regression Testing Repositories for Automated Performance Analysis}, 
+	year={2010}, 
+	pages={32-41}, 
+}
+
+@INPROCEEDINGS{FOO11, 
+	author={Foo, King Chun}, 
+	booktitle={Master's Thesis}, 
+	title={Automated Discovery of Performance Regressions in
+	Enterprise Applications}, 
+	year={2011}, 
+}
+
+@inproceedings{ZHANG11,
+	author = {Zhang, Pingyu and Elbaum, Sebastian and Dwyer, Matthew B.},
+	title = {Automatic Generation of Load Tests},
+	booktitle = {Proceedings of the 2011 26th IEEE/ACM International Conference on Automated Software Engineering},
+	year = {2011},
+	pages = {43--52},
+} 
+
+@inproceedings{GRECHANIK12,
+	author = {Grechanik, Mark and Fu, Chen and Xie, Qing},
+	title = {Automatically Finding Performance Problems with Feedback-directed Learning Software Testing},
+	booktitle = {Proceedings of the 34th International Conference on Software Engineering},
+	year = {2012},
+	pages = {156--166},
+} 
+
+@inproceedings{BARNA11,
+	author = {Barna, Cornel and Litoiu, Marin and Ghanbari, Hamoun},
+	title = {Model-based Performance Testing  (NIER Track)},
+	booktitle = {Proceedings of the 33rd International Conference on Software Engineering},
+	year = {2011},
+	pages = {872--875},
+} 
+
+@inproceedings{LAW03,
+	author = {Law, James and Rothermel, Gregg},
+	title = {Whole Program Path-Based Dynamic Impact Analysis},
+	booktitle = {Proceedings of the 25th International Conference on Software Engineering},
+	year = {2003},
+	pages = {308--318},
+} 
+
+
+@inproceedings{ORSO04,
+	author = {Orso, Alessandro and Apiwattanapong, Taweesup and Law, James and Rothermel, Gregg and Harrold, Mary Jean},
+	title = {An Empirical Comparison of Dynamic Impact Analysis Algorithms},
+	booktitle = {Proceedings of the 26th International Conference on Software Engineering},
+	year = {2004},
+	pages = {491--500},
+}
+
+@inproceedings{ORSO11,
+	author = {Orso, Alessandro and Apiwattanapong, Taweesup and Harrold, Mary Jean},
+	title = {Leveraging Field Data for Impact Analysis and Regression Testing},
+	booktitle = {Proceedings of the 9th European Software Engineering Conference Held Jointly with 11th ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+	year = {2003},
+	pages = {128--137},
+} 
+
+@inproceedings{APIWATTANAPON05,
+	author = {Apiwattanapong, Taweesup and Orso, Alessandro and Harrold, Mary Jean},
+	title = {Efficient and Precise Dynamic Impact Analysis Using Execute-after Sequences},
+	booktitle = {Proceedings of the 27th International Conference on Software Engineering},
+	year = {2005},
+	pages = {432--441},
+	numpages = {10},
+}
+
+@article {TURVERref,
+	author = {Turver, Richard J. and Munro, Malcolm},
+	title = {An early impact analysis technique for software maintenance},
+	journal = {Journal of Software Maintenance: Research and Practice},
+	volume = {6},
+	number = {1},
+	publisher = {John Wiley & Sons, Ltd},
+	pages = {35--52},
+	year = {1994},
+}
+
+@book{Arnoldref96,
+	author = {Arnold, Robert S.},
+	title = {Software Change Impact Analysis},
+	year = {1996},
+	publisher = {IEEE Computer Society Press},
+} 
+
+@inproceedings{Arnoldref93,
+	author = {Arnold, Robert S. and Bohner, Shawn A.},
+	title = {Impact Analysis - Towards a Framework for Comparison},
+	booktitle = {Proceedings of the Conference on Software Maintenance},
+	year = {1993},
+	pages = {292--301},
+} 
+
+@inproceedings{ZIMMERMANN04,
+	author = {Zimmermann, Thomas and Weisgerber, Peter and Diehl, Stephan and Zeller, Andreas},
+	title = {Mining Version Histories to Guide Software Changes},
+	booktitle = {Proceedings of the 26th International Conference on Software Engineering},
+	year = {2004},
+	pages = {563--572},
+} 
+
+@inproceedings{SHERRIFF08,
+	author = {Sherriff, Mark and Williams, Laurie},
+	title = {Empirical Software Change Impact Analysis Using Singular Value Decomposition},
+	booktitle = {Proceedings of the 2008 International Conference on Software Testing, Verification, and Validation},
+	year = {2008},
+	pages = {268--277},
+} 
+
+@inproceedings{Chen2016,
+	author = {Chen, Bihuan and Liu, Yang and Le, Wei},
+	title = {Generating Performance Distributions via Probabilistic Symbolic Execution},
+	booktitle = {Proceedings of the 38th International Conference on Software Engineering},
+	year = {2016},
+	pages = {49--60},
+
+}
+
+@INPROCEEDINGS{Nistor14, 
+	author={A. Nistor and L. Song and D. Marinov and S. Lu}, 
+	booktitle={2013 35th International Conference on Software Engineering (ICSE)}, 
+	title={Toddler: Detecting performance problems via similar memory-access patterns}, 
+	year={2013}, 
+	pages={562-571}, 
+}
+
+@INPROCEEDINGS{Nistor15, 
+	author={A. Nistor and P. C. Chang and C. Radoi and S. Lu}, 
+	booktitle={2015 IEEE/ACM 37th IEEE International Conference on Software Engineering}, 
+	title={CARAMEL: Detecting and Fixing Performance Problems That Have Non-Intrusive Fixes}, 
+	year={2015}, 
+	volume={1}, 
+	pages={902-912}, 
+}
+
+@inproceedings{LUO16,
+	author = {Luo, Qi and Poshyvanyk, Denys and Grechanik, Mark},
+	title = {Mining Performance Regression Inducing Code Changes in Evolving Software},
+	booktitle = {Proceedings of the 13th International Conference on Mining Software Repositories},
+	year = {2016},
+	pages = {25--36},
+} 
+
+@online{SemVer,
+	title = {Semantic Versioning},
+	howpublished = {http://semver.org/}
+	},
+	note = {Accessed: 2016-08-22}
+}
+@INPROCEEDINGS{OOPSLA06,
+	author = {Tao Xie},
+	title = {Augmenting Automatically Generated Unit-Test Suites with Regression Oracle Checking},
+	booktitle = {Proc. 20th European Conference on Object-Oriented Programming (ECOOP 2006)},
+	month = {July},
+	year = {2006},
+	pages = {380--403},
+}
+
+@INPROCEEDINGS{SCAM2014, 
+	author={S. Raemaekers and A. van Deursen and J. Visser}, 
+	booktitle={Source Code Analysis and Manipulation (SCAM), 2014 IEEE 14th International Working Conference on}, 
+	title={Semantic Versioning versus Breaking Changes: A Study of the Maven Repository}, 
+	year={2014}, 
+	pages={215-224}, 
+}
+
+
+@inproceedings{techstat,
+	author={Mostafa, S. and Wang, X.}, 
+	booktitle={Technical Report}, 
+	title={A Statistics on Usage of Java Libraries}, 
+	year={2014}, 
+	howpublished = {\url{http://xywang.100871.net/TechReport_LibStats.pdf}}, 
+}
+
+@inproceedings{WangFSE10,
+	author = {Wang, X. and Zhang, L. and Xie, T. and Mei, H. and Sun, J.},
+	title = {Locating Need-to-translate Constant Strings in Web Applications},
+	booktitle = {Proceedings of the Eighteenth ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+	year = {2010},
+	pages = {87--96},
+} 
+
+@INPROCEEDINGS{QSIC14, 
+	author={Mostafa, S. and Wang, X.}, 
+	booktitle={2014 14th International Conference on Quality Software}, 
+	title={An Empirical Study on the Usage of Mocking Frameworks in Software Testing}, 
+	year={2014}, 
+	pages={127-132}, 
+	}
+
+@inproceedings{Tang2015,
+	author = {Tang, H. and Wang, X. and Zhang, L. and Xie, B. and Zhang, L. and Mei, H.},
+	title = {Summary-Based Context-Sensitive Data-Dependence Analysis in Presence of Callbacks},
+	booktitle = {Proceedings of the 42nd Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+	year = {2015},
+	pages = {83--95},
+} 
+
+
+@inproceedings{WangFSE12,
+	author = {Wang, X. and Zhang, L. and Xie, T. and Xiong, Y. and Mei, H.},
+	title = {Automating Presentation Changes in Dynamic Web Applications via Collaborative Hybrid Analysis},
+	booktitle = {Proceedings of the ACM SIGSOFT 20th International Symposium on the Foundations of Software Engineering},
+	year = {2012},
+	pages = {16:1--16:11},
+} 
+
+
+@inproceedings{bugEvo,
+	author = {Nakakoji, K. and Yamamoto, Y. and Nishinaka, Y. and Kishida, K. and Ye, Y.},
+	title = {Evolution Patterns of Open-source Software Systems and Communities},
+	booktitle = {Proceedings of the International Workshop on Principles of Software Evolution},
+	year = {2002},
+	pages = {76--85},
+} 
+
+@INPROCEEDINGS{featureEvo, 
+	author={M. W. Godfrey and Q. Tu}, 
+	booktitle={Proceedings 2000 International Conference on Software Maintenance}, 
+	title={Evolution in Open Source Software: a Case Study}, 
+	year={2000}, 
+	pages={131-142}, 
+}
+
+@inproceedings{SemVer,
+	title = {Semantic Versioning, http://semver.org/},
+	note = {Accessed: 2016-08-22}
+}
+@INPROCEEDINGS{OOPSLA06,
+	author = {T. Xie},
+	title = {Augmenting Automatically Generated Unit-Test Suites with Regression Oracle Checking},
+	booktitle = {Proc. 20th European Conference on Object-Oriented Programming (ECOOP 2006)},
+	month = {July},
+	year = {2006},
+	pages = {380--403},
+}
+
+@INPROCEEDINGS{MockStudy, 
+	author={S. Mostafa and X. Wang}, 
+	booktitle={2014 14th International Conference on Quality Software}, 
+	title={An Empirical Study on the Usage of Mocking Frameworks in Software Testing}, 
+	year={2014}, 
+	pages={127-132}, 
+}
+
+@INPROCEEDINGS{SCAM2014, 
+	author={S. Raemaekers and A. van Deursen and J. Visser}, 
+	booktitle={Source Code Analysis and Manipulation (SCAM), 2014 IEEE 14th International Working Conference on}, 
+	title={Semantic Versioning versus Breaking Changes: A Study of the Maven Repository}, 
+	year={2014}, 
+	pages={215-224}, 
+}
+
+@INPROCEEDINGS{QSICStudy, 
+	author={S. Mostafa and X. Wang}, 
+	booktitle={QSIC}, 
+	title={An Empirical Study on the Usage of Mocking Frameworks in Software Testing}, 
+	year={2014}, 
+	pages={127-132}, 
+	}
+	
+@inproceedings{Robbes,
+		author = {Robbes, R. and Lungu, M. and R\"{o}thlisberger, D.},
+		title = {How Do Developers React to {API} Deprecation?: The Case of a Smalltalk Ecosystem},
+		booktitle = {Proceedings of the ACM SIGSOFT 20th International Symposium on the Foundations of Software Engineering},
+		year = {2012},
+		pages = {56:1--56:11},
+} 
+
+@incollection{deltadebug,
+	year={1999},
+	booktitle={International Symposium on the Foundations of Software Engineering},
+	title={Yesterday, my Program Worked. Today, it Does Not. Why?},
+	pages={253-267},
+}
+
+@inproceedings{Faulttracer,
+	author = {Zhang, L. and Kim, M. and Khurshid, S.},
+	title = {FaultTracer: A Change Impact and Regression Fault Analysis Tool for Evolving Java Programs},
+	booktitle = {Proceedings of the ACM SIGSOFT 20th International Symposium on the Foundations of Software Engineering},
+	year = {2012},
+	pages = {40:1--40:4},
+} 
+
+@book{Arnold:1996,
+	author = {Arnold, R. S.},
+	title = {Software Change Impact Analysis},
+	year = {1996},
+	isbn = {0818673842},
+	publisher = {IEEE Computer Society Press},
+	address = {Los Alamitos, CA, USA},
+} 
+
+@inproceedings{OOImpact,
+	author = {Ryder, B. G. and Tip, F.},
+	title = {Change Impact Analysis for Object-oriented Programs},
+	booktitle = {Proceedings of the 2001 ACM SIGPLAN-SIGSOFT Workshop on Program Analysis for Software Tools and Engineering},
+	year = {2001},
+	pages = {46--53},
+} 
+
+@inproceedings{IncreRegressionTest,
+	author = {Agrawal, H. and Horgan, J. R. and Krauser, Edward W. and London, S.},
+	title = {Incremental Regression Testing},
+	booktitle = {Proceedings of the Conference on Software Maintenance},
+	year = {1993},
+	pages = {348--357},
+} 
+
+@inproceedings{GUIRegression,
+	author = {Memon, A. M. and Soffa, M. L.},
+	title = {Regression Testing of GUIs},
+	booktitle = {Proceedings of the 9th European Software Engineering Conference Held Jointly with 11th ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+	year = {2003},
+	pages = {118--127},
+} 
+
+
+@inproceedings{dynamicImpact,
+	author = {Law, J. and Rothermel, G.},
+	title = {Whole Program Path-Based Dynamic Impact Analysis},
+	booktitle = {Proceedings of the 25th International Conference on Software Engineering},
+	year = {2003},
+	pages = {308--318},
+} 
+
+@Article{Wu2016,
+	author="Wu, W.
+	and Khomh, F.
+	and Adams, B.
+	and Gu{\'e}h{\'e}neuc, Y.
+	and Antoniol, G.",
+	title="An Exploratory Study of {API} Changes and Usages based on Apache and Eclipse Ecosystems",
+	journal="Empirical Software Engineering",
+	year="2016",
+	volume="21",
+	number="6",
+	pages="2366--2412",
+}
+
+@Article{Wu2015,
+	author="Wu, W.
+	and Serveaux, A.
+	and Gu{\'e}h{\'e}neuc, Y.
+	and Antoniol, G.",
+	title="The Impact of Imperfect Change Rules on Framework {API} Evolution Identification: an Empirical Study",
+	journal="Empirical Software Engineering",
+	year="2015",
+	volume="20",
+	number="4",
+	pages="1126--1158",
+}
+
+@article{Dig2006,
+	author = {Dig, D. and Johnson, R.},
+	title = {How Do {APIs} Evolve\&Quest; A Story of Refactoring: Research Articles},
+	journal = {J. Softw. Maint. Evol.},
+	volume = {18},
+	number = {2},
+	month = mar,
+	year = {2006},
+	pages = {83--107},
+} 
+
+@INPROCEEDINGS{Brito16, 
+	author={G. Brito and A. Hora and M. T. Valente and R. Robbes}, 
+	booktitle={2016 IEEE 23rd International Conference on Software Analysis, Evolution, and Reengineering (SANER)}, 
+	title={Do Developers Deprecate {APIs} with Replacement Messages? A Large-Scale Analysis on Java Systems}, 
+	year={2016}, 
+	volume={1}, 
+	pages={360-369},}
+
+@misc{vista,
+	title =    {Criticism of Windows Vista},
+	url = {https://en.wikipedia.org/wiki/Criticism_of_Windows_Vista},
+	year = {2017},
+}
+
+@misc{sougou,
+	title = {Sougou},
+	url = {https://play.google.com/store/apps/details?id=com.sohu.inputmethod.sogou&hl=en},
+	year = {2017},
+}
+
+@inproceedings{Meng1,
+	author = {Meng, S. and Wang, X. and Zhang, L. and Mei, H.},
+	title = {A History-based Matching Approach to Identification of Framework Evolution},
+	booktitle = {Proceedings of the 34th International Conference on Software Engineering},
+	year = {2012},
+	pages = {353--363},
+} 
+@inproceedings{Nguyen:OOPSLAPattern,
+	author = {Nguyen, H. and Nguyen, T. and Wilson,Jr., G. and Nguyen, A. and Kim, M. and Nguyen, T.},
+	title = {A Graph-based Approach to {API} Usage Adaptation},
+	booktitle = {Proceedings of the ACM International Conference on Object Oriented Programming Systems Languages and Applications},
+	year = {2010},
+	pages = {302--321},
+} 
+
+@INPROCEEDINGS{Raemaekers:APIStability, 
+	author={Raemaekers, S. and van Deursen, A. and Visser, J.}, 
+	booktitle={Software Maintenance (ICSM), 2012 28th IEEE International Conference on}, 
+	title={Measuring Software Library Stability through Historical Version Analysis}, 
+	year={2012}, 
+	pages={378-387}, 
+}
+
+@inproceedings{McDonnell:APIStability,
+	author = {McDonnell, T. and Ray, B. and Kim, M.},
+	title = {An Empirical Study of {API} Stability and Adoption in the Android Ecosystem},
+	booktitle = {Proceedings of the 2013 IEEE International Conference on Software Maintenance},
+	year = {2013},
+	pages = {70--79},
+} 
+
+@inproceedings{Godefroid:POPLComposite,
+	author = {Godefroid, P. and Nori, A. V. and Rajamani, Sriram K. and Tetali, S. D.},
+	title = {Compositional May-must Program Analysis: Unleashing the Power of Alternation},
+	booktitle = {Proceedings of the 37th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+	year = {2010},
+	pages = {43--56},
+} 
+
+@inproceedings{Whaley:EcoopComposite,
+	author = {Whaley, J. and Rinard, M.},
+	title = {Compositional Pointer and Escape Analysis for Java Programs},
+	booktitle = {Proceedings of the 14th ACM SIGPLAN Conference on Object-oriented Programming, Systems, Languages, and Applications},
+	year = {1999},
+	pages = {187--206},
+} 
+
+@inproceedings{McCamant:FSEUpgrade,
+	author = {McCamant, S. and Ernst, M. D.},
+	title = {Predicting Problems Caused by Component Upgrades},
+	booktitle = {Proceedings of the 9th European Software Engineering Conference Held Jointly with 11th ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+	year = {2003},
+	pages = {287--296},
+} 
+
+@inproceedings{McCamant:ECoopUpgrade,
+	year={2004},
+	booktitle={European Conference on Object-Oriented Programming},
+	title={Early Identification of Incompatibilities in Multi-component Upgrades},
+	author={McCamant, S. and Ernst, M. D.},
+	pages={440-464},
+}
+
+@inproceedings{Lahiri:CAVSymDiff,
+	year={2012},
+	booktitle={Computer Aided Verification},
+	title={SYMDIFF: A Language-Agnostic Semantic Diff Tool for Imperative Programs},
+	author={Lahiri, S. and Hawblitzel, C. and Kawaguchi, M. and Rebêlo, H.},
+	pages={712-717},
+}
+
+@inproceedings{Person:PLDIIncreSE,
+	author = {Person, S. and Yang, G. and Rungta, N. and Khurshid, S.},
+	title = {Directed Incremental Symbolic Execution},
+	booktitle = {Proceedings of the 32nd ACM SIGPLAN Conference on Programming Language Design and Implementation},
+	year = {2011},
+	pages = {504--515},
+} 
+
+@inproceedings{Person:FSEDiffSE,
+	author = {Person, S. and Dwyer, M. B. and Elbaum, S. and P\v{a}s\v{a}reanu, C. S.},
+	title = {Differential Symbolic Execution},
+	booktitle = {Proceedings of the 16th ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+	year = {2008},
+	pages = {226--237},
+} 
+
+
+@INPROCEEDINGS{Espinha:WebAPI, 
+	author={Espinha, T. and Zaidman, A. and Gross, H.-G.}, 
+	booktitle={Software Maintenance, Reengineering and Reverse Engineering (CSMR-WCRE), 2014 Software Evolution Week - IEEE Conference on}, 
+	title={Web {API} Growing Pains: Stories from client developers and their code}, 
+	year={2014}, 
+	pages={84-93}, 
+	}
+
+@INPROCEEDINGS{Bavota:upgrade, 
+	author={Bavota, G. and Canfora, G. and Di Penta, M. and Oliveto, R. and Panichella, S.}, 
+	booktitle={Software Maintenance (ICSM), 2013 29th IEEE International Conference on}, 
+	title={The Evolution of Project Inter-dependencies in a Software Ecosystem: The Case of Apache}, 
+	year={2013}, 
+	pages={280-289}, 
+	}
+
+@article{Bavota:upgradeJ,
+	year={2014},
+	journal={Empirical Software Engineering},
+	title={How the Apache Community Upgrades Dependencies: an Evolutionary Study},
+	author={Bavota, G. and Canfora, G. and Di Penta, M. and Oliveto, R. and Panichella, S.},
+	pages={1-43},
+}
+@inproceedings{Vasquez:AndroidAPI,
+	author = {Linares-V\'{a}squez, M. and Bavota, G. and Bernal-C\'{a}rdenas, C. and Di Penta, M. and Oliveto, R. and Poshyvanyk, D.},
+	title = {{API} Change and Fault Proneness: A Threat to the Success of Android Apps},
+	booktitle = {Proceedings of the 2013 9th Joint Meeting on Foundations of Software Engineering},
+	series = {ESEC/FSE 2013},
+	year = {2013},
+	pages = {477--487},
+} 
+
+@ARTICLE{Bavota:AndroidRating, 
+	author={Bavota, G. and Linares-Vasquez, M. and Bernal-Cardenas, C. and Di Penta, M. and Oliveto, R. and Poshyvanyk, D.}, 
+	journal={Software Engineering, IEEE Transactions on}, 
+	title={The Impact of {API} Change- and Fault-Proneness on the User Ratings of Android Apps}, 
+	year={2014}, 
+	number={99}, 
+	pages={1-1}, 
+}
+
+@INPROCEEDINGS{Wu:AUCA, 
+	author={Wu, W. and Adams, B. and Gueheneuc, Y.-G. and Antoniol, G.}, 
+	booktitle={Source Code Analysis and Manipulation (SCAM), 2014 IEEE 14th International Working Conference on}, 
+	title={ACUA: {API} Change and Usage Auditor}, 
+	year={2014}, 
+	pages={89-94}, 
+	}
+	
+@inproceedings{Moreno:ARENA,
+	author = {Moreno, L. and Bavota, G. and Di Penta, M. and Oliveto, R. and Marcus, A. and Canfora, G.},
+	title = {Automatic Generation of Release Notes},
+	booktitle = {Proceedings of the 22nd ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+	series = {FSE 2014},
+	year = {2014},
+	pages = {484--495},
+} 
+
+
+@ARTICLE{bowman:reasoning,
+	AUTHOR = "M. Bowman and S. K. Debray and L. L. Peterson",
+	TITLE = "Reasoning About Naming Systems",
+	JOURNAL = "ACM Trans. Program. Lang. Syst.",
+	VOLUME = {15},
+	NUMBER = {5},
+	PAGES = {795-825},
+	MONTH = "November",
+	YEAR = {1993}	}
+
+@ARTICLE{braams:babel,
+	AUTHOR = "Johannes B.",
+	TITLE = "Babel, a Multilingual Style-Option System for Use with LaTeX's Standard Document Styles",
+	JOURNAL = {TUGboat},
+	VOLUME = {12},
+	NUMBER = {2},
+	PAGES = {291-301},
+	MONTH = "June",
+	YEAR = {1991}	}
+
+@INPROCEEDINGS{clark:pct,
+	AUTHOR = "Malcolm C.",
+	TITLE = "Post Congress Tristesse",
+	BOOKTITLE = "TeX90 Conference Proceedings",
+	PAGES = "84-89",
+	ORGANIZATION = "TeX Users Group",
+	MONTH = "March", 
+	YEAR = {1991}	}
+
+@ARTICLE{herlihy:methodology,
+	AUTHOR = "Maurice H.",
+	TITLE = "A Methodology for Implementing Highly Concurrent
+	Data Objects",
+	JOURNAL = {ACM Trans. Program. Lang. Syst.},
+	VOLUME = {15},
+	NUMBER = {5},
+	PAGES = {745-770},
+	MONTH = "November",
+	YEAR = {1993}	}
+
+@BOOK{Lamport:LaTeX,
+	AUTHOR = "Leslie L.",
+	TITLE = "LaTeX User's Guide and Document Reference Manual",
+	PUBLISHER = "Addison-Wesley Publishing Company",
+	ADDRESS = "Reading, Massachusetts",
+	YEAR = "1986"	}
+
+@BOOK{salas:calculus,
+	AUTHOR = "S.L. Salas and E. Hille",
+	TITLE = "Calculus: One and Several Variable",
+	PUBLISHER = "John Wiley and Sons",
+	ADDRESS = "New York",
+	YEAR = "1978"	}
+
+
+@INPROCEEDINGS{Chow:ICSM96,
+	author =   "K. Chow and D. Notkin",
+	title =   "Semi-automatic Update of Applications in Response to Library Changes",
+	booktitle =   "Proceedings of International Conference on Software Maintenance",
+	year =   "1996",
+	pages =   "359-368"
+}
+
+@INPROCEEDINGS{Steyaert:OOPSLA96,
+	author =   "P. Steyaert and C. Lucas and K. Mens and T. D'Hondt",
+	title =   "Reuse contracts: Managing the evolution of reusable assets",
+	booktitle =   "Proceedings of the ACM International Conference on Object Oriented Programming Systems Languages and Applications",
+	year =   "1996",
+	pages =   "268-285"
+}
+
+@INPROCEEDINGS{Balaban:OOPSLA05,
+	author =   "I. Balaban and F. Tip and R. Fuhrer",
+	title =   "Refactoring support for class library migration",
+	booktitle =   "Proceedings of the ACM International Conference on Object Oriented Programming Systems Languages and Applications",
+	year =   "2005",
+	pages =   "265-279"
+}
+
+@Article{Dig:JSME06,
+	author =   "D. Dig and R. Johnson",
+	title =   "How Do {APIs} Evolve? {A} Story of Refactoring",
+	journal =   "Journal on Software Maintenance of Evolution",
+	month = "March",
+	number = "2",
+	year =   "2006",
+	volume =   "18",
+	pages =   "83-107"
+}
+
+@INPROCEEDINGS{Henkel:ICSE05,
+	author =   "J. Henkel and A. Diwan",
+	title =   "Catchup!: Capturing and replaying refactorings to support {API} evolution",
+	booktitle =   "Proceedings of International Conference on Software Engineering",
+	year =   "2005",
+	pages =   "274-283"
+}
+
+@INPROCEEDINGS{Kemper:JavaOne05,
+	author =   "C. Kemper and C. Overbeck",
+	title =   "What's new with {JBuilder}",
+	booktitle =   "Proceedings of JavaOne",
+	year =   "2005"
+}
+
+
+@INPROCEEDINGS{Kim:WCRE05,
+	author =   "S. Kim and K. Pan and Whitehead, Jr., E. J.",
+	title =   "When Functions Change Their Names: Automatic Detection of Origin Relationships",
+	booktitle =   "Proceedings of Working Conference on Requirement Engineering",
+	year =   "2005",
+	pages =   "143-152"
+}
+
+@INPROCEEDINGS{Kim:ICSE07,
+	author =   "M. Kim and D. Notkin and D. Grossman",
+	title =   "Automatic Inference of Structural Changes for Matching across Program Versions",
+	booktitle =   "Proceedings of International Conference on Software Engineering",
+	year =   "2007",
+	pages =   "333-343"
+}
+
+@INPROCEEDINGS{Dig:ICSE07,
+	author =   "D. Dig and K. Manzoor and R. Johnson and T. N. Nguyen",
+	title =   "Refactoring-Aware Configuration Management for Object-Oriented Programs",
+	booktitle =   "Proceedings of International Conference on Software Engineering",
+	year =   "2007",
+	pages =   "427-436"
+}
+
+@INPROCEEDINGS{Dagenais:ICSE08,
+	author =   "B. Dagenais and M. P. Robillard",
+	title =   "Recommending Adaptive Changes for Framework Evolution",
+	booktitle =   "Proceedings of International Conference on Software Engineering",
+	year =   "2008",
+	pages =   "481-490"
+}
+
+@INPROCEEDINGS{Schafer:ICSE08,
+	author =   "T. Sch{\"a}fer and J. Jonas and M. Mezini",
+	title =   "Mining framework usage changes from instantiation code",
+	booktitle =   "Proceedings of International Conference on Software Engineering",
+	year =   "2008",
+	pages =   "471-480"
+}
+
+@Article{Godfrey:TSE05,
+	author =   "M. W. Godfrey and L. Zou",
+	title =   "Using Origin Analysis to Detect Merging and Splitting of Source Code Entities",
+	journal =   "IEEE Transactions on Software Engineering",
+	month = "February",
+	number = "2",
+	year =   "2005",
+	volume =   "31",
+	pages =   "166-181"
+}
+
+@Article{Xing:TSE07,
+	author =   "Z. Xing and E. Stroulia",
+	title =   "{API}-evolution support with {Diff-CatchUp}",
+	journal =   "IEEE Transactions on Software Engineering",
+	month = "December",
+	number = "12",
+	year =   "2007",
+	volume =   "33",
+	pages =   "818-836"
+}
+
+@INPROCEEDINGS{Wu:ICSE10,
+	author =   "W. Wu and Y. Gu\'{e}h\'{e}neuc and G. Antoniol and M. Kim",
+	title =   "{AURA}: A Hybrid Approach to Identify Framework Evolution",
+	booktitle =   "Proceedings of International Conference on Software Engineering",
+	year =   "2010",
+	pages =   "325-334"
+}
+
+@INPROCEEDINGS{Tan:ICSE11,
+	author =   "L. Tan and Y. Zhou and Y. Padioleau",
+	title =   "a{C}omment: Mining Annotations from Comments and Code to Detect Interrupt Related Concurrency Bugs",
+	booktitle =   "Proceedings of International Conference on Software Engineering",
+	year =   "2011",
+	pages =   "11-20"
+}
+
+
+
+@INPROCEEDINGS{bib:kof,
+	author =   "L. Kof",
+	title =   "Scenarios: Identifying Missing Objects and Actions by means of Computational Linguistics",
+	booktitle =   "Proc. RE",
+	year =   "2007",
+	pages =   "121-130"
+}
+
+@Article{bib:saw,
+	author =   "P. Sawyer and P. Rayson and R. Garside",
+	title =   "{REVERE}: Support for Requirements Synthesis from Documents",
+	journal =   "Information Systems Frontiers",
+	month = "March",
+	number = "3",
+	year =   "2002",
+	volume =   "4",
+	pages =   "343-353"
+}
+
+@Article{bib:fan,
+	author =   "A. Fantechi and S. Gnesi and G. Lami and A. Maccari",
+	title =   "Applications of Linguistic Techniques for Use Case Analysis",
+	journal =   "Requirement Engineering",
+	month = "March",
+	number = "3",
+	year =   "2003",
+	volume =   "8",
+	pages =   "161-170"
+}
+
+@INPROCEEDINGS{bib:she,
+	author =   "D. Shepherd and Z. Fry and E. Hill and L. Pollock and K. Vijay-Shanker",
+	title =   "Using Natural Language Program Analysis to Locate and Understand Action-oriented Concerns",
+	booktitle =   "Proc. AOSD",
+	year =   "2007",
+	pages =   "212-224"
+}
+
+@INPROCEEDINGS{Thummalapenta:ASE08,
+	author =   "S. Thummalapenta and T. Xie",
+	title =   "{SpotWeb}: Detecting Framework Hotspots and Coldspots via Mining Open Source Code on the Web",
+	booktitle =   "Proc. ASE",
+	year =   "2008",
+	pages =   "327-336"
+}
+
+@INPROCEEDINGS{bib:zho,
+	author =   "Hao Zhong and Lu Zhang and Tao Xie and Hong Mei",
+	title =   "Inferring Resource Specifications from Natural Language {API} Documentation",
+	booktitle =   "Proc. ASE",
+	year =   "2009",
+	pages =   "307-318"
+}
+
+@INPROCEEDINGS{bib:tan,
+	author =   "L. Tan and D. Yuan and G. Krishna and Y. Zhou",
+	title =   "/* i{C}omment: Bugs or Bad Comments? */",
+	booktitle =   "Proc. SOSP",
+	year =   "2007",
+	pages =   "145-158"
+}
+
+@INPROCEEDINGS{Demeyer:OOPSLA00,
+	author =   "S. Demeyer and S. Ducasse and O. Nierstrasz",
+	title =   "Finding refactorings via change metrics",
+	booktitle =   "Proc. OOPSLA",
+	year =   "2000",
+	pages =   "166-177"
+}
+
+@INPROCEEDINGS{Dig:ECOOP06,
+	author =   "D. Dig and C. Comertoglu and D. Marinov and R. Johnson",
+	title =   "Automated detection of refactorings in evolving components",
+	booktitle =   "Proc. ECOOP",
+	year =   "2006",
+	pages =   "404-428"
+}
+
+@Article{Malpohl:ASEJ03,
+	author =   "G. Malpohl and J. J. Hunt and W. F. Tichy",
+	title =   "Renaming detection",
+	journal =   "ASEJ",
+	month = "April",
+	number = "2",
+	year =   "2003",
+	volume =   "10",
+	pages =   "183-202"
+}
+
+@INPROCEEDINGS{Weissgerber:ASE06,
+	author =   "P. Wei{\ss}gerber and S. Diehl",
+	title =   "Identifying refactorings from source-code changes",
+	booktitle =   "Proc. ASE",
+	year =   "2006",
+	pages =   "231-240"
+}
+
+@INPROCEEDINGS{Asahara:COLING00,
+	author =   "Masayuki Asahara and Yuji Matsumoto",
+	title =   "Extended Models and Tools for High-performance Part-of-speech",
+	booktitle =   "Proc. COLING",
+	year =   "2000",
+	pages =   "21-27"
+}
+
+@INPROCEEDINGS{Abebe:ICPC10,
+	author =   "Surafel Lemma Abebe and Paolo Tonella",
+	title =   "Natural Language Parsing of Program Element Names for Concept Extraction",
+	booktitle =   "Proc. ICPC",
+	year =   "2010",
+	pages =   "156-159"
+}
+
+@Article{Collins:CLJ05,
+	author =   "Michael J. Collins and Terry Koo",
+	title =   "Discriminative Reranking for Natural Language Parsing",
+	journal =   "Computational Linguistics",
+	month = "March",
+	number = "1",
+	year =   "2005",
+	volume =   "31",
+	pages =   "25-70"
+}
+
+@Article{Kozareva:DKE07,
+	author =   "Z. Kozareva and {\'{O}}. Ferr\'{a}ndez and A. Montoyo and Rafael Mu{\~{n}}oz and Armando Su{\'{a}}rez and Jaime G{\'{o}}mez",
+	title =   "Combining data-driven systems for improving Named Entity Recognition",
+	journal =   "DKE",
+	month = "June",
+	number = "3",
+	year =   "2007",
+	volume =   "61",
+	pages =   "449-466"
+}
+
+@INPROCEEDINGS{Antoniol:IWPSE04,
+	author =   "G. Antoniol and M. D. Penta and E. Merlo",
+	title =   "An automatic approach to identify class evolution discontinuities",
+	booktitle =   "Proc. IWPSE",
+	year =   "2004",
+	pages =   "31-40"
+}
+
+@inproceedings{Nguyen:OOPSLA10,
+	author    = {Hoan Anh Nguyen and
+	Tung Thanh Nguyen and
+	Wilson, Jr., Gary and
+	Anh Tuan Nguyen and
+	Miryung Kim and
+	Tien N. Nguyen},
+	title     = {A graph-based approach to {API} usage adaptation},
+	booktitle = {Proc. OOPSLA},
+	year      = {2010},
+	pages     = {302-321}
+}
+
+@inproceedings{Zhong:ICSE10,
+	author    = {Hao Zhong and
+	Suresh Thummalapenta and
+	Tao Xie and
+	Lu Zhang and
+	Qing Wang},
+	title     = {Mining {API} mapping for language migration},
+	booktitle = {Proc. ICSE},
+	year      = {2010},
+	pages     = {195-204}
+}
+
+@inproceedings{Taneja:ASE07,
+	author    = {Kunal Taneja and
+	Danny Dig and
+	Tao Xie},
+	title     = {Automated detection of {API} refactorings in libraries},
+	booktitle = {Proc. ASE},
+	year      = {2007},
+	pages     = {377-380}
+}
+
+
+
+
+

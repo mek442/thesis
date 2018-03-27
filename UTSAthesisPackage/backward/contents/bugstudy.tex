@@ -1,0 +1,379 @@
+
+\section{Real-world Bug Study}
+\label{sec:studybug}
+In this section, to answer the \textbf{RQ4} and \textbf{RQ5}, we present the study result on real world bug reports related to BBIs, and explore how BBIs are affecting the client software developers. The basic information of the collected bug reports are presented in Table~\ref{table:basicbug}. 
+
+%In the following subsections, we first identify bug reports that are related to signature incompatibilities, and cross-software duplicate bug reports. Then, we categorize bug-inducing behavior incompatibilities and map them back to categories in our library study, and study their documentation status. Finally, we study how these bug are fixed or resolved by library developers and client developers. 
+
+\subsection{Collection of Bug Reports}
+To collect bug reports caused by BBIs. We searched two large on-line open bug repositories: JIRA and GitHub, on their project-specific bug report search engine. Specifically, we used as keywords the combination of terms related to software upgrading (e.g., ``upgrade'', ``update'', ``version''), and the names of the software libraries listed in Table~\ref{table:basicInfo}. From the collected bug reports, we \textit{randomly} selected 500 bug reports, and carefully inspected these bug reports. During the inspection, we read the developers' comments and other references from the bug report to check whether they are confirmed by the developers to be caused by BBIs, and retain all the bug reports that are caused by BBIs. 
+
+We collected only bugs that are closed before Jan. 1st 2015 and never re-opened after that. We believe that these bugs are not likely to be re-opened so their status should be confirmed. We collect both bugs that are closed and fixed and bugs that are closed but not fixed due to developers' decision. 
+
+The reason is that, BBIs bugs are related to both software libraries and client software, so they can be fixed either at the library side or at the client side. Also, there are cases that a BBI bug is never fixed because the software library developers refuse to revert their changes, and the client developers did not find a way to work around it. In such cases, the developers may choose to not to support the new version of software library (not likely for runtime libraries such as OpenJDK and Android because not supporting the updated platform will cause dysfunction in client software), or have the users to tolerate the bug if the bug is relatively minor. 
+
+With the process above, we collected 126 bugs, and divided these bugs into two groups: \textit{library bugs} that are submitted to software library projects that have BBIs, and \textit{client bugs} that are submitted to software client projects because they triggers BBIs of their software libraries. The breakdown of collected bugs is shown in Table~\ref{table:basicbug}.
+
+\begin{table}
+	\center
+	\caption{\label{table:basicbug} Basic Information of Bugs}
+				
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		Subject & Library Bugs& Client Bugs & Total\\ 
+		\hline
+		Java SDK &        8      &     10   & 18   \\
+		Android &         13     &     64   & 77  \\
+		Other   &         29     &    2    & 31  \\
+		\hline
+			Total   & 50             &  76     & 126     \\
+		\hline
+	\end{tabular}
+	\vspace{+0.3cm}			
+\end{table}
+
+From the table, we can observe that, as we used a random selection of bugs, the majority of selected bug reports are from Android and Java SE. The reasons are two fold. First, Java SE and Android are much popular than other software libraries studied. Second, Java SE and Android are both runtime platforms, so that client software developers do not have control on which version of JVM and Android system their software will be executed on. Therefore, BBIs may be revealed after a Java or Android update at the users' side, and get reported to the client software developers. This also explains another observation that, the majority of bugs of Android and Java SE are client bugs, while the majority of bugs of other libraries are library bugs, because Android and Java BBIs are more likely to be reported by end users, while BBIs in other libraries are more likely to be reported by client software developers to library software as library bugs. Sampling from unbalanced bug sets is difficult. Random sampling will be ruled by dominating classes (e.g., JVM and Android). Giving quota to classes, samples will not reflect the actual data distribution, and proper quota size needs to be determined. We chose random sampling in our study to see the actual impact of BBIs in the field. 
+
+%Obviously, Java SE is used in all Java projects. Furthermore, in our previous study on API popularity among 10,000 random Github projects~\cite{QSICStudy}, Android libraries are used in 34\% of the 10,000 projects , while Apache Http, which ranks the 3rd after Java SE and Android, is used in only 10\% of the projects. By contrast, most of the other libraries in our study are packaged with the client software. Thus, client software developers are able to test the backward compatibility of a new software-library version, and work around the backward incompatibilities before the software is released to the users. 
+
+%\subsubsection{Selecting Test Errors / Failures for Manual Inspection}
+
+%When selecting test errors and failures for manual inspection, we expect our subset to be selected random, as well as representative enough to cover all the studied subject libraries. Therefore, we use the strategy of senate-house election. Specifically, we first randomly selected 1 test error / failure from each subject library, and then we randomly select 100 test errors / failures from all the rest test errors and failures. So, finally we form a selected subset with 127 test failure and errors, from which we identified 1xx behavioral incompatibilities with manual inspection. 
+
+\subsection{Study on Bug-Inducing BBIs}
+
+In this subsection, we categorize the bug-inducing BBIs and compare them to the BBI distribution in our library study. Specifically, among the 126 bugs, we find 13 bugs (12 client bugs from Android and 1 library bug from http-core) that can be directly mapped to the BBIs found in our library study. This shows that the test cases in regression testing are far from sufficient for identifying all bug-inducing BBIs, but it also implies that, if the regression testing results can be well documented or conveyed to client developers in better ways, some bugs can be avoided. 
+
+
+%\subsubsection{Signature Incompatibilities}
+
+%Since the bug reports are randomly collected, some of the bug reports are related to signature-level incompatibilities. As we mentioned in Section~\ref{sec:intro}, since signature-level incompatibilities fail compilation, they are not likely to result in real world bugs. 
+
+%Among the 144 bug reports, we do find 18 of then related to signature-level incompatibilities. Specifically, 6 of the 18 bugs are library bugs, which are reported by client developers to request of the recovery of a removed API method. Other 6 of the 18 bugs are runtime errors from client software running on Android, Java, and Bukkit. Because these libraries serve as runtime environments, when automatic updates happen, the software running on them will throw exceptions such as ``NoSuchFieldException'' or ``UnSupportedOperationException''. 
+
+%The rest 6 of the 18 bug reports are more interesting. As for these bugs, the developers of relevant client software use reflections to invoke the API methods with signature changes, or use ``instanceof'' operations, or downcasts on the classes whose inheritance hierarchy has changed. Thus the signature incompatibilities become latent, and cannot be detected by compilers. It should be noted that, 4 of the 6 bug reports are related to Android. Reflection is encouraged in Android to address backward incompatibilities (i.e., call different API methods for different Android versions), so it seems that reflection serves as a double-edge sword here. 
+
+%\framebox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{\textbf{Finding 1}: An important group of runtime bugs related to signature incompatibilities are due to invoking library methods with reflection or checking class hierarchy of the library.}}Besides the 18 bug reports discussed above, the rest 126 bug reports are all related to behavioral incompatibilities. 
+
+
+%\subsubsection{Behavioral Incompatibilities}
+
+Before we perform more in-depth investigation, we first manually scanned the bug reports to detect \textit{cross-software duplicate bug reports}. Duplicate bug reports inside a project are typically labeled and we did not select them when collecting our bug report set. However, different client software may fail due to a same BBI of a same library, so these client bug reports are ``duplicate'' with each other. After the duplicate-bug-report detection, we identified 112 BBIs as presented in Table~\ref{table:basicIncomp}. 
+
+\begin{table}
+	\center 
+	\caption{\label{table:basicIncomp} Bug-Causing BBIs}
+	
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		Subject & Cause Library Bugs& Cause Client Bugs & Total\\ 
+		\hline
+		JDK &        8      &     10   & 18   \\
+		Android &         13     &     51   & 64  \\
+		Other   &         29     &    1    & 30  \\
+		\hline
+		Total   & 50             &  62      & 112     \\
+		\hline
+	\end{tabular}
+	\vspace{+0.3cm}		
+\end{table}
+
+\subsubsection{Incompatible Behaviors}
+
+\begin{example}
+	\begin{verbatim}
+In Android 4.4, SMS apps are no longer able 
+to send SMS to the SMS provider (rejected 
+silently) in the Android system, unless they 
+are reset to receive a broadcast 
+SMS_DELIVER_ACTION. 	
+ \end{verbatim}
+	\caption{Bug-408: Be able to configure as a default 
+		SMS app in KitKat (\small{from WhisperSystems/TextSecure})} 
+	\label{example:sys}
+\end{example}
+
+The breakdown of bug-inducing BBIs per incompatible behaviors is presented in Table~\ref{table:behavior}. Note that, in our bug study, we use the same categories as defined in Section~\ref{subsec:cats}. For incompatible behaviors, we found 2 BBIs that cannot be put into any defined categories, so we add a new category \textit{Sys. Event}, which indicates changes in system events (Example~\ref{example:sys}).
+
+\begin{table}
+	\center
+	\caption{\label{table:behavior} Categorization of Incompatible Behaviors}
+			
+	\begin{tabular}{|l|l|r|r|r|r|r|r|r|}
+		\hline
+		\multicolumn{2}{|l|}{Behavior} & \multicolumn{2}{|c|}{Android} & \multicolumn{2}{|c|}{JDK} & \multicolumn{2}{|c|}{Other} & All\\
+		\cline{3-8}
+		\multicolumn{2}{|l|}{}      & L & C & L & C & L & C& \\
+		\hline
+\NameEntry{2}{Exception and Crash}&New Exception &2 &  21&5&5&13&1 & 47\\ 
+		&Infinite Loop &0 & 0  & 1&0& 0&  0& 1 \\ 
+		\hline
+		\NameEntry{4}{Ret. Var. Change}& Value Change &1 & 0& 0&1&2&0&4 \\
+		& Field Change & 1 & 2 & 1 & 2 & 7 & 0 & 13\\
+		& Type Change&1     & 2 &0 & 0 & 1 & 0 & 4  \\
+		& Structure Change&0    & 0 & 0&1&3   & 0 & 4 \\
+		\hline
+		\NameEntry{4}{Other Effects}& Memory&3 & 4  &0&0&1 & 0& 8 \\         
+		&  GUI     &5     &19 & 0&1 &1  &  0 & 26 \\
+		& File Sys.   &0     &  2 & 0 &0 & 1&  0 &3  \\
+		& Sys. Event    & 0    &  1 & 1 & 0& 0&  0 &2  \\		
+		\hline 
+	\end{tabular}	
+\end{table}
+
+In the table, Columns 2-3 present the number of library bugs (denoted as L) and client bugs (denoted as C) from Android. Columns 4-7 present similar data for Java and Other subjects. Column 8 presents the total of each line. Since Android and JDK dominates our bug report study set, in the rest of the paper, when comparing bug study results and library study results, we provide both overall library study results, and library study results for JDK and Android combined. From Table~\ref{table:behavior}, we have the following observations. 
+
+First, \textit{New Exception} and \textit{Infinite Loop} account for 48 of the 112 (43\%) BBIs, which is higher than their proportion in the library study (28\% overall, 30\% for JDK+Android). These behaviors may be more likely to be reported as bugs due to their severity.
+
+Second, \textit{Value Change} accounts for 4 BBIs (3\%), which is much smaller than its share in library study (29\% overall, 18\% for JDK+ Android). But \textit{Field Change} accounts for 13 BBIs, which is much more than \textit{Value Change} despite its lower share in library study. 
+
+Third, categories \textit{Different Exception} and \textit{No Exception} do not cause any bugs in our data set. This may be because client developers tend to avoid exceptions in their code so they are not affected. This also indicates that such changes are safer at the library side. 
+
+\begin{example}
+
+		\begin{verbatim}
+	In Android 4.4, a method that update the 
+	padding setting must be invoked before 
+	showing the date information, otherwise, 
+	part of the date information can not be seen.
+		\end{verbatim}
+	\caption{Bug-46:Bold ZeroTopPaddingTextView displays cut off on 4.4 (\small{from derekbrameyer/android-betterpickers})} 
+	\label{example:ui} 
+	
+\end{example}
+	
+Fourth, GUI changes accounts for 26 BBIs (22.3\%), which is the second largest category in bug study, but its share in library study is only 3\% overall. The large number of GUI-change BBIs may be related to the large proportion of Android-related bugs in our bug set. Although these BBIs may be specific to Android framework, they are still important and representative because of the popularity of Android apps, and the existence of similar frameworks. We discovered that, most bug-inducing GUI BBIs are changing settings of UI controls and thus affecting presentation. Examples of the settings include the position to put notification bars (top or bottom), box widths, etc. Example~\ref{example:ui} presents a GUI-related bug. The bug report is caused by a BBI between Android 4.3 and Android 4.4 about the changed value of padding settings. It should be noted that, user interface bugs are not just decoration problems, and they may largely affect software usages (i.e., information cannot be seen, or buttons go outside the screen and cannot be clicked). In general, we have the observation as follows.\\
+
+
+
+\medskip
+\noindent\begin{tabular}{|p{16cm}|}
+	\hline
+	\textbf{Observation 5:} Distribution of BBIs in library study and field bug study is mismatched on the incompatibility behavior categories. New Exception, GUI Changes, and other side-effects account for a higher proportion in field bug study, while other categories of BBIs account for a lower proportion.\\
+	\hline
+\end{tabular}
+\medskip
+\vspace{+0.2cm}
+
+
+
+
+%Since Android and JDK dominates our bug report study set, in the rest of the paper, when comparing bug study results and library study results, we provide both overall library study results, and library study results for JDK and Android combined. 
+
+
+
+%this proportion of 45\% is much more than their proportion (28\% overall, 30\% JDK+Android) in the library study at Figure~\ref{figure:behavior}). This implies that, library developers should be very careful when bringing in incompatibilities in this category. Also, simpler and more scalable techniques that target at unhandled-exception-related changes in the software library may be quite effective in detecting these bug-inducing backward incompatibilities. 
+
+
+%(50\% overall, 33\% JDK+Android). It is possible that such incompatibilities are relatively simple and are thus easier for client developers to handle or they are not breaking client code bad enough to result in bug reports. This also shows that unit testing, which does well in checking return values under simple inputs and context, is not sufficient for identifying bug-inducing incompatibilities. 
+
+
+
+
+
+%Such settings are often changed to achieve better presentation of the Android System GUI, but they may also affect the GUI of Android apps. By contrast, the GUI BBIs discovered in our library study are mostly about UI control actions such as dialog not showing or cursor not moving. 
+
+	
+
+
+
+\subsubsection{Invocation Constraints}
+
+\begin{table}
+	\center
+	\caption{\label{table:condition} Categorization of Invocation Conditions}
+		
+	\begin{tabular}{|l|l|r|r|r|r|r|r|r|}
+		\hline
+		\multicolumn{2}{|l|}{Conditions} & \multicolumn{2}{|c|}{Android} & \multicolumn{2}{|c|}{Java} & \multicolumn{2}{|c|}{Other} & All\\
+		\cline{3-8}
+		 \multicolumn{2}{|l|}{}      & L & C & L & C & L & C& \\
+		\hline
+		\multicolumn{2}{|l|}{Always} &5 &  14  &2  & 1   & 2 &0& 24 \\ 
+		\hline
+		\multicolumn{2}{|l|}{Environment}  &0 & 1   & 0 & 0   & 1 &0& 2 \\ 
+		\hline
+		\multicolumn{2}{|l|}{Special Type} &0 &  2  & 0 &  0  & 2 &0& 4 \\ 	
+		\hline		
+		\multicolumn{2}{|l|}{Multiple APIs} &4& 21 & 1 & 5& 7 &1& 39 \\ 	
+		\hline		
+		
+		\NameEntry{4}{Input}& Trivial Value &0 &  0  & 1 &  0  & 2 &0& 3 \\ 
+		& String Format &2 &   2 & 3 &   3 & 6 &0& 16 \\ 
+	    & Specific Field &0 & 4   & 0 &  0  & 0 &0& 4 \\ 
+		& Specific Value &2 &  7  & 1 &  1  & 9 &0& 20 \\ 
+		\hline
+	\end{tabular}
+	\vspace{+0.3cm}			
+\end{table}
+
+
+The breakdown of bug reports according to BBI-invoking conditions is presented in Table~\ref{table:condition}. From the table, we have the following observations. 
+
+First of all, 24 of 112 (21\%) BBIs always happen (compared to 31\% overall and 22\% in JDK+Android in the library study), causing at least 15 client-side bugs. Second, only 2 of the BBIs are related to the environment. This may be largely due to the platform independence of Java, so we doubt whether this conclusion can be generalized to other programming languages. 
+Third, 39 BBIs (35\%) occur only after certain other API methods are invoked and thus belong to the category of \textit{Multiple API}, compared to 7\% overall and 11\% JDK+Android in the library study. This actually implies that a lot of BBIs happen under special usage scenarios which are not covered by the library-side test code. In such cases, client code may be a good source to extract suitable test cases for detecting BBIs in a software library. 
+Fourth, no BBIs fall into the \textit{Error} category of invocation-condition, which shows that BBIs in this category are less likely to cause client bugs or the client bugs they cause are difficult to detect. In general, we have the observation as follows.\\
+
+\noindent
+\begin{tabular}{|p{16cm}|}
+	\hline
+	\textbf{Observation 6:} Distribution of BBIs in library study and field bug study is mismatched on invocation constraints. Multiple APIs account for a much higher proportion in field bug study, compared to its share in library study. This implies that regression testing may need to be strengthened for usage patterns involving multiple API methods. 	
+%	these categories (e.g., automatic GUI oracle checking, including multiple API usage patterns from client code into regression test suite)
+	\\
+	\hline
+\end{tabular}
+\medskip
+\vspace{+0.05cm}
+%\subsubsection{Call Backs}
+%One interesting finding in the 112 studied incompatibilities is that, 6 of them are related to call backs. All 6 incompatibilities are from Android bugs (4 client bugs and 2 library bugs). 
+
+%One example of call-back-related incompatibilities is \textit{Bug-62100: ``WebViewClient.onPageFinished() called multiple times''} of Android system. The bug is a library bug about a backward incompatibility between Android 4.3 and Android 4.4. Specifically, in Android 4.3, this call back method is called only once when a web view with multiple frames is closed. However, in Android 4.4, the developers added a new method \CodeIn{didFinishLoad(...)}, and invoke it when closing each frame (the added method is shown in the code sample below). Note that this method invokes the call back method \CodeIn{onPageFinished(...)}, so in Android 4.4, the call back method is called multiple times when closing a web view with multiple frames. Such a  change may cause severe problem, if the client developers close some resources (closing a closed resource may cause exceptions) or change some global objects such as counters, in the call back. This bug has been reported to and fixed by Android developers. In the fix, the developer added line 4 to check whether the frame to be closed is the main frame, and invoke the call back method only if the frame is a main frame.
+	%\vspace{-0.2cm}
+
+%\begin{CodeOut}
+%\begin{alltt}
+%1 @Override
+%2 public void didFinishLoad(long frameId, String validatedUrl, 
+%3   boolean isMainFrame) \{
+%4+    if (isMainFrame)
+%5       AwContentsClient.this.onPageFinished(validatedUrl);
+% 	 ...
+% \} 
+%\end{alltt}	
+%\end{CodeOut} %
+%	\vspace{-0.2cm}
+%Call-back backward incompatibilities can easily happen, because library developers may simply change the way they are calling a certain method inside their code, without noticing that this method is being overridden by client developers. Also, call-back backward incompatibilities are difficult to avoid, because library developers often cannot make any assumptions on the content of the call back. 
+		
+\subsection{Documentation Study}
+\label{subsubsec:docIncomp}
+To answer the third research question, we further studied the documentation status of the bug-inducing BBIs. Since these BBIs are bug inducing, we predict that they may be more poorly documented then the BBIs detected from cross-version testing (34\% documented), and the results shown in Table~\ref{table:documentation} confirm our guess. In Table~\ref{table:documentation}, the first column presents the documentation status (and the place if documented). The rest columns are organized similar to Table~\ref{table:behavior}. 
+
+\begin{table}
+	\center
+	\caption{\label{table:documentation} Documentation Status of BBIs}
+	\begin{tabular}{|l|l|r|r|r|r|r|r|r|}
+		\hline
+		\multicolumn{2}{|l|}{Behavior} & \multicolumn{2}{|c|}{Android} & \multicolumn{2}{|c|}{Java} & \multicolumn{2}{|c|}{Other} & All\\
+		\cline{3-8}
+		\multicolumn{2}{|l|}{}      & L & C & L & C & L & C& \\
+		\hline
+		\multicolumn{2}{|l|}{No Doc.} &12&43&7&6&  29&  1  & 98  \\
+		\hline
+		\multirow{3}{*}{Doc.}&Release Notes &1   & 1&1&3& 0 &  0 & 6  \\
+		&JavaDoc       & 0  &  3 &0&1& 0 &   0  & 4  \\
+		&Migration Guide &  0  & 4   &0&0& 0& 0  &  4  \\
+		\hline 
+	\end{tabular}
+	\vspace{+0.3cm}	
+\end{table}
+
+From Table~\ref{table:documentation}, we can see that bug-inducing behavioral BBIs are very poorly documented. Only 14 (13\%) BBIs are documented.  Also, the documented changes are relatively scattered, especially for Android (in release notes, JavaDocs, and Migration guides). Also, 8 client bugs of Android and 4 client bugs of Java are related to documented behavioral changes. This implies that we may need a better way than documentation to convey the information of behavioral change and remind client software developers about such changes. 
+		
+\subsection{Bug Resolution Study}
+		
+
+To answer \textbf{RQ5}, we further studied how the real world bugs related to BBIs are resolved (note that they may be not fixed). Cross-software duplicate bugs may be fixed differently in different client software, so we view them as separate bugs in this subsection. 
+
+\subsubsection{Resolution of Library Bugs}
+
+The breakdown of bugs according to how they are resolved is shown in Table~\ref{table:libfix}. The first two columns present the types of resolution. If a library bug is fixed, we check whether it is fixed by a simple revert of the previous change, a patch of the previous change, or library developers decided to support both the previous behavior and the new behavior (typically by adding a parameter, and set either the previous behavior or the new behavior as default). If a library bug is not fixed, we study how library developers response to the bug report, and check whether it is intended behavior, or the developer is reporting a behavioral change on internal APIs which should not be used by client developers. 
+
+\begin{table}
+	\center
+	\caption{\label{table:libfix} Resolution of Library Bugs}
+			
+	\begin{tabular}{|l|l|r|r|r|r|}
+		\hline
+		\multicolumn{2}{|l|}{Resolution} & Android & Java & Other & All\\
+		\hline
+		\NameEntry{3}{Fixed}& Reverted & 1   & 0 & 2    &   3\\
+		& Patched&  6 &  4  &  16  &   26 \\
+		& Double Support& 0  &  0  & 1   & 1   \\
+		\hline
+		\NameEntry{3}{Not Fixed}& Intended& 5  & 2 & 10  &  17 \\         
+		& Discouraged     & 1  &2  &  0  & 3  \\		\hline 				
+	\end{tabular}	
+	\vspace{+0.3cm}	
+\end{table}
+
+From Table~\ref{table:libfix}, we have the following observations. 
+First, 20 of 50 library bugs are not fixed. The major reason is that the behavior change described in the bug report is intentional. It should be noted that, since these behaviors are reported as library bugs, they may already cause some bugs or at least test failures at the client side, although the client bug may not be reported. Second, among the 30 bugs that are fixed, most of them are patched, which shows that the many bug-inducing BBIs are caused by side effect of other productive changes. 
+
+\subsubsection{Resolution of Client Bugs}
+The breakdown of client bugs according to how they are resolved is shown in Table~\ref{table:clifix}. The first two columns present the types of resolution. If a client bug is fixed, we check whether it is fixed by (1) changing the incompatible API method to another one; (2) changing the arguments of the incompatible API method to other constants, variable, or expressions; (3) adding an API invocation to set a certain internal-state field before or after the invocation of the incompatible API method; (4) converting the return value of the incompatible API invocation to the original value; (5) a global structural code change; (6) updating libraries; (7) changing configuration of software; or (8) bypassing the incompatibility behavior by skipping software features (see Example~\ref{example:libfix}).
+
+\medskip
+\begin{example}	
+\begin{verbatim}
+The cause of the bug is that, "ResourceNotFound 
+Exception" is thrown in Android 5.0 when an 
+"overall scroll glow drawer" is requested. 
+In the fix, the client developers simply catch 
+the exception without doing anything with it. 
+Therefore, the request of "overall scroll glow 
+drawer" is actually bypassed. 
+\end{verbatim}
+\caption{Bug-969: Android 5.0 crash when trying to open the app (\small{from open-keychain/open-keychain})} 
+	\label{example:libfix}
+\end{example}
+
+
+%An example of bypassing is the resolution of \textit{}. 
+
+For the client bugs that are not fixed, we discovered two resolutions. The first resolution is that the client developer simply decided to wait until a new version library is released. One reason of such resolution is that, the BBI is caused by a regression bug, so the client developer waits for the library developers to release a bug-free version. Another reason (and the major reason in our study) is that, the BBI affects a third-party library that the client developers are relying on. Since the client developers cannot change the code of the third-party library (sometime they even do not have access to the source code), they are not able to resolve the BBI, and have to wait for the new version of the third party library. The second solution is that, the client developer simply tolerate the behavior change (if the BBI does not cause crashes). They may simply ask their users to get used to the new behavior such as a UI change, or transfer the BBI to downstream developers. 
+
+\begin{table}
+	\center
+	\caption{\label{table:clifix} Resolution of Client Bugs}
+	\begin{tabular}{|l|l|r|r|r|r|}
+		\hline
+		\multicolumn{2}{|l|}{Resolution} & Android & Java & Other & All\\
+		\hline
+		\NameEntry{8}{Fixed}& Change API & 1   &  2 &   0  &  3  \\
+		& Change Input& 13  & 0   &  1  & 14 \\
+		& Add Set Field& 17   & 1   &   0  &  18  \\
+		& Return Convert& 6  & 0   &  0  &  6  \\
+		& Structural&  8 &   5 &   0  &  13  \\
+		& Config&    2 &   0 &  0  & 2   \\
+		& Lib. Update&  2   &  0  &  0     &  2  \\ 
+		& Bypass&   4  &  0  & 0  &  4  \\ 
+		
+		\hline
+		\NameEntry{2}{Not Fixed}& Wait Lib. Fix& 4  & 2 &  0  & 6  \\         
+		& Tolerate  & 7  & 0 &  1  &  8 \\		
+		\hline 
+	\end{tabular}	
+	\vspace{+0.3cm}		
+\end{table}
+
+Table~\ref{table:libfix} shows that 14 client bugs are not fixed. Note that, we find that most developers are willing to and have tried to fix the bugs, but BBI-related bugs are more difficult to fix, because they typically involve code written by other people. Regarding the fixed client bugs, we have the observation as follows. \\
+
+
+\noindent\begin{tabular}{|p{16cm}|}
+	\hline
+	\textbf{Observation 7:} 41 of the 62 fixed client bugs are fixed through small changes including changing API, changing input value, add an API to set field, or convert the return value to the original value. \\
+	\hline
+\end{tabular}
+\\
+
+We present an example of client bug fixing with ``Add an API to set field'' in Example~\ref{example:fix}. The corresponding BBI is that, for Android 5.0, if the developer wants to start a service with an intent, the type of the intent must be explicitly set with the method \CodeIn{setClass(...)}, and the method \CodeIn{startService(...)} will check the \CodeIn{class} field of the intent and throw exceptions if the value is null. %For this example, if we can summarize the addition of field checking in the library code, it will be not difficult to generate the patch code based on the summary. 
+
+\begin{example}
+	\begin{verbatim}
+ Intent intent = new Intent(
+ Actions.NOTIFICATION_SET_FOR_DEVICE); 
++intent.setClass(context, 
+     NotificationIntentService.class);
+ intent.putExtra(BundleExtraKeys.DEVICE_NAME
+     , deviceName);          
+ ...
+ context.startService(intent); 
+	\end{verbatim}
+	\caption{Fix: Bug-812: Lollipop notification settings won't work \small{(from klassm/andFHEM)}} 
+	\label{example:fix}
+\end{example}
+
+		
+
+\subsubsection{Reporting to Library Developers. } In our study, we further studied whether client developers would like to report their bugs to the library developers. Among the 76 client bug reports, we find that the symptom is reported to library developers in only 6 bug reports. In most of the cases, the developers simply search through the Internet to find a workaround. Also, for the 6 reported bugs, only 3 are fixed by the library developers, while the other 3 are rejected because the corresponding BBIs are intended behaviors. 
+

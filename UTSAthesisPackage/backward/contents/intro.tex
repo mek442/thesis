@@ -1,0 +1,86 @@
+\section{Introduction}
+\label{sec:intro}
+Nowadays, as software products become larger and more complicated, software libraries have become a necessary part of almost any software. Since software libraries and their client software are typically maintained by different developers, the asynchronous evolution of software libraries and client software may result in incompatibilities. To avoid incompatibilities, for decades, ``backward compatibility'' has been a well known requirement in the evolution of software libraries. Each API method in an existing version of software library should exactly maintain its behavior in the following versions. 
+
+%For example, a developer may write several lines of code to generate a trivial "Hello World" Android app. When it is executed, it invokes thousand lines of code in software libraries from the Android platform and the underlying Linux system. The prevalent usage of software libraries has significantly reduced software-development cost and improved the quality of software products. 
+%Like all other software, software libraries also evolve continuously and frequently for new features and higher quality. 
+
+
+However, in reality, full backward compatibility is seldom achieved, and the resultant incompatibilities have been known to affect software users as well as the success of both software libraries and client software. For example, criticism on Windows Vista can be largely ascribed to its backward incompatibility with Windows XP~\cite{vista}. In October 2014, the automatic system update to Android 5.0 caused a complete dysfunction of SogouInput (the top Android app for Chinese input on mobile phones, with more than 200 million users), which is not patched until 3 days later~\cite{sougou}. Also, a recent study~\cite{Vasquez:AndroidAPI} has shown that the usage of unstable Android APIs is an important factor affecting the success of Android apps. Therefore, we believe that it is necessary to conduct thorough studies to understand the status and reasons of backward incompatibilities, and the result of such studies may lead to more advanced techniques to support detection, documentation, and resolution of backward incompatibilities. 
+
+
+%With the reported well-known software failures relevant to backward incompatibilities, 
+
+
+There have been many existing empirical studies~\cite{Raemaekers:APIStability,McDonnell:APIStability} on the stability of software libraries, and extensive research efforts on library migration~\cite{Dagenais:ICSE08,Wu:ICSE10}. However, these studies mainly focus on the signature incompatibilities (i.e., added, revised, and removed API methods) between consecutive versions of software libraries. Although API signature changes form an important category of backward incompatibilities, they do not describe the whole picture. Even if the signature of an API method remains identical in a new version, it is possible that its behavior changes (i.e., it generates different output or side effect when certain input are fed in). We refer to such behavioral changes as \textit{Behavioral Backward Incompatibilities} (BBIs). Actually, since signature incompatibilities can be detected by compilers, although they may cause extra efforts in library migration, they are less likely to cause real-world bugs, and thus less harmful compared to BBIs. 
+
+To acquire a deeper and more complete understanding of BBIs in real world software development, in this paper, we present an experimental study on 68 consecutive version pairs from 15 popular Java software libraries. For each pair, we performed cross-version testing to test the new version of software library with the test code of the old version, and manually inspected and categorized the test errors / failures. We further collected and manually inspected 126 real-world bug reports related to BBIs in these libraries. We chose Java software libraries as our subjects because Java software typically extensively relies on libraries, and most popular Java software libraries are open source with test code available. 
+
+The three main contributions this paper makes include:
+
+\begin{itemize}
+	
+	\item A large scale experimental study on BBIs from 15 popular Java libraries and 68 version pairs, grouping 1094 detected test errors / failures to BBIs, and categorizing BBIs by incompatible behaviors, invocation conditions, and reasons.	
+
+	\item A qualitative study of 126 real world bugs caused by BBIs, including the categorization of their root-cause BBIs, and their resolutions. 
+
+	\item A data set including 296 BBIs detected in cross-version testing, and 126 real world bugs, serving as a basis for future research in this area. 
+\end{itemize}
+%The major findings of our study are as follows. 
+
+%\begin{itemize}
+%	\item Cross-version testing revealed 1094 test failures and errors caused by 296 behavioral backward incompatibilities in 52 of 68 consecutive version pairs of popular Java libraries, which shows that behavioral backward incompatibilities are prevalent.
+%	\item Only a small proportion of behavioral backward incompatibilities are documented. Specifically, only 34\% of the behavioral backward incompatibilities detected in cross-version testing are documented, and only 13\% of the behavioral backward incompatibilities related to the inspected bug reports are documented. 
+%	\item The most common backward incompatible behavior is unhandled exception (47 of 112 inspected incompatibilities), and a significant number (31 of 112) of behavioral backward incompatibilities  result in GUI changes and system environment changes. Only a relatively small portion (17 of 112) of behavioral backward incompatibilities cause return value changes of the corresponding API methods.	
+%	\item Most client software bugs caused by behavioral backward incompatibilities of libraries are fixed by client developers with small changes (changing argument, 1-statement addition) at the invocation location of the backward incompatible API method.
+	
+%	\item Most behavioral backward incompatibilities fall into a small number of categories, which are xxx, xxx, and xxx (covering xx of xx behavioral backward incompatibilities). 
+%\end{itemize}
+
+
+
+
+
+%We organize the rest of the paper as follows. In Section~\ref{sec:studylib}, we introduce the design of our study and the process of data collection. In Section~\ref{sec:studybug}, we present the result of our study on both cross-version testing of consecutive versions pairs of software libraries, as well as real-world bugs caused by backward incompatibilities. After that, we discuss the learned lessons and limitations of our study in Section~\ref{sec:discuss}, and the related works in Section~\ref{sec:related}. Before we conclude in Section~\ref{sec:conclusion}, we indicate a number of future research directions based on the results of our study in Section~\ref{sec:future}. 
+
+
+
+
+
+%A recently study directed by the PI~\cite{} shows that during the version history of Java SDK, Android SDK, and Eclipse, more than 80 \% upgrades failed to achieve \textit{signature-level backward compatibility} (i.e., none of public methods / fields in the previous release are removed or have a different signature in the following release)\footnote{It should be noted that signature-level backward compatibility is merely a necessity, instead of a sufficient condition for backward compatibility.}. Some previous research efforts (e.g., Chow and Notkin~\cite{}, Steyaert et al.~\cite{}, Balaban et al.~\cite{}, and Dig and Johnson~\cite{}) have also identified the existence of backward incompatibility between two consecutive releases of software libraries. In a recent study, Wu et al.~\cite{} presented an example of backward incompatibility in a widely used software library (i.e., between JHotDraw 5.2 and 5.3), which involves more than 100 (x \% of) public methods in the library. Figure~\ref{fig:example} shows two examples of library incompatibilities. 
+
+
+
+%Typically, developers of client software know about the libraries they are using, while library developers are not able to know the client software using their library, so most incompatibilities occur during the upgrading of the software libraries (i.e., when a client software designed for an older release of a library is compiled or executed with a newer release of the library). 
+
+
+%Library incompatibilities may result in severe issues both during the software development phase and after the software is distributed. If the updated library is statically packaged in the client software product, the developers may find their code cannot compile or pass all test cases when they try to incorporate the new release of the library. Thus they must perform extra changes and bug fixes if they want to take advantage of the new release of the library. In such a case, the software users are not affected because they can still use the software product with the earlier release of library. The case become even worse when the upgraded library is dynamically linked so that it belongs to the product's runtime environment (e.g., operating system libraries, Java runtime libraries, platform libraries for plug-ins such as Chrome / Firefox / Eclipse libraries). In such cases, a software user may simply perform a system / platform update (the user may even not notice it if he / she turned on automatic updates) during the night, and find one or more his/her software applications no longer work in the morning. 
+
+%The resolution of incompatibilities is often a difficult task for client-software developers. The reasons are two folds. First of all, the code revisions that cause incompatibilities are in the library code that client-software developers are not familiar with and often do not have access to, and the effect of the code revisions are often not well documented. Second, a library upgrading may affect multiple API methods, and thus incompatibilities may occur at many places in the code. Furthermore, resolution of incompatibilities is often urgent, especially in the case when the upgraded library is dynamically linked as mentioned above. In other words, resolution of incompatibilities is ``trying to fix many bugs caused by unfamiliar code revisions in a very short time''. 
+
+%To reduce developers' efforts as well as accelerate the completion of a compatible client software (so that the negative effect of incompatibilities can be reduced), automation support to the resolution of library incompatibilities is highly desired. Actually, recent research progress in genetic programming~\cite{}, program synthesis~\cite{}, and code pattern mining / application~\cite{} has shown that automatic program repair is promising and feasible in reality. In the past several years, there has been a number of research efforts~\cite{}~\cite{}~\cite{} on mapping API methods in consecutive library releases to help developers resolve incompatibilities. However, the possibility and approaches to automatic resolution of incompatibilities have not been well explored, and our preliminary study (See Section~\ref{sec:infer}) shows that the mapping of API methods is helpful but not sufficient information in the resolution of incompatibilities.
+
+%Automatic resolution of library incompatibilities brings both opportunities and challenges to automatic program repair. On the one hand, for library compatibilities, it is possible to automatically validate or verify the correctness of the repair with existing techniques in testing and verification. The reason is that, the old version of library and client software provides an ideal ground truth of the expected software behavior, which is typically not available in other scenarios of program repair. On the other hand, library code is not changeable and often even not visible when repairing the client software code, which limits the available information and code-revision flexibility during the program repair. 
+
+%To take advantage of the opportunities and address the challenges, in the proposed project, the PI plans to explore a two-phase approach to automatic resolution of library incompatibilities. In the approach, the first phase is to analyze and summarize changes in the library code and generate a number of \textit{resolution rules}, which are supposed to be provided along with the new release of the library. The second phase is to change the code of the client software according to the change rules, and search for the correct resolution of incompatibilities based on regression testing. The major advantage of such a two-phase approach is that, the approach does not require source code of the library. 
+
+%Figure~\ref{fig:trans} presents the resolution rules to be extracted and applied for the exemplar incompatibilities in Figure~\ref{fig:example}. The definition, extraction, and application of resolution rules are presented in Section~\ref{sec:rules}, Section~\ref{sec:infer}, and Section~\ref{sec:repair}, respectively. 
+
+
+
+
+
+
+
+
+
+%\item \textbf{Incompatibility Repair.} Repair of incompatibilities is often an emergency in software development. Millions of users may suddenly find an application to be abnormal in the morning after an automatic system update at midnight. Since system downgrade is not always easy (also often not an option, because system updates may fix vulnerabilities), the developers of the application must work out a release compatible with new system libraries as soon as possible. Thus fully or partial automation of repair process is desirable.
+
+
+%Recently, many advanced techniques such as polymorphism~\cite{}, reflection~\cite{}, dynamic code generation~\cite{}, and web services~\cite{} have provided developers with higher flexibilities and more convenience. At the same time, many of these techniques allow developers to do library method invocation in a latent way (i.e., unaware by the compiler). 
+
+%As incompatibilities during library upgrading gradually become a severe threat to the software productivity and usability, they attracted much attentions from both academia and industry. For example,  
+
+%researchers have performed . Specifically, much research efforts have been made on the detection of latent incompatibilities, as well as the 
+
+%\item \textbf{Detection of Incompatibilities. } Some library incompatibilities can be directly detected by the compiler or from the determinant crash of software. However, library incompatibilities can also be latent, and are invoked and / or result in runtime errors under only specific inputs. Such incompatibilities are actually more dangerous, and may cost more software maintenance effort since they may be detected much later, and affect many following code revisions. 

@@ -1,0 +1,61 @@
+\section{Design}
+\label{sec:design}
+In this section, we introduce the design of our empirical study on the usage of mocking frameworks among developers of open source software projects. 
+\vspace{-0.2cm}
+
+\subsection{Research Questions}
+\label{subsec:rq}
+\vspace{-0.2cm}
+
+In this study, we design an experiment to answer the following research questions. By answering these questions, we try to understand whether and how software developers and testers use mocking frameworks to handle dependencies in the testing of open source software projects. 
+\begin{itemize}
+\item \textbf{RQ1:} How popular are mocking frameworks that are used in the testing of open source Java software projects? Are developers trying to mock most or all of dependencies?
+\item \textbf{RQ2:} What features of mocking frameworks are most frequently used in the testing of open source software projects?
+\item \textbf{RQ3:} What types of dependencies developers tend to mock?
+\end{itemize}
+\vspace{-0.2cm}
+
+\subsection{Subjects}
+\vspace{-0.2cm}
+
+To perform our empirical study, we randomly downloaded 5,000 Java software projects from Github. We choose to focus on Java software projects because Java is one of the most widely used object-oriented programming language, and due to the popularity of Java in the open source community, a large number of open source Java software projects may serve as subjects. When selecting subject projects, we first search Java projects in Github with 26 keywords from 'a' to 'z', and then, we randomly sample 5000 projects from the merged search results. For each project, we consider only the most recent version. 
+
+The basic information of the 5,000 Java software projects are presented in Table~\ref{table:basic}.
+
+\begin{table}
+\caption{Basic Information of Subjects Used in Study}
+\label{table:basic}
+\centering
+\begin{tabular}{|c|r|r|r|r|}
+\hline
+Info Type & Avg. & Med. & Max. & Min\\
+\hline
+\# Java Files &153&18&10,141&1\\
+LOC  &25,305&1,833&3,094,265&0\\
+\# Test Files  &16.4&0&3,335&0\\
+\# Developers  &3.0&1&39&1\\
+\# Versions  &11.4&1&1694&1\\
+\hline
+\end{tabular}
+\end{table}
+
+In Table~\ref{table:basic}, we present five types of basic information of the collected software projects, which are in the Lines 2-6 of the table. Specifically, Line 2 presents the number of Java Files in the project. It should be noted that some of the software projects may be developed in multiple programming languages and may involve other types of source code files. In our study, we focus only on the Java part of such software projects. Line 3 presents the total lines of source code in the Java source files. Line 4 presents the number of test files in the software projects. Specifically, we consider a Java source file as a test file if it uses any library classes from JUnit or TestNG, which are the two major test frameworks for Java and the only test frameworks we notice the collected software projects are using. It should be noted that, in some software projects, a test class $C$ may extend a library class in test frameworks, and other test files use only $C$ but not any library classes in test frameworks. So in our study, we also consider the test files that indirectly use library classes in test frameworks by using classes like $C$. Line 5 and Line 6 present the number of developers and the number of versions (i.e. code commits) of the software projects. 
+
+Due to the large number of subjects, we are not able to present the basic information of individual software projects. Instead, we present the statistical information of the software projects. Column 2-5 present the average, medium, maximum and minimum of all types of information, respectively.  
+
+From Table~\ref{table:basic}, we can see that the chosen subjects vary largely in their sizes, testing efforts, number of developers, and history. The average size of the subjects are 25KLOC, and the largest subject has more than 3 million lines of code. Furthermore, more than half of the subjects have no test code (the medium of number of test files is 0), and the average number of test classes is 16.4. 
+\vspace{-0.2cm}
+
+\subsection{Process}
+\vspace{-0.2cm}
+
+To answer the research questions listed in Section~\ref{subsec:rq}, for each of the collected subject, we first identify all the Java source files and test files. Then, we parse these files to extract the code relevant to mocking frameworks. 
+
+In particular, we consider the four most popular Java mocking frameworks in our study: Mockito, EasyMock, JMock, and JMockit. PowerMock is another popular mocking framework, but it is actually an extension of Mockito and EasyMock frameworks, and typically software projects using PowerMock will use at least one of Mockito or EasyMock frameworks, so we do not consider PowerMock in our study. 
+
+The four investigated frameworks have some specific characteristics. EasyMock
+requires developers to specify the type of the mock object at the creation point (i.e., whether the mock object is strict or not, and whether to raise exceptions when there are unexpected methods invoked). Typically, EasyMock is more strict to raise more run time errors, and the interface is not very easy to learn (comments from StackOverflow). Mockito actually origins from EasyMock, and it
+provides a very simple API interface to create mocking objects (not strict by default) and support annotations to specify the classes to be mocked. Mockito also provides very good spy features that verifies the dependency-related interaction of the class under testing on the real dependency classes. JMock is similar to EasyMock in most aspects. JMockit uses class-map as its underlying technique for mocking and thus can mock final classes. 
+
+
+From the relevant code, we extract the information that can help answer our research questions, Specifically, we extract a data set of API signatures of each mocking framework from their API documents, and developed a AST-tree-based code analyzer analyze the source code of subject projects extract all relevant API invocations. Based on these API invocations, we are able to identify the API method in mocking frameworks used, the dependency classes being mocked, etc. 

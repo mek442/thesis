@@ -1,0 +1,95 @@
+\section{Introduction}
+\label{sec:intro}
+During software evolution, frequent code changes, often including problematic changes, may degrade software performance. For example, a study~\cite{huang2014performance} found that upgrading from MySQL 4.1 to 5.0 caused the loading time of the same web page to increase from 1 second to 20 seconds in a production e-commerce website. Even small performance degradation may result in severe consequence. For example, Google could lose 20\% traffic due to an increase of 500ms latency~\cite{Google}. Amazon could have 1\% decrease in sales due to a 100ms delay in page rendering~\cite{Stevefamov}. \\
+
+Developers can apply systematic, continuous performance regression testing to reveal such performance regressions in early stages~\cite{foxref,poliniref,Ejref,MITCHELL,KALIBERA}. But due to its high overhead, performance regression testing is expensive to conduct frequently. Actually, the typical execution cost of popular performance benchmarks varies from tens of minutes to tens of hours~\cite{huang2014performance}, so it is impractical to run all performance test cases for each code commit. Recently, PerfScope~\cite{huang2014performance} was proposed to predict whether a code commit may significantly affect software performance and thus require performance testing. Specifically, PerfScope extracts various features from the original version and the code commit, and trains a classification model for prediction. Although PerfScope helps reduce code commits for performance regression testing, its empirical evaluation shows that a non-trivial proportion of code commits still require performance testing; thus, there is still a strong need of reducing the cost of conducting performance regression testing on a code commit, even after applying PerfScope in practice.\\
+
+%Such problematic changes are referred to as performance regressions in this paper. and GCC from 4.3 to 4.5, Mozilla developers experienced an up to 19\% performance regression, which forced them to consider a complete switchover.Performance regression testing is a major approach to detecting performance regressions, This is widely advocated in academia, open source community and industry .for web servers is 3 minute to 1 hr, for databases is 10 minutes to 3 hrs, for compilers is 1 hr to 20 hrs and for operating systems is 2 hrs to 24 hrs . With the high revision frequency and high testing cost, 
+
+
+%
+%it does not consider the performance impact of code commits on individual test cases, and thus results in two limitations. First,
+%
+
+To address such strong need, developers shall prioritize performance test cases on a code commit for three main reasons. First, there can be high cost to execute all performance test cases on a code commit for large systems in practice. Second, as reported in a previous industrial study~\cite{TSEPerform} and our study in Section~\ref{sec:motivation}, various random factors may affect the observed execution time, so it typically requires a large number of repetitive executions to confirm a performance regression. Therefore, with prioritized test cases, developers can better distribute testing resources  (i.e., do more executions on test cases likely to trigger performance regressions). 
+Third, a code commit may accelerate some test cases while slowing down others. It is often important for the developers to understand the performance of their software under different scenarios, while a coarse-grained commit-level technique is not helpful on this requirement. \\
+
+
+
+%research effort by addressed this problem with PerfScope, or regressional performance testing. Specifically, for each new code commit, PerfScope applied to the code change various program analysis (e.g., hot path analysis, bound analysis, and data dependency analysis) to  to 
+
+%For example, our study shows that it averagely requires 150 executions to confirm a 10\% performance difference, which is typically considered significant, and dynamic techniques bringing in more than 10\% overhead are typically not considered for deployment-time usage~\cite{}. 
+
+
+%Mozilla’s Talos performance regression detection system~\cite{firefoxTalos} runs performance tests every time a change is pushed to the Firefox source repository~\cite{firefoxperf}. In our empirical evaluation, we observe that one code commit may affect more than 100 test cases. 
+
+
+ 
+
+
+%There is a useful work on the performance risk implication of code change. But their approach may not accurately assess the risk of performance regression issues because of generic nature of static modeling and lacking profiling information. Furthermore, prioritizing commits is not enough to address performance regression because  a code changes touches several test cases is very common during the evolution of software. In our study, we found that some commits touches more than 100 test cases. So the key difference is that we focus  on the prioritizing test cases in regressional performance testing via performance impact analysis of code changes that includes one time profiling and static modeling.
+
+To develop an effective test-prioritization solution for performance regression testing, we focus on \textit{collection-intensive software}, an important type of modern software whose execution time is heavily spent on loading, manipulating, and writing collections of data. Collections are widely used in software for scalable data storage and processing, and thus collection-intensive software is very common. Examples include libraries for data structures, text formating and parsing, mathematics, image processing, etc. Also, collection-intensive software is often used as components in complex systems. Moreover, a recent study~\cite{JIN12} shows that a large portion of performance bugs are related to loops, which are often used to iterate through collections. Our statistics show that 89\% and 77\% of loops iterate through collections for our two subjects Xalan and Apache Commons Math, respectively.\\
+
+%improper iteration on collections has been identified as one of the most
+%
+
+For collection-intensive software, a straightforward approach to prioritizing performance test cases on a code commit would be measuring collection iterations (e.g., loops) impacted by the code commit and executed by each test case. However, such an approach may not be precise enough to differentiate test cases in the presence of newly added iterations, manipulations, and processing of collections, as well as their effect on existing collection iterations. Consider the simplified code example from Xalan in Listing~\ref{list:example-p3}. The code commit involves a new loop, and its location may or may not be at the hot spot for all or most test cases. Therefore, its impact on different test cases may largely depend on the different iteration counts of the added loop, the side effect of changing variable \CodeIn{list}, and the operations in the loop. Since Loop$_B$ depends on a collection variable \CodeIn{limits}, which further depends on Loop$_A$, we can infer the test-case-specific iteration count of Loop$_B$ from that of Loop$_A$; such iteration count can be acquired by profiling the base version for all test cases. Furthermore, we can infer the effect of adding \CodeIn{list.add(...)} on \CodeIn{list} with the iteration count of Loop$_B$, and update the iteration count of loops dependent on \CodeIn{list}. Moreover, we can enhance the estimation precision by using test-case-specific execution time of operations (e.g., \CodeIn{new Arc(...)}). 
+
+
+{\fontsize{10}{10}
+	\begin{lstlisting}[columns=flexible,language=Java,caption=Collection Loop Correlation, label={list:example-p3}]
+	  while(i <= m\_size){ //Loop A
+	    limits.add(new Limit(...))
+	    ...
+	  }
+	  ...
+	+ Collections.sort(limits);
+	+ for (int i = 0; i < limits.size()-1; i++) { //Loop B
+	+   list.add(new Arc(limits.get(i), ...));
+	+ }
+	\end{lstlisting}
+}
+
+
+These observations inspire us for three main insights to effectively model a code commit and its effect on existing collections and their iterations. First, collection sizes (e.g., \CodeIn{limits.size()}) and loop-iteration counts (e.g., Loop$_B$) can often be correlated, so collection sizes can be inferred from loop-iteration numbers and vice versa. Also, collection variables (e.g., \CodeIn{limits}) can be used as bridges to infer iteration counts of new loops (e.g., Loop$_B$) from existing loops (e.g., Loop$_A$). Second, collection manipulations (e.g., \CodeIn{list.add(...)}) are often inside loops, so the size of collections referred by collection variables (e.g. \CodeIn{list}) can be estimated from loop-iteration counts (e.g., Loop$_B$). Third, due to the large number of elements in collections, the average processing time of elements (e.g., \CodeIn{new Arc(...)}) is relatively stable, so a method's average execution time in the new version may be estimated from that in the base version.\\ 
+
+Based on the three insights, we propose PerfRanker, which consists of four automatic steps. First, on a base version, we execute each test case in a profiling mode to collect information about the test execution, including the runtime call graph and the iteration counts of all executed loops. We also perform static analysis to capture the dependency among collection objects and loops. Second, based on the profiling information, we construct a performance model for each test case. Third, given a code commit, we estimate the execution time of each test case on the new version (formed by the code commit) by extending and revising its old performance model. We use profiling information and loop-collection correlations to infer parameters of the new performance model, and refer to this step as \textit{Performance Impact Analysis}. Fourth, we rank all the test cases based on the performance impact on them.\\
+
+%its impact on each test case from two aspects: the execution time of the added and removed code in the revised method, and the execution time of the loops affected by the collection objects which are return values of revised methods. 
+
+
+
+
+%To address the two limitations above, we propose a novel approach to prioritize individual test cases in performance regression testing via performance impact analysis, which estimates the impact of a given code revision on the execution time of a given test case. 
+
+
+
+%our algorithm automatically takes the information in each code commit by statically analyzing the added code and removed code from automatically generated diff of each commit. Incorporating the profile and static information into each test case's call graph we determine the run-time cost and the execution frequency of the code affected by code changes. 
+
+We implement our approach and apply it on two sets of code commits collected from popular open source collection-intensive projects: Apache Commons Math and Xalan. To measure the effectiveness of test case prioritization for a code commit in performance regression testing, we use three metrics: (1) \textit{APFD-P} (Average Percentage Fault Detected for Performance), an adapted version of the APFD metric~\cite{AlexeyAPFD} for performance testing, (2) \textit{DCG}~\cite{NDCG}, a general metric for comparing the similarity of two sequences, and (3) \textit{Top-N Percentile}, which calculates the percentage of test cases needed to be executed to cover the top N test cases whose execution time is most affected by the code commit. Our evaluation results show that, compared with the best of the three other baseline approaches, our approach achieves an average improvement of 17.6 percentage points on \textit{APFD-P} and 27.4 percentage points on DCG. Furthermore, for Apache Commons Math and Xalan, our approach is able to rank top 1 affected test case within top 8\% and top 16\% test cases, and top 3 affected test cases within top 37\% and 30\% test cases, respectively. 
+
+%Since we are not aware of previous research efforts on prioritizing test cases for performance regression testing, we developed  for Apache Commons Math, and an improvement of 16.6 percentage points on APFD and 27.2 percentage points on DCG for Xalan, respectively
+
+%calculated impact score is used with adaptive APFD and DCG metric formula to rank the test case which shows that they can significantly reduce the cost of performance regression. 
+
+
+This paper makes the following major contributions:
+  \vspace{-0.1cm}
+\begin{itemize}
+  \item A novel approach to prioritizing test cases in performance regression testing of collection-intensive software.
+  
+  
+%supported by a novel technique called performance impact analysis which estimates the performance impact of code revisions on test cases.
+  
+%  \item A motivation study on the number of executions required to acquire stable performance testing results.
+    
+    
+  \item Adaptation of the APFD metric to measure the result of test prioritization for performance regression testing. 
+    
+  \item An evaluation of our approach on real-world code commits from two popular open source collection-intensive projects. 
+  
+\end{itemize}
+  
+  
+%The rest parts of this paper are organized as follows. In Section~\ref{sec:motivation}, we present a motivation study showing that multiple test executions are required to confirm a performance regression. In Section~\ref{sec:approach}, we introduce our approach and performance impact analysis in details. We present our evaluation results in Section~\ref{sec:evaluation}, and discuss some related issues in Section~\ref{sec:discuss}. Before we conclude in Section~\ref{sec:conclusion}, we introduce related research efforts in Section~\ref{sec:related}, and indicate some future work in Section~\ref{sec:future}.

@@ -1,0 +1,139 @@
+\section{Discussion}
+\label{sec:discuss}
+In this section, we discuss the lessons learned, limitations and the threats to our study, and regression faults.
+%\subsection{Summary of Major Findings}
+
+%\textbf{At the end of our study, we highlight our major findings in two studies as follows.}
+
+%\begin{enumerate}	
+
+	
+%	\item Behavioral backward incompatibilities are prevalent in library evolution. They appear frequently in both major and minor versions, and cause many real-world bugs. 
+
+%	\item The top reasons of bringing in behavioral backward incompatibilities are making behavior more reasonable, enhancing string output format, enforcing input rules, and enable lousy inputs. 
+
+%	\item There is a mismatch between distribution of incompatibilities in our library study and bug study, implying that some incompatibilities are safer or easier to detect, while others are more destructive or difficult to detect. 
+
+%	\item Half of the 12 runtime errors caused by signature incompatibilities are related to the usage of reflection or class-hierarchy checking such as downcast. 
+%	\vspace{-0.1cm}
+	
+%	\item The most common backward incompatible behaviors are unhandled exception and GUI changes, which account for 42\% (47 of 112) and 23\% (26 of 112) of backward incompatibilities. 
+%	\vspace{-0.1cm}
+	
+%	\item As a backward incompatible behavior, change of return value accounts for only 15\% (17 of 112) backward incompatibilities. 
+%	\vspace{-0.1cm}
+	
+%	\item 39 of 112 backward incompatibilities can be revealed only when certain other APIs are invoked before or after the backward incompatible API. 
+%	\vspace{-0.1cm}
+	
+%	\item Most backward incompatibilities (98 of 112) causing the bug reports we studied are not documented at all. 
+
+%	\item Most client bugs are fixed by client developers, and 65\% fixed bugs (49 of 75) are fixed with simple changes such as replacing the input arguments, converting the return values, and add an invocation to a certain field-setting API method before or after the backward incompatible API invocation.
+
+	%
+%\end{enumerate}
+		
+
+\subsection{Lessons Learned}
+		
+The final goal of our study is to find actionable goals for library / client developers to avoid or resolve bugs caused by behavioral backward incompatibilities. 
+
+
+\subsubsection{Avoidance of BBI Bugs}
+\textbf{Enforcing Old Tests on Release.} In our study, we are surprised by the large number of BBIs found with simple cross-version testing. Note that all tests come with the project and developers are supposed to run them every time they build the code. Our study shows that, most tests detecting BBIs are changed accordingly or deleted when BBIs were brought in, so they can never detect the BBIs. Therefore, we suggest to enforce testing with old tests when releasing a new version. Such a feature can be added to IDEs or version control systems. It is unnecessary that all old tests pass but developers should provide document or workaround for failed tests, especially on minor version releases. 
+
+\textbf{Augmenting Regression Tests.} Our results in Figure~\ref{figure:behavior} shows that, although 105 BBIs cause different exception / crash status and 86 BBIs cause primitive return value changes, the remaining 105 of 296 BBIs (36\%) cause memory state change (e.g., certain field of the returned object) or other side effects (e.g., GUI, file systems). Such BBIs can be revealed only with extra API calls or side-effect checking. Furthermore, Table~\ref{figure:behavior} shows that such BBIs cause 60 of 112 (54\%) studied BBI-related bugs. Some side effects, such as file and UI change can be difficult to detect using normal assertions. Augmented regression tests with more advanced memory revealing assertions will detect more bug-inducing BBIs, and automatic test augmentation techniques such as Ostra~\cite{OOPSLA06} may be helpful. 
+
+
+
+%(1) Library developers should perform cross-version testing when they release a new version. 
+
+%Our first study finds averagely 3 behavioral backward incompatibilities with basic cross-version testing. This is surprising because all the test code we use comes with the source code and the test code are executed each time the project is built. The major reason for the missing 
+
+
+\textbf{BBI Recommendation.} Our study reveals mismatches between the distribution of BBIs in various categories and the corresponding distribution of BBI-related bugs, which shows that certain categories of BBIs are more likely to result in bugs. For example, GUI changes as incompatible behaviors and multiple APIs as invocation conditions has a much higher population in the studied bug-related BBIs, and none of studied bugs are caused by BBIs related to different exceptions or changed error messages. Also, APIs that are frequently used, once have BBIs, are more likely to result in multiple client-side bugs, which is also observed in our study. Furthermore, our study also observed contradictory reasons of behavioral changes (e.g., allowing lousy input and enforce input rules) and several reverted or double-supported BBIs, which shows that developers are not always clear about the consequences of involving BBIs. Therefore, based on the category and API-usage frequency information (together with other factors such as major or minor version released, development status, etc.), a recommendation system can be helpful for developers when they make decisions on involving a BBI in a release. 
+
+\textbf{Test Change Tracking.} Our study shows that, for 267 of 296 BBIs (90.2\%), developers change their test code to accommodate the behavior change. Therefore, change of test code on public APIs can be a sign of BBIs, and tracking test code changes may provide more information about the happening and evolution of BBIs. 
+
+
+
+
+\subsubsection{Detection and Resolution of BBI-Related Bugs}
+\textbf{BBI Notification.} Our study shows that the documentation status of behavioral incompatibilities is very poor. Even when a behavioral change is documented, there are still many relevant client bugs. We believe that, advanced techniques on documentation of behavioral incompatibilities is in a great need and will help reduce many bugs related to backward incompatibilities. The technique should be able to directly check the client code (e.g., finding code clones of a failed library-side test case) and raise warnings about potential relevant behavioral backward incompatibilities. 
+
+\textbf{Advanced GUI Testing.} We find that, GUI behavior change is one of the major cause of BBI-related client bugs. Many of such bugs cannot be easily detected by normal assertions, such as the bugs on text invisibility due to color and size change of UI controls (Example~\ref{example:ui}). Some BBI bugs can be detected only with human eyes. Automatic oracle checking is straightforward for unit regression testing, but hard for GUI regression testing. This calls for more advanced user-interface checking techniques to support automatic regression testing of GUI applications. 
+
+\textbf{Test Code Reference.} Since developers change their test code to accommodate BBIs, the test code change can be used as examples of how to work around BBIs. When using certain API methods, client developers may consider watching the library-side test-code changes, or searching for relevant test-code changes for workarounds when resolving the BBIs from client side. The resource of test code changes can also be used in documentation, BBI notifications, or automatic BBI resolution tools for the client side. 
+
+\textbf{Automatic Fixing of Client Bugs.} Our study shows that, 67\% bugs (41 of 62) fixed from client are based on simple changes such as replacing the input arguments, converting the return values, and add an invocation to a certain field-setting API method before or after the BBI API invocation. Consider Example 5, where an Intent object's field needs to be set before it is used. In many such BBIs, a validation is added in library code to check the field (e.g., checking class field of Intent for accessible classes) and an exception is thrown there. The existence of such patterns shows possibilities that many BBI-related bugs can be fixed automatically by adding new change rules to automatic bug fixing tools.
+\vspace{-3ex}
+\subsection{Limitations and Threats}
+\label{subsec:limit}
+\textbf{Limitations.} First, we use cross-version testing to detect BBIs in software libraries. This result in an under-estimation of the number of BBIs between version pairs. Also, since we require all test cases pass in their original versions, the detected BBIs are biased to the intended behavioral changes (since the relevant test cases are already fixed). However, the major goal of our study on regression testing is to show the prevalence of BBIs, and we believe the above mentioned limitations do not affect our conclusion. Second, when studying BBI-related bugs, we searched the bug repositories with keywords such as ``update''. Bugs related to BBIs do not have obvious keywords, such as ``deadlock'' for concurrency bugs. In particular, some BBI-related bugs may stay in the software for a long time, and the client developers may not realize the root cause of the bug even after it is fixed. Thus, our selected bugs may be biased to those bugs that are easily found to be relevant to BBIs. 
+
+
+%As an early step towards better understanding of behavioral backward incompatibilities, our study has a number of limitations. 
+
+
+
+
+%Third, in our study on bug reports, we largely depend on the comments and code commits of developers to determine whether a bug is fixed or not, and the fix locations. So developers' mistakes may affect the precision of our results. 
+
+%Fourth, in our study of documentation status, we carefully checked release notes, migration guides, and API JavaDocs. However, it is still possible BBIs are documented elsewhere, such as in bug repositories. Thus, we may miss documented BBIs. However, the places we check are also the places client developers may refer to. If the BBIs are documented somewhere hard to find, it is still not well documented. 
+
+\textbf{Threats to Validity.} The major threats to internal validity of our study is the potential errors and mistakes in the process of building software and performing regression testing, studying the bugs, and doing the statistics. To reduce this threat, we carefully wrote all the tools we used, and manually checked the results for correctness. The major threats to external validity is that, our conclusion may hold for only Java software libraries, and the libraries under study. Furthermore, our conclusion may hold for only the bugs studied. Since our bug dataset is dominated by Android and Java, some conclusions (e.g., about GUI) may be specific to these libraries. To reduce this threat, we chose the most popular Java software libraries, as well as randomly chose the bugs to be studied. 
+
+
+\subsection{Detailed Classification of BBIs}
+
+\textbf{Intention of Behavior Changes.} In our paper, we do not differentiate regression bugs from other BBIs and treat them exactly the same. Our second study shows that, both regression bugs and intentional BBIs cause real-world client bugs. Also, it is very hard to tell whether a behavioral change is intentional because an intentional behavioral change can have unexpected side effects. 
+
+%In our first study, developers updated test cases accordingly for 267 of 296 incompatibilities. These incompatibilities are more likely to be intentional because changes on test code show that developers are aware of the changes, and we have manually found reasons of the BBIs. In our second study, we can infer whether a bug is a regression fault from how they are fixed. For library bugs, according to Table~\ref{table:libfix}, 20 of 50 bugs that are not fixed or resolved with supporting both behaviors should not be regression faults, while others may be regression faults. For client bugs, according to Table~\ref{table:clifix}, only 9 bugs are either fixed with library update or waiting for library fixes. However, this number may not be very informative for client bugs because some client bugs may be temporarily fixed by workarounds and will be fixed with library update in future.
+
+
+%Though there are still other possibilities such as developer temporarily disabling test cases for the software to build successfully. 
+
+\textbf{Contract-based Classification of Behaviors.} In our paper, we manually categorized incompatible behaviors and invocation constraints in an intuitive way. In future, we plan to apply analysis tools to categorize incompatibilities in a more formal manner. Specifically, we plan to categorize incompatibilities to precondition violations where the new upgraded function requires more from its inputs than the old one(e.g., an non-null input is required) and postcondition violations where the return values of the new function do not subsume the old ones, or the new function throws different exceptions or has different side effects. 
+
+
+%For two consecutive software versions, regression faults are bugs in the later version that are caused by the changes between the two versions. Since regression bugs also cause behavioral changes between two versions, they can be viewed as a category of behavioral backward incompatibilities that are unintentionally brought in by library developers. 
+
+%In our first study on cross-version testing, we believe that most of detected test failures and errors are NOT regression bugs. The reason has been mentioned in Section~\ref{subsec:limit} (we require all test cases pass in their original versions). This fact implies that the library developers intentionally changed the test code in the new version to avoid test failures / errors. 
+
+%
+
+
+
+%This validation (may be located from stack trace of the thrown exception) can provide information on which field to set, and constraint for the value to be set. With such information, automatic fixing tool may exhaust accessible values in the scope to generate fix candidates for further validation with test suite.
+
+%(1) Automatic repair techniques may be helpful for resolving client-side bugs
+
+%(2) Library test cases can be a source to find resolution of client-side bugs
+
+
+%Generally, findings in our paper show that library developers and client developers need to be more involved to each other's side to reduce behavioral backward incompatibilities and relevant bugs. 
+
+
+%\textbf{Prevalence of Behavioral Incompatibilities.} Our study shows that behavioral incompatibilities are very common in popular Java software libraries. Although cross-version testing is able to reveal only a small portion of potential backward incompatibilities, we still detected 1094 test failures and errors, as well as identified 296 incompatibility groups. We also find that behavioral incompatibilities do cause lots of real bugs in the real world. 
+
+%\textbf{For Library Developers:} Our study shows that library developers of all popular libraries are not documenting cross-version test failures. A potential reason is that, it has been common practice to build and test at code commit time. So library developers tend to change the test code as their library evolves. An enforcement of cross-version testing at release time would be helpful for documenting incompatibilities. Also, based on such information, library developers could better distribute their changes in major and minor versions. Furthermore, according to our findings, some behavioral changes, such as changing exceptions, are safer, while others, such as change API usage patterns and GUI settings, are more destructive. It would also be desirable for library developers (with proper tool support) to check how the changed API methods are used in client side, and test library code with those code. 
+
+
+
+
+
+%Our study shows that, the invocation conditions of behavioral incompatibilities vary, and the invocation of other APIs is one of the major condition. This implies that testing an API method together with other methods that may change relevant internal memory state may benefit the detection of behavioral incompatibilities. We also find that, user interface change is one of the major symptom of behavioral incompatibilities. This calls for automatic user-interface checking techniques to support automatic oracle in regression testing of GUI applications. 
+
+%\textbf{For Client Developers:} When upgrading library, client developers should check carefully on newly thrown exceptions (may be from regression test results of library code), 
+%latent reference of APIs such as reflections and call-backs, as well as GUI components potentially affected by the upgraded library. Changed library test cases (if available) can be a good source to find solution or workarounds of client-side incompatibility bugs. 
+
+
+%\textbf{For Researchers:} Our study shows that the documentation status of behavioral incompatibilities is very poor. Even when a behavioral change is documented, there are still many relevant client bugs. We believe that, advanced techniques on documentation of behavioral incompatibilities is in a great need and will help reduce many bugs related to backward incompatibilities. The technique should be able to directly check the client code (e.g., finding code clones of a failed library-side test case) and raise warnings about potential relevant behavioral backward incompatibilities. 
+
+
+
+%Our study shows that the documentation status of behavioral incompatibilities is very poor. Even if a behavioral change is documented, there are still many relevant client bugs. We believe that, advanced techniques on documentation of behavioral incompatibilities is in a great need and will help reduce many bugs related to backward incompatibilities. The technique should be able to document various factors of behavioral changes such as the APIs that help to invoke behavioral incompatibilities, and the changes on the user interface. 
+
+%\textbf{Resolution of Behavioral Incompatibilities.} Our study shows that, there are a number of simple change patterns for fixing bugs related to behavioral incompatibilities. Specifically, a lot of bugs are fixed through direct adjustment or replacement of the input values, or conversion of the return values. Also, we find that many bugs are fixed by directly setting proper values to a field whose value is changed or checked due to the behavioral change of the API method. The existence of such patterns shows possibilities that many bugs related to behavioral incompatibilities can be fixed automatically. 
+
+

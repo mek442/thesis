@@ -1,0 +1,53 @@
+
+
+\section{Related Work}
+
+
+\label{sec:related}
+Our work is related to studies on software library evolution, summarization of library changes, and migration for library evolution.
+ 
+
+
+\subsection{Studies on Software Libraries Evolution}
+
+
+Researchers have noticed that software libraries are evolving frequently for various reasons such as bug fixing ~\cite{bugEvo}, adding features ~\cite{featureEvo}, and better
+UI support~\cite{WangFSE12} ~\cite{WangFSE10}. A number of studies have been conducted on the evolution of software libraries. Dig and Johnson~\cite{Dig2006} carried out an empirical study on how developers refactor API methods. Raemaekers et al.~\cite{Raemaekers:APIStability} proposed a measurement of software-library stability which considers API method difference and code difference, and studied the stability of 140 industrial Java systems based on the measurement. McDonnell et al.~\cite{McDonnell:APIStability} studied the stability of Android APIs (in terms of added and removed classes and methods), and the time lag between the release of API changes and the corresponding adaptation at the client software side. Espinha et al.~\cite{Espinha:WebAPI} interviewed 6 web client software developers and conducted an empirical study on four widely used web services to understand their API evolution trends, including the frequency of API changes, and the time given client developers to upgrade to the new version of services. Bavota et al.~\cite{Bavota:upgrade,Bavota:upgradeJ}, studied the evolution of software dependency upgrades in the apache software ecosystem. Robbes et al.~\cite{Robbes} studied the reaction of developers to deprecated APIs in SmallTalk ecosystem. Wu et al.~\cite{Wu2015, Wu2016} studied the evolution of API usages in large software ecosystem. Brito et al.~\cite{Brito16}'s empirical study shows that deprecation message is not helpful for developers. The existing research efforts mainly focus on signature-level API changes (Raemaekers et al.'s work further considers the amount of code difference) to measure API changes and stability. By contrast, our study focuses on behavioral changes of software libraries, which are more difficult to be detected and may cause more severe consequences. 
+
+%The authors analyzed the factors that affect developers' decision on software library dependency upgrades and their impact. 
+
+There have also been a number of research efforts on the impact of software-library to client software. Linares-Vásquez et al.~\cite{Vasquez:AndroidAPI} studied the relationship between change proneness of APIs methods and the successfulness of client software that uses those API methods. Bavota et al.~\cite{Bavota:AndroidRating} further extends the work with more detailed experimental results. These research efforts shows that backward incompatibilities have much effect on the successfulness of client software, and thus motivate the study in our paper.
+
+\subsection{Summarizing Software Library Changes}
+
+%As a general technique, change impact analyses~\cite{Arnold:1996}~\cite{dynamicImpact}~\cite{OOImpact} can identify the code being affected by program edits. Therefore, they can be used to identify the API methods affected by program edits between two consecutive versions. Regression testing~\cite{IncreRegressionTest} is another general technique to detecting software library changes by running test code of old versions with the source code of the new version. Furthermore, to identify the program edits that cause the regression test failures, researchers have proposed corresponding fault localization techniques such as delta debugging~\cite{deltadebug}, FaultTracer~\cite{Faulttracer}, etc. 
+
+%Among these general techniques for detecting regression faults, static impact analyses often generate too many false positives and cannot provide information on how the API methods will be affected, while regression testing may provide only partial information. Actually, in our first study, we observed that developers of most studied libraries changed the test code to accommodate the changes in the source code, thus such changes may provide good documentation or code example for corresponding API method changes. 
+
+To provide more information about the changes on API methods, there have also been research efforts trying to summarize changes between two consecutive versions of a software library. On the signature level, Wu et al.~\cite{Wu:AUCA} proposed AUCA, an auditor for API changes, that reports a large variety of signature-level changes of APIs. Tang et al.~\cite{Tang2015} proposed to use tree adjoining language to summarize dependency relationships in libraries. Moreno et al.~\cite{Moreno:ARENA} proposed ARENA, an automatic tool to summarize software-library changes and generate release notes. 
+
+%Specifically, ARENA analyzes source code changes of a software library and generate a natural-language-based notes summarizing library changes changes including additions and removals of files, classes, methods, changes of method signatures, etc. 
+
+On the behavior level, McCamant and Ernst~\cite{McCamant:FSEUpgrade,McCamant:ECoopUpgrade} proposed to represent behavior API methods with program invariants generated with Daikon. Person et al.~\cite{Person:FSEDiffSE,Person:PLDIIncreSE} proposed differential symbolic execution to summarize as symbolic expressions of inputs the semantic difference between two versions of a method. Lahiri et. al~\cite{Lahiri:CAVSymDiff} proposed SymDiff, a tool that leverages a modularized approach to check semantic equivalence of different code versions, and calculate program paths that can reveal code behavioral difference.
+
+%, and to represent behavioral changes as violations of program invariants. More recently,  
+
+
+%summarizing the behavior of a method from its source code has been a hot topic for a long time in the area of compositional program analysis~\cite{Godefroid:POPLComposite,Whaley:EcoopComposite}. There are also some research efforts on change-aware behavior summarization, that summarize the behavioral changes between two versions of a method. Specifically, 
+%These proposed summarization techniques can handle general behavioral changes of methods, while our study actually shows that a large portion of real-world behavioral incompatibilities are related to user interface, execution environment, etc., which raise new challenges for these techniques. Also, our study shows that behavioral incompatibilities follow some patterns, so that more specific and more scalable techniques may be developed accordingly. 
+
+\subsection{Support for Library Migration}
+
+%Another research topic closely relevant to our work is support for library migration, including the mapping of APIs between two consecutive versions of a software library and inference of usage patterns of newly added APIs. 
+Godfrey and Zou~\cite{Godfrey:TSE05} proposed a number of heuristics based on text similarity, call dependency, and other code metrics, to infer evolution rules of software libraries. Later on, S. Kim et al.~\cite{Kim:WCRE05} further improved their approach to achieve fully automation. M. Kim et al.~\cite{Kim:ICSE07} inspected existing framework evolution process to gather a number name-changing patterns and used these patterns to infer rules of framework evolution. Dagenais and Robillard~\cite{Dagenais:ICSE08} proposed \emph{SemDiff}, which infers rules of framework evolution via analyzing and mining the code changes in the software library itself. Wu et al. developed \emph{AURA}~\cite{Wu:ICSE10}, which further involves multiple rounds of iteration applying call-dependency and text-similarity based heuristics on the code of software library itself. Most recently, Meng et al.~\cite{Meng1} proposed \emph{Hima}, which further enhances \emph{AURA} by involving information from comments of code commits between two consecutive versions of software libraries. 
+
+%It should be noted that, almost all existing support for library migration are at the API signature level (i.e., providing replacement API methods to make client code compile). While these approach can largely enhance the productivity of library migration, they may not be able to handle API methods with behavioral changes, which can go through compilation and become runtime errors in the later stages of software life cycle. 
+
+
+%It should be noted that some of the preceding heuristics can be extended to instantiation code to explore how instantiation code of the framework adapts to framework evolution. Sch\"{a}fer et al.~\cite{Schafer:ICSE08} proposed to infer rules of framework evolution from the changes in client code for migrating from one release to another. Moreover, \emph{SemDiff} considers adaptations in the evolution history between the two releases. The use of adaptation information in a finer granularity further improves its accuracy. However, rules inferred from instantiation code do not include those related to APIs not used in instantiation code. That is to say, using only instantiation code may even decrease recall. Note that frameworks typically contain cold spots~\cite{Thummalapenta:ASE08}, which are APIs seldom used in instantiation code.
+
+%As matching-based approaches do not rely on recorded operations, applicability of matching-based approaches is typically higher than operation-based approaches. However, matching-based approaches can hardly always be very accurate due to the inability to sufficiently use finer evolution information. In fact, matching-based approaches typically need to balance between precision and recall. In general, the \emph{AURA} approach makes a good trade-off between precision and recall, but some complex changes inside method bodies may mislead \emph{AURA}~\cite{Wu:ICSE10}.
+
+
+%In particular, researchers have investigated the following types of heuristics: heuristics based on call dependency~\cite{Malpohl:ASEJ03,Godfrey:TSE05,Kim:WCRE05,Dig:ECOOP06,Wu:ICSE10,Nguyen:OOPSLA10}, heuristics based on text similarity~\cite{Antoniol:IWPSE04,Godfrey:TSE05,Kim:WCRE05,Xing:TSE07,Kim:ICSE07,Taneja:ASE07,Wu:ICSE10,Nguyen:OOPSLA10}, heuristics based on structure similarity~\cite{Xing:TSE07}, and heuristics based on metrics~\cite{Demeyer:OOPSLA00,Godfrey:TSE05,Kim:WCRE05,Weissgerber:ASE06,Taneja:ASE07,Nguyen:OOPSLA10}. Some approaches even use more than one type of heuristics.
+%We notice that there are two recent research efforts on the API stability of software libraries, which are closely related to our work. 

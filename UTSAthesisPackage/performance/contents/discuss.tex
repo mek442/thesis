@@ -1,0 +1,37 @@
+\section{Discussion}
+\label{sec:discuss}
+%\subsection{Limitations of Our Approach}
+%As the first step towards effective prioritization of performance test cases, our approach has a number of known limitations as follows. 
+
+\textbf{Handling Recursions.} Recursions and loops are two major ways to execute a piece of code iteratively. Our approach constructs dependency relationships between loops and collection variables to estimate the iteration counts of loops. For recursion cycles existing in the base version, we simply update execution-time changes along the cycle only once, and multiply the execution-time change by averaging the invocation depths, attained via dividing the total execution frequency of all methods in the cycle by the product of invocation-frequency sum of these methods from outside the cycle and the accumulated recursive invocations inside the cycle (multiplying invocation frequencies along the cycle once). As an example, consider a cyclic call graph: $X \to A$, $Y \to B$, $A \to B$, and $B \to A$. When $t(B)$ is changed, the impact is propagated to $A$ as $t(A)=t(B)*f_{AB}$. The propagation then stops to break the cycle. After that, impact on X becomes $f_{XA}*depth*t(A)$ where $depth$ is the cycle's number of execution iterations, estimated as below:  
+\vspace{-0.15cm}
+\begin{equation}
+\frac{total(A)+total(B)}{(f_{XA}+f_{YB})*f_{AB}*f_{BA}}
+\end{equation}
+
+\noindent where $total(F)$ is the total frequency of method $F$ in profile, and the divisor is the product of all calling frequencies from outside and inside of a cycle. For newly added recursions, our approach currently does not support estimation of the invocation depth, and simply assumes the invocation depth to be 1. In future work, we plan to develop analysis to estimate the termination condition of newly added recursions and relate invocation depths to collection variables.
+
+% The reasons are 1) according to literature~\cite{JIN12}, most performance bugs are related to loops, and 2) the termination condition of recursions are more complicated than loops, and thus it is more difficult to relate invocation depths of recursions with collection variables. 
+
+\textbf{Approximation in Performance Estimation.} Since our approach is not able to make any assumption on the given code commit, we have to make coarse approximations for the parameters of our performance model. For example, we ignore non-method-call instructions in revised methods, assume all newly added recursions to have invocation depth 1, and use the average recorded execution time of existing methods and JDK library methods to estimate their execution time in the new version. More advanced analysis can result in more accurate execution-time estimation, yet with higher overhead in the prioritization process, so future investigation is needed for the best trade-off. 
+
+%Actually, the execution time of a method invocation may largely depend on its input and invocation context. So the estimation would be more precise if we can estimate execution time of existing methods or JDK methods as functions of method-input sizes instead of constants. While such idea is possible based on our recorded profiles, a major challenge is to estimate the size of input in a newly added/revised method. We believe that such estimation can be partly done by extending our collection-loop correlation analysis. However, even when our current approach uses relatively coarser approximations, our evaluation results demonstrate its effectiveness. 
+
+\textbf{Supporting Multi-threaded Programs.} Multi-threaded programs are widely used for high-performance systems. In multi-threaded programs, methods and statement blocks can be executed concurrently, and thus our performance model can be inaccurate because the product of invocation frequency and average execution time of a method is no longer the total execution time. To address concurrent execution, we need to analyze the base version to find out the methods that can be executed concurrently. Then, we can give such methods a penalizing coefficient to reflect the extent of concurrency. We plan to explore this direction in  future work. 
+
+%\subsection{Metrics for Performance Test Prioritization}
+%In our evaluation, we considered 3 metrics to measure the effectiveness of performance test prioritization. As discussed in Section~\ref{}, $APFD-P$ emphasize more on the overall performance impact on test cases, while $nDCG$ is more sensitive to the ranking of most affected test cases. Top-3 Coverage considers only the top affected test cases, but is more intuitive than the other two. More investigation and user studies may be required to find out which metric is more suitable for a given scenario. Also, our approach and all of the 3 metrics weighted all test cases equal other than the code commit's performance impact on them. In practice, the importance of a test case may differ a lot depending their execution frequency in real-world systems. A 2-3\% overhead on a very frequent operation may not be acceptable, but a 10\% 
+%overhead on a rarely performed operation may not matter much. So a metric closer to practice may also need to take into account execution frequency of test cases. 
+
+%\subsection{Selection of Base Versions}
+\textbf{Selection of Base Versions.}
+The overhead of our approach largely depends on the required number of base versions. In our evaluation, we use one base version to estimate the subsequent code commits ranging over more than 3 years and 300 code commits. The evaluation results do not show significant effectiveness downgrade as time goes by. One potential reason is that, both software projects in our evaluation are in their stable phase and the code commits are less likely to interfere with each other. 
+
+%
+%If the software project is evolving very fast, it is possible that we need to update the base version more frequently, but in such a scenario, the benefit of test prioritization will also be larger due to the frequent code commits. It should be possible to predict the time for updating the base version by observing the downgrade of prioritization effectiveness, and such prediction technique warrants future investigation. 
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+\section{Discussions}
+\label{sec:discuss}
+\subsection{Definition of Security Bug Reports}
+
+Although the word ``security bug reports'' is widely referred to, it is not a well-defined word and represent a well-defined set of bug reports. Depending on the different understanding of ``security'', and ``security bugs'', a bug report can be either a security bug report or not. For example, a display error of a password prompt is related to security, because the bug is about a security-related component, and users may mistakenly input some information (even privacy) to the prompt. However, such a bug is not a vulnerability of the software that allows an attacker to break in the system or steal important private information. 
+
+In our paper, when referring to security bug reports, we indicate bug reports reporting vulnerabilities of the software (so that may be attacked by malicious users). Actually, according to our motivation, these are exactly the bug reports that should be hidden from the public. Also, both our data sets of security bug reports are built by linking bug reports to vulnerabilities. In particular, the Red Hat security bug reports are linked to CVE vulnerabilities, and the Firefox bug reports are linked to reported vulnerabilities in Mozilla Foundation Security Advisory. 
+
+It should be noted that, our definition of security bugs is very strict, which is consistent with our motivation, but this definition will make the problem of identifying security bug reports more difficult because those security-related non-security bug reports (such as the display error example above) often contain security-related terms and features (e.g., ``password'' in the example above).
+
+\subsection{The Size and Unbalance of the Data Set}
+
+In our evaluation, we used a small training set (i.e., 100 labeled security bug reports), and our data set is unbalanced (the ratio of security bug reports by non-security bug reports is 1:11). The reason for using such settings in our evaluation is to simulate the actual scenario of using our approach. 
+
+First, it is not easy to label security bug reports, and accumulate a large training set for security bug reports, because security bug reports typically account for a very small proportion of the whole bug report set. Thus, to label a small number of security bug reports, it is necessary to read  (sometimes intensively study) a large number of bug reports. We choose 100 labeled security bug reports to form our training set because it is often mentioned as the smallest size of training set for most mining and learning tasks~\cite{}, and it is often not prohibitively expensive to accumulate 100 labeled security bug reports. 
+
+Second, as we mentioned in Section~\ref{sec:evaluation:setup}, we use the 1:11 ratio according to the proportion of security bug reports of Red Had during the period these bug reports are submitted. Although it is obvious that the data set should be unbalanced due to the sparsity of security bug reports, the ratio of security bug reports by non-security bug reports may vary in different projects. The reason is that different software projects may have different amount of code and number of features related to security. At the same time, it is very hard to estimate the proportion of security bug reports in the open bug repository of a software project, because security bug reports are not well labeled in most current software projects.
+Actually, a different ratio may result in different evaluation results. Given a classification model and assuming that the security bug report set remain unchanged, adding more non-security bug reports to reduce the ratio will not change the recall, but the precision will get lower because the classification model may mistakenly predict some added non-security bug reports as security bug reports. Consider a classification model that achieves 90\% precision and recall on a test set with 100 security bug reports and 1,000 non-security bug reports, and we are adding 9,000 non-security bug reports to reduce the ratio from 1:10 to 1:100. If perfect randomness is achieved (so that the added non-security bug reports are statistically identical with existing non-security bug reports), on the new test set, the recall will be still 90\%, and the precision will become 47\% (90/190), because the classification model is mis-predicts 1\% of non-security bugs, and thus will mis-predict 90 more non-security bug reports as security bug reports. In the future, we plan to carry out more experiments on different ratios of security bug reports by non-security bug reports. 
+
+\subsection{Evaluation Metrics}
+
+In our evaluation, we use the widely applied F-score to measure the effectiveness of our approach. The benefit of using F-score is that, it combines precision and recall to a single value and makes it easy to compare different approaches. However, in different usage scenarios, the meaning of precision and recall may vary and their importance may also vary. In our case, it is obvious that recall is very important because low recall value indicates missing of security bug reports and taking the risk of exposing the bug reports to the public. The precision should also not be very low, because otherwise the bug triager must read a lot of bug reports, some of which may be of low priority, and thus the processing of real security bug reports, and other bug reports will be delayed. Also, it is not proper to withhold a large number of bug reports from the public as mentioned in Section~\ref{sec:motivation}. However, it is also true that a lower precision (e.g., 50\%) is more acceptable than a lower recall. 
+
+Therefore, we believe that it may be good to develop some better evaluation metrics that combines precision and recall in-equivalently.  Since our approach achieves higher values on both precision and recall, the comparison between our approaches and other approaches should not be affected. But it may be interesting to further adapting our approach to achieve a higher recall while sacrificing some precision.
+
+
+
+
+
+
+

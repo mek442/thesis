@@ -1,0 +1,370 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,english]{report}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{float}
+\usepackage{calc}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{longtable,lscape}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{xspace}
+\usepackage{nccmath}
+
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\providecommand{\LyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+\floatstyle{ruled}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\usepackage{UTSAthesis}      
+\usepackage{times}            
+\usepackage{latexsym}
+\usepackage{fixltx2e}
+
+\newenvironment{ruledcenter}{%
+  \begin{center}
+  \rule{\textwidth}{1mm} } {%
+  \rule{\textwidth}{1mm} 
+  \end{center}}%
+
+
+  \theoremstyle{definition}
+  \newtheorem{defn}{\protect\definitionname}
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+
+\input{macros}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{varwidth}
+\usepackage{array}
+\usepackage{float}
+\usepackage{balance}
+
+\floatstyle{ruled}
+\newfloat{example}{thp}{lop}
+\floatname{example}{Example}
+
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcommand\NameEntry[2]{%
+	\multirow{#1}*{%
+		\begin{varwidth}{5em}% --- or minipage, if you prefer a fixed width
+			 #2%
+		\end{varwidth}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{epsfig}          
+\usepackage{setspace}         
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{cite}
+
+
+\usepackage{xspace}
+\usepackage{enumerate}
+\usepackage{array} 
+\usepackage{color}
+\usepackage{cases}
+\usepackage{amsfonts}
+
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+\makeatother
+
+\usepackage{babel}
+  \providecommand{\definitionname}{Definition}
+\providecommand{\theoremname}{Theorem}
+
+
+
+\begin{document}
+
+
+\supervisor{Xiaoyin Wang, Ph.D.}
+
+\committeeB{Jianwei Niu, Ph.D.}
+
+\committeeD{Palden Lama, Ph.D.}
+
+\committeeC{Wei Wang, Ph.D.}
+
+\committeeE{Lide Duan, Ph.D.}
+
+
+
+
+\informationitems{Doctor of Philosophy in Computer Science}{Ph. D.}{B. Sc.}{Department of Computer Science}{College of Sciences}{March}{ 2018 }
+
+
+\thesiscopyright{Copyright 2018 Shaikh Nahid Mostafa \\
+All rights reserved. }
+
+
+\dedication{\emph{I would like to dedicate this thesis/dissertation 
+to my parents.}}
+
+
+\title{\textbf{Study and Prioritization of Dependency-Oriented Test Code for Efficient Regression Testing}}
+
+
+\author{Shaikh Mostafa}
+\maketitle
+\begin{acknowledgements}
+First of all, I would like to thank my adviser, Xiaoyin Wang. If it were not for him, I would
+neither have started nor finished my PhD. I very much enjoyed spending time and working with him.
+I have to thank him for numerous nights of assisting on the project or conversation through email.
+His advises regarding my research as well as professional career have been invaluable.
+Although I could never do enough to return all that he has done for me, I hope to assist
+the junior co-workers with the same passion in the future.\\ 
+
+
+I would like to convey my deepest gratitude to Tao Xie for being a tremendous mentor of the research project PerfRanker. Furthermore,
+I would like to thank Jianwei Niu, Palden Lama, Wei Wang, and Lide Duan
+for their generous help during my graduate studies. They served on my thesis
+committee and helped me improve presentation of this material.\\
+
+
+My internship mentors also provided great support and lovely environments: John
+Micco (Google) and Abhayendra Shing (Google) to carry out a research project on google
+infrastructure. I was honored to work with exceptional master's student Rodney Rodriguez.
+I would like to thank other colleagues and friends, including Foyzul Hasan and Xue Qin.\\
+
+Last but not least, I would like to thank my sister, my brother, my parents
+and my wife for their never-ending love, care, and support.
+
+\vspace{4in}
+
+\begin{singlespace}
+\emph{This Doctoral Dissertation Thesis
+was produced in accordance with guidelines which permit the inclusion
+as part of the Doctoral Dissertation
+the text of an original paper, or papers, submitted for publication.
+The Doctoral Dissertation must
+still conform to all other requirements explained in the Guide for
+the Preparation of  Doctoral Dissertation 
+at The University of Texas at San Antonio. It must include a comprehensive
+abstract, a full introduction and literature review, and a final overall
+conclusion. Additional material (procedural and design data as well
+as descriptions of equipment) must be provided in sufficient detail
+to allow a clear and precise judgement to be made of the importance
+and originality of the research reported. }
+
+\emph{It is acceptable for this
+Doctoral Dissertation to include as chapters authentic copies of papers
+already published, provided these meet type size, margin, and legibility
+requirements. In such cases, connecting texts, which provide logical
+bridges between different manuscripts, are mandatory. Where the student
+is not the sole author of a manuscript, the student is required to
+make an explicit statement in the introductory material to that manuscript
+describing the students contribution to the work and acknowledging
+the contribution of the other author(s). The signatures of the Supervising
+Committee which precede all other material in  Doctoral Dissertation attest to the accuracy of this statement.}\end{singlespace}
+\end{acknowledgements}
+\begin{abstract}
+In modern software process, software testing is performed along with software development to detect errors as early as possible and to guarantee that changes made in software did not affect the system negatively. However, during the development phase, the test suite is updated and tends to increase in size. Due to the resource and time constraints for re-executing large test suites, it is important to develop techniques to reduce the effort of regression testing.\\ 
+ 
+Unit testing testing is the core of test driven development where software testers need to test a class or a component without integration with some of its dependencies. Typical reasons for excluding dependencies in testing high cost of invoking some dependencies (e.g., slow network or database operations, commercial third-party web services), and the potential interference of bugs in the dependencies. In practice, mock objects have been used in software testing to simulate such missing dependencies. However, due to exclusion of dependencies, mock-objects-based testing is not suitable for performance regression and backward incompatibility regression testing.\\
+ 
+A small extent of performance degradation may result in severe consequence and running performance test needs more time and resources. Also, it can be hard for a developer to understand performance impact with few runs. Furthermore, A code changes touches several test cases is very common during the evolution of software. Due to the resource and time constraints for re-executing large test suites, it is important to develop techniques to reduce the effort of regression testing. Our proposed method focus on the performance test suite prioritization via performance impact analysis of change.\\
+ 
+Nowadays, due to the frequent technological innovation and market changes, software libraries are evolving very quickly. To make sure that existing client software applications are not broken after a library update, backward compatibility has always been one of the most important requirements during the evolution of software platforms and libraries. Previous studies on this topic mainly focus on API signature changes between consecutive versions of software libraries, but behavioral changes of APIs with untouched signatures are actually more dangerous and are causing most real world bugs because they cannot be easily detected. Our study categorizes behavioral backward incompatibilities according to incompatible behaviors and invocation conditions. We propose compare those detected in regression testing with those causing real-world bugs and prioritization test case based on backward incompatibilities in dependencies.\\
+ 
+\end{abstract}
+
+\pageone{}
+
+
+\chapter{Introduction}
+
+
+\section{Motivation}
+
+In every aspect of our lives, e.g., ranging from communication to social networks to entertainment to business to transportation to health uses of software is predominant. Therefore, software correctness is of utmost importance. The world has witnessed the high cost of bugs far too many times. Prior studies in the area of software testing estimate that bugs cost global economy more than \$300 billion per year. Despite the risk of introducing new bugs while making changes, software constantly evolves due to never-ending requirements. When Agile software development models were first envisioned, a core tenet was to iterate more quickly on software changes and determine the correct path via exploration--essentially, striving to "fail fast" and iterate to correctness as a fundamental project goal. \\
+
+
+
+Thus, software developers have to check, at each project revision, not only correctness of newly added functionality, but also that the recent project changes did not break any previously working functionality. Software testing is the most common approach in industry to check correctness of software. Software developers usually write tests for newly implemented functionality and include these tests in a test suite (i.e., a set of tests for the entire project). To check that project changes did not break previously working functionality, developers practice regression testing - running test suite at each project revision.  Clearly, more automation and better tools for software testing can lower the cost of software development, increase the reliability of software, and reduce the negative economic impact of defective software. So, Continuous Integration process which automatically compile, build, and test every new version of code committed to the central team repository, ensures that the entire team is alerted any time the central code repository contains broken code.\\
+
+
+Although regression testing is important, it is costly because it frequently runs a large number of tests. Some research studies [38, 48, 67, 109, 117] estimate that regression testing can take up to 80\% of the testing budget and up to 50\% of the software maintenance cost. The cost of regression testing increases as software grows. For example, Google reported that In 2014, approximately 15 million lines of code were changed in approximately 250,000 files in the Google repository on a weekly basis. Google's codebase is shared by more than 25,000 Google software developers from dozens of offices in countries around the world. On a typical workday, they commit 16,000 changes to the codebase, and another 24,000 changes are committed by automated systems. 
+Their regression-testing system, TAP [65,146,149], has had a linear increase in both the number of project changes per day and the average test-suite execution time per change, leading to a quadratic increase in the total test-suite execution time per day. As a result, the increase is challenging to keep up with even for a company with an abundance of computing resources. Other companies and open-source projects also reported long regression testing time.\\
+
+
+
+Due to the resource and time constraints for re-executing large test suites, it is important to develop techniques to reduce the effort of regression testing.  Unit testing testing is the core of test driven development where software testers need to test a class or a component without integration with some of its dependencies. Typical reasons for excluding dependencies in testing high cost of invoking some dependencies (e.g., slow network or database operations, commercial third-party web services), and the potential interference of bugs in the dependencies. In practice, mock objects have been used in software testing to simulate such missing dependencies. However, due to exclusion of dependencies, mock-objects-based testing is not suitable for performance regression and backward incompatibility regression testing.\\
+ 
+A small extent of performance degradation may result in severe consequence motivate us that running performance test needs more time and resources. Also, it can be hard for a developer to understand performance impact with few runs. Furthermore, A code changes touches several test cases is very common during the evolution of software. Due to the resource and time constraints for re-executing large test suites, it is important to develop techniques to reduce the effort of regression testing. Our proposed method focus on the performance test suite prioritization via performance impact analysis of change.\\
+
+ 
+Nowadays, due to the frequent technological innovation and market changes, software libraries are evolving very quickly. To make sure that existing client software applications are not broken after a library update, backward compatibility has always been one of the most important requirements during the evolution of software platforms and libraries. Previous studies on this topic mainly focus on API signature changes between consecutive versions of software libraries, but behavioral changes of APIs with untouched signatures are actually more dangerous and are causing most real world bugs because they cannot be easily detected. Our study categorizes behavioral backward incompatibilities according to incompatible behaviors and invocation conditions. We compared those detected in regression testing with those causing real-world bugs and prioritization test case based on backward incompatibilities in dependencies.
+
+\section{Thesis Statement}
+Our thesis is three-pronged:\\
+\\
+\medskip\vspace{+0.05cm}
+\noindent\begin{tabular}{|p{16cm}|}
+	\hline
+	\textit{\textbf{(1)} Developer should have better understanding when mock and when real object}\\
+	\textit{\textbf{(2)} There is a need for an automated performance test suite prioritization technique for collection-intensive software that works in practice}\\
+	\textit{\textbf{(3)} It is important to study and categorization of behavioral backward incompatibilities}\\
+	\hline
+\end{tabular}
+\medskip
+
+
+\section{Contributions}
+To confirm the thesis statement, this dissertation makes the following contributions:
+\begin{itemize}
+\item The dissertation presents the first empirical study on status and the usage of mocking frameworks in software testing. The study shows that mocking frameworks are widely used in practice, and a small portion of dependencies are mocked. Software testers tend to mock source code classes than libraries, while library classes also
+take a substantial proportion (40\%) in all mocked classes and developer most likely to mock network, database and time consuming services API.
+
+\item The main goal of this dissertation project is to investigate and prioritize software regression testing and how we can improve the efficiency and cost reduction
+of software regression testing. Particular, given a large number of existing performance test cases, how should we rank them such that commit of code changes are pushed to repository in a given time. The dissertation introduces a novel technique for performance RTS, named PerfRanker and our evaluation results show that, compared with the best of the three other baseline approaches, our approach achieves an average improvement of 17.6 percentage points on APFD-P and 27.4 percentage points on DCG. Furthermore, for Apache Commons Math and Xalan, our approach is able to rank top 1 affected test case within top 8\% and top 16\% test cases, and top 3 affected test cases within top 37\% and 30\% test cases, respectively.
+
+\item The dissertation presents study and categorization behavioral backward incompatibilities according to incompatible behaviors and invocation conditions beyond api signature. 
+The study shows that behavioral backward incompatibilities are prevalent among Java software libraries, and caused most of real-world backward-incompatibility bugs. Furthermore, many of the behavioral backward incompatibilities are intentional, but are rarely well documented.
+\end{itemize}
+
+\section{Organization}
+\vspace{-0.5cm}
+This dissertation is organized as follows. Chapter 2 introduces the background and related work. Chapter 3 describes our empirical study on the usage of mocking frameworks in software testing. Chapter 4 presents performance test case prioritization and experimental results for them. Chapter 5 describe our study categorization of behavioral backward incompatibilities according to incompatible behaviors and invocation conditions. In chapter 6 and 7 we discusses the lesson learned and future work direction.
+
+
+
+
+\chapter{Background and Related Work}
+The purpose of this section is to provide the background of this study and a review of
+related literature. First, the background is introduced followed by a related work section
+about Mocking, Regression, Performance Regression and Backward incompatibility.
+
+
+
+\section{Mocking}
+Mocking objects are used in software testing to simulate software dependencies so that the testing process can be accelerated and the testing scope can be limited to the component under test (instead of going beyond the interface of dependencies and invoke potential bugs relevant to dependencies). To
+simulate real dependencies, mock objects typically have the same interface as the objects they mimic. Therefore, the client object remains unaware of whether it is using a real object or a mock object.
+
+There have been a number of existing research efforts on enhancing mocking frameworks or leveraging mock objects to improve automatic software testing. Freeman et al.~\cite{IEEEhowto:kopka}~\cite{Freeman} presented the basic process and concepts of using mocks objects in unit testing, as well as a mocking framework jMock. Galler et al.~\cite{Galler} proposed an approach to automatically generation of mocking objects satisfying certain preconditions to serve as test inputs in automatic test-case generation for Java unit testing. Taneja et al.~\cite{Taneja} proposed to automatically generate mock objects to simulate the behavior of database systems in the automatic test-case generation of database systems. Coelho et al.~\cite{Coelho} proposed an approach to generate mock agents in the unit testing of multi-agent software systems. Due to the necessity of mock objects in unit testing, researchers also proposed approaches to automatically generating mock objects along with unit test cases ~\cite{woda}~\cite{Pasternak}. For the existing test cases which are not using mock objects, Saff and Ernst~\cite{Saff} proposed an approach to automatically refactor such test cases by adding mock objects. Marri et al.~\cite{Marri} carried out an experiment to study the benefit of using mock objects to simulate file systems. All these research efforts are about automatic generation of mock objects and how to leverage mock objects in specific testing problems, while our work focuses on the current usage status of mocking frameworks and mock objects in real world software projects. As far as we know, this paper is the first research effort to study the usage status of mocking frameworks and mock objects in software practice.
+
+\section{ Regression}
+Regression testing is the activity of testing software after it has been modified to gain
+confidence that the newly introduced changes do not obstruct the behavior of the existing,
+unchanged parts of the software. In order to gain confidence that program changes did not introduce any errors, regression test suites are executed recurringly. The number of test cases
+can greatly influence the execution time of a test suite. There are a number of challenges related to regression testing, such as identification of obsolete test cases, regression test selection, prioritization
+and minimization and test suite augmentation [19]. Yoo and Harman [44] conducted a
+survey on regression testing minimization, selection and prioritization, constituting nearly
+200 papers. It encompasses the main research results around regression testing, addressing
+the problems of identifying obsolete, reusable and re-testable test cases (selection),
+eliminating redundant test cases (minimization) and ordering test cases to maximize early
+fault detection (prioritization).
+
+
+
+\section{Performance Reression}
+The default approach for regression testing is to retest all test cases after releasing a new version, which is an expensive proposition.
+To solve this problem, there are good collection of industry case studies and research effort on performance regression testing in software systems. For example, automating regression benchmarking \cite{KALIBERA}, a model-based performance testing framework for workloads\cite{BARNA11}, genetic algorithm to expose performance regression\cite{LUO16}, learning-based performance testing framework for test input data\cite{GRECHANIK12}, symbolic execution to generate load test\cite{ZHANG11} and probabilistic symbolic execution \cite{Chen2016} focus on building better performance regression testing infrastructure and test cases. Other important works are performance bug detection(\cite{JIN12, JOVIC11, KILLIAN10, YAN12}), performance debugging(\cite{SHEN05,HAN12,LEUNG07,AGUILERA03}), automatic fixing performance problem \cite{Nistor15} and 
+performance regression testing result analysis(\cite{FOO11,FOO10}) focus on detecting performance regression bugs or provide forensic diagnosis. But Our work 
+assumes the existence performance testing infrastructure and test cases, and improves the testing efficiency by prioritizing test suite.
+
+
+Functional regression is a well research area to reduce testing cost by test case selection based on test case property and
+code modification(\cite{ROTHERMEL97,CHEN94}), test suite reduction by removing redundancy in test suite (\cite{HARROLD93,BLACK04,ZHONG06}) and test cases prioritization orders test case execution in a way to hope to detect functional fault faster(\cite{ELBAUM00,KIM02,LI07,ROTHERMEL99}). Different from these work, our goal is to reduce performance regression
+testing overhead via test suite prioritization based on change impact analysis whether an operation is expensive or lies in hot path.
+Most relevant work on the performance risk implication of code change~\cite{huang2014performance}. However, this work relies on static analysis and focuses on specific types of performance regressions. Furthermore, prioritizing commits is not enough to address performance regression because 
+a code changes touches several test cases is very common during the evolution of software. In our study, we found that some commits touches more than 100 test cases.
+
+
+
+\section{Backward incompatibility }
+Nowadays, as software products become larger and more complicated, software libraries have become a necessary part of almost any software. Since software libraries and their client software are typically maintained by different developers, the asynchronous evolution of software libraries and client software may result in incompatibilities. To avoid incompatibilities, for decades, ``backward compatibility'' has been a well known requirement in the evolution of software libraries. Each API method in an existing version of software library should exactly maintain its behavior in the following versions.
+
+
+Researchers have noticed that software libraries are evolving frequently for a long time, so a number of studies have been conducted on the evolution of software libraries. Raemaekers et al.~\cite{Raemaekers:APIStability} proposed a measurement of software-library stability which considers API method difference and code difference, and studied the stability of 140 industrial Java systems based on the measurement. McDonnell et al.~\cite{McDonnell:APIStability} studied the stability of Android APIs (in terms of added and removed classes and methods), and the time lag between the release of API changes and the corresponding adaptation at the client software side. Espinha et al.~\cite{Espinha:WebAPI} interviewed 6 web client software developers and conducted an empirical study on four widely used web services to understand their API evolution trends, including the frequency of API changes, and the time given client developers to upgrade to the new version of services. Bavota et al.~\cite{Bavota:upgrade,Bavota:upgradeJ}, studied the evolution of software dependency upgrades in the apache software ecosystem. Robbes et al.~\cite{Robbes} studied the reaction of developers to deprecated APIs in SmallTalk ecosystem. The existing research efforts mainly focus on signature-level API changes (Raemaekers et al.'s work further considers the amount of code difference) to measure API changes and stability. By contrast, our study focuses on behavioral changes of software libraries, which are more difficult to be detected and may cause more severe consequences.
+
+
+
+
+
+\include{mocking/chapt2}
+
+\include{performance/chapt2}
+
+\include{backward/chapt3}
+
+
+\chapter{Lesson Learned}
+From our large scale empirical study on the usage of mocking frameworks in software testing, we have learned that mocking frameworks are widely used in practice, and a small portion of dependencies are mocked - developer most likely to mock network, database and time consuming services API. The reason of mocking is that software dependencies such as web services and databases are very slow when they are invoked. Thus involving such dependencies in testing will slow down the whole testing process,
+which may be fine for system testing, but not acceptable in unit testing and regression testing which are typically performed whenever a change is committed.\\
+
+Regression performance testing is an important but time/resource consuming process. Developers need to detect performance regressions
+as early as possible to reduce their negative impact and fixing cost. But in the evolution of a code it is very challenging 
+that a code commit may include any type and scope of code changes, from one line revision, to feature addition and interface revision. 
+A code commit may contain newly added code, especially new loops. No execution information of such code is available, but given that loops can have high impact
+on performance, there is a strong need of estimating the code commits execution time and frequency. Even if the execution time of changed code in a code commit has little impact on performance, the code commit may include changes on collection variables, eventually
+affecting the performance of unchanged code. From our study, we can conclude that it better to replace mocking with real code when code change performance impact is high.\\
+
+Our finding from BBIs study shows that BBIs are prevalent among Java software libraries and majority of BBI bugs
+are not documented. There is little difference between major version pairs and minor version pairs suffered from backward incompatibilities on average,
+so they are equally important for BBI testing. Furthermore, majority client bugs are fixed through small changes including changing
+API, changing input value, add an API to set field, or convert the return value to the original value which signifies that majority of BBI can be
+fixed automatically. Cross version testing is an important way to find BBI bugs bolster that developer should be careful when to mock and when not. 
+
+
+
+
+
+\chapter{Future Directions}
+
+\section{Prioritization Regression Tests}
+The challenge of static analysis without profiling and input may not may not accurately assess the risk of sophisticated performance
+regression issues such as resource contention, caching effect. Improve the accuracy our cost model include context sensitive
+profiling information. Our current work consider single threaded program because of thread context switch,
+it is hard to capture execution time accurately. It would be better to consider thread contention as a feedback to
+our model to handle multi threaded program.\\ 
+
+To provide more information about the changes on API methods, there have also been research efforts trying to summarize changes between two consecutive versions of a software library. On the signature level, Wu et al.~\cite{Wu:AUCA} proposed AUCA, an auditor for API changes, that reports a large variety of signature-level changes of APIs. Moreno et al.~\cite{Moreno:ARENA} proposed ARENA, an automatic tool to summarize software-library changes and generate release notes. There is a good research direction to combine with our approach to make better hybrid model.\\
+
+
+On the behavior level, McCamant and Ernst~\cite{McCamant:FSEUpgrade,McCamant:ECoopUpgrade} proposed to represent behavior API methods with program invariants generated with Daikon. Person et al.~\cite{Person:FSEDiffSE,Person:PLDIIncreSE} proposed differential symbolic execution to summarize as symbolic expressions of inputs the semantic difference between two versions of a method. Lahiri et. al~\cite{Lahiri:CAVSymDiff} proposed SymDiff, a tool that leverages a modularized approach to check semantic equivalence of different code versions, and calculate program paths that can reveal code behavioral difference.\\
+
+There is no research to prioritize regression tests based on backward incompatibility. Behavioral Backward incompatibility is our another research study where we categorize the behavioral bug beyond api signature change. It would be excellent research direction to prioritization regression tests based on backward incompatibility.
+
+\section{Augmenting Regression Tests}
+Software engineers use regression testing to validate software as it evolves. To do this cost-effectively, they often begin by running
+existing test cases. Existing test cases, however, may not be adequate to validate the code or system behaviors that are present in a
+new version of a system. Test suite augmentation techniques address this problem, by identifying where new test
+cases are needed and then creating them with reuse of existing test cases for augmentation. This is because existing test cases provide a rich source of data on potential inputs and code reachability, and existing test cases are naturally available as a starting point in the regression testing context. To create effective test suite augmentation techniques we need to understand the influence of the foregoing factors. Based on such an understanding, It would be better to create augmentation
+techniques that leverage test cases in a cost-effective manner. Input of test case are foreign element that effect the performance, how an existing test-generation tool to generate new test inputs to augment the existing test suite would be an excellent idea to go forward.\\
+
+Our existing performance model can be extended easily by correlating input to collection or array. We can easily model the
+input change and amplify performance change that depends on input. It will be good tool to tune application performance on
+the average case and also for performance debugging. Behavioral bug like file change and UI layout change can be difficult to detect using normal assertions. Augmented regression tests with more advanced memory revealing code and assertions will detect more bug-inducing BBIs, and automatic test augmentation techniques such as Ostra~\cite{OOPSLA06} may be helpful. So augmented test suite would be better approach to expose more behavioral bug automatically.
+
+\section{Logging}
+ Inappropriate provisioning of resources may lead to unexpected performance bottlenecks or memory overflow. So there is an essential need to system monitoring. Monitoring a computer on which System Monitor is running can affect computer performance slightly. Therefore, either log the System Monitor data to another disk (or computer) so that it reduces the effect on the computer being monitored, or run System Monitor from a remote computer. Using the logging trace System can predict resource usage and integrating with our performance model would be able to predict more sophisticated performance impact. 
+
+\appendix
+
+
+
+
+\bibliographystyle{plain}
+\nocite{*}
+\bibliography{sampleThesis}
+
+
+
+\end{document}

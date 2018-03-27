@@ -1,0 +1,11 @@
+\section{Future Works}
+\label{sec:future}
+In the future, we plan to further explore the following research directions. 
+
+First of all, our study focuses on Java software libraries, so our conclusion may not be generalized to other programming languages. Therefore, we plan to conduct similar studies on software libraries written in other languages, especially non-object-oriented languages to confirm or extend our conclusion. We also plan to inspect more backward-incompatibility-related bug reports. 
+
+Second, as we mentioned in Section~\ref{sec:studylib}, regression testing with developers' test suite may find only a small portion behavioral incompatibilities, and thus results in a very course underestimation of the number of behavioral incompatibilities. In the future, we plan to leverage automatic test generation and more advanced automatic test oracles to better detect behavioral backward incompatibilities. 
+
+Third, due to the difference in the popularity of API methods, the potential influence of backward incompatibilities varies. A backward incompatibility is more important if the relevant API method is used (directly or indirectly) more widely. We plan to further study the influence of behavioral incompatibilities and signature incompatibilities. 
+
+Fourth, in our study, we find a number of challenges and research opportunities including behavioral incompatibilities related to reflections, call backs, GUI, and execution environments, better documentation of behavioral incompatibilities, etc. We plan to address some of these challenges in the future. 

@@ -1,0 +1,91 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: sampleThesis.aux
+A level-1 auxiliary file: mocking/chapt2.aux
+A level-1 auxiliary file: performance/chapt2.aux
+A level-1 auxiliary file: backward/chapt3.aux
+The style file: plain.bst
+Database file #1: sampleThesis.bib
+Warning--entry type for "xalan" isn't style-file defined
+--line 667 of file sampleThesis.bib
+Warning--entry type for "commonMath" isn't style-file defined
+--line 677 of file sampleThesis.bib
+Warning--entry type for "SemVer" isn't style-file defined
+--line 1477 of file sampleThesis.bib
+Repeated entry---line 1641 of file sampleThesis.bib
+ : @inproceedings{SemVer
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1649 of file sampleThesis.bib
+ : @inproceedings{OOPSLA06
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1667 of file sampleThesis.bib
+ : @inproceedings{MockStudy
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1683 of file sampleThesis.bib
+ : @inproceedings{SCAM2014
+ :                        ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in perfranker
+Warning--to sort, need author or key in xalan
+Warning--to sort, need author or key in commonMath
+Warning--to sort, need author or key in vista
+Warning--to sort, need author or key in sougou
+Warning--to sort, need author or key in SemVer
+Warning--to sort, need author or key in deltadebug
+Warning--empty author in deltadebug
+Warning--empty publisher in deltadebug
+Warning--there's a number but no volume in Bavota:AndroidRating
+Warning--can't use both author and editor fields in Spark
+Warning--empty publisher in Spark
+Warning--empty institution in AlexeyAPFD
+Warning--empty booktitle in Google
+Warning--empty year in Google
+Warning--empty booktitle in MITCHELL
+Warning--empty year in MITCHELL
+Warning--can't use both author and editor fields in GBRandom
+Warning--empty publisher in GBRandom
+You've used 169 entries,
+            2118 wiz_defined-function locations,
+            1470 strings with 35487 characters,
+and the built_in function-call counts, 73723 in all, are:
+= -- 7231
+> -- 3151
+< -- 128
++ -- 1265
+- -- 1070
+* -- 4718
+:= -- 10802
+add.period$ -- 512
+call.type$ -- 169
+change.case$ -- 1036
+chr.to.int$ -- 0
+cite$ -- 188
+duplicate$ -- 3300
+empty$ -- 6129
+format.name$ -- 1070
+if$ -- 16634
+int.to.chr$ -- 0
+int.to.str$ -- 169
+missing$ -- 169
+newline$ -- 839
+num.names$ -- 324
+pop$ -- 1440
+preamble$ -- 1
+purify$ -- 873
+quote$ -- 0
+skip$ -- 2730
+stack$ -- 0
+substring$ -- 4898
+swap$ -- 1369
+text.length$ -- 128
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 662
+warning$ -- 19
+while$ -- 684
+width$ -- 172
+write$ -- 1843
+(There were 4 error messages)

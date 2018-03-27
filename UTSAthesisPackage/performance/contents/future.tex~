@@ -1,0 +1,10 @@
+\section{Future Works}
+\label{sec:future}
+In the future, we plan to extend our work in the following three directions. 
+
+First of all, in this paper, we evaluated our approach on two data sets with hundreds of bug reports each. Actually, there are not many labeled security bug reports in the wild to serve as evaluation data sets. We plan to construct larger data sets of security bug reports and perform larger-scale evaluation of our approach. In particular, we may identify security bug reports by checking whether a bug report can be linked with security related code commits or is assigned to certain group of developers who handle security bugs in a software projects. 
+
+Second, as we mentioned in Section~\ref{sec:discuss}, due to the characteristics of the security-bug-report identification problem, the widely applied F-score may be not the best metrics for evaluation results. We plan to study more advanced evaluation metrics by studying the behavior of bug triagers / software developers, or doing surveys with them. 
+
+Third, in this paper, due to the small number of labeled security bug reports in the wild, we leverage the semi-supervised learning techniques in our approach. Actually, in the area of software engineering, labeled data for training is sometimes very expensive to acquire. Thus it is interesting to see how semi-supervised learning techniques work for other problems with a small number of labeled data for training. 
+
