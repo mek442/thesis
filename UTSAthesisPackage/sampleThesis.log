@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.7.25)  27 MAR 2018 14:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.7.25)  9 APR 2018 16:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -924,53 +924,53 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 232.
- [3] [4]
+ [3] [4] [5]
 Chapter 2.
-[5
+[6
 
-] [6] [7] [8]
-\openout2 = `mocking/chapt2.aux'.
-
- (./mocking/chapt2.tex
-Chapter 3.
-(./mocking/content/intro.tex [9
-
-
-] [10]) (./mocking/content/background.tex
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+]
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
-[12] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[7] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 LaTeX Font Info:    Try loading font information for T1+[Scale=0.7]{Courier} on
- input line 22.
-LaTeX Font Info:    No file T1[Scale=0.7]{Courier}.fd. on input line 22.
+ input line 287.
+LaTeX Font Info:    No file T1[Scale=0.7]{Courier}.fd. on input line 287.
 
 
 LaTeX Font Warning: Font shape `T1/[Scale=0.7]{Courier}/m/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 22.
+(Font)              using `T1/cmr/m/n' instead on input line 287.
 
 
 LaTeX Font Warning: Font shape `T1/[Scale=0.7]{Courier}/bx/n' undefined
 (Font)              using `T1/[Scale=0.7]{Courier}/m/n' instead on input line 2
-4.
+89.
 
 
 LaTeX Font Warning: Font shape `T1/[Scale=0.7]{Courier}/m/it' undefined
 (Font)              using `T1/[Scale=0.7]{Courier}/m/n' instead on input line 2
-9.
+94.
 
-) (./mocking/content/design.tex [13] [14] [15]) (./mocking/content/study.tex
-[16] <mocking/boxplot.pdf, id=695, 361.35pt x 252.945pt>
+[8] [9] [10] [11]
+\openout2 = `mocking/chapt2.aux'.
+
+ (./mocking/chapt2.tex
+Chapter 3.
+(./mocking/content/intro.tex [12
+
+
+] [13]) (./mocking/content/design.tex [14]
+[15] [16]) (./mocking/content/study.tex [17]
+<mocking/boxplot.pdf, id=688, 361.35pt x 252.945pt>
 File: mocking/boxplot.pdf Graphic file (type pdf)
-
-<use mocking/boxplot.pdf>
+ <use mocking/boxplot.pdf>
 Package pdftex.def Info: mocking/boxplot.pdf used on input line 17.
 (pdftex.def)             Requested size: 284.53156pt x 170.71892pt.
- [17 <./mocking/boxplot.pdf>] [18]
+
+[18 <./mocking/boxplot.pdf>]
 Overfull \hbox (40.71205pt too wide) in paragraph at lines 127--143
  [][] 
  []
@@ -980,8 +980,8 @@ Overfull \hbox (38.3394pt too wide) in paragraph at lines 158--174
  [][] 
  []
 
-[20] [21]) (./mocking/content/related.tex [22]) (./mocking/content/conclude.tex
-[23])) [24]
+[20] [21] [22]) (./mocking/content/related.tex [23])
+(./mocking/content/conclude.tex [24])) [25]
 \openout2 = `performance/chapt2.aux'.
 
  (./performance/chapt2.tex
@@ -1001,7 +1001,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
-[25
+[26
 
 
 
@@ -1013,7 +1013,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 37.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [26]
+) [27]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 41.
 
@@ -1026,55 +1026,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[27]) (./performance/contents/motivation.tex
-<performance/images/standard-deviation.pdf, id=811, 796.9775pt x 597.23125pt>
+[28]) (./performance/contents/motivation.tex
+<performance/images/standard-deviation.pdf, id=804, 796.9775pt x 597.23125pt>
 File: performance/images/standard-deviation.pdf Graphic file (type pdf)
 
 <use performance/images/standard-deviation.pdf>
 Package pdftex.def Info: performance/images/standard-deviation.pdf used on inpu
 t line 10.
 (pdftex.def)             Requested size: 211.3883pt x 158.40222pt.
- [28] [29 <./performance/images/standard-deviation.pdf>]) (./performance/conten
+ [29] [30 <./performance/images/standard-deviation.pdf>]) (./performance/conten
 ts/approach.tex
-<performance/images/Workflow2.pdf, id=848, 558.085pt x 547.04375pt>
+<performance/images/Workflow2.pdf, id=842, 558.085pt x 547.04375pt>
 File: performance/images/Workflow2.pdf Graphic file (type pdf)
 
 <use performance/images/Workflow2.pdf>
 Package pdftex.def Info: performance/images/Workflow2.pdf used on input line 16
 .
 (pdftex.def)             Requested size: 252.94125pt x 252.94533pt.
- [30 <./performance/images/Workflow2.pdf>] [31] <performance/images/performance
--model.pdf, id=873, 794.97pt x 578.16pt>
+ [31 <./performance/images/Workflow2.pdf>] [32] <performance/images/performance
+-model.pdf, id=866, 794.97pt x 578.16pt>
 File: performance/images/performance-model.pdf Graphic file (type pdf)
 
 <use performance/images/performance-model.pdf>
 Package pdftex.def Info: performance/images/performance-model.pdf used on input
  line 75.
 (pdftex.def)             Requested size: 289.0881pt x 216.80946pt.
- [32] [33 <./performance/images/performance-model.pdf>] [34] [35]
-<performance/images/cfg-new.pdf, id=927, 290.08376pt x 70.2625pt>
+ [33] [34 <./performance/images/performance-model.pdf>] [35] [36]
+<performance/images/cfg-new.pdf, id=921, 290.08376pt x 70.2625pt>
 File: performance/images/cfg-new.pdf Graphic file (type pdf)
 
 <use performance/images/cfg-new.pdf>
 Package pdftex.def Info: performance/images/cfg-new.pdf used on input line 161.
 
 (pdftex.def)             Requested size: 252.94624pt x 72.2736pt.
- [36 <./performance/images/cfg-new.pdf>]
-[37]
-<performance/images/operationDepend.pdf, id=955, 434.62375pt x 149.55875pt>
+ [37 <./performance/images/cfg-new.pdf>]
+[38]
+<performance/images/operationDepend.pdf, id=948, 434.62375pt x 149.55875pt>
 File: performance/images/operationDepend.pdf Graphic file (type pdf)
 
 <use performance/images/operationDepend.pdf>
 Package pdftex.def Info: performance/images/operationDepend.pdf used on input l
 ine 207.
 (pdftex.def)             Requested size: 252.95071pt x 93.95322pt.
- [38 <./performance/images/operationDepend.pdf>]
+ [39 <./performance/images/operationDepend.pdf>]
 Overfull \hbox (17.62482pt too wide) detected at line 253
 [][] 
  []
 
-) (./performance/contents/evaluation.tex [39] [40] [41] [42] [43]
-<performance/images/common-math-apfd.pdf, id=1042, 963.6pt x 542.025pt>
+) (./performance/contents/evaluation.tex [40] [41] [42] [43] [44]
+<performance/images/common-math-apfd.pdf, id=1035, 963.6pt x 542.025pt>
 File: performance/images/common-math-apfd.pdf Graphic file (type pdf)
 
 <use performance/images/common-math-apfd.pdf>
@@ -1082,15 +1082,15 @@ Package pdftex.def Info: performance/images/common-math-apfd.pdf used on input
 line 181.
 (pdftex.def)             Requested size: 289.06752pt x 180.67178pt.
 
-<performance/images/xalan-apfd.pdf, id=1043, 963.6pt x 542.025pt>
+<performance/images/xalan-apfd.pdf, id=1036, 963.6pt x 542.025pt>
 File: performance/images/xalan-apfd.pdf Graphic file (type pdf)
 
 <use performance/images/xalan-apfd.pdf>
 Package pdftex.def Info: performance/images/xalan-apfd.pdf used on input line 1
 91.
 (pdftex.def)             Requested size: 289.06752pt x 151.76596pt.
- [44 <./performance/images/common-math-apfd.pdf>]
-<performance/images/common-math-dcg.pdf, id=1060, 963.6pt x 542.025pt>
+ [45 <./performance/images/common-math-apfd.pdf>]
+<performance/images/common-math-dcg.pdf, id=1053, 963.6pt x 542.025pt>
 File: performance/images/common-math-dcg.pdf Graphic file (type pdf)
 
 <use performance/images/common-math-dcg.pdf>
@@ -1098,27 +1098,27 @@ Package pdftex.def Info: performance/images/common-math-dcg.pdf used on input l
 ine 231.
 (pdftex.def)             Requested size: 289.06752pt x 151.76596pt.
 
-<performance/images/xalan-dcg.pdf, id=1061, 963.6pt x 542.025pt>
+<performance/images/xalan-dcg.pdf, id=1054, 963.6pt x 542.025pt>
 File: performance/images/xalan-dcg.pdf Graphic file (type pdf)
 
 <use performance/images/xalan-dcg.pdf>
 Package pdftex.def Info: performance/images/xalan-dcg.pdf used on input line 24
 0.
 (pdftex.def)             Requested size: 289.06752pt x 151.76596pt.
- [45 <./performance/images/xalan-apfd.pdf> <./performance/images/common-math-dc
+ [46 <./performance/images/xalan-apfd.pdf> <./performance/images/common-math-dc
 g.pdf
 
 pdfTeX warning: pdflatex (file ./performance/images/common-math-dcg.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] [46 <./performance/images/xalan-dcg.pdf>]
+>] [47 <./performance/images/xalan-dcg.pdf>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 297.
- [47]
+ [48]
 Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
  []
 
-[48]
+[49]
 Underfull \hbox (badness 10000) in paragraph at lines 409--410
 
  []
@@ -1128,73 +1128,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 464--465
 
  []
 
-[49]
+[50]
 Underfull \hbox (badness 10000) in paragraph at lines 481--484
 
  []
 
-[50]) (./performance/contents/discuss.tex [51])
-(./performance/contents/related.tex [52]
+[51]) (./performance/contents/discuss.tex [52])
+(./performance/contents/related.tex [53]
 Overfull \hbox (16.60931pt too wide) in paragraph at lines 9--10
 []\T1/ptm/m/n/12 Another re-lated area is re-search on per-for-mance faults, in
 -clud-ing stud-ies on per-for-mance faults [[]66[],
  []
 
 ) (./performance/contents/future.tex) (./performance/contents/conclusion.tex
-[53])) [54]
+[54])) [55]
 \openout2 = `backward/chapt3.aux'.
 
  (./backward/chapt3.tex
 Chapter 5.
-(./backward/contents/intro.tex [55
+(./backward/contents/intro.tex [56
 
 
 
-]) (./backward/contents/concept.tex [56])
-(./backward/contents/compstudy.tex [57] [58] (./backward/tables/basicInfo.tex)
-[59] (./backward/tables/incompatibilities.tex)
+]) (./backward/contents/concept.tex [57])
+(./backward/contents/compstudy.tex [58] [59] (./backward/tables/basicInfo.tex)
+[60] (./backward/tables/incompatibilities.tex)
 Overfull \hbox (0.5691pt too wide) in paragraph at lines 60--66
 []  
  []
 
-[60]
+[61]
 Overfull \hbox (0.5691pt too wide) in paragraph at lines 80--87
 []  
  []
 
-(./backward/tables/incompVersions.tex) [61] [62]
+(./backward/tables/incompVersions.tex) [62] [63]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 111.
- [63]
+ [64]
 Overfull \hbox (0.5691pt too wide) in paragraph at lines 128--134
 []  
  []
 
-<backward/figs/Behavior.pdf, id=1316, 363.3575pt x 302.12875pt>
+<backward/figs/Behavior.pdf, id=1309, 363.3575pt x 302.12875pt>
 File: backward/figs/Behavior.pdf Graphic file (type pdf)
 
 <use backward/figs/Behavior.pdf>
 Package pdftex.def Info: backward/figs/Behavior.pdf used on input line 140.
 (pdftex.def)             Requested size: 187.89912pt x 156.24115pt.
- [64 <./backward/figs/Behavior.pdf>]
-<backward/figs/Condition.pdf, id=1335, 268.00125pt x 240.9pt>
+ [65 <./backward/figs/Behavior.pdf>]
+<backward/figs/Condition.pdf, id=1328, 268.00125pt x 240.9pt>
 File: backward/figs/Condition.pdf Graphic file (type pdf)
 
 <use backward/figs/Condition.pdf>
 Package pdftex.def Info: backward/figs/Condition.pdf used on input line 176.
 (pdftex.def)             Requested size: 187.89912pt x 168.89717pt.
- [65] [66 <./backward/figs/Condition.pdf>]
+ [66] [67 <./backward/figs/Condition.pdf>]
 Overfull \hbox (0.5691pt too wide) in paragraph at lines 198--205
 []  
  []
 
-<backward/figs/Reason.pdf, id=1360, 297.11pt x 242.9075pt>
+<backward/figs/Reason.pdf, id=1353, 297.11pt x 242.9075pt>
 File: backward/figs/Reason.pdf Graphic file (type pdf)
 
 <use backward/figs/Reason.pdf>
 Package pdftex.def Info: backward/figs/Reason.pdf used on input line 210.
 (pdftex.def)             Requested size: 187.89912pt x 153.62555pt.
-) (./backward/contents/bugstudy.tex [67 <./backward/figs/Reason.pdf>] [68] [69]
+) (./backward/contents/bugstudy.tex [68 <./backward/figs/Reason.pdf>] [69] [70]
 
 Underfull \hbox (badness 10000) in paragraph at lines 108--108
 []\T1/ptm/m/n/12 Exception
@@ -1215,7 +1215,7 @@ Underfull \hbox (badness 10000) detected at line 116
 []\T1/ptm/m/n/12 Other
  []
 
-[70]
+[71]
 Underfull \hbox (badness 10000) in paragraph at lines 140--140
 []\T1/ptm/b/n/12 Example 3 \T1/ptm/m/n/12 Bug-46:Bold Ze-ro-Top-Padding-TextVie
 w dis-plays cut off on 4.4 (\T1/ptm/m/n/10.95 from
@@ -1226,7 +1226,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
-[71]
+[72]
 Overfull \hbox (0.5691pt too wide) in paragraph at lines 150--157
 []  
  []
@@ -1236,12 +1236,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--216
 
  []
 
-[72]
+[73]
 Overfull \hbox (0.5691pt too wide) in paragraph at lines 217--229
 []  
  []
 
-[73] [74] [75]
+[74] [75] [76]
 Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
@@ -1251,48 +1251,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 352--358
 
  []
 
-[76]) (./backward/contents/discussion.tex [77] [78] [79] [80])
-(./backward/contents/related.tex [81] [82]) (./backward/contents/conclude.tex))
-[83]
+[77]) (./backward/contents/discussion.tex [78] [79] [80] [81])
+(./backward/contents/related.tex [82] [83]) (./backward/contents/conclude.tex))
+[84]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--311
+Underfull \hbox (badness 10000) in paragraph at lines 344--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--318
+Underfull \hbox (badness 10000) in paragraph at lines 347--353
 
  []
 
-[84
+[85
 
 
-] [85]
+] [86]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--337
+Underfull \hbox (badness 10000) in paragraph at lines 367--372
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
-[86
+[87
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 346--351
+Underfull \hbox (badness 10000) in paragraph at lines 381--386
 
  []
 
-[87] (./sampleThesis.bbl [88]
+[88] (./sampleThesis.bbl [89]
 Underfull \hbox (badness 10000) in paragraph at lines 25--27
 []\T1/ptm/m/n/12 PerfRanker project web.  []$\T1/pcr/m/n/12 https : / / sites .
  google . com / site /
@@ -1304,19 +1304,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--33
 tore / apps / details ? id = com .
  []
 
-[89
+[90
 
-] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102]
-[103] [104] [105] [106] [107])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 370.
- [108]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 370.
+] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103]
+[104] [105] [106] [107] [108])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 405.
+ [109]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 405.
  (./sampleThesis.aux (./mocking/chapt2.aux) (./performance/chapt2.aux) (./backw
 ard/chapt3.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 370.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 370.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 405.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 405.
 Package rerunfilecheck Info: File `sampleThesis.out' has not changed.
-(rerunfilecheck)             Checksum: EB59911AB7C0BF11954E9D0CFFE62704;5451.
+(rerunfilecheck)             Checksum: 5BA0212BA8F25C82F97790ECFD3DCEFD;5318.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1324,13 +1324,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 370.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 405.
  ) 
 Here is how much of TeX's memory you used:
- 16373 strings out of 493304
- 228165 string characters out of 6139871
- 425574 words of memory out of 5000000
- 18896 multiletter control sequences out of 15000+600000
+ 16366 strings out of 493304
+ 228013 string characters out of 6139871
+ 425770 words of memory out of 5000000
+ 18893 multiletter control sequences out of 15000+600000
  48449 words of font info for 92 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  51i,15n,44p,3258b,1219s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1347,10 +1347,10 @@ pe1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sampleThesis.pdf (121 pages, 1543514 bytes).
+Output written on sampleThesis.pdf (122 pages, 1542728 bytes).
 PDF statistics:
- 1850 PDF objects out of 2073 (max. 8388607)
- 1649 compressed objects within 17 object streams
- 486 named destinations out of 1000 (max. 500000)
- 690 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1843 PDF objects out of 2073 (max. 8388607)
+ 1641 compressed objects within 17 object streams
+ 485 named destinations out of 1000 (max. 500000)
+ 674 words of extra memory for PDF output out of 10000 (max. 10000000)
 

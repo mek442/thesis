@@ -2,29 +2,29 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {Table 3.1}{\ignorespaces Basic Information of Subjects Used in Study}}{14}{subsection.3.3.2}
-\contentsline {table}{\numberline {Table 3.2}{\ignorespaces Popularity of Mocking Frameworks}}{18}{subsection.3.4.1}
-\contentsline {table}{\numberline {Table 3.3}{\ignorespaces Usage of Mocking Frameworks in Test Classes}}{18}{subsection.3.4.1}
-\contentsline {table}{\numberline {Table 3.4}{\ignorespaces Number of Mock Objects in Test Classes}}{19}{subsection.3.4.1}
-\contentsline {table}{\numberline {Table 3.5}{\ignorespaces Proportion of Mocked Classes}}{19}{subsection.3.4.1}
-\contentsline {table}{\numberline {Table 3.6}{\ignorespaces Most popular ten APIs in Mockito}}{20}{subsection.3.4.2}
-\contentsline {table}{\numberline {Table 3.7}{\ignorespaces Most popular ten APIs in EasyMock}}{21}{subsection.3.4.2}
-\contentsline {table}{\numberline {Table 3.8}{\ignorespaces Mocking of Library Classes}}{21}{subsection.3.4.3}
-\contentsline {table}{\numberline {Table 3.9}{\ignorespaces Mostly Mocked Library Classes}}{22}{subsection.3.4.3}
+\contentsline {table}{\numberline {Table 3.1}{\ignorespaces Basic Information of Subjects Used in Study}}{15}{subsection.3.2.2}
+\contentsline {table}{\numberline {Table 3.2}{\ignorespaces Popularity of Mocking Frameworks}}{19}{subsection.3.3.1}
+\contentsline {table}{\numberline {Table 3.3}{\ignorespaces Usage of Mocking Frameworks in Test Classes}}{19}{subsection.3.3.1}
+\contentsline {table}{\numberline {Table 3.4}{\ignorespaces Number of Mock Objects in Test Classes}}{20}{subsection.3.3.1}
+\contentsline {table}{\numberline {Table 3.5}{\ignorespaces Proportion of Mocked Classes}}{20}{subsection.3.3.1}
+\contentsline {table}{\numberline {Table 3.6}{\ignorespaces Most popular ten APIs in Mockito}}{21}{subsection.3.3.2}
+\contentsline {table}{\numberline {Table 3.7}{\ignorespaces Most popular ten APIs in EasyMock}}{21}{subsection.3.3.2}
+\contentsline {table}{\numberline {Table 3.8}{\ignorespaces Mocking of Library Classes}}{22}{subsection.3.3.3}
+\contentsline {table}{\numberline {Table 3.9}{\ignorespaces Mostly Mocked Library Classes}}{22}{subsection.3.3.3}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {Table 4.1}{\ignorespaces Evaluation Subjects}}{41}{subsection.4.4.1}
-\contentsline {table}{\numberline {Table 4.2}{\ignorespaces Top-N Percentile of Apache Commons Math}}{47}{section*.11}
-\contentsline {table}{\numberline {Table 4.3}{\ignorespaces Top-N Percentile of Xalan}}{47}{section*.11}
+\contentsline {table}{\numberline {Table 4.1}{\ignorespaces Evaluation Subjects}}{42}{subsection.4.4.1}
+\contentsline {table}{\numberline {Table 4.2}{\ignorespaces Top-N Percentile of Apache Commons Math}}{48}{section*.11}
+\contentsline {table}{\numberline {Table 4.3}{\ignorespaces Top-N Percentile of Xalan}}{48}{section*.11}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {Table 5.1}{\ignorespaces Basic Information of Studied Subjects and Versions}}{59}{section*.14}
-\contentsline {table}{\numberline {Table 5.2}{\ignorespaces BBIs in Software-Library Version Pairs}}{61}{subsection.5.3.2}
-\contentsline {table}{\numberline {Table 5.3}{\ignorespaces Distribution of BBIs in Different Version Pairs}}{62}{subsection.5.3.2}
-\contentsline {table}{\numberline {Table 5.4}{\ignorespaces Basic Information of Bugs}}{69}{subsection.5.4.1}
-\contentsline {table}{\numberline {Table 5.5}{\ignorespaces Bug-Causing BBIs}}{70}{subsection.5.4.2}
-\contentsline {table}{\numberline {Table 5.6}{\ignorespaces Categorization of Incompatible Behaviors}}{71}{example.2}
-\contentsline {table}{\numberline {Table 5.7}{\ignorespaces Categorization of Invocation Conditions}}{72}{section*.20}
-\contentsline {table}{\numberline {Table 5.8}{\ignorespaces Documentation Status of BBIs}}{74}{subsection.5.4.3}
-\contentsline {table}{\numberline {Table 5.9}{\ignorespaces Resolution of Library Bugs}}{74}{section*.21}
-\contentsline {table}{\numberline {Table 5.10}{\ignorespaces Resolution of Client Bugs}}{76}{example.4}
+\contentsline {table}{\numberline {Table 5.1}{\ignorespaces Basic Information of Studied Subjects and Versions}}{60}{section*.14}
+\contentsline {table}{\numberline {Table 5.2}{\ignorespaces BBIs in Software-Library Version Pairs}}{62}{subsection.5.3.2}
+\contentsline {table}{\numberline {Table 5.3}{\ignorespaces Distribution of BBIs in Different Version Pairs}}{63}{subsection.5.3.2}
+\contentsline {table}{\numberline {Table 5.4}{\ignorespaces Basic Information of Bugs}}{70}{subsection.5.4.1}
+\contentsline {table}{\numberline {Table 5.5}{\ignorespaces Bug-Causing BBIs}}{71}{subsection.5.4.2}
+\contentsline {table}{\numberline {Table 5.6}{\ignorespaces Categorization of Incompatible Behaviors}}{72}{example.2}
+\contentsline {table}{\numberline {Table 5.7}{\ignorespaces Categorization of Invocation Conditions}}{73}{section*.20}
+\contentsline {table}{\numberline {Table 5.8}{\ignorespaces Documentation Status of BBIs}}{75}{subsection.5.4.3}
+\contentsline {table}{\numberline {Table 5.9}{\ignorespaces Resolution of Library Bugs}}{75}{section*.21}
+\contentsline {table}{\numberline {Table 5.10}{\ignorespaces Resolution of Client Bugs}}{77}{example.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -8,71 +8,69 @@
 \BOOKMARK [1][-]{section.1.3}{Contributions}{chapter.1}% 8
 \BOOKMARK [1][-]{section.1.4}{Organization}{chapter.1}% 9
 \BOOKMARK [0][-]{chapter.2}{Chapter 2: Background and Related Work}{}% 10
-\BOOKMARK [1][-]{section.2.1}{Mocking}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.2}{ Regression}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.3}{Performance Reression}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.4}{Backward incompatibility }{chapter.2}% 14
-\BOOKMARK [0][-]{chapter.3}{Chapter 3: An Empirical Study on the Usage of Mocking Frameworks in Software Testing}{}% 15
-\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.2}{Background}{chapter.3}% 17
-\BOOKMARK [2][-]{subsection.3.2.1}{Mocking Objects}{section.3.2}% 18
-\BOOKMARK [2][-]{subsection.3.2.2}{Mocking Frameworks}{section.3.2}% 19
-\BOOKMARK [1][-]{section.3.3}{Design}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.3.1}{Research Questions}{section.3.3}% 21
-\BOOKMARK [2][-]{subsection.3.3.2}{Subjects}{section.3.3}% 22
-\BOOKMARK [2][-]{subsection.3.3.3}{Process}{section.3.3}% 23
-\BOOKMARK [1][-]{section.3.4}{Empirical Study Results}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.4.1}{Popularity of Mocking Frameworks}{section.3.4}% 25
-\BOOKMARK [2][-]{subsection.3.4.2}{Usage of Mocking Frameworks}{section.3.4}% 26
-\BOOKMARK [2][-]{subsection.3.4.3}{Mocked Dependencies}{section.3.4}% 27
-\BOOKMARK [2][-]{subsection.3.4.4}{Summary}{section.3.4}% 28
-\BOOKMARK [2][-]{subsection.3.4.5}{Threats to Validity}{section.3.4}% 29
-\BOOKMARK [1][-]{section.3.5}{Related}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.6}{Conclusion}{chapter.3}% 31
-\BOOKMARK [0][-]{chapter.4}{Chapter 4: PerfRanker: Prioritization of Performance Regression Tests for Collection-Intensive Software}{}% 32
-\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.2}{Motivation}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.3}{Approach}{chapter.4}% 35
-\BOOKMARK [2][-]{subsection.4.3.1}{Overview}{section.4.3}% 36
-\BOOKMARK [2][-]{subsection.4.3.2}{Performance Model}{section.4.3}% 37
-\BOOKMARK [2][-]{subsection.4.3.3}{Performance Impact Analysis}{section.4.3}% 38
-\BOOKMARK [2][-]{subsection.4.3.4}{Loop-Count Estimation with Collection-Loop Correlation}{section.4.3}% 39
-\BOOKMARK [2][-]{subsection.4.3.5}{Test Case Prioritization}{section.4.3}% 40
-\BOOKMARK [1][-]{section.4.4}{Evaluation}{chapter.4}% 41
-\BOOKMARK [2][-]{subsection.4.4.1}{Evaluation Subjects}{section.4.4}% 42
-\BOOKMARK [2][-]{subsection.4.4.2}{Evaluation Setup}{section.4.4}% 43
-\BOOKMARK [2][-]{subsection.4.4.3}{Evaluation Metrics}{section.4.4}% 44
-\BOOKMARK [2][-]{subsection.4.4.4}{Baseline Approaches Under Comparison}{section.4.4}% 45
-\BOOKMARK [2][-]{subsection.4.4.5}{Quantitative Evaluation}{section.4.4}% 46
-\BOOKMARK [2][-]{subsection.4.4.6}{Successful and Challenging Examples}{section.4.4}% 47
-\BOOKMARK [2][-]{subsection.4.4.7}{Threats to Validity}{section.4.4}% 48
-\BOOKMARK [1][-]{section.4.5}{Discussion}{chapter.4}% 49
-\BOOKMARK [1][-]{section.4.6}{Related Work}{chapter.4}% 50
-\BOOKMARK [1][-]{section.4.7}{Conclusion}{chapter.4}% 51
-\BOOKMARK [0][-]{chapter.5}{Chapter 5: Beyond API Signatures: Behavioral Backward Incompatibilities of Java Software Libraries}{}% 52
-\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 53
-\BOOKMARK [1][-]{section.5.2}{Research Scope}{chapter.5}% 54
-\BOOKMARK [1][-]{section.5.3}{Cross-Version Testing Study}{chapter.5}% 55
-\BOOKMARK [2][-]{subsection.5.3.1}{Study Setup}{section.5.3}% 56
-\BOOKMARK [2][-]{subsection.5.3.2}{BBIs in Popular Libraries}{section.5.3}% 57
-\BOOKMARK [2][-]{subsection.5.3.3}{Categorization of BBIs}{section.5.3}% 58
-\BOOKMARK [1][-]{section.5.4}{Real-world Bug Study}{chapter.5}% 59
-\BOOKMARK [2][-]{subsection.5.4.1}{Collection of Bug Reports}{section.5.4}% 60
-\BOOKMARK [2][-]{subsection.5.4.2}{Study on Bug-Inducing BBIs}{section.5.4}% 61
-\BOOKMARK [2][-]{subsection.5.4.3}{Documentation Study}{section.5.4}% 62
-\BOOKMARK [2][-]{subsection.5.4.4}{Bug Resolution Study}{section.5.4}% 63
-\BOOKMARK [1][-]{section.5.5}{Discussion}{chapter.5}% 64
-\BOOKMARK [2][-]{subsection.5.5.1}{Lessons Learned}{section.5.5}% 65
-\BOOKMARK [2][-]{subsection.5.5.2}{Limitations and Threats}{section.5.5}% 66
-\BOOKMARK [2][-]{subsection.5.5.3}{Detailed Classification of BBIs}{section.5.5}% 67
-\BOOKMARK [1][-]{section.5.6}{Related Work}{chapter.5}% 68
-\BOOKMARK [2][-]{subsection.5.6.1}{Studies on Software Libraries Evolution}{section.5.6}% 69
-\BOOKMARK [2][-]{subsection.5.6.2}{Summarizing Software Library Changes}{section.5.6}% 70
-\BOOKMARK [2][-]{subsection.5.6.3}{Support for Library Migration}{section.5.6}% 71
-\BOOKMARK [1][-]{section.5.7}{Conclusion}{chapter.5}% 72
-\BOOKMARK [0][-]{chapter.6}{Chapter 6: Lesson Learned}{}% 73
-\BOOKMARK [0][-]{chapter.7}{Chapter 7: Future Directions}{}% 74
-\BOOKMARK [1][-]{section.7.1}{Prioritization Regression Tests}{chapter.7}% 75
-\BOOKMARK [1][-]{section.7.2}{Augmenting Regression Tests}{chapter.7}% 76
-\BOOKMARK [1][-]{section.7.3}{Logging}{chapter.7}% 77
-\BOOKMARK [0][-]{appendix*.26}{Bibliography}{}% 78
+\BOOKMARK [1][-]{section.2.1}{ Regression}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{Mocking}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Mocking Frameworks}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.4}{Performance Reression}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.5}{Backward incompatibility }{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Chapter 3: An Empirical Study on the Usage of Mocking Frameworks in Software Testing}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Design}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Research Questions}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{Subjects}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.3}{Process}{section.3.2}% 21
+\BOOKMARK [1][-]{section.3.3}{Empirical Study Results}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.1}{Popularity of Mocking Frameworks}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.2}{Usage of Mocking Frameworks}{section.3.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.3}{Mocked Dependencies}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.4}{Summary}{section.3.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.5}{Threats to Validity}{section.3.3}% 27
+\BOOKMARK [1][-]{section.3.4}{Related}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.5}{Conclusion}{chapter.3}% 29
+\BOOKMARK [0][-]{chapter.4}{Chapter 4: PerfRanker: Prioritization of Performance Regression Tests for Collection-Intensive Software}{}% 30
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.2}{Motivation}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.3}{Approach}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.3.1}{Overview}{section.4.3}% 34
+\BOOKMARK [2][-]{subsection.4.3.2}{Performance Model}{section.4.3}% 35
+\BOOKMARK [2][-]{subsection.4.3.3}{Performance Impact Analysis}{section.4.3}% 36
+\BOOKMARK [2][-]{subsection.4.3.4}{Loop-Count Estimation with Collection-Loop Correlation}{section.4.3}% 37
+\BOOKMARK [2][-]{subsection.4.3.5}{Test Case Prioritization}{section.4.3}% 38
+\BOOKMARK [1][-]{section.4.4}{Evaluation}{chapter.4}% 39
+\BOOKMARK [2][-]{subsection.4.4.1}{Evaluation Subjects}{section.4.4}% 40
+\BOOKMARK [2][-]{subsection.4.4.2}{Evaluation Setup}{section.4.4}% 41
+\BOOKMARK [2][-]{subsection.4.4.3}{Evaluation Metrics}{section.4.4}% 42
+\BOOKMARK [2][-]{subsection.4.4.4}{Baseline Approaches Under Comparison}{section.4.4}% 43
+\BOOKMARK [2][-]{subsection.4.4.5}{Quantitative Evaluation}{section.4.4}% 44
+\BOOKMARK [2][-]{subsection.4.4.6}{Successful and Challenging Examples}{section.4.4}% 45
+\BOOKMARK [2][-]{subsection.4.4.7}{Threats to Validity}{section.4.4}% 46
+\BOOKMARK [1][-]{section.4.5}{Discussion}{chapter.4}% 47
+\BOOKMARK [1][-]{section.4.6}{Related Work}{chapter.4}% 48
+\BOOKMARK [1][-]{section.4.7}{Conclusion}{chapter.4}% 49
+\BOOKMARK [0][-]{chapter.5}{Chapter 5: Beyond API Signatures: Behavioral Backward Incompatibilities of Java Software Libraries}{}% 50
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 51
+\BOOKMARK [1][-]{section.5.2}{Research Scope}{chapter.5}% 52
+\BOOKMARK [1][-]{section.5.3}{Cross-Version Testing Study}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.3.1}{Study Setup}{section.5.3}% 54
+\BOOKMARK [2][-]{subsection.5.3.2}{BBIs in Popular Libraries}{section.5.3}% 55
+\BOOKMARK [2][-]{subsection.5.3.3}{Categorization of BBIs}{section.5.3}% 56
+\BOOKMARK [1][-]{section.5.4}{Real-world Bug Study}{chapter.5}% 57
+\BOOKMARK [2][-]{subsection.5.4.1}{Collection of Bug Reports}{section.5.4}% 58
+\BOOKMARK [2][-]{subsection.5.4.2}{Study on Bug-Inducing BBIs}{section.5.4}% 59
+\BOOKMARK [2][-]{subsection.5.4.3}{Documentation Study}{section.5.4}% 60
+\BOOKMARK [2][-]{subsection.5.4.4}{Bug Resolution Study}{section.5.4}% 61
+\BOOKMARK [1][-]{section.5.5}{Discussion}{chapter.5}% 62
+\BOOKMARK [2][-]{subsection.5.5.1}{Lessons Learned}{section.5.5}% 63
+\BOOKMARK [2][-]{subsection.5.5.2}{Limitations and Threats}{section.5.5}% 64
+\BOOKMARK [2][-]{subsection.5.5.3}{Detailed Classification of BBIs}{section.5.5}% 65
+\BOOKMARK [1][-]{section.5.6}{Related Work}{chapter.5}% 66
+\BOOKMARK [2][-]{subsection.5.6.1}{Studies on Software Libraries Evolution}{section.5.6}% 67
+\BOOKMARK [2][-]{subsection.5.6.2}{Summarizing Software Library Changes}{section.5.6}% 68
+\BOOKMARK [2][-]{subsection.5.6.3}{Support for Library Migration}{section.5.6}% 69
+\BOOKMARK [1][-]{section.5.7}{Conclusion}{chapter.5}% 70
+\BOOKMARK [0][-]{chapter.6}{Chapter 6: Lesson Learned}{}% 71
+\BOOKMARK [0][-]{chapter.7}{Chapter 7: Future Directions}{}% 72
+\BOOKMARK [1][-]{section.7.1}{Prioritization Regression Tests}{chapter.7}% 73
+\BOOKMARK [1][-]{section.7.2}{Augmenting Regression Tests}{chapter.7}% 74
+\BOOKMARK [1][-]{section.7.3}{Logging}{chapter.7}% 75
+\BOOKMARK [0][-]{appendix*.26}{Bibliography}{}% 76

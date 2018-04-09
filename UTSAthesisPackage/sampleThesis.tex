@@ -210,7 +210,7 @@ Due to the resource and time constraints for re-executing large test suites, it 
 A small extent of performance degradation may result in severe consequence motivate us that running performance test needs more time and resources. Also, it can be hard for a developer to understand performance impact with few runs. Furthermore, A code changes touches several test cases is very common during the evolution of software. Due to the resource and time constraints for re-executing large test suites, it is important to develop techniques to reduce the effort of regression testing. Our proposed method focus on the performance test suite prioritization via performance impact analysis of change.\\
 
  
-Nowadays, due to the frequent technological innovation and market changes, software libraries are evolving very quickly. To make sure that existing client software applications are not broken after a library update, backward compatibility has always been one of the most important requirements during the evolution of software platforms and libraries. Previous studies on this topic mainly focus on API signature changes between consecutive versions of software libraries, but behavioral changes of APIs with untouched signatures are actually more dangerous and are causing most real world bugs because they cannot be easily detected. Our study categorizes behavioral backward incompatibilities according to incompatible behaviors and invocation conditions. We compared those detected in regression testing with those causing real-world bugs and prioritization test case based on backward incompatibilities in dependencies.
+Nowadays, due to the frequent technological innovation and market changes, software libraries are evolving very quickly. To make sure that existing client software applications are not broken after a library update, backward compatibility has always been one of the most important requirements during the evolution of software platforms and libraries. Previous studies on this topic mainly focus on API signature changes between consecutive versions of software libraries, but behavioral changes of APIs with untouched signatures are actually more dangerous and are causing most real world bugs because they cannot be easily detected. Our study categorizes behavioral backward incompatibilities according to incompatible behaviors and invocation conditions. We compared those detected in regression testing with those causing real-world bugs using our defined category and presented the resolution of of real bugs related to behavioral backward incompatibilities.
 
 \section{Thesis Statement}
 Our thesis is three-pronged:\\
@@ -249,28 +249,63 @@ This dissertation is organized as follows. Chapter 2 introduces the background a
 \chapter{Background and Related Work}
 The purpose of this section is to provide the background of this study and a review of
 related literature. First, the background is introduced followed by a related work section
-about Mocking, Regression, Performance Regression and Backward incompatibility.
+about Regression, Mocking, Performance Regression and Backward Incompatibility.
 
-
-
-\section{Mocking}
-Mocking objects are used in software testing to simulate software dependencies so that the testing process can be accelerated and the testing scope can be limited to the component under test (instead of going beyond the interface of dependencies and invoke potential bugs relevant to dependencies). To
-simulate real dependencies, mock objects typically have the same interface as the objects they mimic. Therefore, the client object remains unaware of whether it is using a real object or a mock object.
-
-There have been a number of existing research efforts on enhancing mocking frameworks or leveraging mock objects to improve automatic software testing. Freeman et al.~\cite{IEEEhowto:kopka}~\cite{Freeman} presented the basic process and concepts of using mocks objects in unit testing, as well as a mocking framework jMock. Galler et al.~\cite{Galler} proposed an approach to automatically generation of mocking objects satisfying certain preconditions to serve as test inputs in automatic test-case generation for Java unit testing. Taneja et al.~\cite{Taneja} proposed to automatically generate mock objects to simulate the behavior of database systems in the automatic test-case generation of database systems. Coelho et al.~\cite{Coelho} proposed an approach to generate mock agents in the unit testing of multi-agent software systems. Due to the necessity of mock objects in unit testing, researchers also proposed approaches to automatically generating mock objects along with unit test cases ~\cite{woda}~\cite{Pasternak}. For the existing test cases which are not using mock objects, Saff and Ernst~\cite{Saff} proposed an approach to automatically refactor such test cases by adding mock objects. Marri et al.~\cite{Marri} carried out an experiment to study the benefit of using mock objects to simulate file systems. All these research efforts are about automatic generation of mock objects and how to leverage mock objects in specific testing problems, while our work focuses on the current usage status of mocking frameworks and mock objects in real world software projects. As far as we know, this paper is the first research effort to study the usage status of mocking frameworks and mock objects in software practice.
 
 \section{ Regression}
 Regression testing is the activity of testing software after it has been modified to gain
 confidence that the newly introduced changes do not obstruct the behavior of the existing,
-unchanged parts of the software. In order to gain confidence that program changes did not introduce any errors, regression test suites are executed recurringly. The number of test cases
-can greatly influence the execution time of a test suite. There are a number of challenges related to regression testing, such as identification of obsolete test cases, regression test selection, prioritization
-and minimization and test suite augmentation [19]. Yoo and Harman [44] conducted a
+unchanged parts of the software. In order to gain confidence that program changes did not introduce any errors, regression test suites are executed recurringly.
+There are different variant of regression test such as unit level, integration level, functional level and system level. In each of them number of test cases
+can greatly influence the execution time of a test suite. There are a number of challenges related to regression testing, such as identification of obsolete test cases, regression test selection, prioritization and minimization and test suite augmentation [19]. Yoo and Harman [44] conducted a
 survey on regression testing minimization, selection and prioritization, constituting nearly
 200 papers. It encompasses the main research results around regression testing, addressing
 the problems of identifying obsolete, reusable and re-testable test cases (selection),
 eliminating redundant test cases (minimization) and ordering test cases to maximize early
 fault detection (prioritization).
 
+\section{Mocking}
+Programmer most often write unit tests - small scope (e.g. a class, a function or a component) and one of the key characteristics of unit testing is fast - mean that they can be run very frequently.If the programmer introduced the defect with the last change, it is much easier for the person to spot the bug because does not have to look far. But what happen when the method depends on system-ddl, network, database or servlet engine? Because running those method introduce more cost to regression testing. In practice those dependency are actually replaced my mocking object which is a fake object or proxy of a real object.
+
+
+Mocking objects are used in software testing to simulate software dependencies so that the testing process can be accelerated and the testing scope can be limited to the component under test (instead of going beyond the interface of dependencies and invoke potential bugs relevant to dependencies). To simulate real dependencies, mock objects typically have the same interface as the objects they mimic. Therefore, the client object remains unaware of whether it is using a real object or a mock object. 
+
+%The major difference between mock object and other test doubles (i.e., objects simulating software dependencies, such as test stubs, fake objects) is that, on top of simulating software dependencies, mock objects also contain assertions of their own. Mock objects will examine the context of each invocation of their methods, on whether a method is invoked, whether several methods are invoked in correct order, and whether arguments of the methods are passed in correctly. 
+
+For example, when testing an email client, software testers may not use the real email server which has slow response and random failures. By contrast, they may construct a fake email server object (a mock object) that returns whatever expected by the software testers. The expected return value can be either a simple success code for the testing of normal functioning of the email client, or a server error code for the testing of error handling of the email client. Such a fake email server helps to reduce testing time as well as to explore the handling of server errors that are very hard to invoke with a real server. However, when such a simplified email server is used, it is hard for testers to tell whether the email client has invoked the email server in a correct order (if multiple-step configuration of the server is required), or whether the client has passed correct arguments to the server. 
+
+Therefore, the software testers may further have some code in the fake email server to check whether the client interacts with it correctly and passes correct arguments. With such a mock email server, software testers can perform quick and controllable testing of the email client without losing the thorough exploration of the interface between the email client and the email server.
+
+
+\section{Mocking Frameworks}
+
+As mentioned in the previous section, mocking objects are desirable for simulating software dependencies in software testing. However, since mock objects need to perform various checking of the invocations, it is usually nontrivial to write such mock objects, and thus the benefit of using mock objects can be undermined by the effort spent on writing mock objects. 
+
+To solve this problem, in the past decade, people have developed various mocking frameworks to generate mock objects automatically. A code sample of using a mocking framework is presented below. With a mocking framework, software testers first create an empty mock object (Line 3). Then, for the created mock object, software testers can specify a number of invocation for the object to check, both on the order of the invocations and the correctness of the arguments (Line 6). After that, in the test code, testers run the component under test as usual but with created mock objects (Line 8). During the execution, if the specified invocation order or arguments are not satisfied, the mock object will throw a test failure so that the software testers know that something wrong happened (Line 9). \\
+
+
+\begin{lstlisting}[language=Java]
+1: @Test
+2: public void testEmailClient(){
+3:     Server sv = EasyMock.
+            CreateMock(Server.class); 
+4:     Client c = new Client(sv);         
+5:     Email em = new Email(...)
+        //record
+6:     EasyMock.expect(sv.send(em)).
+            andReturn(0);
+        //replay
+7:     EasyMock.replay(sv);
+8:     c.send(em)
+9:     EasyMock.verify(sv)
+10:}
+\end{lstlisting}
+
+
+For each major programming language, there have been a number of mocking frameworks developed, such as Mockito, EasyMock, and JMock for Java, pmock, mox for Python, and NMock, Moq for C\#. All of these mocking frameworks support the basic features of mocking including the creation of mock objects, the specification of invocation orders and arguments, and the verification of the specifications. The differences between these mocking frameworks are mainly on the design of APIs and supporting of advanced specifications such as checking the number of invocations of a certain method. 
+
+
+There have been a number of existing research efforts on enhancing mocking frameworks or leveraging mock objects to improve automatic software testing. Freeman et al.~\cite{IEEEhowto:kopka}~\cite{Freeman} presented the basic process and concepts of using mocks objects in unit testing, as well as a mocking framework jMock. Galler et al.~\cite{Galler} proposed an approach to automatically generation of mocking objects satisfying certain preconditions to serve as test inputs in automatic test-case generation for Java unit testing. Taneja et al.~\cite{Taneja} proposed to automatically generate mock objects to simulate the behavior of database systems in the automatic test-case generation of database systems. Coelho et al.~\cite{Coelho} proposed an approach to generate mock agents in the unit testing of multi-agent software systems. Due to the necessity of mock objects in unit testing, researchers also proposed approaches to automatically generating mock objects along with unit test cases ~\cite{woda}~\cite{Pasternak}. For the existing test cases which are not using mock objects, Saff and Ernst~\cite{Saff} proposed an approach to automatically refactor such test cases by adding mock objects. Marri et al.~\cite{Marri} carried out an experiment to study the benefit of using mock objects to simulate file systems. All these research efforts are about automatic generation of mock objects and how to leverage mock objects in specific testing problems, while our work focuses on the current usage status of mocking frameworks and mock objects in real world software projects. As far as we know, this paper is the first research effort to study the usage status of mocking frameworks and mock objects in software practice.
 
 
 \section{Performance Reression}
