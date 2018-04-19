@@ -1,5 +1,6 @@
 \select@language {english}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {Figure 1.1}{\ignorespaces Smart Mocking System}}{3}{section.1.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {Figure 3.1}{\ignorespaces Size comparison of software projects using mocking frameworks and all software projects with test code}}{19}{subsection.3.3.1}

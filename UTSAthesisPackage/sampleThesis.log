@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.7.25)  14 APR 2018 19:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.7.25)  18 APR 2018 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -905,51 +905,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--211
  []
 
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+ []
+
+<vision.png, id=505, 1821.80624pt x 1249.66875pt>
+File: vision.png Graphic file (type png)
+ <use vision.png>
+Package pdftex.def Info: vision.png used on input line 217.
+(pdftex.def)             Requested size: 281.85585pt x 193.33435pt.
+ [3 <./vision.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 221.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 233.
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--227
+Underfull \hbox (badness 10000) in paragraph at lines 228--239
 
  []
 
 
-Overfull \hbox (1.64906pt too wide) in paragraph at lines 216--227
+Overfull \hbox (1.64906pt too wide) in paragraph at lines 228--239
  []
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 232.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 244.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 232.
- [3] [4] [5]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 244.
+ [4] [5]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
 
  []
 
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
 
  []
 
@@ -957,45 +967,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 279--280
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 LaTeX Font Info:    Try loading font information for T1+[Scale=0.7]{Courier} on
- input line 282.
-LaTeX Font Info:    No file T1[Scale=0.7]{Courier}.fd. on input line 282.
+ input line 294.
+LaTeX Font Info:    No file T1[Scale=0.7]{Courier}.fd. on input line 294.
 
 
 LaTeX Font Warning: Font shape `T1/[Scale=0.7]{Courier}/m/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 282.
+(Font)              using `T1/cmr/m/n' instead on input line 294.
 
 
 LaTeX Font Warning: Font shape `T1/[Scale=0.7]{Courier}/bx/n' undefined
 (Font)              using `T1/[Scale=0.7]{Courier}/m/n' instead on input line 2
-84.
+96.
 
 
 LaTeX Font Warning: Font shape `T1/[Scale=0.7]{Courier}/m/it' undefined
-(Font)              using `T1/[Scale=0.7]{Courier}/m/n' instead on input line 2
-89.
+(Font)              using `T1/[Scale=0.7]{Courier}/m/n' instead on input line 3
+01.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--319
+Underfull \hbox (badness 10000) in paragraph at lines 320--331
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 321--325
+Underfull \hbox (badness 10000) in paragraph at lines 333--337
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 335--338
+Underfull \hbox (badness 10000) in paragraph at lines 347--350
 
  []
 
@@ -1009,7 +1019,7 @@ Chapter 3.
 
 ] [14]) (./mocking/content/design.tex [15]
 [16] [17]) (./mocking/content/study.tex [18]
-<mocking/boxplot.pdf, id=693, 361.35pt x 252.945pt>
+<mocking/boxplot.pdf, id=696, 361.35pt x 252.945pt>
 File: mocking/boxplot.pdf Graphic file (type pdf)
  <use mocking/boxplot.pdf>
 Package pdftex.def Info: mocking/boxplot.pdf used on input line 17.
@@ -1072,7 +1082,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
  []
 
 [29]) (./performance/contents/motivation.tex
-<performance/images/standard-deviation.pdf, id=808, 796.9775pt x 597.23125pt>
+<performance/images/standard-deviation.pdf, id=811, 796.9775pt x 597.23125pt>
 File: performance/images/standard-deviation.pdf Graphic file (type pdf)
 
 <use performance/images/standard-deviation.pdf>
@@ -1081,7 +1091,7 @@ t line 10.
 (pdftex.def)             Requested size: 211.3883pt x 158.40222pt.
  [30] [31 <./performance/images/standard-deviation.pdf>]) (./performance/conten
 ts/approach.tex
-<performance/images/Workflow2.pdf, id=846, 558.085pt x 547.04375pt>
+<performance/images/Workflow2.pdf, id=849, 558.085pt x 547.04375pt>
 File: performance/images/Workflow2.pdf Graphic file (type pdf)
 
 <use performance/images/Workflow2.pdf>
@@ -1089,7 +1099,7 @@ Package pdftex.def Info: performance/images/Workflow2.pdf used on input line 16
 .
 (pdftex.def)             Requested size: 252.94125pt x 252.94533pt.
  [32 <./performance/images/Workflow2.pdf>] [33] <performance/images/performance
--model.pdf, id=870, 794.97pt x 578.16pt>
+-model.pdf, id=873, 794.97pt x 578.16pt>
 File: performance/images/performance-model.pdf Graphic file (type pdf)
 
 <use performance/images/performance-model.pdf>
@@ -1097,7 +1107,7 @@ Package pdftex.def Info: performance/images/performance-model.pdf used on input
  line 75.
 (pdftex.def)             Requested size: 289.0881pt x 216.80946pt.
  [34] [35 <./performance/images/performance-model.pdf>] [36] [37]
-<performance/images/cfg-new.pdf, id=925, 290.08376pt x 70.2625pt>
+<performance/images/cfg-new.pdf, id=928, 290.08376pt x 70.2625pt>
 File: performance/images/cfg-new.pdf Graphic file (type pdf)
 
 <use performance/images/cfg-new.pdf>
@@ -1106,7 +1116,7 @@ Package pdftex.def Info: performance/images/cfg-new.pdf used on input line 161.
 (pdftex.def)             Requested size: 252.94624pt x 72.2736pt.
  [38 <./performance/images/cfg-new.pdf>]
 [39]
-<performance/images/operationDepend.pdf, id=952, 434.62375pt x 149.55875pt>
+<performance/images/operationDepend.pdf, id=955, 434.62375pt x 149.55875pt>
 File: performance/images/operationDepend.pdf Graphic file (type pdf)
 
 <use performance/images/operationDepend.pdf>
@@ -1119,7 +1129,7 @@ Overfull \hbox (17.62482pt too wide) detected at line 253
  []
 
 ) (./performance/contents/evaluation.tex [41] [42] [43] [44] [45]
-<performance/images/common-math-apfd.pdf, id=1039, 963.6pt x 542.025pt>
+<performance/images/common-math-apfd.pdf, id=1042, 963.6pt x 542.025pt>
 File: performance/images/common-math-apfd.pdf Graphic file (type pdf)
 
 <use performance/images/common-math-apfd.pdf>
@@ -1127,7 +1137,7 @@ Package pdftex.def Info: performance/images/common-math-apfd.pdf used on input
 line 181.
 (pdftex.def)             Requested size: 289.06752pt x 180.67178pt.
 
-<performance/images/xalan-apfd.pdf, id=1040, 963.6pt x 542.025pt>
+<performance/images/xalan-apfd.pdf, id=1043, 963.6pt x 542.025pt>
 File: performance/images/xalan-apfd.pdf Graphic file (type pdf)
 
 <use performance/images/xalan-apfd.pdf>
@@ -1135,7 +1145,7 @@ Package pdftex.def Info: performance/images/xalan-apfd.pdf used on input line 1
 91.
 (pdftex.def)             Requested size: 289.06752pt x 151.76596pt.
  [46 <./performance/images/common-math-apfd.pdf>]
-<performance/images/common-math-dcg.pdf, id=1057, 963.6pt x 542.025pt>
+<performance/images/common-math-dcg.pdf, id=1060, 963.6pt x 542.025pt>
 File: performance/images/common-math-dcg.pdf Graphic file (type pdf)
 
 <use performance/images/common-math-dcg.pdf>
@@ -1143,7 +1153,7 @@ Package pdftex.def Info: performance/images/common-math-dcg.pdf used on input l
 ine 231.
 (pdftex.def)             Requested size: 289.06752pt x 151.76596pt.
 
-<performance/images/xalan-dcg.pdf, id=1058, 963.6pt x 542.025pt>
+<performance/images/xalan-dcg.pdf, id=1061, 963.6pt x 542.025pt>
 File: performance/images/xalan-dcg.pdf Graphic file (type pdf)
 
 <use performance/images/xalan-dcg.pdf>
@@ -1215,14 +1225,14 @@ Overfull \hbox (0.5691pt too wide) in paragraph at lines 128--134
 []  
  []
 
-<backward/figs/Behavior.pdf, id=1313, 363.3575pt x 302.12875pt>
+<backward/figs/Behavior.pdf, id=1316, 363.3575pt x 302.12875pt>
 File: backward/figs/Behavior.pdf Graphic file (type pdf)
 
 <use backward/figs/Behavior.pdf>
 Package pdftex.def Info: backward/figs/Behavior.pdf used on input line 140.
 (pdftex.def)             Requested size: 187.89912pt x 156.24115pt.
  [66 <./backward/figs/Behavior.pdf>]
-<backward/figs/Condition.pdf, id=1333, 268.00125pt x 240.9pt>
+<backward/figs/Condition.pdf, id=1336, 268.00125pt x 240.9pt>
 File: backward/figs/Condition.pdf Graphic file (type pdf)
 
 <use backward/figs/Condition.pdf>
@@ -1233,7 +1243,7 @@ Overfull \hbox (0.5691pt too wide) in paragraph at lines 198--205
 []  
  []
 
-<backward/figs/Reason.pdf, id=1357, 297.11pt x 242.9075pt>
+<backward/figs/Reason.pdf, id=1360, 297.11pt x 242.9075pt>
 File: backward/figs/Reason.pdf Graphic file (type pdf)
 
 <use backward/figs/Reason.pdf>
@@ -1301,12 +1311,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 352--358
 [85]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--356
+Underfull \hbox (badness 10000) in paragraph at lines 366--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--363
+Underfull \hbox (badness 10000) in paragraph at lines 369--375
 
  []
 
@@ -1316,24 +1326,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 357--363
 ] [87]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--381
+Underfull \hbox (badness 10000) in paragraph at lines 388--393
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
 
  []
 
 [88
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 390--395
+Underfull \hbox (badness 10000) in paragraph at lines 402--407
 
  []
 
@@ -1353,13 +1363,13 @@ tore / apps / details ? id = com .
 
 ] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104]
 [105] [106] [107] [108] [109])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 414.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 426.
  [110]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 414.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 426.
  (./sampleThesis.aux (./mocking/chapt2.aux) (./performance/chapt2.aux) (./backw
 ard/chapt3.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 414.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 414.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 426.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 426.
 Package rerunfilecheck Info: File `sampleThesis.out' has not changed.
 (rerunfilecheck)             Checksum: 2248B75CF75549D4B6C648D43854EDC9;5334.
 
@@ -1369,13 +1379,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 414.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 426.
  ) 
 Here is how much of TeX's memory you used:
- 16367 strings out of 493304
- 228021 string characters out of 6139871
- 426288 words of memory out of 5000000
- 18893 multiletter control sequences out of 15000+600000
+ 16374 strings out of 493304
+ 228109 string characters out of 6139871
+ 426369 words of memory out of 5000000
+ 18898 multiletter control sequences out of 15000+600000
  48449 words of font info for 92 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  51i,15n,44p,3258b,1219s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1392,10 +1402,10 @@ pe1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sampleThesis.pdf (123 pages, 1545157 bytes).
+Output written on sampleThesis.pdf (123 pages, 1652641 bytes).
 PDF statistics:
- 1847 PDF objects out of 2073 (max. 8388607)
- 1644 compressed objects within 17 object streams
+ 1850 PDF objects out of 2073 (max. 8388607)
+ 1646 compressed objects within 17 object streams
  486 named destinations out of 1000 (max. 500000)
- 674 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 679 words of extra memory for PDF output out of 10000 (max. 10000000)
 

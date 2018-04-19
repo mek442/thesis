@@ -210,7 +210,19 @@ Due to the resource and time constraints for re-executing large test suites, it 
 A small extent of performance degradation may result in severe consequence motivate us that running performance test needs more time and resources. Also, it can be hard for a developer to understand performance impact with few runs. Furthermore, A code changes touches several test cases is very common during the evolution of software. Due to the resource and time constraints for re-executing large test suites, it is important to develop techniques to reduce the effort of regression testing. Our proposed method focus on the performance test suite prioritization via performance impact analysis of change.\\
 
  
-Nowadays, due to the frequent technological innovation and market changes, software libraries are evolving very quickly. To make sure that existing client software applications are not broken after a library update, backward compatibility has always been one of the most important requirements during the evolution of software platforms and libraries. Previous studies on this topic mainly focus on API signature changes between consecutive versions of software libraries, but behavioral changes of APIs with untouched signatures are actually more dangerous and are causing most real world bugs because they cannot be easily detected. Our study categorizes behavioral backward incompatibilities according to incompatible behaviors and invocation conditions. We compared those detected in regression testing with those causing real-world bugs using our defined category and presented the resolution of of real bugs related to behavioral backward incompatibilities.
+Nowadays, due to the frequent technological innovation and market changes, software libraries are evolving very quickly. To make sure that existing client software applications are not broken after a library update, backward compatibility has always been one of the most important requirements during the evolution of software platforms and libraries. Previous studies on this topic mainly focus on API signature changes between consecutive versions of software libraries, but behavioral changes of APIs with untouched signatures are actually more dangerous and are causing most real world bugs because they cannot be easily detected. Our study categorizes behavioral backward incompatibilities according to incompatible behaviors and invocation conditions. We compared those detected in regression testing with those causing real-world bugs using our defined category and presented the resolution of of real bugs related to behavioral backward incompatibilities.\\
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{vision.png}
+	\caption{Smart Mocking System}
+	\label{figure:vision}
+	\vspace{0.3cm}
+\end{figure}
+
+
+Our vision is to provide a framework to determine when mock and when not. In the figure \ref{figure:vision}, we can see the smart mocking system takes performance test case, code commit and regression test suite as the input of the framework and output is ranked list of test cases based on performance impact and behavioral incompatibility. There are two major component of the system, one is performance impact analysis component and the other is behavioral incompatibility analysis component. Main objective of these two component are not only to provide recommendation when to mock, when not and when to replace mock by real code, but also rank the regression test cases.
+
 
 \section{Thesis Statement}
 Our thesis is three-pronged:\\
