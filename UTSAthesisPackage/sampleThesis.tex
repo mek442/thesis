@@ -175,13 +175,15 @@ the contribution of the other author(s). The signatures of the Supervising
 Committee which precede all other material in  Doctoral Dissertation attest to the accuracy of this statement.}\end{singlespace}
 \end{acknowledgements}
 \begin{abstract}
-In modern software process, software testing is performed along with software development to detect errors as early as possible and to guarantee that changes made in software did not affect the system negatively. However, during the development phase, the test suite is updated and tends to increase in size. Due to the resource and time constraints for re-executing large test suites, it is important to develop techniques to reduce the effort of regression testing.\\ 
+	
+
+In modern software process, software testing is performed along with software development to detect errors as early as possible and to guarantee that changes made in software do not affect the system negatively. However, during the development phase, the test suite is frequently expanded for new features and tends to increase in size quickly. Due to the resource and time constraints for re-executing large test suites, it is important to develop techniques to reduce the effort of regression testing.\\ 
  
-Unit testing testing is the core of test driven development where software testers need to test a class or a component without integration with some of its dependencies. Typical reasons for excluding dependencies in testing high cost of invoking some dependencies (e.g., slow network or database operations, commercial third-party web services), and the potential interference of bugs in the dependencies. In practice, mock objects have been used in software testing to simulate such missing dependencies. However, due to exclusion of dependencies, mock-objects-based testing is not suitable for performance regression and backward incompatibility regression testing.\\
+Unit testing testing is the core of test driven development where software testers need to test a class or a component without integration with some of its dependencies. Typical reasons for excluding dependencies in testing include high cost of invoking some dependencies (e.g., slow network or database operations, commercial third-party web services), and the potential interference of bugs in dependencies. In practice, mock objects have been used in software testing to simulate such missing dependencies. However, due to exclusion of dependencies, mock-objects-based testing is not suitable for performance regression and backward incompatibility regression testing.\\
  
 A small extent of performance degradation may result in severe consequence and running performance test needs more time and resources. Also, it can be hard for a developer to understand performance impact with few runs. Furthermore, A code changes touches several test cases is very common during the evolution of software. Due to the resource and time constraints for re-executing large test suites, it is important to develop techniques to reduce the effort of regression testing. Our proposed method focus on the performance test suite prioritization via performance impact analysis of change.\\
  
-Nowadays, due to the frequent technological innovation and market changes, software libraries are evolving very quickly. To make sure that existing client software applications are not broken after a library update, backward compatibility has always been one of the most important requirements during the evolution of software platforms and libraries. Previous studies on this topic mainly focus on API signature changes between consecutive versions of software libraries, but behavioral changes of APIs with untouched signatures are actually more dangerous and are causing most real world bugs because they cannot be easily detected. Our study categorizes behavioral backward incompatibilities according to incompatible behaviors and invocation conditions. We propose compare those detected in regression testing with those causing real-world bugs and prioritization test case based on backward incompatibilities in dependencies.\\
+Nowadays, due to the frequent technological innovation and market changes, software libraries are evolving very quickly. To make sure that existing client software applications are not broken after a library update, backward compatibility has always been one of the most important requirements during the evolution of software platforms and libraries. Previous studies on this topic mainly focus on API signature changes between consecutive versions of software libraries, but behavioral changes of APIs with untouched signatures are actually more dangerous and are causing most real world bugs because they cannot be easily detected. Our study categorizes behavioral backward incompatibilities according to incompatible behaviors and invocation conditions. We propose to compare those detected in regression testing with those causing real-world bugs and prioritizing test case based on backward incompatibilities in dependencies.\\
  
 \end{abstract}
 
@@ -197,10 +199,10 @@ In every aspect of our lives, e.g., ranging from communication to social network
 
 
 
-Thus, software developers have to check, at each project revision, not only correctness of newly added functionality, but also that the recent project changes did not break any previously working functionality. Software testing is the most common approach in industry to check correctness of software. Software developers usually write tests for newly implemented functionality and include these tests in a test suite (i.e., a set of tests for the entire project). To check that project changes did not break previously working functionality, developers practice regression testing - running test suite at each project revision.  Clearly, more automation and better tools for software testing can lower the cost of software development, increase the reliability of software, and reduce the negative economic impact of defective software. So, Continuous Integration process which automatically compile, build, and test every new version of code committed to the central team repository, ensures that the entire team is alerted any time the central code repository contains broken code.\\
+Thus, software developers have to check, at each project revision, not only correctness of newly added functionality, but also that the recent project changes did not break any previously working functionality. Software testing is the most common approach in industry to check correctness of software. Software developers usually write tests for newly implemented functionality and include these tests in a test suite (i.e., a set of tests for the entire project). To check that project changes do not break previously working functionality, developers practice regression testing - running test suite at each project revision.  Clearly, more automation and better tools for software testing can lower the cost of software development, increase the reliability of software, and reduce the negative economic impact of defective software. So, continuous integration process which automatically compile, build, and test every new version of code committed to the central team repository, ensures that the entire team is alerted any time the central code repository contains broken code.\\
 
 
-Although regression testing is important, it is costly because it frequently runs a large number of tests. Some research studies [38, 48, 67, 109, 117] estimate that regression testing can take up to 80\% of the testing budget and up to 50\% of the software maintenance cost. The cost of regression testing increases as software grows. For example, Google reported that In 2014, approximately 15 million lines of code were changed in approximately 250,000 files in the Google repository on a weekly basis. Google's codebase is shared by more than 25,000 Google software developers from dozens of offices in countries around the world. On a typical workday, they commit 16,000 changes to the codebase, and another 24,000 changes are committed by automated systems. 
+Although regression testing is important, it is costly because it frequently runs a large number of tests. Some research studies [38, 48, 67, 109, 117] estimate that regression testing can take up to 80\% of the testing budget and up to 50\% of the software maintenance cost. The cost of regression testing increases as software grows. For example, Google reported that In 2014, approximately 15 million lines of code were changed in approximately 250,000 files in the Google repository on a weekly basis. Google's code base is shared by more than 25,000 Google software developers from dozens of offices in countries around the world. On a typical workday, they commit 16,000 changes to the code base, and another 24,000 changes are committed by automated systems. 
 Their regression-testing system, TAP [65,146,149], has had a linear increase in both the number of project changes per day and the average test-suite execution time per change, leading to a quadratic increase in the total test-suite execution time per day. As a result, the increase is challenging to keep up with even for a company with an abundance of computing resources. Other companies and open-source projects also reported long regression testing time.\\
 
 
@@ -212,16 +214,7 @@ A small extent of performance degradation may result in severe consequence motiv
  
 Nowadays, due to the frequent technological innovation and market changes, software libraries are evolving very quickly. To make sure that existing client software applications are not broken after a library update, backward compatibility has always been one of the most important requirements during the evolution of software platforms and libraries. Previous studies on this topic mainly focus on API signature changes between consecutive versions of software libraries, but behavioral changes of APIs with untouched signatures are actually more dangerous and are causing most real world bugs because they cannot be easily detected. Our study categorizes behavioral backward incompatibilities according to incompatible behaviors and invocation conditions. We compared those detected in regression testing with those causing real-world bugs using our defined category and presented the resolution of of real bugs related to behavioral backward incompatibilities.\\
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.6\textwidth]{vision.png}
-	\caption{Smart Mocking System}
-	\label{figure:vision}
-	\vspace{0.3cm}
-\end{figure}
 
-
-Our vision is to provide a framework to determine when mock and when not. In the figure \ref{figure:vision}, we can see the smart mocking system takes performance test case, code commit and regression test suite as the input of the framework and output is ranked list of test cases based on performance impact and behavioral incompatibility. There are two major component of the system, one is performance impact analysis component and the other is behavioral incompatibility analysis component. Main objective of these two component are not only to provide recommendation when to mock, when not and when to replace mock by real code, but also rank the regression test cases.
 
 
 \section{Thesis Statement}
@@ -237,6 +230,18 @@ Our thesis is three-pronged:\\
 \end{tabular}
 \medskip
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{vision.png}
+	\caption{Smart Mocking System}
+	\label{figure:vision}
+	\vspace{0.3cm}
+\end{figure}
+
+
+Our vision is to provide a framework to determine when to do mocking in testing and when to use the real dependency. A more precise question should be, developers should do mocking for which test cases and include all dependencies for which test cases. 
+
+In the figure \ref{figure:vision}, we can see the smart mocking system takes a code commit, the software's performance test suite, and unit test suite as the input, and its output is a list of test cases that should not be mocked based on performance impact and behavioral incompatibility. There are two major component of the system, one is performance impact analysis component and the other is behavioral incompatibility analysis component. It should be noted that these two component can not only provide recommendations on which test cases to mock and for which test cases we should replace mock by real code, but also rank the test cases on their importance. 
 
 \section{Contributions}
 To confirm the thesis statement, this dissertation makes the following contributions:
@@ -341,6 +346,12 @@ code modification(\cite{ROTHERMEL97,CHEN94}), test suite reduction by removing r
 Most relevant work on the performance risk implication of code change~\cite{huang2014performance}. However, this work relies on static analysis and focuses on specific types of performance regressions. Furthermore, prioritizing commits is not enough to address performance regression because 
 a code changes touches several test cases is very common during the evolution of software. In our study, we found that some commits touches more than 100 test cases.
 
+\subsection{Test Prioritization}
+Test-case prioritization is a well studied research area. As for generic prioritization strategies, the total and additional strategies are the most widely-used prioritization strategies~\cite{Rother99:testprio}, and reported empirical results show that the additional strategy is more effective than the total strategy in most cases. There also have been a number of research efforts seeking for other optimal prioritization strategies. For example, Li et al.~\cite{DBLP:journals/tse/LiHH07} proposed a 2-optimal strategy based on two different strategies: hill-climbing, and genetic programming. respectively. Jiang et al.~\cite{Jiang:2009} proposed an adaptive random strategy for test-case prioritization. Bryce and Memon~\cite{prioComb}, which aims to prioritize test cases (i.e., event sequences) for event-based GUI software. As each test case is an event sequence in GUI testing, their approach tries to select event sequences to cover different event interactions as early as possible.  Zhang et al.~\cite{DBLP:conf/icse/ZhangH0RM13} proposed a generic strategy that has flavor of both total and additional strategies.  
+
+Besides the generic prioritization strategy, a criteria is necessary for test-case prioritization for comparing test cases. Most existing efforts in this area leverage as criteria the code coverage at different levels. There have been work based on statement and branch coverage~\cite{Rother99:testprio}, function coverage~\cite{Elbaum:2000:PTC:347324.348910}, block coverage~\cite{DBLP:DoRK04}, modified condition/decision coverage~\cite{DBLP:DoRK04}, etc. There have also been research~\cite{DBLP:conf/icsm/KorelTH05} on test-case prioritization using coverage of system models. Mei et al.~\cite{Mei:2009} investigate criteria based on dataflow coverage for testing service-oriented software. 
+
+Compared with existing techniques on prioritization of test executions, the work of this thesis focuses on the prioritization of the tests to be not mocked, so it mainly focuses on the influence of a code change on software performance and library dependencies. 
 
 
 \section{Backward Incompatibility }

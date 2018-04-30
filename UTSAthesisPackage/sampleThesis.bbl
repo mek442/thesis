@@ -58,6 +58,13 @@ Azzah Al-Maskari, Mark Sanderson, and Paul Clough.
   Conference on Research and Development in Information Retrieval}, pages
   773--774, 2007.
 
+\bibitem{andrews2005mutation}
+James~H Andrews, Lionel~C Briand, and Yvan Labiche.
+\newblock Is mutation an appropriate tool for testing experiments?[software
+  testing].
+\newblock In {\em Software Engineering, 2005. ICSE 2005. Proceedings. 27th
+  International Conference on}, pages 402--411. IEEE, 2005.
+
 \bibitem{Antoniol:IWPSE04}
 G.~Antoniol, M.~D. Penta, and E.~Merlo.
 \newblock An automatic approach to identify class evolution discontinuities.
@@ -152,6 +159,13 @@ Stephen~M. Blackburn, Robin Garner, Chris Hoffmann, Asjad~M. Khang, Kathryn~S.
   Object-oriented Programming Systems, Languages, and Applications}, pages
   169--190, 2006.
 
+\bibitem{ICSE13:combmini}
+Dale Blue, Itai Segall, Rachel Tzoref-Brill, and Aviad Zlotnick.
+\newblock Interaction-based test-suite minimization.
+\newblock In {\em Proceedings of the 2013 International Conference on Software
+  Engineering}, ICSE '13, pages 182--191, Piscataway, NJ, USA, 2013. IEEE
+  Press.
+
 \bibitem{SootIFDS}
 Eric Bodden.
 \newblock Inter-procedural data-flow analysis with ifds/ide and soot.
@@ -170,11 +184,30 @@ G.~Brito, A.~Hora, M.~T. Valente, and R.~Robbes.
 \newblock In {\em 2016 IEEE 23rd International Conference on Software Analysis,
   Evolution, and Reengineering (SANER)}, volume~1, pages 360--369, 2016.
 
+\bibitem{IST06:combconstraint}
+Ren{\'e}e~C. Bryce and Charles~J. Colbourn.
+\newblock Prioritized interaction testing for pair-wise coverage with seeding
+  and constraints.
+\newblock {\em Information {\&} Software Technology}, 48(10):960--970, 2006.
+
+\bibitem{prioComb}
+Ren{\'e}e~C. Bryce and Atif~M. Memon.
+\newblock Test suite prioritization by interaction coverage.
+\newblock In {\em Workshop on Domain specific approaches to software test
+  automation: in conjunction with the 6th ESEC/FSE joint meeting}, DOSTA '07,
+  pages 1--7, New York, NY, USA, 2007. ACM.
+
 \bibitem{clark:pct}
 Malcolm C.
 \newblock Post congress tristesse.
 \newblock In {\em TeX90 Conference Proceedings}, pages 84--89. TeX Users Group,
   March 1991.
+
+\bibitem{cadar2008klee}
+Cristian Cadar, Daniel Dunbar, and Dawson~R Engler.
+\newblock Klee: Unassisted and automatic generation of high-coverage tests for
+  complex systems programs.
+\newblock In {\em OSDI}, volume~8, pages 209--224, 2008.
 
 \bibitem{Chen2016}
 Bihuan Chen, Yang Liu, and Wei Le.
@@ -201,16 +234,46 @@ Roberta Coelho, Uir{\'a} Kulesza, Arndt von Staa, and Carlos Lucena.
 \newblock In {\em Proceedings of the 2006 international workshop on Software
   engineering for large-scale multi-agent systems}, pages 83--90. ACM, 2006.
 
+\bibitem{TSE97:comb}
+David~M. Cohen, Siddhartha~R. Dalal, Michael~L. Fredman, and Gardner~C. Patton.
+\newblock The aetg system: An approach to testing based on combinatiorial
+  design.
+\newblock {\em IEEE Trans. Software Eng.}, 23(7):437--444, 1997.
+
+\bibitem{TSE08:combcons}
+Myra~B. Cohen, Matthew~B. Dwyer, and Jiangfan Shi.
+\newblock Constructing interaction test suites for highly-configurable systems
+  in the presence of constraints: A greedy approach.
+\newblock {\em IEEE Trans. Software Eng.}, 34(5):633--650, 2008.
+
 \bibitem{Collins:CLJ05}
 Michael~J. Collins and Terry Koo.
 \newblock Discriminative reranking for natural language parsing.
 \newblock {\em Computational Linguistics}, 31(1):25--70, March 2005.
+
+\bibitem{CoreUtilsWeb}
+{Coreutils - GNU core utilities}.
+\newblock \url{http://www.gnu.org/software/coreutils/}.
 
 \bibitem{Dagenais:ICSE08}
 B.~Dagenais and M.~P. Robillard.
 \newblock Recommending adaptive changes for framework evolution.
 \newblock In {\em Proceedings of International Conference on Software
   Engineering}, pages 481--490, 2008.
+
+\bibitem{ISSTA10:testRepair}
+Brett Daniel, Tihomir Gvero, and Darko Marinov.
+\newblock On test repair using symbolic execution.
+\newblock In {\em Proceedings of the 19th international symposium on Software
+  testing and analysis}, ISSTA '10, pages 207--218, New York, NY, USA, 2010.
+  ACM.
+
+\bibitem{delamaro1996proteum}
+M{\'a}rcio~Eduardo Delamaro, Jos{\'e}~Carlos Maldonado, and AP~Mathur.
+\newblock Proteum-a tool for the assessment of test adequacy for c programs
+  user's guide.
+\newblock Technical report, Technical Report SERC-TR168-P, Software Engineering
+  Research Center, Purdue University, 1996.
 
 \bibitem{Demeyer:OOPSLA00}
 S.~Demeyer, S.~Ducasse, and O.~Nierstrasz.
@@ -247,11 +310,37 @@ D.~Dig, K.~Manzoor, R.~Johnson, and T.~N. Nguyen.
 \newblock In {\em Proceedings of International Conference on Software
   Engineering}, pages 427--436, 2007.
 
+\bibitem{do2005supporting}
+Hyunsook Do, Sebastian Elbaum, and Gregg Rothermel.
+\newblock Supporting controlled experimentation with testing techniques: An
+  infrastructure and its potential impact.
+\newblock {\em Empirical Software Engineering}, 10(4):405--435, 2005.
+
+\bibitem{do2006use}
+Hyunsook Do and Gregg Rothermel.
+\newblock On the use of mutation faults in empirical assessments of test case
+  prioritization techniques.
+\newblock {\em Software Engineering, IEEE Transactions on}, 32(9):733--752,
+  2006.
+
+\bibitem{DBLP:DoRK04}
+Hyunsook Do, Gregg Rothermel, and Alex Kinneer.
+\newblock Empirical studies of test case prioritization in a junit testing
+  environment.
+\newblock In {\em ISSRE}, pages 113--124, 2004.
+
 \bibitem{ELBAUM00}
 Sebastian Elbaum, Alexey~G. Malishevsky, and Gregg Rothermel.
 \newblock Prioritizing test cases for regression testing.
 \newblock In {\em Proceedings of the 2000 ACM SIGSOFT International Symposium
   on Software Testing and Analysis}, pages 102--112, 2000.
+
+\bibitem{Elbaum:2000:PTC:347324.348910}
+Sebastian Elbaum, Alexey~G. Malishevsky, and Gregg Rothermel.
+\newblock Prioritizing test cases for regression testing.
+\newblock In {\em Proceedings of the 2000 ACM SIGSOFT international symposium
+  on Software testing and analysis}, ISSTA '00, pages 102--112, New York, NY,
+  USA, 2000. ACM.
 
 \bibitem{Espinha:WebAPI}
 T.~Espinha, A.~Zaidman, and H.-G. Gross.
@@ -279,6 +368,14 @@ King~Chun Foo, Zhen~Ming Jiang, Bram Adams, Ahmed~E. Hassan, Ying Zou, and
   performance analysis.
 \newblock In {\em 2010 10th International Conference on Quality Software},
   pages 32--41, 2010.
+
+\bibitem{Fouche:2007}
+Sandro Fouch{\'e}, Myra~B. Cohen, and Adam Porter.
+\newblock Towards incremental adaptive covering arrays.
+\newblock In {\em The 6th Joint Meeting on European software engineering
+  conference and the ACM SIGSOFT symposium on the foundations of software
+  engineering: companion papers}, ESEC-FSE companion '07, pages 557--560, New
+  York, NY, USA, 2007. ACM.
 
 \bibitem{foxref}
 Gregory Fox.
@@ -314,6 +411,12 @@ Stefan~J Galler, Andreas Maller, and Franz Wotawa.
 \newblock In {\em Proceedings of the 5th Workshop on Automation of Software
   Test}, pages 43--50. ACM, 2010.
 
+\bibitem{milos2013coverage}
+Milos Gligoric, Alex Groce, Chaoqiang Zhang, Rohan Sharma, Amin Alipour, and
+  Darko Marinov.
+\newblock Comparing non-adequate test suites using coverage criteria.
+\newblock In {\em Proc. of ISSTA}, pages 302--313, 2013.
+
 \bibitem{Godefroid:POPLComposite}
 P.~Godefroid, A.~V. Nori, Sriram~K. Rajamani, and S.~D. Tetali.
 \newblock Compositional may-must program analysis: Unleashing the power of
@@ -346,6 +449,17 @@ Michaela Greiler, Arie~van Deursen, and Margaret-Anne Storey.
 \newblock Test confessions: A study of testing practices for plug-in systems.
 \newblock In {\em Proceedings of the 34th International Conference on Software
   Engineering}, pages 244--254. IEEE Press, 2012.
+
+\bibitem{STVR05:combstr}
+Mats Grindal, Jeff Offutt, and Sten~F. Andler.
+\newblock Combination testing strategies: a survey.
+\newblock {\em Softw. Test., Verif. Reliab.}, 15(3):167--199, 2005.
+
+\bibitem{groce2007randomized}
+Alex Groce, Gerard Holzmann, and Rajeev Joshi.
+\newblock Randomized differential testing as a prelude to formal verification.
+\newblock In {\em Software Engineering, 2007. ICSE 2007. 29th International
+  Conference on}, pages 621--631. IEEE, 2007.
 
 \bibitem{SPEED}
 Sumit Gulwani, Krishna~K. Mehra, and Trishul Chilimbi.
@@ -384,6 +498,11 @@ J.~Henkel and A.~Diwan.
 \newblock In {\em Proceedings of International Conference on Software
   Engineering}, pages 274--283, 2005.
 
+\bibitem{TSE82:mutation}
+William~E. Howden.
+\newblock Weak mutation testing and completeness of test sets.
+\newblock {\em IEEE Trans. Software Eng.}, 8(4):371--379, 1982.
+
 \bibitem{huang2014performance}
 Peng Huang, Xiao Ma, Dongcai Shen, and Yuanyuan Zhou.
 \newblock Performance regression testing target prioritization via performance
@@ -391,12 +510,27 @@ Peng Huang, Xiao Ma, Dongcai Shen, and Yuanyuan Zhou.
 \newblock In {\em Proceedings of the 36th International Conference on Software
   Engineering}, ICSE 2014, pages 60--71, 2014.
 
+\bibitem{ICSE94:Siemens}
+Monica Hutchins, Herb Foster, Tarak Goradia, and Thomas Ostrand.
+\newblock Experiments of the effectiveness of dataflow- and controlflow-based
+  test adequacy criteria.
+\newblock In {\em Proceedings of the 16th international conference on Software
+  engineering}, ICSE '94, pages 191--200, Los Alamitos, CA, USA, 1994. IEEE
+  Computer Society Press.
+
 \bibitem{woda}
 Mainul Islam and Christoph Csallner.
 \newblock Dsc+ mock: A test case+ mock class generator in support of coding
   against interfaces.
 \newblock In {\em Proceedings of the Eighth International Workshop on Dynamic
   Analysis}, pages 26--31. ACM, 2010.
+
+\bibitem{Jiang:2009}
+Bo~Jiang, Zhenyu Zhang, W.~K. Chan, and T.~H. Tse.
+\newblock Adaptive random test case prioritization.
+\newblock In {\em Proceedings of the 2009 IEEE/ACM International Conference on
+  Automated Software Engineering}, ASE '09, pages 233--244, Washington, DC,
+  USA, 2009. IEEE Computer Society.
 
 \bibitem{JIN12}
 Guoliang Jin, Linhai Song, Xiaoming Shi, Joel Scherpelz, and Shan Lu.
@@ -456,11 +590,36 @@ L.~Kof.
   computational linguistics.
 \newblock In {\em Proc. RE}, pages 121--130, 2007.
 
+\bibitem{DBLP:conf/icsm/KorelTH05}
+Bogdan Korel, Luay~Ho Tahat, and Mark Harman.
+\newblock Test prioritization using system models.
+\newblock In {\em ICSM}, pages 559--568, 2005.
+
 \bibitem{Kozareva:DKE07}
 Z.~Kozareva, {\'{O}}.~Ferr\'{a}ndez, A.~Montoyo, Rafael Mu{\~{n}}oz, Armando
   Su{\'{a}}rez, and Jaime G{\'{o}}mez.
 \newblock Combining data-driven systems for improving named entity recognition.
 \newblock {\em DKE}, 61(3):449--466, June 2007.
+
+\bibitem{Krishnan2007:model}
+R.~Krishnan, S.~Murali Krishna, and P.~Siva Nandhan.
+\newblock Combinatorial testing: learnings from our experience.
+\newblock {\em SIGSOFT Softw. Eng. Notes}, 32(3):1--8, May 2007.
+
+\bibitem{TSE:Comb}
+D.~R. Kuhn, D.~R. Wallace, and A.~M. Gallo, Jr.
+\newblock Software fault interactions and implications for software testing.
+\newblock {\em IEEE Trans. Softw. Eng.}, 30(6):418--421, June 2004.
+
+\bibitem{intro:comb}
+D~Richard Kuhn, Raghu~N Kacker, and Yu~Lei.
+\newblock {\em Introduction to Combinatorial Testing}, volume~5.
+\newblock Chapman \& Hall, 2013.
+
+\bibitem{IT08:pairwise}
+Rick Kuhn, Yu~Lei, and Raghu Kacker.
+\newblock Practical combinatorial testing: Beyond pairwise.
+\newblock {\em IT Professional}, 10(3):19--23, 2008.
 
 \bibitem{ATC2013}
 Yongin Kwon, Sangmin Lee, Hayoon Yi, Donghyun Kwon, Seungjun Yang, Byung-Gon
@@ -508,6 +667,11 @@ Ond{\v{r}}ej Lhot{\'a}k and Laurie Hendren.
 Zheng Li, Mark Harman, and Robert~M. Hierons.
 \newblock Search algorithms for regression test case prioritization.
 \newblock {\em IEEE Trans. Softw. Eng.}, 33(4):225--237, April 2007.
+
+\bibitem{DBLP:journals/tse/LiHH07}
+Zheng Li, Mark Harman, and Robert~M. Hierons.
+\newblock Search algorithms for regression test case prioritization.
+\newblock {\em IEEE Trans. Software Eng.}, 33(4):225--237, 2007.
 
 \bibitem{Vasquez:AndroidAPI}
 M.~Linares-V\'{a}squez, G.~Bavota, C.~Bernal-C\'{a}rdenas, M.~Di~Penta,
@@ -587,6 +751,13 @@ T.~McDonnell, B.~Ray, and M.~Kim.
 \newblock In {\em Proceedings of the 2013 IEEE International Conference on
   Software Maintenance}, pages 70--79, 2013.
 
+\bibitem{Mei:2009}
+Lijun Mei, Zhenyu Zhang, W.~K. Chan, and T.~H. Tse.
+\newblock Test case prioritization for regression testing of service-oriented
+  business applications.
+\newblock In {\em Proceedings of the 18th international conference on World
+  wide web}, WWW '09, pages 901--910, New York, NY, USA, 2009. ACM.
+
 \bibitem{GUIRegression}
 A.~M. Memon and M.~L. Soffa.
 \newblock Regression testing of guis.
@@ -661,6 +832,11 @@ Hoan~Anh Nguyen, Tung~Thanh Nguyen, Gary Wilson, Jr., Anh~Tuan Nguyen, Miryung
   Kim, and Tien~N. Nguyen.
 \newblock A graph-based approach to {API} usage adaptation.
 \newblock In {\em Proc. OOPSLA}, pages 302--321, 2010.
+
+\bibitem{2011:CombSurvey}
+Changhai Nie and Hareton Leung.
+\newblock A survey of combinatorial testing.
+\newblock {\em ACM Comput. Surv.}, 43(2):11:1--11:29, February 2011.
 
 \bibitem{Nistor15}
 A.~Nistor, P.~C. Chang, C.~Radoi, and S.~Lu.
@@ -799,6 +975,11 @@ Gregg Rothermel, Roland~H. Untch, Chengyun Chu, and Mary~Jean Harrold.
 \newblock In {\em Proceedings of the IEEE International Conference on Software
   Maintenance}, ICSM '99, pages 179--, 1999.
 
+\bibitem{Rother99:testprio}
+Gregg Rothermel, Roland~H. Untch, Chengyun Chu, and Mary~Jean Harrold.
+\newblock Test case prioritization: An empirical study.
+\newblock In {\em ICSM}, pages 179--188, 1999.
+
 \bibitem{OOImpact}
 B.~G. Ryder and F.~Tip.
 \newblock Change impact analysis for object-oriented programs.
@@ -827,6 +1008,16 @@ T.~Sch{\"a}fer, J.~Jonas, and M.~Mezini.
 \newblock Mining framework usage changes from instantiation code.
 \newblock In {\em Proceedings of International Conference on Software
   Engineering}, pages 471--480, 2008.
+
+\bibitem{seize1977student}
+Theresa~K Seize.
+\newblock Student's t-test.
+\newblock {\em Southern Medical Journal}, 70(11):1299, 1977.
+
+\bibitem{shapiro1965analysis}
+Samuel~Sanford Shapiro and Martin~B Wilk.
+\newblock An analysis of variance test for normality (complete samples).
+\newblock {\em Biometrika}, 52(3/4):591--611, 1965.
 
 \bibitem{SHEN05}
 Kai Shen, Ming Zhong, and Chuanpeng Li.
@@ -996,6 +1187,10 @@ Z.~Xing and E.~Stroulia.
 \newblock {\em IEEE Transactions on Software Engineering}, 33(12):818--836,
   December 2007.
 
+\bibitem{YaffsWeb}
+{YAFFS}: A flash file system for embedded use.
+\newblock \url{http://www.yaffs.net/}.
+
 \bibitem{YAN12}
 Dacong Yan, Guoqing Xu, and Atanas Rountev.
 \newblock Uncovering performance problems in java applications with reference
@@ -1015,6 +1210,12 @@ L.~Zhang, M.~Kim, and S.~Khurshid.
   evolving java programs.
 \newblock In {\em Proceedings of the ACM SIGSOFT 20th International Symposium
   on the Foundations of Software Engineering}, pages 40:1--40:4, 2012.
+
+\bibitem{DBLP:conf/icse/ZhangH0RM13}
+Lingming Zhang, Dan Hao, Lu~Zhang, Gregg Rothermel, and Hong Mei.
+\newblock Bridging the gap between the total and additional test-case
+  prioritization strategies.
+\newblock In {\em ICSE}, pages 192--201, 2013.
 
 \bibitem{additionalTestPrior}
 Lingming Zhang, Dan Hao, Lu~Zhang, Gregg Rothermel, and Hong Mei.
