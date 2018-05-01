@@ -1,37 +1,41 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: sampleThesis.aux
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: sampleThesis.aux
 A level-1 auxiliary file: mocking/chapt2.aux
 A level-1 auxiliary file: performance/chapt2.aux
 A level-1 auxiliary file: backward/chapt3.aux
 The style file: plain.bst
 Database file #1: sampleThesis.bib
 Warning--entry type for "xalan" isn't style-file defined
---line 334 of file sampleThesis.bib
+--line 755 of file sampleThesis.bib
 Warning--entry type for "commonMath" isn't style-file defined
---line 339 of file sampleThesis.bib
+--line 765 of file sampleThesis.bib
 Warning--entry type for "SemVer" isn't style-file defined
---line 739 of file sampleThesis.bib
-Repeated entry---line 821 of file sampleThesis.bib
+--line 1527 of file sampleThesis.bib
+Repeated entry---line 1675 of file sampleThesis.bib
  : @inproceedings{SemVer
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 825 of file sampleThesis.bib
+Repeated entry---line 1683 of file sampleThesis.bib
  : @inproceedings{OOPSLA06
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 834 of file sampleThesis.bib
- : @inproceedings{MockStudy
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 842 of file sampleThesis.bib
+Repeated entry---line 1717 of file sampleThesis.bib
  : @inproceedings{SCAM2014
  :                        ,
 I'm skipping whatever remains of this entry
-A bad cross reference---entry "DBLP:conf/icse/ZhangH0RM13"
-refers to entry "DBLP:conf/icse/2013", which doesn't exist
 A bad cross reference---entry "DBLP:DoRK04"
 refers to entry "DBLP:conf/issre/2004", which doesn't exist
 A bad cross reference---entry "DBLP:conf/icsm/KorelTH05"
 refers to entry "DBLP:conf/icsm/2005", which doesn't exist
+Name 1 in "A. Nanda, S. Mani, S. Sinha, M. J. Harrold, and A. Orso" has a comma at the end for entry nanda2011
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "A. Nanda, S. Mani, S. Sinha, M. J. Harrold, and A. Orso" for entry nanda2011
+while executing---line 1049 of file plain.bst
+Warning--to sort, need author or key in gtesting2011
+Warning--to sort, need author or key in gContinous2011
+Name 1 in "S. Elbaum, G. Rothermel, and J. Penix." has a comma at the end for entry elbaum2014
+while executing---line 1049 of file plain.bst
 Warning--to sort, need author or key in perfranker
 Warning--to sort, need author or key in xalan
 Warning--to sort, need author or key in commonMath
@@ -41,6 +45,10 @@ Warning--to sort, need author or key in SemVer
 Warning--to sort, need author or key in deltadebug
 Warning--empty author in deltadebug
 Warning--empty publisher in deltadebug
+Name 1 in "A. Nanda, S. Mani, S. Sinha, M. J. Harrold, and A. Orso" has a comma at the end for entry nanda2011
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "A. Nanda, S. Mani, S. Sinha, M. J. Harrold, and A. Orso" for entry nanda2011
+while executing---line 1090 of file plain.bst
 Warning--there's a number but no volume in Bavota:AndroidRating
 Warning--can't use both author and editor fields in Spark
 Warning--empty publisher in Spark
@@ -49,6 +57,49 @@ Warning--empty booktitle in Google
 Warning--empty year in Google
 Warning--empty booktitle in MITCHELL
 Warning--empty year in MITCHELL
+Name 1 in "S. Elbaum, G. Rothermel, and J. Penix." has a comma at the end for entry elbaum2014
+while executing---line 1090 of file plain.bst
 Warning--can't use both author and editor fields in GBRandom
 Warning--empty publisher in GBRandom
-(There were 7 error messages)
+You've used 201 entries,
+            2118 wiz_defined-function locations,
+            1668 strings with 41511 characters,
+and the built_in function-call counts, 85721 in all, are:
+= -- 8479
+> -- 3627
+< -- 144
++ -- 1453
+- -- 1226
+* -- 5526
+:= -- 12633
+add.period$ -- 617
+call.type$ -- 201
+change.case$ -- 1212
+chr.to.int$ -- 0
+cite$ -- 222
+duplicate$ -- 3792
+empty$ -- 7121
+format.name$ -- 1226
+if$ -- 19307
+int.to.chr$ -- 0
+int.to.str$ -- 201
+missing$ -- 197
+newline$ -- 995
+num.names$ -- 380
+pop$ -- 1635
+preamble$ -- 1
+purify$ -- 1017
+quote$ -- 0
+skip$ -- 3108
+stack$ -- 0
+substring$ -- 5714
+swap$ -- 1524
+text.length$ -- 144
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 788
+warning$ -- 21
+while$ -- 796
+width$ -- 204
+write$ -- 2210
+(There were 11 error messages)

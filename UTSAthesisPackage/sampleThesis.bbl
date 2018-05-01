@@ -17,6 +17,16 @@ Yesterday, my program worked. today, it does not. why?
 \newblock In {\em International Symposium on the Foundations of Software
   Engineering}, pages 253--267. 1999.
 
+\bibitem{gtesting2011}
+Testing at the speed and scale of google.
+\newblock
+  \url{http://google-engtools.blogspot.com/2011/06/testing-at-speed-and-scale-of-google.html},
+  2011.
+
+\bibitem{gContinous2011}
+Tools for continuous integration at google scale.
+\newblock \url{http://www.youtube.com/watch?v=b52aXZ2yi08}, 2011.
+
 \bibitem{vista}
 Criticism of windows vista.
 \newblock \url{https://en.wikipedia.org/wiki/Criticism_of_Windows_Vista}, 2017.
@@ -30,6 +40,12 @@ Sougou.
 \newblock
   \url{https://play.google.com/store/apps/details?id=com.sohu.inputmethod.sogou&hl=en},
   2017.
+
+\bibitem{nanda2011}
+S.~Sinha M. J.~Harrold A.~Nanda, S.~Mani and A.~Orso.
+\newblock Regression testing in the presence of non-code changes.
+\newblock In {\em In International Conference on Software Testing,
+  Verification, and Validation}, pages 21--30, 2011.
 
 \bibitem{Abebe:ICPC10}
 Surafel~Lemma Abebe and Paolo Tonella.
@@ -222,6 +238,12 @@ Yih-Farn Chen, D.~S. Rosenblum, and Kiem-Phong Vo.
 \newblock In {\em Proceedings of 16th International Conference on Software
   Engineering}, pages 211--220, 1994.
 
+\bibitem{chittimalli2007}
+P.~K. Chittimalli and M.~J. Harrold.
+\newblock Re-computing coverage information to assist regression testing.
+\newblock In {\em In International Conference on Software Maintenance}, pages
+  164--173, 2007.
+
 \bibitem{Chow:ICSM96}
 K.~Chow and D.~Notkin.
 \newblock Semi-automatic update of applications in response to library changes.
@@ -291,12 +313,6 @@ D.~Dig, C.~Comertoglu, D.~Marinov, and R.~Johnson.
 \newblock Automated detection of refactorings in evolving components.
 \newblock In {\em Proc. ECOOP}, pages 404--428, 2006.
 
-\bibitem{Dig:JSME06}
-D.~Dig and R.~Johnson.
-\newblock How do {APIs} evolve? {A} story of refactoring.
-\newblock {\em Journal on Software Maintenance of Evolution}, 18(2):83--107,
-  March 2006.
-
 \bibitem{Dig2006}
 D.~Dig and R.~Johnson.
 \newblock How do {APIs} evolve\&quest; a story of refactoring: Research
@@ -341,6 +357,12 @@ Sebastian Elbaum, Alexey~G. Malishevsky, and Gregg Rothermel.
 \newblock In {\em Proceedings of the 2000 ACM SIGSOFT international symposium
   on Software testing and analysis}, ISSTA '00, pages 102--112, New York, NY,
   USA, 2000. ACM.
+
+\bibitem{engstr2010}
+E.~Engstr and P.~Runeson.
+\newblock A qualitative survey of regression testing practices.
+\newblock In {\em In Product-Focused Software Process Improvement}, pages
+  3--16. Springer-Verlag, 2010.
 
 \bibitem{Espinha:WebAPI}
 T.~Espinha, A.~Zaidman, and H.-G. Gross.
@@ -658,17 +680,18 @@ A.~W. Leung, E.~Lalonde, J.~Telleen, J.~Davis, and C.~Maltzahn.
 \newblock In {\em 24th IEEE Conference on Mass Storage Systems and Technologies
   (MSST 2007)}, pages 281--286, 2007.
 
+\bibitem{hkLeung}
+H.~K.~N. Leung and L.~White.
+\newblock Insights into regression testing.
+\newblock In {\em In International Conference on Software Maintenance}, pages
+  60--69, 1989.
+
 \bibitem{Spark}
 Ond{\v{r}}ej Lhot{\'a}k and Laurie Hendren.
 \newblock {\em Scaling Java Points-to Analysis Using Spark}, pages 153--169.
 \newblock 2003.
 
 \bibitem{LI07}
-Zheng Li, Mark Harman, and Robert~M. Hierons.
-\newblock Search algorithms for regression test case prioritization.
-\newblock {\em IEEE Trans. Softw. Eng.}, 33(4):225--237, April 2007.
-
-\bibitem{DBLP:journals/tse/LiHH07}
 Zheng Li, Mark Harman, and Robert~M. Hierons.
 \newblock Search algorithms for regression test case prioritization.
 \newblock {\em IEEE Trans. Software Eng.}, 33(4):225--237, 2007.
@@ -772,13 +795,6 @@ S.~Meng, X.~Wang, L.~Zhang, and H.~Mei.
 \newblock In {\em 2012 34th International Conference on Software Engineering
   (ICSE)}, pages 353--363, 2012.
 
-\bibitem{Meng1}
-S.~Meng, X.~Wang, L.~Zhang, and H.~Mei.
-\newblock A history-based matching approach to identification of framework
-  evolution.
-\newblock In {\em Proceedings of the 34th International Conference on Software
-  Engineering}, pages 353--363, 2012.
-
 \bibitem{MITCHELL}
 M.~MITCHELL.
 \newblock Gcc performance regression testing discussion.
@@ -793,21 +809,8 @@ L.~Moreno, G.~Bavota, M.~Di~Penta, R.~Oliveto, A.~Marcus, and G.~Canfora.
 S.~Mostafa and X.~Wang.
 \newblock An empirical study on the usage of mocking frameworks in software
   testing.
-\newblock In {\em 14th International Conference on Quality Software}, pages
-  127--132, 2014.
-
-\bibitem{QSIC14}
-S.~Mostafa and X.~Wang.
-\newblock An empirical study on the usage of mocking frameworks in software
-  testing.
 \newblock In {\em 2014 14th International Conference on Quality Software},
   pages 127--132, 2014.
-
-\bibitem{QSICStudy}
-S.~Mostafa and X.~Wang.
-\newblock An empirical study on the usage of mocking frameworks in software
-  testing.
-\newblock In {\em QSIC}, pages 127--132, 2014.
 
 \bibitem{techstat}
 S.~Mostafa and X.~Wang.
@@ -826,12 +829,6 @@ H.~Nguyen, T.~Nguyen, G.~Wilson, Jr., A.~Nguyen, M.~Kim, and T.~Nguyen.
 \newblock In {\em Proceedings of the ACM International Conference on Object
   Oriented Programming Systems Languages and Applications}, pages 302--321,
   2010.
-
-\bibitem{Nguyen:OOPSLA10}
-Hoan~Anh Nguyen, Tung~Thanh Nguyen, Gary Wilson, Jr., Anh~Tuan Nguyen, Miryung
-  Kim, and Tien~N. Nguyen.
-\newblock A graph-based approach to {API} usage adaptation.
-\newblock In {\em Proc. OOPSLA}, pages 302--321, 2010.
 
 \bibitem{2011:CombSurvey}
 Changhai Nie and Hareton Leung.
@@ -920,12 +917,6 @@ Michael Pradel, Markus Huggler, and Thomas~R. Gross.
 \newblock In {\em Proceedings of the International Symposium on Software
   Testing and Analysis}, pages 13--25, 2014.
 
-\bibitem{Pradel:2014:PRT:2610384.2610393}
-Michael Pradel, Markus Huggler, and Thomas~R. Gross.
-\newblock Performance regression testing of concurrent classes.
-\newblock In {\em Proceedings of the 2014 International Symposium on Software
-  Testing and Analysis}, pages 13--25, 2014.
-
 \bibitem{CacheRandom}
 C.~Pyo, S.~Pae, and G.~Lee.
 \newblock Dram as source of randomness.
@@ -958,22 +949,10 @@ R.~Robbes, M.~Lungu, and D.~R\"{o}thlisberger.
 \newblock In {\em Proceedings of the ACM SIGSOFT 20th International Symposium
   on the Foundations of Software Engineering}, pages 56:1--56:11, 2012.
 
-\bibitem{covtestprior}
-G.~Rothermel, R.~H. Untch, Chengyun Chu, and M.~J. Harrold.
-\newblock Test case prioritization: an empirical study.
-\newblock In {\em Software Maintenance, 1999. (ICSM '99) Proceedings. IEEE
-  International Conference on}, pages 179--188, 1999.
-
 \bibitem{ROTHERMEL97}
 Gregg Rothermel and Mary~Jean Harrold.
 \newblock A safe, efficient regression test selection technique.
 \newblock {\em ACM Trans. Softw. Eng. Methodol.}, 6(2):173--210, April 1997.
-
-\bibitem{ROTHERMEL99}
-Gregg Rothermel, Roland~H. Untch, Chengyun Chu, and Mary~Jean Harrold.
-\newblock Test case prioritization: An empirical study.
-\newblock In {\em Proceedings of the IEEE International Conference on Software
-  Maintenance}, ICSM '99, pages 179--, 1999.
 
 \bibitem{Rother99:testprio}
 Gregg Rothermel, Roland~H. Untch, Chengyun Chu, and Mary~Jean Harrold.
@@ -985,6 +964,13 @@ B.~G. Ryder and F.~Tip.
 \newblock Change impact analysis for object-oriented programs.
 \newblock In {\em Proceedings of the 2001 ACM SIGPLAN-SIGSOFT Workshop on
   Program Analysis for Software Tools and Engineering}, pages 46--53, 2001.
+
+\bibitem{elbaum2014}
+G.~Rothermel S.~Elbaum and J.~Penix.
+\newblock Techniques for improving regression testing in continuous integration
+  development environments.
+\newblock In {\em Proceedings of the eighteenth ACM SIGSOFT international
+  symposium on Foundations of software engineering}, pages 235--245. ACM, 2014.
 
 \bibitem{Saff}
 David Saff and Michael~D Ernst.
@@ -1132,12 +1118,6 @@ E.~J. Weyuker and F.~I. Vokolos.
 \newblock {\em IEEE Transactions on Software Engineering}, 26(12):1147--1156,
   2000.
 
-\bibitem{Ejref}
-Elaine~J. Weyuker and Filippos~I. Vokolos.
-\newblock Experience with performance testing of software systems: Issues, an
-  approach, and case study.
-\newblock {\em IEEE Trans. Softw. Eng.}, 26(12):1147--1156, December 2000.
-
 \bibitem{Whaley:EcoopComposite}
 J.~Whaley and M.~Rinard.
 \newblock Compositional pointer and escape analysis for java programs.
@@ -1187,6 +1167,12 @@ Z.~Xing and E.~Stroulia.
 \newblock {\em IEEE Transactions on Software Engineering}, 33(12):818--836,
   December 2007.
 
+\bibitem{xu2010directed}
+Zhihong Xu, Yunho Kim, Moonzoo Kim, Gregg Rothermel, and Myra~B Cohen.
+\newblock Directed test suite augmentation: techniques and tradeoffs.
+\newblock In {\em Proceedings of the eighteenth ACM SIGSOFT international
+  symposium on Foundations of software engineering}, pages 257--266. ACM, 2010.
+
 \bibitem{YaffsWeb}
 {YAFFS}: A flash file system for embedded use.
 \newblock \url{http://www.yaffs.net/}.
@@ -1197,6 +1183,13 @@ Dacong Yan, Guoqing Xu, and Atanas Rountev.
   propagation profiling.
 \newblock In {\em Proceedings of the 34th International Conference on Software
   Engineering}, pages 134--144, 2012.
+
+\bibitem{yoo2012regression}
+Shin Yoo and Mark Harman.
+\newblock Regression testing minimization, selection and prioritization: a
+  survey.
+\newblock {\em Software Testing, Verification and Reliability}, 22(2):67--120,
+  2012.
 
 \bibitem{PerfBugStudy}
 Shahed Zaman, Bram Adams, and Ahmed~E. Hassan.
@@ -1210,12 +1203,6 @@ L.~Zhang, M.~Kim, and S.~Khurshid.
   evolving java programs.
 \newblock In {\em Proceedings of the ACM SIGSOFT 20th International Symposium
   on the Foundations of Software Engineering}, pages 40:1--40:4, 2012.
-
-\bibitem{DBLP:conf/icse/ZhangH0RM13}
-Lingming Zhang, Dan Hao, Lu~Zhang, Gregg Rothermel, and Hong Mei.
-\newblock Bridging the gap between the total and additional test-case
-  prioritization strategies.
-\newblock In {\em ICSE}, pages 192--201, 2013.
 
 \bibitem{additionalTestPrior}
 Lingming Zhang, Dan Hao, Lu~Zhang, Gregg Rothermel, and Hong Mei.
