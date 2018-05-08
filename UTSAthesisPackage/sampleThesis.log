@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.7.25)  1 MAY 2018 16:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.7.25)  2 MAY 2018 14:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1027,18 +1027,9 @@ File: mocking/boxplot.pdf Graphic file (type pdf)
 Package pdftex.def Info: mocking/boxplot.pdf used on input line 17.
 (pdftex.def)             Requested size: 284.53156pt x 170.71892pt.
 
-[20 <./mocking/boxplot.pdf>]
-Overfull \hbox (40.71205pt too wide) in paragraph at lines 127--143
- [][] 
- []
-
-[21]
-Overfull \hbox (38.3394pt too wide) in paragraph at lines 158--174
- [][] 
- []
-
-[22] [23] [24]) (./mocking/content/related.tex [25])
-(./mocking/content/conclude.tex [26])) [27]
+[20 <./mocking/boxplot.pdf>] [21] [22] [23] [24])
+(./mocking/content/related.tex [25]) (./mocking/content/conclude.tex [26]))
+[27]
 \openout2 = `performance/chapt2.aux'.
 
  (./performance/chapt2.tex
@@ -1194,7 +1185,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 481--484
 (./performance/contents/related.tex [55]
 Overfull \hbox (16.60931pt too wide) in paragraph at lines 9--10
 []\T1/ptm/m/n/12 Another re-lated area is re-search on per-for-mance faults, in
--clud-ing stud-ies on per-for-mance faults [[]92[],
+-clud-ing stud-ies on per-for-mance faults [[]59[],
  []
 
 ) (./performance/contents/future.tex) (./performance/contents/conclusion.tex
@@ -1370,14 +1361,14 @@ tore / apps / details ? id = com .
 [92
 
 ] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105]
-[106] [107] [108] [109] [110] [111] [112] [113])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 436.
- [114]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 436.
- (./sampleThesis.aux
-(./mocking/chapt2.aux) (./performance/chapt2.aux) (./backward/chapt3.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 436.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 436.
+[106] [107]) [108]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 449.
+ [109]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 449.
+ (./sampleThesis.aux (./mocking/chapt2.aux)
+(./performance/chapt2.aux) (./backward/chapt3.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 449.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 449.
 Package rerunfilecheck Info: File `sampleThesis.out' has not changed.
 (rerunfilecheck)             Checksum: AC2D519CBDA95AC19AC116AEC8546718;5407.
 
@@ -1387,14 +1378,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 436.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 449.
  ) 
 Here is how much of TeX's memory you used:
- 16445 strings out of 493304
- 229355 string characters out of 6139871
- 427685 words of memory out of 5000000
- 18932 multiletter control sequences out of 15000+600000
- 48449 words of font info for 92 fonts, out of 8000000 for 9000
+ 16323 strings out of 493304
+ 227312 string characters out of 6139871
+ 425316 words of memory out of 5000000
+ 18877 multiletter control sequences out of 15000+600000
+ 50268 words of font info for 100 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  51i,15n,44p,3258b,1219s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
@@ -1410,10 +1401,10 @@ pe1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sampleThesis.pdf (127 pages, 1665913 bytes).
+Output written on sampleThesis.pdf (122 pages, 1650475 bytes).
 PDF statistics:
- 1939 PDF objects out of 2073 (max. 8388607)
- 1730 compressed objects within 18 object streams
- 523 named destinations out of 1000 (max. 500000)
+ 1839 PDF objects out of 2073 (max. 8388607)
+ 1636 compressed objects within 17 object streams
+ 456 named destinations out of 1000 (max. 500000)
  687 words of extra memory for PDF output out of 10000 (max. 10000000)
 

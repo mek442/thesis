@@ -5,8 +5,8 @@ Apache commons maths.
 \newblock http://commons.apache.org/proper/commons-math/.
 
 \bibitem{SemVer}
-Semantic versioning.
-\newblock http://semver.org/.
+Semantic versioning, http://semver.org/.
+\newblock Accessed: 2016-08-22.
 
 \bibitem{xalan}
 Xalan for java.
@@ -41,24 +41,6 @@ Sougou.
   \url{https://play.google.com/store/apps/details?id=com.sohu.inputmethod.sogou&hl=en},
   2017.
 
-\bibitem{nanda2011}
-S.~Sinha M. J.~Harrold A.~Nanda, S.~Mani and A.~Orso.
-\newblock Regression testing in the presence of non-code changes.
-\newblock In {\em In International Conference on Software Testing,
-  Verification, and Validation}, pages 21--30, 2011.
-
-\bibitem{Abebe:ICPC10}
-Surafel~Lemma Abebe and Paolo Tonella.
-\newblock Natural language parsing of program element names for concept
-  extraction.
-\newblock In {\em Proc. ICPC}, pages 156--159, 2010.
-
-\bibitem{IncreRegressionTest}
-H.~Agrawal, J.~R. Horgan, Edward~W. Krauser, and S.~London.
-\newblock Incremental regression testing.
-\newblock In {\em Proceedings of the Conference on Software Maintenance}, pages
-  348--357, 1993.
-
 \bibitem{AGUILERA03}
 Marcos~K. Aguilera, Jeffrey~C. Mogul, Janet~L. Wiener, Patrick Reynolds, and
   Athicha Muthitacharoen.
@@ -74,29 +56,12 @@ Azzah Al-Maskari, Mark Sanderson, and Paul Clough.
   Conference on Research and Development in Information Retrieval}, pages
   773--774, 2007.
 
-\bibitem{andrews2005mutation}
-James~H Andrews, Lionel~C Briand, and Yvan Labiche.
-\newblock Is mutation an appropriate tool for testing experiments?[software
-  testing].
-\newblock In {\em Software Engineering, 2005. ICSE 2005. Proceedings. 27th
-  International Conference on}, pages 402--411. IEEE, 2005.
-
-\bibitem{Antoniol:IWPSE04}
-G.~Antoniol, M.~D. Penta, and E.~Merlo.
-\newblock An automatic approach to identify class evolution discontinuities.
-\newblock In {\em Proc. IWPSE}, pages 31--40, 2004.
-
 \bibitem{APIWATTANAPON05}
 Taweesup Apiwattanapong, Alessandro Orso, and Mary~Jean Harrold.
 \newblock Efficient and precise dynamic impact analysis using execute-after
   sequences.
 \newblock In {\em Proceedings of the 27th International Conference on Software
   Engineering}, pages 432--441, 2005.
-
-\bibitem{Arnold:1996}
-R.~S. Arnold.
-\newblock {\em Software Change Impact Analysis}.
-\newblock IEEE Computer Society Press, Los Alamitos, CA, USA, 1996.
 
 \bibitem{Arnoldref96}
 Robert~S. Arnold.
@@ -108,24 +73,6 @@ Robert~S. Arnold and Shawn~A. Bohner.
 \newblock Impact analysis - towards a framework for comparison.
 \newblock In {\em Proceedings of the Conference on Software Maintenance}, pages
   292--301, 1993.
-
-\bibitem{Asahara:COLING00}
-Masayuki Asahara and Yuji Matsumoto.
-\newblock Extended models and tools for high-performance part-of-speech.
-\newblock In {\em Proc. COLING}, pages 21--27, 2000.
-
-\bibitem{braams:babel}
-Johannes B.
-\newblock Babel, a multilingual style-option system for use with latex's
-  standard document styles.
-\newblock {\em TUGboat}, 12(2):291--301, June 1991.
-
-\bibitem{Balaban:OOPSLA05}
-I.~Balaban, F.~Tip, and R.~Fuhrer.
-\newblock Refactoring support for class library migration.
-\newblock In {\em Proceedings of the ACM International Conference on Object
-  Oriented Programming Systems Languages and Applications}, pages 265--279,
-  2005.
 
 \bibitem{BARNA11}
 Cornel Barna, Marin Litoiu, and Hamoun Ghanbari.
@@ -175,23 +122,11 @@ Stephen~M. Blackburn, Robin Garner, Chris Hoffmann, Asjad~M. Khang, Kathryn~S.
   Object-oriented Programming Systems, Languages, and Applications}, pages
   169--190, 2006.
 
-\bibitem{ICSE13:combmini}
-Dale Blue, Itai Segall, Rachel Tzoref-Brill, and Aviad Zlotnick.
-\newblock Interaction-based test-suite minimization.
-\newblock In {\em Proceedings of the 2013 International Conference on Software
-  Engineering}, ICSE '13, pages 182--191, Piscataway, NJ, USA, 2013. IEEE
-  Press.
-
 \bibitem{SootIFDS}
 Eric Bodden.
 \newblock Inter-procedural data-flow analysis with ifds/ide and soot.
 \newblock In {\em Proceedings of the ACM SIGPLAN International Workshop on
   State of the Art in Java Program Analysis}, pages 3--8, 2012.
-
-\bibitem{bowman:reasoning}
-M.~Bowman, S.~K. Debray, and L.~L. Peterson.
-\newblock Reasoning about naming systems.
-\newblock {\em ACM Trans. Program. Lang. Syst.}, 15(5):795--825, November 1993.
 
 \bibitem{Brito16}
 G.~Brito, A.~Hora, M.~T. Valente, and R.~Robbes.
@@ -199,12 +134,6 @@ G.~Brito, A.~Hora, M.~T. Valente, and R.~Robbes.
   large-scale analysis on java systems.
 \newblock In {\em 2016 IEEE 23rd International Conference on Software Analysis,
   Evolution, and Reengineering (SANER)}, volume~1, pages 360--369, 2016.
-
-\bibitem{IST06:combconstraint}
-Ren{\'e}e~C. Bryce and Charles~J. Colbourn.
-\newblock Prioritized interaction testing for pair-wise coverage with seeding
-  and constraints.
-\newblock {\em Information {\&} Software Technology}, 48(10):960--970, 2006.
 
 \bibitem{prioComb}
 Ren{\'e}e~C. Bryce and Atif~M. Memon.
@@ -218,12 +147,6 @@ Malcolm C.
 \newblock Post congress tristesse.
 \newblock In {\em TeX90 Conference Proceedings}, pages 84--89. TeX Users Group,
   March 1991.
-
-\bibitem{cadar2008klee}
-Cristian Cadar, Daniel Dunbar, and Dawson~R Engler.
-\newblock Klee: Unassisted and automatic generation of high-coverage tests for
-  complex systems programs.
-\newblock In {\em OSDI}, volume~8, pages 209--224, 2008.
 
 \bibitem{Chen2016}
 Bihuan Chen, Yang Liu, and Wei Le.
@@ -244,38 +167,11 @@ P.~K. Chittimalli and M.~J. Harrold.
 \newblock In {\em In International Conference on Software Maintenance}, pages
   164--173, 2007.
 
-\bibitem{Chow:ICSM96}
-K.~Chow and D.~Notkin.
-\newblock Semi-automatic update of applications in response to library changes.
-\newblock In {\em Proceedings of International Conference on Software
-  Maintenance}, pages 359--368, 1996.
-
 \bibitem{Coelho}
 Roberta Coelho, Uir{\'a} Kulesza, Arndt von Staa, and Carlos Lucena.
 \newblock Unit testing in multi-agent systems using mock agents and aspects.
 \newblock In {\em Proceedings of the 2006 international workshop on Software
   engineering for large-scale multi-agent systems}, pages 83--90. ACM, 2006.
-
-\bibitem{TSE97:comb}
-David~M. Cohen, Siddhartha~R. Dalal, Michael~L. Fredman, and Gardner~C. Patton.
-\newblock The aetg system: An approach to testing based on combinatiorial
-  design.
-\newblock {\em IEEE Trans. Software Eng.}, 23(7):437--444, 1997.
-
-\bibitem{TSE08:combcons}
-Myra~B. Cohen, Matthew~B. Dwyer, and Jiangfan Shi.
-\newblock Constructing interaction test suites for highly-configurable systems
-  in the presence of constraints: A greedy approach.
-\newblock {\em IEEE Trans. Software Eng.}, 34(5):633--650, 2008.
-
-\bibitem{Collins:CLJ05}
-Michael~J. Collins and Terry Koo.
-\newblock Discriminative reranking for natural language parsing.
-\newblock {\em Computational Linguistics}, 31(1):25--70, March 2005.
-
-\bibitem{CoreUtilsWeb}
-{Coreutils - GNU core utilities}.
-\newblock \url{http://www.gnu.org/software/coreutils/}.
 
 \bibitem{Dagenais:ICSE08}
 B.~Dagenais and M.~P. Robillard.
@@ -283,35 +179,11 @@ B.~Dagenais and M.~P. Robillard.
 \newblock In {\em Proceedings of International Conference on Software
   Engineering}, pages 481--490, 2008.
 
-\bibitem{ISSTA10:testRepair}
-Brett Daniel, Tihomir Gvero, and Darko Marinov.
-\newblock On test repair using symbolic execution.
-\newblock In {\em Proceedings of the 19th international symposium on Software
-  testing and analysis}, ISSTA '10, pages 207--218, New York, NY, USA, 2010.
-  ACM.
-
-\bibitem{delamaro1996proteum}
-M{\'a}rcio~Eduardo Delamaro, Jos{\'e}~Carlos Maldonado, and AP~Mathur.
-\newblock Proteum-a tool for the assessment of test adequacy for c programs
-  user's guide.
-\newblock Technical report, Technical Report SERC-TR168-P, Software Engineering
-  Research Center, Purdue University, 1996.
-
-\bibitem{Demeyer:OOPSLA00}
-S.~Demeyer, S.~Ducasse, and O.~Nierstrasz.
-\newblock Finding refactorings via change metrics.
-\newblock In {\em Proc. OOPSLA}, pages 166--177, 2000.
-
 \bibitem{poliniref}
 Giovanni Denaro, Andrea Polini, and Wolfgang Emmerich.
 \newblock Early performance testing of distributed software applications.
 \newblock In {\em Proceedings of the 4th International Workshop on Software and
   Performance}, pages 94--103, 2004.
-
-\bibitem{Dig:ECOOP06}
-D.~Dig, C.~Comertoglu, D.~Marinov, and R.~Johnson.
-\newblock Automated detection of refactorings in evolving components.
-\newblock In {\em Proc. ECOOP}, pages 404--428, 2006.
 
 \bibitem{Dig2006}
 D.~Dig and R.~Johnson.
@@ -319,31 +191,24 @@ D.~Dig and R.~Johnson.
   articles.
 \newblock {\em J. Softw. Maint. Evol.}, 18(2):83--107, March 2006.
 
-\bibitem{Dig:ICSE07}
-D.~Dig, K.~Manzoor, R.~Johnson, and T.~N. Nguyen.
-\newblock Refactoring-aware configuration management for object-oriented
-  programs.
-\newblock In {\em Proceedings of International Conference on Software
-  Engineering}, pages 427--436, 2007.
-
 \bibitem{do2005supporting}
 Hyunsook Do, Sebastian Elbaum, and Gregg Rothermel.
 \newblock Supporting controlled experimentation with testing techniques: An
   infrastructure and its potential impact.
 \newblock {\em Empirical Software Engineering}, 10(4):405--435, 2005.
 
-\bibitem{do2006use}
-Hyunsook Do and Gregg Rothermel.
-\newblock On the use of mutation faults in empirical assessments of test case
-  prioritization techniques.
-\newblock {\em Software Engineering, IEEE Transactions on}, 32(9):733--752,
-  2006.
-
 \bibitem{DBLP:DoRK04}
 Hyunsook Do, Gregg Rothermel, and Alex Kinneer.
 \newblock Empirical studies of test case prioritization in a junit testing
   environment.
 \newblock In {\em ISSRE}, pages 113--124, 2004.
+
+\bibitem{elbaum2014}
+S.~Elbaum, G.~Rothermel, and J.~Penix.
+\newblock Techniques for improving regression testing in continuous integration
+  development environments.
+\newblock In {\em Proceedings of the eighteenth ACM SIGSOFT international
+  symposium on Foundations of software engineering}, pages 235--245. ACM, 2014.
 
 \bibitem{ELBAUM00}
 Sebastian Elbaum, Alexey~G. Malishevsky, and Gregg Rothermel.
@@ -372,11 +237,6 @@ T.~Espinha, A.~Zaidman, and H.-G. Gross.
   (CSMR-WCRE), 2014 Software Evolution Week - IEEE Conference on}, pages
   84--93, 2014.
 
-\bibitem{bib:fan}
-A.~Fantechi, S.~Gnesi, G.~Lami, and A.~Maccari.
-\newblock Applications of linguistic techniques for use case analysis.
-\newblock {\em Requirement Engineering}, 8(3):161--170, March 2003.
-
 \bibitem{FOO11}
 King~Chun Foo.
 \newblock Automated discovery of performance regressions in enterprise
@@ -390,14 +250,6 @@ King~Chun Foo, Zhen~Ming Jiang, Bram Adams, Ahmed~E. Hassan, Ying Zou, and
   performance analysis.
 \newblock In {\em 2010 10th International Conference on Quality Software},
   pages 32--41, 2010.
-
-\bibitem{Fouche:2007}
-Sandro Fouch{\'e}, Myra~B. Cohen, and Adam Porter.
-\newblock Towards incremental adaptive covering arrays.
-\newblock In {\em The 6th Joint Meeting on European software engineering
-  conference and the ACM SIGSOFT symposium on the foundations of software
-  engineering: companion papers}, ESEC-FSE companion '07, pages 557--560, New
-  York, NY, USA, 2007. ACM.
 
 \bibitem{foxref}
 Gregory Fox.
@@ -433,19 +285,6 @@ Stefan~J Galler, Andreas Maller, and Franz Wotawa.
 \newblock In {\em Proceedings of the 5th Workshop on Automation of Software
   Test}, pages 43--50. ACM, 2010.
 
-\bibitem{milos2013coverage}
-Milos Gligoric, Alex Groce, Chaoqiang Zhang, Rohan Sharma, Amin Alipour, and
-  Darko Marinov.
-\newblock Comparing non-adequate test suites using coverage criteria.
-\newblock In {\em Proc. of ISSTA}, pages 302--313, 2013.
-
-\bibitem{Godefroid:POPLComposite}
-P.~Godefroid, A.~V. Nori, Sriram~K. Rajamani, and S.~D. Tetali.
-\newblock Compositional may-must program analysis: Unleashing the power of
-  alternation.
-\newblock In {\em Proceedings of the 37th Annual ACM SIGPLAN-SIGACT Symposium
-  on Principles of Programming Languages}, pages 43--56, 2010.
-
 \bibitem{featureEvo}
 M.~W. Godfrey and Q.~Tu.
 \newblock Evolution in open source software: a case study.
@@ -471,17 +310,6 @@ Michaela Greiler, Arie~van Deursen, and Margaret-Anne Storey.
 \newblock Test confessions: A study of testing practices for plug-in systems.
 \newblock In {\em Proceedings of the 34th International Conference on Software
   Engineering}, pages 244--254. IEEE Press, 2012.
-
-\bibitem{STVR05:combstr}
-Mats Grindal, Jeff Offutt, and Sten~F. Andler.
-\newblock Combination testing strategies: a survey.
-\newblock {\em Softw. Test., Verif. Reliab.}, 15(3):167--199, 2005.
-
-\bibitem{groce2007randomized}
-Alex Groce, Gerard Holzmann, and Rajeev Joshi.
-\newblock Randomized differential testing as a prelude to formal verification.
-\newblock In {\em Software Engineering, 2007. ICSE 2007. 29th International
-  Conference on}, pages 621--631. IEEE, 2007.
 
 \bibitem{SPEED}
 Sumit Gulwani, Krishna~K. Mehra, and Trishul Chilimbi.
@@ -513,32 +341,12 @@ M.~Jean Harrold, Rajiv Gupta, and Mary~Lou Soffa.
 \newblock A methodology for controlling the size of a test suite.
 \newblock {\em ACM Trans. Softw. Eng. Methodol.}, 2(3):270--285, July 1993.
 
-\bibitem{Henkel:ICSE05}
-J.~Henkel and A.~Diwan.
-\newblock Catchup!: Capturing and replaying refactorings to support {API}
-  evolution.
-\newblock In {\em Proceedings of International Conference on Software
-  Engineering}, pages 274--283, 2005.
-
-\bibitem{TSE82:mutation}
-William~E. Howden.
-\newblock Weak mutation testing and completeness of test sets.
-\newblock {\em IEEE Trans. Software Eng.}, 8(4):371--379, 1982.
-
 \bibitem{huang2014performance}
 Peng Huang, Xiao Ma, Dongcai Shen, and Yuanyuan Zhou.
 \newblock Performance regression testing target prioritization via performance
   risk analysis.
 \newblock In {\em Proceedings of the 36th International Conference on Software
   Engineering}, ICSE 2014, pages 60--71, 2014.
-
-\bibitem{ICSE94:Siemens}
-Monica Hutchins, Herb Foster, Tarak Goradia, and Thomas Ostrand.
-\newblock Experiments of the effectiveness of dataflow- and controlflow-based
-  test adequacy criteria.
-\newblock In {\em Proceedings of the 16th international conference on Software
-  engineering}, ICSE '94, pages 191--200, Los Alamitos, CA, USA, 1994. IEEE
-  Computer Society Press.
 
 \bibitem{woda}
 Mainul Islam and Christoph Csallner.
@@ -573,11 +381,6 @@ T.~Kalibera, L.~Bulej, and P.~Tuma.
 \newblock In {\em 13th IEEE International Symposium on Modeling, Analysis, and
   Simulation of Computer and Telecommunication Systems}, pages 183--190, 2005.
 
-\bibitem{Kemper:JavaOne05}
-C.~Kemper and C.~Overbeck.
-\newblock What's new with {JBuilder}.
-\newblock In {\em Proceedings of JavaOne}, 2005.
-
 \bibitem{KILLIAN10}
 Charles Killian, Karthik Nagaraj, Salman Pervez, Ryan Braud, James~W. Anderson,
   and Ranjit Jhala.
@@ -606,42 +409,10 @@ S.~Kim, K.~Pan, and E.~J. Whitehead, Jr.
 \newblock In {\em Proceedings of Working Conference on Requirement
   Engineering}, pages 143--152, 2005.
 
-\bibitem{bib:kof}
-L.~Kof.
-\newblock Scenarios: Identifying missing objects and actions by means of
-  computational linguistics.
-\newblock In {\em Proc. RE}, pages 121--130, 2007.
-
 \bibitem{DBLP:conf/icsm/KorelTH05}
 Bogdan Korel, Luay~Ho Tahat, and Mark Harman.
 \newblock Test prioritization using system models.
 \newblock In {\em ICSM}, pages 559--568, 2005.
-
-\bibitem{Kozareva:DKE07}
-Z.~Kozareva, {\'{O}}.~Ferr\'{a}ndez, A.~Montoyo, Rafael Mu{\~{n}}oz, Armando
-  Su{\'{a}}rez, and Jaime G{\'{o}}mez.
-\newblock Combining data-driven systems for improving named entity recognition.
-\newblock {\em DKE}, 61(3):449--466, June 2007.
-
-\bibitem{Krishnan2007:model}
-R.~Krishnan, S.~Murali Krishna, and P.~Siva Nandhan.
-\newblock Combinatorial testing: learnings from our experience.
-\newblock {\em SIGSOFT Softw. Eng. Notes}, 32(3):1--8, May 2007.
-
-\bibitem{TSE:Comb}
-D.~R. Kuhn, D.~R. Wallace, and A.~M. Gallo, Jr.
-\newblock Software fault interactions and implications for software testing.
-\newblock {\em IEEE Trans. Softw. Eng.}, 30(6):418--421, June 2004.
-
-\bibitem{intro:comb}
-D~Richard Kuhn, Raghu~N Kacker, and Yu~Lei.
-\newblock {\em Introduction to Combinatorial Testing}, volume~5.
-\newblock Chapman \& Hall, 2013.
-
-\bibitem{IT08:pairwise}
-Rick Kuhn, Yu~Lei, and Raghu Kacker.
-\newblock Practical combinatorial testing: Beyond pairwise.
-\newblock {\em IT Professional}, 10(3):19--23, 2008.
 
 \bibitem{ATC2013}
 Yongin Kwon, Sangmin Lee, Hayoon Yi, Donghyun Kwon, Seungjun Yang, Byung-Gon
@@ -649,11 +420,6 @@ Yongin Kwon, Sangmin Lee, Hayoon Yi, Donghyun Kwon, Seungjun Yang, Byung-Gon
 \newblock Mantis: Automatic performance prediction for smartphone applications.
 \newblock In {\em Proceedings of the 2013 USENIX Conference on Annual Technical
   Conference}, pages 297--308, 2013.
-
-\bibitem{Lamport:LaTeX}
-Leslie L.
-\newblock {\em LaTeX User's Guide and Document Reference Manual}.
-\newblock Addison-Wesley Publishing Company, Reading, Massachusetts, 1986.
 
 \bibitem{Lahiri:CAVSymDiff}
 S.~Lahiri, C.~Hawblitzel, M.~Kawaguchi, and H.~Rebêlo.
@@ -736,11 +502,6 @@ Alexey~G. Malishevsky, Joseph~R. Ruthruff, Gregg Rothermel, and Sebastian
 \newblock Cost-cognizant test case prioritization.
 \newblock Technical report, 2006.
 
-\bibitem{Malpohl:ASEJ03}
-G.~Malpohl, J.~J. Hunt, and W.~F. Tichy.
-\newblock Renaming detection.
-\newblock {\em ASEJ}, 10(2):183--202, April 2003.
-
 \bibitem{Marri}
 Madhuri~R Marri, Tao Xie, Nikolai Tillmann, Jonathan De~Halleux, and Wolfram
   Schulte.
@@ -781,13 +542,6 @@ Lijun Mei, Zhenyu Zhang, W.~K. Chan, and T.~H. Tse.
 \newblock In {\em Proceedings of the 18th international conference on World
   wide web}, WWW '09, pages 901--910, New York, NY, USA, 2009. ACM.
 
-\bibitem{GUIRegression}
-A.~M. Memon and M.~L. Soffa.
-\newblock Regression testing of guis.
-\newblock In {\em Proceedings of the 9th European Software Engineering
-  Conference Held Jointly with 11th ACM SIGSOFT International Symposium on
-  Foundations of Software Engineering}, pages 118--127, 2003.
-
 \bibitem{MengHima}
 S.~Meng, X.~Wang, L.~Zhang, and H.~Mei.
 \newblock A history-based matching approach to identification of framework
@@ -823,17 +577,11 @@ K.~Nakakoji, Y.~Yamamoto, Y.~Nishinaka, K.~Kishida, and Y.~Ye.
 \newblock In {\em Proceedings of the International Workshop on Principles of
   Software Evolution}, pages 76--85, 2002.
 
-\bibitem{Nguyen:OOPSLAPattern}
-H.~Nguyen, T.~Nguyen, G.~Wilson, Jr., A.~Nguyen, M.~Kim, and T.~Nguyen.
-\newblock A graph-based approach to {API} usage adaptation.
-\newblock In {\em Proceedings of the ACM International Conference on Object
-  Oriented Programming Systems Languages and Applications}, pages 302--321,
-  2010.
-
-\bibitem{2011:CombSurvey}
-Changhai Nie and Hareton Leung.
-\newblock A survey of combinatorial testing.
-\newblock {\em ACM Comput. Surv.}, 43(2):11:1--11:29, February 2011.
+\bibitem{nanda2011}
+A.~Nanda, S.~Mani, S.~Sinha, M.~J. Harrold, and A.~Orso.
+\newblock Regression testing in the presence of non-code changes.
+\newblock In {\em In International Conference on Software Testing,
+  Verification, and Validation}, pages 21--30, 2011.
 
 \bibitem{Nistor15}
 A.~Nistor, P.~C. Chang, C.~Radoi, and S.~Lu.
@@ -855,13 +603,6 @@ Alessandro Orso, Taweesup Apiwattanapong, and Mary~Jean Harrold.
 \newblock In {\em Proceedings of the 9th European Software Engineering
   Conference Held Jointly with 11th ACM SIGSOFT International Symposium on
   Foundations of Software Engineering}, pages 128--137, 2003.
-
-\bibitem{ORSO04}
-Alessandro Orso, Taweesup Apiwattanapong, James Law, Gregg Rothermel, and
-  Mary~Jean Harrold.
-\newblock An empirical comparison of dynamic impact analysis algorithms.
-\newblock In {\em Proceedings of the 26th International Conference on Software
-  Engineering}, pages 491--500, 2004.
 
 \bibitem{PadhyeICSE2017}
 Rohan Padhye and Koushik Sen.
@@ -959,19 +700,6 @@ Gregg Rothermel, Roland~H. Untch, Chengyun Chu, and Mary~Jean Harrold.
 \newblock Test case prioritization: An empirical study.
 \newblock In {\em ICSM}, pages 179--188, 1999.
 
-\bibitem{OOImpact}
-B.~G. Ryder and F.~Tip.
-\newblock Change impact analysis for object-oriented programs.
-\newblock In {\em Proceedings of the 2001 ACM SIGPLAN-SIGSOFT Workshop on
-  Program Analysis for Software Tools and Engineering}, pages 46--53, 2001.
-
-\bibitem{elbaum2014}
-G.~Rothermel S.~Elbaum and J.~Penix.
-\newblock Techniques for improving regression testing in continuous integration
-  development environments.
-\newblock In {\em Proceedings of the eighteenth ACM SIGSOFT international
-  symposium on Foundations of software engineering}, pages 235--245. ACM, 2014.
-
 \bibitem{Saff}
 David Saff and Michael~D Ernst.
 \newblock Mock object creation for test factoring.
@@ -979,31 +707,10 @@ David Saff and Michael~D Ernst.
   Program analysis for software tools and engineering}, pages 49--51. ACM,
   2004.
 
-\bibitem{salas:calculus}
-S.L. Salas and E.~Hille.
-\newblock {\em Calculus: One and Several Variable}.
-\newblock John Wiley and Sons, New York, 1978.
-
 \bibitem{bib:saw}
 P.~Sawyer, P.~Rayson, and R.~Garside.
 \newblock {REVERE}: Support for requirements synthesis from documents.
 \newblock {\em Information Systems Frontiers}, 4(3):343--353, March 2002.
-
-\bibitem{Schafer:ICSE08}
-T.~Sch{\"a}fer, J.~Jonas, and M.~Mezini.
-\newblock Mining framework usage changes from instantiation code.
-\newblock In {\em Proceedings of International Conference on Software
-  Engineering}, pages 471--480, 2008.
-
-\bibitem{seize1977student}
-Theresa~K Seize.
-\newblock Student's t-test.
-\newblock {\em Southern Medical Journal}, 70(11):1299, 1977.
-
-\bibitem{shapiro1965analysis}
-Samuel~Sanford Shapiro and Martin~B Wilk.
-\newblock An analysis of variance test for normality (complete samples).
-\newblock {\em Biometrika}, 52(3/4):591--611, 1965.
 
 \bibitem{SHEN05}
 Kai Shen, Ming Zhong, and Chuanpeng Li.
@@ -1011,12 +718,6 @@ Kai Shen, Ming Zhong, and Chuanpeng Li.
   characterization.
 \newblock In {\em Proceedings of the 4th Conference on USENIX Conference on
   File and Storage Technologies - Volume 4}, pages 23--23, 2005.
-
-\bibitem{bib:she}
-D.~Shepherd, Z.~Fry, E.~Hill, L.~Pollock, and K.~Vijay-Shanker.
-\newblock Using natural language program analysis to locate and understand
-  action-oriented concerns.
-\newblock In {\em Proc. AOSD}, pages 212--224, 2007.
 
 \bibitem{SHERRIFF08}
 Mark Sherriff and Laurie Williams.
@@ -1029,30 +730,6 @@ Mark Sherriff and Laurie Williams.
 S.~Stefanov.
 \newblock Yslow 2.0.
 \newblock In {\em CSDN Software Development 2.0 Conference}, 2008.
-
-\bibitem{Steyaert:OOPSLA96}
-P.~Steyaert, C.~Lucas, K.~Mens, and T.~D'Hondt.
-\newblock Reuse contracts: Managing the evolution of reusable assets.
-\newblock In {\em Proceedings of the ACM International Conference on Object
-  Oriented Programming Systems Languages and Applications}, pages 268--285,
-  1996.
-
-\bibitem{bib:tan}
-L.~Tan, D.~Yuan, G.~Krishna, and Y.~Zhou.
-\newblock /* i{C}omment: Bugs or bad comments? */.
-\newblock In {\em Proc. SOSP}, pages 145--158, 2007.
-
-\bibitem{Tan:ICSE11}
-L.~Tan, Y.~Zhou, and Y.~Padioleau.
-\newblock a{C}omment: Mining annotations from comments and code to detect
-  interrupt related concurrency bugs.
-\newblock In {\em Proceedings of International Conference on Software
-  Engineering}, pages 11--20, 2011.
-
-\bibitem{Taneja:ASE07}
-Kunal Taneja, Danny Dig, and Tao Xie.
-\newblock Automated detection of {API} refactorings in libraries.
-\newblock In {\em Proc. ASE}, pages 377--380, 2007.
 
 \bibitem{Taneja}
 Kunal Taneja, Yi~Zhang, and Tao Xie.
@@ -1067,12 +744,6 @@ H.~Tang, X.~Wang, L.~Zhang, B.~Xie, L.~Zhang, and H.~Mei.
   of callbacks.
 \newblock In {\em Proceedings of the 42nd Annual ACM SIGPLAN-SIGACT Symposium
   on Principles of Programming Languages}, pages 83--95, 2015.
-
-\bibitem{Thummalapenta:ASE08}
-S.~Thummalapenta and T.~Xie.
-\newblock {SpotWeb}: Detecting framework hotspots and coldspots via mining open
-  source code on the web.
-\newblock In {\em Proc. ASE}, pages 327--336, 2008.
 
 \bibitem{TURVERref}
 Richard~J. Turver and Malcolm Munro.
@@ -1106,11 +777,6 @@ Xiaoyin Wang, David Lo, Jiefeng Cheng, Lu~Zhang, Hong Mei, and Jeffrey~Xu Yu.
 \newblock In {\em Proceedings of the IEEE/ACM International Conference on
   Automated Software Engineering}, pages 457--466, 2010.
 
-\bibitem{Weissgerber:ASE06}
-P.~Wei{\ss}gerber and S.~Diehl.
-\newblock Identifying refactorings from source-code changes.
-\newblock In {\em Proc. ASE}, pages 231--240, 2006.
-
 \bibitem{TSEPerform}
 E.~J. Weyuker and F.~I. Vokolos.
 \newblock Experience with performance testing of software systems: issues, an
@@ -1118,15 +784,8 @@ E.~J. Weyuker and F.~I. Vokolos.
 \newblock {\em IEEE Transactions on Software Engineering}, 26(12):1147--1156,
   2000.
 
-\bibitem{Whaley:EcoopComposite}
-J.~Whaley and M.~Rinard.
-\newblock Compositional pointer and escape analysis for java programs.
-\newblock In {\em Proceedings of the 14th ACM SIGPLAN Conference on
-  Object-oriented Programming, Systems, Languages, and Applications}, pages
-  187--206, 1999.
-
 \bibitem{GBRandom}
-Paul~R. Wilson.
+Paul~R. Wilson, Yves Bekkers, and Jacques Cohen.
 \newblock {\em Uniprocessor garbage collection techniques}, pages 1--42.
 \newblock 1992.
 
@@ -1161,21 +820,11 @@ Tao Xie.
 \newblock In {\em Proc. 20th European Conference on Object-Oriented Programming
   (ECOOP 2006)}, pages 380--403, July 2006.
 
-\bibitem{Xing:TSE07}
-Z.~Xing and E.~Stroulia.
-\newblock {API}-evolution support with {Diff-CatchUp}.
-\newblock {\em IEEE Transactions on Software Engineering}, 33(12):818--836,
-  December 2007.
-
 \bibitem{xu2010directed}
 Zhihong Xu, Yunho Kim, Moonzoo Kim, Gregg Rothermel, and Myra~B Cohen.
 \newblock Directed test suite augmentation: techniques and tradeoffs.
 \newblock In {\em Proceedings of the eighteenth ACM SIGSOFT international
   symposium on Foundations of software engineering}, pages 257--266. ACM, 2010.
-
-\bibitem{YaffsWeb}
-{YAFFS}: A flash file system for embedded use.
-\newblock \url{http://www.yaffs.net/}.
 
 \bibitem{YAN12}
 Dacong Yan, Guoqing Xu, and Atanas Rountev.
@@ -1217,22 +866,11 @@ Pingyu Zhang, Sebastian Elbaum, and Matthew~B. Dwyer.
 \newblock In {\em Proceedings of the 2011 26th IEEE/ACM International
   Conference on Automated Software Engineering}, pages 43--52, 2011.
 
-\bibitem{Zhong:ICSE10}
-Hao Zhong, Suresh Thummalapenta, Tao Xie, Lu~Zhang, and Qing Wang.
-\newblock Mining {API} mapping for language migration.
-\newblock In {\em Proc. ICSE}, pages 195--204, 2010.
-
 \bibitem{ZHONG06}
 Hao Zhong, Lu~Zhang, and Hong Mei.
 \newblock An experimental comparison of four test suite reduction techniques.
 \newblock In {\em Proceedings of the 28th International Conference on Software
   Engineering}, pages 636--640, 2006.
-
-\bibitem{bib:zho}
-Hao Zhong, Lu~Zhang, Tao Xie, and Hong Mei.
-\newblock Inferring resource specifications from natural language {API}
-  documentation.
-\newblock In {\em Proc. ASE}, pages 307--318, 2009.
 
 \bibitem{ZIMMERMANN04}
 Thomas Zimmermann, Peter Weisgerber, Stephan Diehl, and Andreas Zeller.
